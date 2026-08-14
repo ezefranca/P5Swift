@@ -74,10 +74,7 @@ public extension P5Sketch {
     ///
     /// - Parameter framesPerSecond: A finite value greater than zero.
     func frameRate(_ framesPerSecond: Double) {
-        precondition(
-            framesPerSecond.isFinite && framesPerSecond > 0,
-            "frameRate(_:) requires a finite value greater than zero."
-        )
+        precondition(framesPerSecond.isFinite && framesPerSecond > 0)
         internalView.framesPerSecond = framesPerSecond
     }
 }
@@ -297,10 +294,7 @@ public extension P5Sketch {
     ///
     /// - Parameter weight: A finite value greater than zero.
     func strokeWeight(_ weight: CGFloat) {
-        precondition(
-            weight.isFinite && weight > 0,
-            "strokeWeight(_:) requires a finite value greater than zero."
-        )
+        precondition(weight.isFinite && weight > 0)
         internalView.addOperation(.strokeWeight(weight))
     }
 }

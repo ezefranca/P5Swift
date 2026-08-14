@@ -1,4 +1,4 @@
-//! A native Swift drawing library whose sketch lifecycle and core API mirror p5.js.
+//! Native creative coding with a lifecycle and vocabulary modeled after p5.js.
 
 #if canImport(UIKit)
 import UIKit

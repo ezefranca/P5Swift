@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreFoundation
-import P5Swift
+import P5
 
 /// A Starfield simulation.
 ///

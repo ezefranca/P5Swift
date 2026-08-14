@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreGraphics
-import P5Swift
+import P5
 
 /// The game of life!
 ///
