@@ -36,6 +36,7 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
 
 #if canImport(UIKit)
     private var displayLink: CADisplayLink?
+    private var displayLinkTarget: P5DisplayLinkTarget?
 #elseif canImport(AppKit)
     private var timer: Timer?
 
@@ -59,6 +60,7 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
     deinit {
         MainActor.assumeIsolated {
 #if canImport(UIKit)
+            displayLinkTarget = nil
             displayLink?.invalidate()
 #elseif canImport(AppKit)
             timer?.invalidate()
@@ -123,12 +125,16 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
 
     private func startAnimation() {
 #if canImport(UIKit)
+        let target = P5DisplayLinkTarget { [weak self] in
+            self?.requestDisplay()
+        }
         let displayLink = CADisplayLink(
-            target: self,
-            selector: #selector(displayLinkDidFire)
+            target: target,
+            selector: #selector(P5DisplayLinkTarget.displayLinkDidFire)
         )
         displayLink.preferredFramesPerSecond = Int(framesPerSecond.rounded())
         displayLink.add(to: .main, forMode: .common)
+        displayLinkTarget = target
         self.displayLink = displayLink
 #elseif canImport(AppKit)
         startTimer()
@@ -143,12 +149,7 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
 #endif
     }
 
-#if canImport(UIKit)
-    @objc
-    private func displayLinkDidFire() {
-        requestDisplay()
-    }
-#elseif canImport(AppKit)
+#if canImport(AppKit)
     private func startTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(

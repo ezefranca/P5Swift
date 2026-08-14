@@ -5,7 +5,7 @@
 //  Created by Juan Hurtado on 13/06/23.
 //
 
-import P5Swift
+import P5
 import UIKit
 
 class ViewController: UIViewController {

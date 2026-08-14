@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import P5Swift
+import P5
 
 class FourierSeries: P5Sketch {
     var time = 0.0
