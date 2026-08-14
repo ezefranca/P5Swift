@@ -44,7 +44,7 @@ class Starfield: P5Sketch {
         let newY = star.y / star.z * height
         star.updateCoordinates(x: newX, y: newY)
         let radius = (1.0 - star.z / width) * 16.0
-        circle(star.x, star.y, radius)
+        circle(star.x, star.y, radius * 2)
     }
     
     struct Star {

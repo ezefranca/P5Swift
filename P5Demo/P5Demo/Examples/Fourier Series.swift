@@ -31,7 +31,7 @@ class FourierSeries: P5Sketch {
             let radius = 4 / n * .pi  * 5.0
             noFill()
             stroke(UIColor.white.withAlphaComponent(0.3).cgColor)
-            circle(prevX, prevY, radius)
+            circle(prevX, prevY, radius * 2)
             
             y += radius * sin(n * time)
             x += radius * cos(n * time)
