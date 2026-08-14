@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     lazy var examples: [P5Sketch] = [
-        FractalOrganicTree(ofSize: view.frame.size),
-        GameOfLife(ofSize: view.frame.size),
-        Starfield(ofSize: view.frame.size),
-        FourierSeries(ofSize: view.frame.size)
+        FractalOrganicTree(size: view.bounds.size),
+        GameOfLife(size: view.bounds.size),
+        Starfield(size: view.bounds.size),
+        FourierSeries(size: view.bounds.size)
     ]
     
     override func viewDidLoad() {
