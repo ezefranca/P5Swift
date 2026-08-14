@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "P5Swift"
-               BuildableName = "P5Swift"
-               BlueprintName = "P5Swift"
+               BlueprintIdentifier = "P5"
+               BuildableName = "P5"
+               BlueprintName = "P5"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "P5SwiftTests"
-               BuildableName = "P5SwiftTests"
-               BlueprintName = "P5SwiftTests"
+               BlueprintIdentifier = "P5Tests"
+               BuildableName = "P5Tests"
+               BlueprintName = "P5Tests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "P5SwiftTests"
-               BuildableName = "P5SwiftTests"
-               BlueprintName = "P5SwiftTests"
+               BlueprintIdentifier = "P5Tests"
+               BuildableName = "P5Tests"
+               BlueprintName = "P5Tests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
@@ -75,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "P5Swift"
-            BuildableName = "P5Swift"
-            BlueprintName = "P5Swift"
+            BlueprintIdentifier = "P5"
+            BuildableName = "P5"
+            BlueprintName = "P5"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
