@@ -14,6 +14,7 @@ open class P5Sketch {
     var isBuildingShape = false
     var isInsideContour = false
     var shapeHasEndpoint = false
+    var colorConfiguration = P5ColorConfiguration()
 
     /// A human-readable title that clients can use when presenting the sketch.
     public var title: String?
