@@ -107,6 +107,86 @@ public enum P5Math {
     public static func degrees(_ radians: CGFloat) -> CGFloat {
         radians * 180 / .pi
     }
+
+    /// Returns the smaller of two values.
+    public static func minimum(_ first: CGFloat, _ second: CGFloat) -> CGFloat {
+        Swift.min(first, second)
+    }
+
+    /// Returns the larger of two values.
+    public static func maximum(_ first: CGFloat, _ second: CGFloat) -> CGFloat {
+        Swift.max(first, second)
+    }
+
+    /// Rounds a value to the nearest integral value using the away-from-zero tie rule.
+    public static func round(_ value: CGFloat) -> CGFloat {
+        value.rounded(.toNearestOrAwayFromZero)
+    }
+
+    /// Rounds a value down to the nearest integral value.
+    public static func floor(_ value: CGFloat) -> CGFloat {
+        Foundation.floor(value)
+    }
+
+    /// Rounds a value up to the nearest integral value.
+    public static func ceil(_ value: CGFloat) -> CGFloat {
+        Foundation.ceil(value)
+    }
+
+    /// Returns the square of a value.
+    public static func square(_ value: CGFloat) -> CGFloat {
+        value * value
+    }
+
+    /// Returns the nonnegative square root of a nonnegative value.
+    public static func squareRoot(_ value: CGFloat) -> CGFloat {
+        precondition(value >= 0)
+        return value.squareRoot()
+    }
+
+    /// Raises a base to an exponent.
+    public static func power(_ base: CGFloat, _ exponent: CGFloat) -> CGFloat {
+        Foundation.pow(base, exponent)
+    }
+
+    /// Returns the sine of an angle expressed in a selected mode.
+    public static func sine(_ angle: CGFloat, angleMode: P5AngleMode = .radians) -> CGFloat {
+        Foundation.sin(angleMode.radians(from: angle))
+    }
+
+    /// Returns the cosine of an angle expressed in a selected mode.
+    public static func cosine(_ angle: CGFloat, angleMode: P5AngleMode = .radians) -> CGFloat {
+        Foundation.cos(angleMode.radians(from: angle))
+    }
+
+    /// Returns the tangent of an angle expressed in a selected mode.
+    public static func tangent(_ angle: CGFloat, angleMode: P5AngleMode = .radians) -> CGFloat {
+        Foundation.tan(angleMode.radians(from: angle))
+    }
+
+    /// Returns the inverse sine in a selected angle mode.
+    public static func arcSine(_ value: CGFloat, angleMode: P5AngleMode = .radians) -> CGFloat {
+        angleMode.value(fromRadians: Foundation.asin(value))
+    }
+
+    /// Returns the inverse cosine in a selected angle mode.
+    public static func arcCosine(_ value: CGFloat, angleMode: P5AngleMode = .radians) -> CGFloat {
+        angleMode.value(fromRadians: Foundation.acos(value))
+    }
+
+    /// Returns the inverse tangent in a selected angle mode.
+    public static func arcTangent(_ value: CGFloat, angleMode: P5AngleMode = .radians) -> CGFloat {
+        angleMode.value(fromRadians: Foundation.atan(value))
+    }
+
+    /// Returns the quadrant-aware inverse tangent in a selected angle mode.
+    public static func arcTangent2(
+        _ y: CGFloat,
+        _ x: CGFloat,
+        angleMode: P5AngleMode = .radians
+    ) -> CGFloat {
+        angleMode.value(fromRadians: Foundation.atan2(y, x))
+    }
 }
 
 public extension P5Sketch {
@@ -179,5 +259,85 @@ public extension P5Sketch {
     /// Converts radians to degrees.
     func degrees(_ radians: CGFloat) -> CGFloat {
         P5Math.degrees(radians)
+    }
+
+    /// Selects the unit used by sketch rotation and trigonometric methods.
+    func angleMode(_ mode: P5AngleMode) {
+        currentAngleMode = mode
+    }
+
+    /// Returns the smaller of two values.
+    func min(_ first: CGFloat, _ second: CGFloat) -> CGFloat {
+        P5Math.minimum(first, second)
+    }
+
+    /// Returns the larger of two values.
+    func max(_ first: CGFloat, _ second: CGFloat) -> CGFloat {
+        P5Math.maximum(first, second)
+    }
+
+    /// Rounds a value to the nearest integral value.
+    func round(_ value: CGFloat) -> CGFloat {
+        P5Math.round(value)
+    }
+
+    /// Rounds a value down to the nearest integral value.
+    func floor(_ value: CGFloat) -> CGFloat {
+        P5Math.floor(value)
+    }
+
+    /// Rounds a value up to the nearest integral value.
+    func ceil(_ value: CGFloat) -> CGFloat {
+        P5Math.ceil(value)
+    }
+
+    /// Returns the square of a value.
+    func sq(_ value: CGFloat) -> CGFloat {
+        P5Math.square(value)
+    }
+
+    /// Returns the nonnegative square root of a nonnegative value.
+    func sqrt(_ value: CGFloat) -> CGFloat {
+        P5Math.squareRoot(value)
+    }
+
+    /// Raises a base to an exponent.
+    func pow(_ base: CGFloat, _ exponent: CGFloat) -> CGFloat {
+        P5Math.power(base, exponent)
+    }
+
+    /// Returns the sine of an angle in the current angle mode.
+    func sin(_ angle: CGFloat) -> CGFloat {
+        P5Math.sine(angle, angleMode: currentAngleMode)
+    }
+
+    /// Returns the cosine of an angle in the current angle mode.
+    func cos(_ angle: CGFloat) -> CGFloat {
+        P5Math.cosine(angle, angleMode: currentAngleMode)
+    }
+
+    /// Returns the tangent of an angle in the current angle mode.
+    func tan(_ angle: CGFloat) -> CGFloat {
+        P5Math.tangent(angle, angleMode: currentAngleMode)
+    }
+
+    /// Returns the inverse sine in the current angle mode.
+    func asin(_ value: CGFloat) -> CGFloat {
+        P5Math.arcSine(value, angleMode: currentAngleMode)
+    }
+
+    /// Returns the inverse cosine in the current angle mode.
+    func acos(_ value: CGFloat) -> CGFloat {
+        P5Math.arcCosine(value, angleMode: currentAngleMode)
+    }
+
+    /// Returns the inverse tangent in the current angle mode.
+    func atan(_ value: CGFloat) -> CGFloat {
+        P5Math.arcTangent(value, angleMode: currentAngleMode)
+    }
+
+    /// Returns the quadrant-aware inverse tangent in the current angle mode.
+    func atan2(_ y: CGFloat, _ x: CGFloat) -> CGFloat {
+        P5Math.arcTangent2(y, x, angleMode: currentAngleMode)
     }
 }

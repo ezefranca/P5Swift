@@ -22,6 +22,26 @@ struct P5MathTests {
         #expect(P5Math.magnitude(2, 3, 6) == 7)
         #expect(P5Math.radians(180).isApproximately(.pi))
         #expect(P5Math.degrees(.pi / 2).isApproximately(90))
+        #expect(P5Math.minimum(2, 3) == 2)
+        #expect(P5Math.maximum(2, 3) == 3)
+        #expect(P5Math.round(2.5) == 3)
+        #expect(P5Math.floor(2.9) == 2)
+        #expect(P5Math.ceil(2.1) == 3)
+        #expect(P5Math.square(4) == 16)
+        #expect(P5Math.squareRoot(16) == 4)
+        #expect(P5Math.power(2, 3) == 8)
+        #expect(P5Math.sine(.pi / 2).isApproximately(1))
+        #expect(P5Math.cosine(180, angleMode: .degrees).isApproximately(-1))
+        #expect(P5Math.tangent(45, angleMode: .degrees).isApproximately(1))
+        #expect(P5Math.arcSine(1, angleMode: .degrees).isApproximately(90))
+        #expect(P5Math.arcCosine(0).isApproximately(.pi / 2))
+        #expect(P5Math.arcTangent(1, angleMode: .degrees).isApproximately(45))
+        #expect(P5Math.arcTangent2(1, 0, angleMode: .degrees).isApproximately(90))
+        #expect(P5AngleMode.allCases == [.radians, .degrees])
+        #expect(P5AngleMode.radians.radians(from: 2) == 2)
+        #expect(P5AngleMode.degrees.radians(from: 180).isApproximately(.pi))
+        #expect(P5AngleMode.radians.value(fromRadians: 2) == 2)
+        #expect(P5AngleMode.degrees.value(fromRadians: .pi).isApproximately(180))
     }
 
     @Test
@@ -31,6 +51,9 @@ struct P5MathTests {
         }
         await #expect(processExitsWith: .failure) {
             _ = P5Math.map(1, from: 0, to: 0, onto: 0, to: 1)
+        }
+        await #expect(processExitsWith: .failure) {
+            _ = P5Math.squareRoot(-1)
         }
     }
 }
@@ -200,6 +223,31 @@ struct P5SketchMathTests {
         #expect(sketch.mag(2, 3, 6) == 7)
         #expect(sketch.radians(180).isApproximately(.pi))
         #expect(sketch.degrees(.pi).isApproximately(180))
+        #expect(sketch.min(2, 3) == 2)
+        #expect(sketch.max(2, 3) == 3)
+        #expect(sketch.round(2.5) == 3)
+        #expect(sketch.floor(2.9) == 2)
+        #expect(sketch.ceil(2.1) == 3)
+        #expect(sketch.sq(4) == 16)
+        #expect(sketch.sqrt(16) == 4)
+        #expect(sketch.pow(2, 3) == 8)
+        #expect(sketch.sin(.pi / 2).isApproximately(1))
+        #expect(sketch.cos(.pi).isApproximately(-1))
+        #expect(sketch.tan(.pi / 4).isApproximately(1))
+        #expect(sketch.asin(1).isApproximately(.pi / 2))
+        #expect(sketch.acos(0).isApproximately(.pi / 2))
+        #expect(sketch.atan(1).isApproximately(.pi / 4))
+        #expect(sketch.atan2(1, 0).isApproximately(.pi / 2))
+
+        sketch.angleMode(.degrees)
+        #expect(sketch.sin(90).isApproximately(1))
+        #expect(sketch.cos(180).isApproximately(-1))
+        #expect(sketch.tan(45).isApproximately(1))
+        #expect(sketch.asin(1).isApproximately(90))
+        #expect(sketch.acos(0).isApproximately(90))
+        #expect(sketch.atan(1).isApproximately(45))
+        #expect(sketch.atan2(1, 0).isApproximately(90))
+        sketch.rotate(90)
 
         sketch.randomSeed(77)
         let firstRandom = sketch.random()

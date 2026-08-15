@@ -46,6 +46,27 @@ struct P5VectorTests {
     }
 
     @Test
+    func componentOverloadsRemaindersAndEqualityMatchP5Semantics() {
+        var vector = P5Vector.zero
+        #expect(vector.set(P5Vector(x: 10, y: 20, z: 30)) == P5Vector(x: 10, y: 20, z: 30))
+        #expect(vector.add(1, 2, 3) == P5Vector(x: 11, y: 22, z: 33))
+        #expect(vector.sub(1, 2, 3) == P5Vector(x: 10, y: 20, z: 30))
+        #expect(vector.mult(P5Vector(x: 2, y: 3, z: 4)) == P5Vector(x: 20, y: 60, z: 120))
+        #expect(vector.div(P5Vector(x: 2, y: 3, z: 4)) == P5Vector(x: 10, y: 20, z: 30))
+        #expect(vector.rem(7) == P5Vector(x: 3, y: 6, z: 2))
+        #expect(vector.rem(P5Vector(x: 2, y: 4, z: 3)) == P5Vector(x: 1, y: 2, z: 2))
+        #expect(vector.equals(P5Vector(x: 1, y: 2, z: 2)))
+        #expect(!vector.equals(.zero))
+
+        let lhs = P5Vector(x: 10, y: 20, z: 30)
+        let rhs = P5Vector(x: 2, y: 4, z: 5)
+        #expect(P5Vector.mult(lhs, rhs) == P5Vector(x: 20, y: 80, z: 150))
+        #expect(P5Vector.div(lhs, rhs) == P5Vector(x: 5, y: 5, z: 6))
+        #expect(P5Vector.rem(lhs, 6) == P5Vector(x: 4, y: 2, z: 0))
+        #expect(P5Vector.rem(lhs, rhs) == P5Vector(x: 0, y: 0, z: 0))
+    }
+
+    @Test
     func magnitudeDirectionAndInterpolationMatchP5Semantics() {
         let vector = P5Vector(x: 3, y: 4)
         #expect(vector.magSq() == 25)
@@ -100,6 +121,62 @@ struct P5VectorTests {
     }
 
     @Test
+    func explicitAngleModesConvertEveryAngularVectorOperation() {
+        var vector = P5Vector(x: 2, y: 0)
+
+        #expect(vector.heading(angleMode: .degrees) == 0)
+        vector.setHeading(90, angleMode: .degrees)
+        #expect(vector.isApproximately(P5Vector(x: 0, y: 2)))
+        vector.rotate(90, angleMode: .degrees)
+        #expect(vector.isApproximately(P5Vector(x: -2, y: 0)))
+        #expect(
+            P5Vector(x: 1).angleBetween(P5Vector(y: 1), angleMode: .degrees).isApproximately(90)
+        )
+        #expect(
+            P5Vector.fromAngle(90, length: 3, angleMode: .degrees)
+                .isApproximately(P5Vector(x: 0, y: 3))
+        )
+    }
+
+    @Test
+    func reflectionAndSphericalInterpolationHandleAllDirectionCases() {
+        var reflected = P5Vector(x: 1, y: -1)
+        #expect(reflected.reflect(P5Vector(y: 2)).isApproximately(P5Vector(x: 1, y: 1)))
+        #expect(reflected.reflect(.zero).isApproximately(P5Vector(x: 1, y: 1)))
+        #expect(
+            P5Vector.reflect(P5Vector(x: -1, y: 1), normal: P5Vector(x: 2))
+                .isApproximately(P5Vector(x: 1, y: 1))
+        )
+
+        var zero = P5Vector.zero
+        #expect(zero.slerp(P5Vector(x: 2), 0.5) == P5Vector(x: 1))
+
+        var parallel = P5Vector(x: 2)
+        #expect(parallel.slerp(P5Vector(x: 4), 0.5).isApproximately(P5Vector(x: 3)))
+
+        var regular = P5Vector(x: 2)
+        #expect(
+            regular.slerp(P5Vector(x: 0, y: 4), 0.5)
+                .isApproximately(P5Vector(x: 4.5.squareRoot(), y: 4.5.squareRoot()))
+        )
+
+        var oppositeX = P5Vector(x: 2)
+        #expect(
+            oppositeX.slerp(P5Vector(x: -2), 0.5)
+                .isApproximately(P5Vector(z: 2))
+        )
+        var oppositeY = P5Vector(y: 2)
+        #expect(
+            oppositeY.slerp(P5Vector(y: -2), 0.5)
+                .isApproximately(P5Vector(z: -2))
+        )
+        #expect(
+            P5Vector.slerp(P5Vector(x: 1), P5Vector(y: 1), 0.5)
+                .isApproximately(P5Vector(x: 0.5.squareRoot(), y: 0.5.squareRoot()))
+        )
+    }
+
+    @Test
     func random2DCreatesUnitVectors() {
         var generator = SeededGenerator(state: 0x1234_5678_9ABC_DEF0)
         let seeded = P5Vector.random2D(using: &generator)
@@ -109,6 +186,26 @@ struct P5VectorTests {
         #expect(seeded.z == 0)
         #expect(system.mag().isApproximately(1))
         #expect(system.z == 0)
+    }
+
+    @Test
+    func random3DCreatesUnitVectors() {
+        var generator = SeededGenerator(state: 0x1234_5678_9ABC_DEF0)
+        let seeded = P5Vector.random3D(using: &generator)
+        let system = P5Vector.random3D()
+
+        #expect(seeded.mag().isApproximately(1))
+        #expect((-1...1).contains(seeded.z))
+        #expect(system.mag().isApproximately(1))
+        #expect((-1...1).contains(system.z))
+    }
+
+    @Test
+    func invalidSphericalInterpolationTerminatesTheProcess() async {
+        await #expect(processExitsWith: .failure) {
+            var vector = P5Vector(x: 1)
+            vector.slerp(P5Vector(y: 1), .nan)
+        }
     }
 }
 

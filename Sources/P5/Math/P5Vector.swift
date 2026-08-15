@@ -7,8 +7,8 @@ import CoreGraphics
 /// semantics, uses `CGFloat` to interoperate with Core Graphics, and supports
 /// both p5-style mutating methods and Swift arithmetic operators.
 ///
-/// Angular APIs use radians. A future `angleMode()` API can add unit conversion
-/// at the sketch boundary without changing the vector's stored components.
+/// Angular APIs use radians by default. Overloads accepting ``P5AngleMode`` keep
+/// standalone vectors explicit and independent from a sketch's mutable settings.
 @frozen
 public struct P5Vector: Sendable, Hashable, Codable {
     /// The x component.
@@ -70,6 +70,13 @@ public struct P5Vector: Sendable, Hashable, Codable {
 // MARK: - Component arithmetic
 
 public extension P5Vector {
+    /// Replaces all components with another vector and returns the updated value.
+    @discardableResult
+    mutating func set(_ other: Self) -> Self {
+        self = other
+        return self
+    }
+
     /// Replaces all components and returns the updated vector.
     ///
     /// This method corresponds to
@@ -90,6 +97,12 @@ public extension P5Vector {
         return self
     }
 
+    /// Adds individual components in place and returns the updated vector.
+    @discardableResult
+    mutating func add(_ x: CGFloat, _ y: CGFloat, _ z: CGFloat = 0) -> Self {
+        add(Self(x: x, y: y, z: z))
+    }
+
     /// Subtracts another vector in place and returns the updated vector.
     ///
     /// This method corresponds to
@@ -98,6 +111,12 @@ public extension P5Vector {
     mutating func sub(_ other: Self) -> Self {
         self -= other
         return self
+    }
+
+    /// Subtracts individual components in place and returns the updated vector.
+    @discardableResult
+    mutating func sub(_ x: CGFloat, _ y: CGFloat, _ z: CGFloat = 0) -> Self {
+        sub(Self(x: x, y: y, z: z))
     }
 
     /// Multiplies every component in place and returns the updated vector.
@@ -110,6 +129,16 @@ public extension P5Vector {
         return self
     }
 
+    /// Multiplies individual components in place and returns the updated vector.
+    @discardableResult
+    mutating func mult(_ other: Self) -> Self {
+        precondition(other.x.isFinite && other.y.isFinite && other.z.isFinite)
+        x *= other.x
+        y *= other.y
+        z *= other.z
+        return self
+    }
+
     /// Divides every component in place and returns the updated vector.
     ///
     /// The scalar must be finite and nonzero. This method corresponds to
@@ -118,6 +147,44 @@ public extension P5Vector {
     mutating func div(_ scalar: CGFloat) -> Self {
         self /= scalar
         return self
+    }
+
+    /// Divides individual components in place and returns the updated vector.
+    @discardableResult
+    mutating func div(_ other: Self) -> Self {
+        precondition(
+            other.x.isFinite && other.x != 0 && other.y.isFinite && other.y != 0
+                && other.z.isFinite && other.z != 0
+        )
+        x /= other.x
+        y /= other.y
+        z /= other.z
+        return self
+    }
+
+    /// Replaces each component with its floating-point remainder after division.
+    @discardableResult
+    mutating func rem(_ divisor: CGFloat) -> Self {
+        precondition(divisor.isFinite && divisor != 0)
+        return rem(Self(x: divisor, y: divisor, z: divisor))
+    }
+
+    /// Applies a component-wise floating-point remainder operation.
+    @discardableResult
+    mutating func rem(_ divisor: Self) -> Self {
+        precondition(
+            divisor.x.isFinite && divisor.x != 0 && divisor.y.isFinite && divisor.y != 0
+                && divisor.z.isFinite && divisor.z != 0
+        )
+        x.formTruncatingRemainder(dividingBy: divisor.x)
+        y.formTruncatingRemainder(dividingBy: divisor.y)
+        z.formTruncatingRemainder(dividingBy: divisor.z)
+        return self
+    }
+
+    /// Reports whether all three components exactly equal another vector.
+    func equals(_ other: Self) -> Bool {
+        self == other
     }
 
     /// Adds two vectors without changing either input.
@@ -138,6 +205,34 @@ public extension P5Vector {
     /// Divides a vector without changing the input.
     static func div(_ vector: Self, _ scalar: CGFloat) -> Self {
         vector / scalar
+    }
+
+    /// Returns the component-wise product of two vectors.
+    static func mult(_ lhs: Self, _ rhs: Self) -> Self {
+        var result = lhs
+        result.mult(rhs)
+        return result
+    }
+
+    /// Returns the component-wise quotient of two vectors.
+    static func div(_ lhs: Self, _ rhs: Self) -> Self {
+        var result = lhs
+        result.div(rhs)
+        return result
+    }
+
+    /// Returns the component-wise remainder of a vector and scalar.
+    static func rem(_ vector: Self, _ divisor: CGFloat) -> Self {
+        var result = vector
+        result.rem(divisor)
+        return result
+    }
+
+    /// Returns the component-wise remainder of two vectors.
+    static func rem(_ lhs: Self, _ rhs: Self) -> Self {
+        var result = lhs
+        result.rem(rhs)
+        return result
     }
 }
 
@@ -235,6 +330,11 @@ public extension P5Vector {
         atan2(y, x)
     }
 
+    /// Returns the two-dimensional heading in an explicit angle mode.
+    func heading(angleMode: P5AngleMode) -> CGFloat {
+        angleMode.value(fromRadians: heading())
+    }
+
     /// Rotates the x and y components to a heading while preserving their
     /// two-dimensional magnitude and the z component.
     ///
@@ -247,6 +347,12 @@ public extension P5Vector {
         x = cos(angle) * magnitude2D
         y = sin(angle) * magnitude2D
         return self
+    }
+
+    /// Rotates to a heading expressed in an explicit angle mode.
+    @discardableResult
+    mutating func setHeading(_ angle: CGFloat, angleMode: P5AngleMode) -> Self {
+        setHeading(angleMode.radians(from: angle))
     }
 
     /// Rotates the x and y components by an angle in radians.
@@ -263,6 +369,12 @@ public extension P5Vector {
         return self
     }
 
+    /// Rotates by an angle expressed in an explicit angle mode.
+    @discardableResult
+    mutating func rotate(_ angle: CGFloat, angleMode: P5AngleMode) -> Self {
+        rotate(angleMode.radians(from: angle))
+    }
+
     /// Returns the signed two-dimensional angle to another vector in radians.
     ///
     /// This method corresponds to
@@ -271,6 +383,26 @@ public extension P5Vector {
         let crossZ = (x * other.y) - (y * other.x)
         let dot2D = (x * other.x) + (y * other.y)
         return atan2(crossZ, dot2D)
+    }
+
+    /// Returns the signed angle to another vector in an explicit angle mode.
+    func angleBetween(_ other: Self, angleMode: P5AngleMode) -> CGFloat {
+        angleMode.value(fromRadians: angleBetween(other))
+    }
+
+    /// Reflects the vector from a surface normal.
+    ///
+    /// A zero normal leaves the vector unchanged. Nonzero normals are normalized
+    /// before reflection.
+    @discardableResult
+    mutating func reflect(_ normal: Self) -> Self {
+        var unitNormal = normal
+        guard unitNormal.magSq() != 0 else {
+            return self
+        }
+        unitNormal.normalize()
+        self -= unitNormal * (2 * dot(unitNormal))
+        return self
     }
 
     /// Moves the components proportionally toward another vector.
@@ -282,6 +414,38 @@ public extension P5Vector {
         x += (other.x - x) * amount
         y += (other.y - y) * amount
         z += (other.z - z) * amount
+        return self
+    }
+
+    /// Spherically interpolates direction and linearly interpolates magnitude.
+    ///
+    /// Opposite vectors follow a deterministic orthogonal arc. A zero endpoint
+    /// falls back to linear interpolation because its direction is undefined.
+    @discardableResult
+    mutating func slerp(_ other: Self, _ amount: CGFloat) -> Self {
+        precondition(amount.isFinite)
+        let startMagnitude = mag()
+        let stopMagnitude = other.mag()
+        guard startMagnitude != 0 && stopMagnitude != 0 else {
+            return lerp(other, amount)
+        }
+
+        let start = self / startMagnitude
+        let stop = other / stopMagnitude
+        let cosine = min(max(start.dot(stop), -1), 1)
+        let direction: Self
+        if cosine > 0.9995 {
+            direction = Self.normalize(Self.lerp(start, stop, amount))
+        } else if cosine < -0.9995 {
+            let axis = abs(start.x) < 0.9 ? Self(x: 1) : Self(y: 1)
+            let orthogonal = Self.normalize(start.cross(axis))
+            direction = (start * cos(.pi * amount)) + (orthogonal * sin(.pi * amount))
+        } else {
+            let angle = acos(cosine) * amount
+            let relative = Self.normalize(stop - (start * cosine))
+            direction = (start * cos(angle)) + (relative * sin(angle))
+        }
+        self = direction * P5Math.lerp(startMagnitude, stopMagnitude, amount)
         return self
     }
 
@@ -322,6 +486,20 @@ public extension P5Vector {
         result.lerp(rhs, amount)
         return result
     }
+
+    /// Returns the reflection of a vector from a surface normal.
+    static func reflect(_ vector: Self, normal: Self) -> Self {
+        var result = vector
+        result.reflect(normal)
+        return result
+    }
+
+    /// Returns a spherical interpolation without changing either input.
+    static func slerp(_ lhs: Self, _ rhs: Self, _ amount: CGFloat) -> Self {
+        var result = lhs
+        result.slerp(rhs, amount)
+        return result
+    }
 }
 
 // MARK: - Construction
@@ -334,6 +512,15 @@ public extension P5Vector {
     static func fromAngle(_ angle: CGFloat, length: CGFloat = 1) -> Self {
         precondition(angle.isFinite && length.isFinite)
         return Self(x: cos(angle) * length, y: sin(angle) * length)
+    }
+
+    /// Creates a two-dimensional vector from an angle in an explicit mode.
+    static func fromAngle(
+        _ angle: CGFloat,
+        length: CGFloat = 1,
+        angleMode: P5AngleMode
+    ) -> Self {
+        fromAngle(angleMode.radians(from: angle), length: length)
     }
 
     /// Creates a unit vector with a random two-dimensional heading.
@@ -354,6 +541,20 @@ public extension P5Vector {
     ) -> Self {
         let angle = CGFloat.random(in: 0..<2 * .pi, using: &generator)
         return fromAngle(angle)
+    }
+
+    /// Creates a random three-dimensional unit vector.
+    static func random3D() -> Self {
+        var generator = SystemRandomNumberGenerator()
+        return random3D(using: &generator)
+    }
+
+    /// Creates a random three-dimensional unit vector using a supplied generator.
+    static func random3D<R: RandomNumberGenerator>(using generator: inout R) -> Self {
+        let z = CGFloat.random(in: -1...1, using: &generator)
+        let angle = CGFloat.random(in: 0..<2 * .pi, using: &generator)
+        let radius = sqrt(max(0, 1 - (z * z)))
+        return Self(x: radius * cos(angle), y: radius * sin(angle), z: z)
     }
 }
 

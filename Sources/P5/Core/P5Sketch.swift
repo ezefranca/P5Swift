@@ -9,6 +9,7 @@ open class P5Sketch {
     private let internalView: P5SketchInternalView
     var randomGenerator = P5RandomGenerator()
     var noiseGenerator = P5NoiseGenerator()
+    var currentAngleMode = P5AngleMode.radians
 
     /// A human-readable title that clients can use when presenting the sketch.
     public var title: String?
@@ -245,14 +246,14 @@ public extension P5Sketch {
 // MARK: - Transformations
 
 public extension P5Sketch {
-    /// Rotates the coordinate system by an angle in radians.
+    /// Rotates the coordinate system by an angle in the current angle mode.
     ///
     /// This method corresponds to
     /// [p5.js `rotate()`](https://p5js.org/reference/p5/rotate/).
     ///
-    /// - Parameter angle: The clockwise rotation in radians.
+    /// - Parameter angle: The clockwise rotation.
     func rotate(_ angle: CGFloat) {
-        internalView.addOperation(.rotate(angle))
+        internalView.addOperation(.rotate(currentAngleMode.radians(from: angle)))
     }
 
     /// Moves the origin of the coordinate system.
