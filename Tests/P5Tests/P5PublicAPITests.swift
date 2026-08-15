@@ -17,6 +17,12 @@ struct P5PublicAPITests {
         #expect((0...1).contains(noise.noise(0.5)))
         #expect(P5ArcMode.allCases == [.open, .chord, .pie])
         #expect(P5ShapeClosure.allCases == [.open, .close])
+        #expect(P5RectMode.allCases == [.corner, .corners, .center, .radius])
+        #expect(P5EllipseMode.allCases == [.corner, .corners, .center, .radius])
+        #expect(P5StrokeCap.allCases == [.round, .project, .square])
+        #expect(P5StrokeJoin.allCases == [.miter, .bevel, .round])
+        #expect(P5FillRule.allCases == [.nonZero, .evenOdd])
+        #expect(P5BlendMode.allCases == [.normal, .multiply, .screen, .add])
         #expect(color.alpha == 1)
     }
 }

@@ -376,6 +376,58 @@ struct P5RendererTests {
         #expect(bitmap.pixel(atX: 22, y: 7) == .clear)
     }
 
+    @Test
+    func testStrokeFillAntialiasOpacityAndBlendStyles() throws {
+        let renderer = makeRenderer(width: 32, height: 28)
+        renderer.addOperation(.noFill)
+        renderer.addOperation(.stroke(red))
+        renderer.addOperation(.strokeWeight(3))
+        renderer.addOperation(.strokeCap(.round))
+        renderer.addOperation(.line(x1: 2, y1: 2, x2: 8, y2: 2))
+        renderer.addOperation(.strokeCap(.project))
+        renderer.addOperation(.line(x1: 2, y1: 6, x2: 8, y2: 6))
+        renderer.addOperation(.strokeCap(.square))
+        renderer.addOperation(.line(x1: 2, y1: 10, x2: 8, y2: 10))
+        renderer.addOperation(.strokeJoin(.miter))
+        renderer.addOperation(.strokeMiterLimit(4))
+        renderer.addOperation(.strokeDash(phase: 1, lengths: [2, 1]))
+        renderer.addOperation(
+            .polygon([CGPoint(x: 12, y: 2), CGPoint(x: 18, y: 2), CGPoint(x: 15, y: 8)])
+        )
+        renderer.addOperation(.strokeJoin(.bevel))
+        renderer.addOperation(.strokeDash(phase: 0, lengths: []))
+        renderer.addOperation(
+            .polygon([CGPoint(x: 20, y: 2), CGPoint(x: 26, y: 2), CGPoint(x: 23, y: 8)])
+        )
+        renderer.addOperation(.strokeJoin(.round))
+        renderer.addOperation(
+            .polygon([CGPoint(x: 12, y: 10), CGPoint(x: 18, y: 10), CGPoint(x: 15, y: 16)])
+        )
+        renderer.addOperation(.fill(green))
+        renderer.addOperation(.noStroke)
+        renderer.addOperation(.fillRule(.nonZero))
+        renderer.addOperation(.antialias(false))
+        renderer.addOperation(.blendMode(.normal))
+        renderer.addOperation(.opacity(0.5))
+        renderer.addOperation(.rect(x: 2, y: 18, width: 6, height: 6))
+        renderer.addOperation(.fillRule(.evenOdd))
+        renderer.addOperation(.antialias(true))
+        renderer.addOperation(.blendMode(.multiply))
+        renderer.addOperation(.rect(x: 8, y: 18, width: 6, height: 6))
+        renderer.addOperation(.blendMode(.screen))
+        renderer.addOperation(.rect(x: 14, y: 18, width: 6, height: 6))
+        renderer.addOperation(.blendMode(.add))
+        renderer.addOperation(.opacity(1))
+        renderer.addOperation(.rect(x: 20, y: 18, width: 6, height: 6))
+
+        let bitmap = try makeBitmap(width: 32, height: 28)
+        renderer.render(in: bitmap.context)
+
+        #expect(bitmap.pixel(atX: 5, y: 2).red > 0)
+        #expect(bitmap.pixel(atX: 5, y: 20).alpha > 0)
+        #expect(bitmap.pixel(atX: 23, y: 20).green > 0)
+    }
+
     private func makeRenderer(
         width: CGFloat = 10,
         height: CGFloat = 10

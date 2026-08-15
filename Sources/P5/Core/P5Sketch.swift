@@ -15,6 +15,8 @@ open class P5Sketch {
     var isInsideContour = false
     var shapeHasEndpoint = false
     var colorConfiguration = P5ColorConfiguration()
+    var currentRectMode = P5RectMode.corner
+    var currentEllipseMode = P5EllipseMode.center
 
     /// A human-readable title that clients can use when presenting the sketch.
     public var title: String?
@@ -198,8 +200,14 @@ public extension P5Sketch {
         _ width: CGFloat,
         _ height: CGFloat
     ) {
+        let rectangle = rectangle(x, y, width, height)
         internalView.addOperation(
-            .rect(x: x, y: y, width: width, height: height)
+            .rect(
+                x: rectangle.origin.x,
+                y: rectangle.origin.y,
+                width: rectangle.size.width,
+                height: rectangle.size.height
+            )
         )
     }
 
@@ -213,7 +221,7 @@ public extension P5Sketch {
     ///   - y: The top-left y-coordinate.
     ///   - extent: The width and height.
     func square(_ x: CGFloat, _ y: CGFloat, _ extent: CGFloat) {
-        internalView.addOperation(.square(x: x, y: y, extent: extent))
+        rect(x, y, extent, extent)
     }
 
     /// Draws a circle centered at a point.
@@ -246,8 +254,14 @@ public extension P5Sketch {
         _ width: CGFloat,
         _ height: CGFloat
     ) {
+        let rectangle = ellipseRectangle(x, y, width, height)
         internalView.addOperation(
-            .ellipse(x: x, y: y, width: width, height: height)
+            .ellipse(
+                x: rectangle.midX,
+                y: rectangle.midY,
+                width: rectangle.width,
+                height: rectangle.height
+            )
         )
     }
 
@@ -305,12 +319,13 @@ public extension P5Sketch {
         _ stop: CGFloat,
         _ mode: P5ArcMode = .open
     ) {
+        let rectangle = ellipseRectangle(x, y, width, height)
         internalView.addOperation(
             .arc(
-                x: x,
-                y: y,
-                width: width,
-                height: height,
+                x: rectangle.midX,
+                y: rectangle.midY,
+                width: rectangle.width,
+                height: rectangle.height,
                 start: currentAngleMode.radians(from: start),
                 stop: currentAngleMode.radians(from: stop),
                 mode: mode
@@ -326,12 +341,13 @@ public extension P5Sketch {
         _ height: CGFloat,
         cornerRadius: CGFloat
     ) {
+        let rectangle = rectangle(x, y, width, height)
         internalView.addOperation(
             .roundedRect(
-                x: x,
-                y: y,
-                width: width,
-                height: height,
+                x: rectangle.origin.x,
+                y: rectangle.origin.y,
+                width: rectangle.size.width,
+                height: rectangle.size.height,
                 cornerRadius: cornerRadius
             )
         )
@@ -353,6 +369,72 @@ public extension P5Sketch {
             return CGPoint(x: x + cos(angle) * radius, y: y + sin(angle) * radius)
         }
         internalView.addOperation(.polygon(points))
+    }
+
+    private func rectangle(
+        _ first: CGFloat,
+        _ second: CGFloat,
+        _ third: CGFloat,
+        _ fourth: CGFloat
+    ) -> CGRect {
+        switch currentRectMode {
+        case .corner:
+            return CGRect(x: first, y: second, width: third, height: fourth)
+        case .corners:
+            return CGRect(
+                x: min(first, third),
+                y: min(second, fourth),
+                width: abs(third - first),
+                height: abs(fourth - second)
+            )
+        case .center:
+            return CGRect(
+                x: first - third / 2,
+                y: second - fourth / 2,
+                width: third,
+                height: fourth
+            )
+        case .radius:
+            return CGRect(
+                x: first - third,
+                y: second - fourth,
+                width: third * 2,
+                height: fourth * 2
+            )
+        }
+    }
+
+    private func ellipseRectangle(
+        _ first: CGFloat,
+        _ second: CGFloat,
+        _ third: CGFloat,
+        _ fourth: CGFloat
+    ) -> CGRect {
+        switch currentEllipseMode {
+        case .corner:
+            return CGRect(x: first, y: second, width: third, height: fourth)
+        case .corners:
+            return CGRect(
+                x: min(first, third),
+                y: min(second, fourth),
+                width: abs(third - first),
+                height: abs(fourth - second)
+            )
+        case .center:
+            return CGRect(
+                x: first - third / 2,
+                y: second - fourth / 2,
+                width: third,
+                height: fourth
+            )
+        case .radius:
+            return CGRect(
+                x: first - third,
+                y: second - fourth,
+                width: third * 2,
+                height: fourth * 2
+            )
+        }
     }
 }
 

@@ -6,6 +6,14 @@ enum P5Operation {
     case stroke(CGColor)
     case noStroke
     case strokeWeight(CGFloat)
+    case strokeCap(P5StrokeCap)
+    case strokeJoin(P5StrokeJoin)
+    case strokeMiterLimit(CGFloat)
+    case strokeDash(phase: CGFloat, lengths: [CGFloat])
+    case fillRule(P5FillRule)
+    case antialias(Bool)
+    case blendMode(P5BlendMode)
+    case opacity(CGFloat)
 
     case background(CGColor)
     case line(x1: CGFloat, y1: CGFloat, x2: CGFloat, y2: CGFloat)

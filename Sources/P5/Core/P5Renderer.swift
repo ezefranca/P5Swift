@@ -5,6 +5,15 @@ final class P5Renderer {
         var fillColor: CGColor? = CGColor(gray: 1, alpha: 1)
         var strokeColor: CGColor? = CGColor(gray: 0, alpha: 1)
         var strokeWeight: CGFloat = 1
+        var strokeCap = P5StrokeCap.round
+        var strokeJoin = P5StrokeJoin.miter
+        var strokeMiterLimit: CGFloat = 10
+        var strokeDashPhase: CGFloat = 0
+        var strokeDashLengths: [CGFloat] = []
+        var fillRule = P5FillRule.nonZero
+        var shouldAntialias = true
+        var blendMode = P5BlendMode.normal
+        var opacity: CGFloat = 1
     }
 
     var size: CGSize = .zero
@@ -32,6 +41,23 @@ final class P5Renderer {
                 style.strokeColor = nil
             case .strokeWeight(let weight):
                 style.strokeWeight = weight
+            case .strokeCap(let cap):
+                style.strokeCap = cap
+            case .strokeJoin(let join):
+                style.strokeJoin = join
+            case .strokeMiterLimit(let limit):
+                style.strokeMiterLimit = limit
+            case .strokeDash(let phase, let lengths):
+                style.strokeDashPhase = phase
+                style.strokeDashLengths = lengths
+            case .fillRule(let rule):
+                style.fillRule = rule
+            case .antialias(let shouldAntialias):
+                style.shouldAntialias = shouldAntialias
+            case .blendMode(let mode):
+                style.blendMode = mode
+            case .opacity(let opacity):
+                style.opacity = opacity
             case .background(let bgColor):
                 background(bgColor, in: context)
             case .line(let x1, let y1, let x2, let y2):
@@ -126,8 +152,8 @@ final class P5Renderer {
         }
 
         context.saveGState()
+        applyStyle(to: context)
         context.setStrokeColor(strokeColor)
-        context.setLineWidth(style.strokeWeight)
         context.beginPath()
         context.move(to: CGPoint(x: x1, y: y1))
         context.addLine(to: CGPoint(x: x2, y: y2))
@@ -151,11 +177,14 @@ final class P5Renderer {
         guard let strokeColor = style.strokeColor else {
             return
         }
+        context.saveGState()
+        applyStyle(to: context)
         context.setFillColor(strokeColor)
         let diameter = style.strokeWeight
         context.fillEllipse(
             in: CGRect(x: x - diameter / 2, y: y - diameter / 2, width: diameter, height: diameter)
         )
+        context.restoreGState()
     }
 
     private func polygon(_ points: [CGPoint], in context: CGContext) {
@@ -295,21 +324,73 @@ final class P5Renderer {
     }
 
     private func drawCurrentPath(in context: CGContext, usesEvenOddFill: Bool = false) {
+        applyStyle(to: context)
+        let usesEvenOddFill = usesEvenOddFill || style.fillRule == .evenOdd
         switch (style.fillColor, style.strokeColor) {
         case let (fillColor?, strokeColor?):
             context.setFillColor(fillColor)
             context.setStrokeColor(strokeColor)
-            context.setLineWidth(style.strokeWeight)
             context.drawPath(using: usesEvenOddFill ? .eoFillStroke : .fillStroke)
         case let (fillColor?, nil):
             context.setFillColor(fillColor)
             context.drawPath(using: usesEvenOddFill ? .eoFill : .fill)
         case let (nil, strokeColor?):
             context.setStrokeColor(strokeColor)
-            context.setLineWidth(style.strokeWeight)
             context.drawPath(using: .stroke)
         case (nil, nil):
             context.beginPath()
+        }
+    }
+
+    private func applyStyle(to context: CGContext) {
+        context.setLineWidth(style.strokeWeight)
+        context.setLineCap(style.strokeCap.cgLineCap)
+        context.setLineJoin(style.strokeJoin.cgLineJoin)
+        context.setMiterLimit(style.strokeMiterLimit)
+        context.setLineDash(phase: style.strokeDashPhase, lengths: style.strokeDashLengths)
+        context.setShouldAntialias(style.shouldAntialias)
+        context.setBlendMode(style.blendMode.cgBlendMode)
+        context.setAlpha(style.opacity)
+    }
+}
+
+private extension P5StrokeCap {
+    var cgLineCap: CGLineCap {
+        switch self {
+        case .round:
+            .round
+        case .project:
+            .square
+        case .square:
+            .butt
+        }
+    }
+}
+
+private extension P5StrokeJoin {
+    var cgLineJoin: CGLineJoin {
+        switch self {
+        case .miter:
+            .miter
+        case .bevel:
+            .bevel
+        case .round:
+            .round
+        }
+    }
+}
+
+private extension P5BlendMode {
+    var cgBlendMode: CGBlendMode {
+        switch self {
+        case .normal:
+            .normal
+        case .multiply:
+            .multiply
+        case .screen:
+            .screen
+        case .add:
+            .plusLighter
         }
     }
 }
