@@ -14,5 +14,7 @@ struct P5PublicAPITests {
         #expect(P5Math.map(0.5, from: 0, to: 1, onto: 0, to: 10) == 5)
         #expect((0..<1).contains(random.random()))
         #expect((0...1).contains(noise.noise(0.5)))
+        #expect(P5ArcMode.allCases == [.open, .chord, .pie])
+        #expect(P5ShapeClosure.allCases == [.open, .close])
     }
 }

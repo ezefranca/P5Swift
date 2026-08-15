@@ -10,6 +10,10 @@ open class P5Sketch {
     var randomGenerator = P5RandomGenerator()
     var noiseGenerator = P5NoiseGenerator()
     var currentAngleMode = P5AngleMode.radians
+    var shapeCommands: [P5PathCommand] = []
+    var isBuildingShape = false
+    var isInsideContour = false
+    var shapeHasEndpoint = false
 
     /// A human-readable title that clients can use when presenting the sketch.
     public var title: String?
@@ -65,6 +69,10 @@ open class P5Sketch {
     /// This method corresponds to
     /// [p5.js `draw()`](https://p5js.org/reference/p5/draw/).
     open func draw() {}
+
+    func queueOperation(_ operation: P5Operation) {
+        internalView.addOperation(operation)
+    }
 }
 
 // MARK: - Environment
@@ -241,6 +249,110 @@ public extension P5Sketch {
             .ellipse(x: x, y: y, width: width, height: height)
         )
     }
+
+    /// Draws a point using the current stroke color and weight.
+    func point(_ x: CGFloat, _ y: CGFloat) {
+        internalView.addOperation(.point(x: x, y: y))
+    }
+
+    /// Draws a triangle from three vertices.
+    func triangle(
+        _ x1: CGFloat,
+        _ y1: CGFloat,
+        _ x2: CGFloat,
+        _ y2: CGFloat,
+        _ x3: CGFloat,
+        _ y3: CGFloat
+    ) {
+        internalView.addOperation(
+            .polygon([
+                CGPoint(x: x1, y: y1),
+                CGPoint(x: x2, y: y2),
+                CGPoint(x: x3, y: y3),
+            ])
+        )
+    }
+
+    /// Draws a quadrilateral from four vertices.
+    func quad(
+        _ x1: CGFloat,
+        _ y1: CGFloat,
+        _ x2: CGFloat,
+        _ y2: CGFloat,
+        _ x3: CGFloat,
+        _ y3: CGFloat,
+        _ x4: CGFloat,
+        _ y4: CGFloat
+    ) {
+        internalView.addOperation(
+            .polygon([
+                CGPoint(x: x1, y: y1),
+                CGPoint(x: x2, y: y2),
+                CGPoint(x: x3, y: y3),
+                CGPoint(x: x4, y: y4),
+            ])
+        )
+    }
+
+    /// Draws an elliptical arc using angles in the current angle mode.
+    func arc(
+        _ x: CGFloat,
+        _ y: CGFloat,
+        _ width: CGFloat,
+        _ height: CGFloat,
+        _ start: CGFloat,
+        _ stop: CGFloat,
+        _ mode: P5ArcMode = .open
+    ) {
+        internalView.addOperation(
+            .arc(
+                x: x,
+                y: y,
+                width: width,
+                height: height,
+                start: currentAngleMode.radians(from: start),
+                stop: currentAngleMode.radians(from: stop),
+                mode: mode
+            )
+        )
+    }
+
+    /// Draws a rectangle with uniformly rounded corners.
+    func rect(
+        _ x: CGFloat,
+        _ y: CGFloat,
+        _ width: CGFloat,
+        _ height: CGFloat,
+        cornerRadius: CGFloat
+    ) {
+        internalView.addOperation(
+            .roundedRect(
+                x: x,
+                y: y,
+                width: width,
+                height: height,
+                cornerRadius: cornerRadius
+            )
+        )
+    }
+
+    /// Draws a regular polygon centered at a point.
+    func regularPolygon(
+        _ x: CGFloat,
+        _ y: CGFloat,
+        radius: CGFloat,
+        sides: Int,
+        rotation: CGFloat = 0
+    ) {
+        precondition(sides >= 3)
+        precondition(radius.isFinite && radius >= 0)
+        let start = currentAngleMode.radians(from: rotation)
+        let points = (0..<sides).map { index in
+            let angle = start + (2 * .pi * CGFloat(index) / CGFloat(sides))
+            return CGPoint(x: x + cos(angle) * radius, y: y + sin(angle) * radius)
+        }
+        internalView.addOperation(.polygon(points))
+    }
 }
 
 // MARK: - Transformations
@@ -266,6 +378,36 @@ public extension P5Sketch {
     ///   - y: The vertical translation.
     func translate(_ x: CGFloat, _ y: CGFloat) {
         internalView.addOperation(.translate(x: x, y: y))
+    }
+
+    /// Scales both coordinate axes by the same factor.
+    func scale(_ factor: CGFloat) {
+        scale(factor, factor)
+    }
+
+    /// Scales the horizontal and vertical coordinate axes independently.
+    func scale(_ x: CGFloat, _ y: CGFloat) {
+        internalView.addOperation(.scale(x: x, y: y))
+    }
+
+    /// Shears the horizontal axis by an angle in the current angle mode.
+    func shearX(_ angle: CGFloat) {
+        internalView.addOperation(.shearX(tan(currentAngleMode.radians(from: angle))))
+    }
+
+    /// Shears the vertical axis by an angle in the current angle mode.
+    func shearY(_ angle: CGFloat) {
+        internalView.addOperation(.shearY(tan(currentAngleMode.radians(from: angle))))
+    }
+
+    /// Concatenates a Core Graphics affine transformation.
+    func applyMatrix(_ transform: CGAffineTransform) {
+        internalView.addOperation(.applyMatrix(transform))
+    }
+
+    /// Restores the coordinate system used at the beginning of the frame.
+    func resetMatrix() {
+        internalView.addOperation(.resetMatrix)
     }
 }
 
