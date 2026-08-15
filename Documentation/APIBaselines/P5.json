@@ -263,6 +263,151 @@
           },
           {
             "kind": "Var",
+            "name": "frameDriver",
+            "printedName": "frameDriver",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5FrameDriver",
+                "printedName": "P5.P5FrameDriver",
+                "usr": "s:2P50A11FrameDriverO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC11frameDriverAA0a5FrameD0Ovp",
+            "mangledName": "$s2P50A6SketchC11frameDriverAA0a5FrameD0Ovp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5FrameDriver",
+                    "printedName": "P5.P5FrameDriver",
+                    "usr": "s:2P50A11FrameDriverO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC11frameDriverAA0a5FrameD0Ovg",
+                "mangledName": "$s2P50A6SketchC11frameDriverAA0a5FrameD0Ovg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "frameCount",
+            "printedName": "frameCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC10frameCounts6UInt64Vvp",
+            "mangledName": "$s2P50A6SketchC10frameCounts6UInt64Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC10frameCounts6UInt64Vvg",
+                "mangledName": "$s2P50A6SketchC10frameCounts6UInt64Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deltaTime",
+            "printedName": "deltaTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC9deltaTimeSdvp",
+            "mangledName": "$s2P50A6SketchC9deltaTimeSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC9deltaTimeSdvg",
+                "mangledName": "$s2P50A6SketchC9deltaTimeSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "view",
             "printedName": "view",
             "children": [
@@ -336,6 +481,45 @@
             "declKind": "Constructor",
             "usr": "s:2P50A6SketchC4sizeACSo6CGSizeV_tcfc",
             "mangledName": "$s2P50A6SketchC4sizeACSo6CGSizeV_tcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(size:clock:frameDriver:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Sketch",
+                "printedName": "P5.P5Sketch",
+                "usr": "s:2P50A6SketchC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Clock",
+                "printedName": "any P5.P5Clock",
+                "usr": "s:2P50A5ClockP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5FrameDriver",
+                "printedName": "P5.P5FrameDriver",
+                "usr": "s:2P50A11FrameDriverO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6SketchC4size5clock11frameDriverACSo6CGSizeV_AA0A5Clock_pAA0a5FrameF0Otcfc",
+            "mangledName": "$s2P50A6SketchC4size5clock11frameDriverACSo6CGSizeV_AA0A5Clock_pAA0a5FrameF0Otcfc",
             "moduleName": "P5",
             "declAttributes": [
               "Custom"
@@ -433,6 +617,50 @@
             "declKind": "Func",
             "usr": "s:2P50A6SketchC9frameRateyySdF",
             "mangledName": "$s2P50A6SketchC9frameRateyySdF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "frameRate",
+            "printedName": "frameRate()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC9frameRateSdyF",
+            "mangledName": "$s2P50A6SketchC9frameRateSdyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "millis",
+            "printedName": "millis()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6millisSdyF",
+            "mangledName": "$s2P50A6SketchC6millisSdyF",
             "moduleName": "P5",
             "declAttributes": [
               "Custom"
@@ -581,6 +809,27 @@
             "declKind": "Func",
             "usr": "s:2P50A6SketchC6redrawyyF",
             "mangledName": "$s2P50A6SketchC6redrawyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "advanceFrame",
+            "printedName": "advanceFrame()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12advanceFrameyyF",
+            "mangledName": "$s2P50A6SketchC12advanceFrameyyF",
             "moduleName": "P5",
             "declAttributes": [
               "Custom"
@@ -3960,6 +4209,815 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Clock",
+        "printedName": "P5Clock",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "now",
+            "printedName": "now",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5ClockP3nowSdvp",
+            "mangledName": "$s2P50A5ClockP3nowSdvp",
+            "moduleName": "P5",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimeInterval",
+                    "printedName": "Foundation.TimeInterval",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5ClockP3nowSdvg",
+                "mangledName": "$s2P50A5ClockP3nowSdvg",
+                "moduleName": "P5",
+                "genericSig": "<Self where Self : P5.P5Clock>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:2P50A5ClockP",
+        "mangledName": "$s2P50A5ClockP",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5SystemClock",
+        "printedName": "P5SystemClock",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5SystemClock",
+                "printedName": "P5.P5SystemClock",
+                "usr": "s:2P50A11SystemClockV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11SystemClockVACycfc",
+            "mangledName": "$s2P50A11SystemClockVACycfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "now",
+            "printedName": "now",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11SystemClockV3nowSdvp",
+            "mangledName": "$s2P50A11SystemClockV3nowSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimeInterval",
+                    "printedName": "Foundation.TimeInterval",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11SystemClockV3nowSdvg",
+                "mangledName": "$s2P50A11SystemClockV3nowSdvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A11SystemClockV",
+        "mangledName": "$s2P50A11SystemClockV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "P5Clock",
+            "printedName": "P5Clock",
+            "usr": "s:2P50A5ClockP",
+            "mangledName": "$s2P50A5ClockP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ManualClock",
+        "printedName": "P5ManualClock",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "now",
+            "printedName": "now",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11ManualClockC3nowSdvp",
+            "mangledName": "$s2P50A11ManualClockC3nowSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimeInterval",
+                    "printedName": "Foundation.TimeInterval",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11ManualClockC3nowSdvg",
+                "mangledName": "$s2P50A11ManualClockC3nowSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(initialTime:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ManualClock",
+                "printedName": "P5.P5ManualClock",
+                "usr": "s:2P50A11ManualClockC"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11ManualClockC11initialTimeACSd_tcfc",
+            "mangledName": "$s2P50A11ManualClockC11initialTimeACSd_tcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "advance",
+            "printedName": "advance(by:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11ManualClockC7advance2byySd_tF",
+            "mangledName": "$s2P50A11ManualClockC7advance2byySd_tF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A11ManualClockC",
+        "mangledName": "$s2P50A11ManualClockC",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Final",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "P5Clock",
+            "printedName": "P5Clock",
+            "usr": "s:2P50A5ClockP",
+            "mangledName": "$s2P50A5ClockP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5FrameDriver",
+        "printedName": "P5FrameDriver",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "automatic",
+            "printedName": "automatic",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5FrameDriver.Type) -> P5.P5FrameDriver",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5FrameDriver",
+                    "printedName": "P5.P5FrameDriver",
+                    "usr": "s:2P50A11FrameDriverO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5FrameDriver.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5FrameDriver",
+                        "printedName": "P5.P5FrameDriver",
+                        "usr": "s:2P50A11FrameDriverO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11FrameDriverO9automaticyA2CmF",
+            "mangledName": "$s2P50A11FrameDriverO9automaticyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "manual",
+            "printedName": "manual",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5FrameDriver.Type) -> P5.P5FrameDriver",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5FrameDriver",
+                    "printedName": "P5.P5FrameDriver",
+                    "usr": "s:2P50A11FrameDriverO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5FrameDriver.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5FrameDriver",
+                        "printedName": "P5.P5FrameDriver",
+                        "usr": "s:2P50A11FrameDriverO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11FrameDriverO6manualyA2CmF",
+            "mangledName": "$s2P50A11FrameDriverO6manualyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5FrameDriver]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5FrameDriver",
+                    "printedName": "P5.P5FrameDriver",
+                    "usr": "s:2P50A11FrameDriverO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A11FrameDriverO8AllCasesa",
+            "mangledName": "$s2P50A11FrameDriverO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5FrameDriver",
+                "printedName": "P5.P5FrameDriver",
+                "usr": "s:2P50A11FrameDriverO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5FrameDriver",
+                "printedName": "P5.P5FrameDriver",
+                "usr": "s:2P50A11FrameDriverO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11FrameDriverO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A11FrameDriverO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5FrameDriver]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5FrameDriver",
+                    "printedName": "P5.P5FrameDriver",
+                    "usr": "s:2P50A11FrameDriverO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11FrameDriverO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A11FrameDriverO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5FrameDriver]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5FrameDriver",
+                        "printedName": "P5.P5FrameDriver",
+                        "usr": "s:2P50A11FrameDriverO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11FrameDriverO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A11FrameDriverO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11FrameDriverO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A11FrameDriverO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11FrameDriverO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A11FrameDriverO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11FrameDriverO9hashValueSivp",
+            "mangledName": "$s2P50A11FrameDriverO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11FrameDriverO9hashValueSivg",
+                "mangledName": "$s2P50A11FrameDriverO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5FrameDriver",
+                "printedName": "P5.P5FrameDriver",
+                "usr": "s:2P50A11FrameDriverO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11FrameDriverO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A11FrameDriverO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A11FrameDriverO",
+        "mangledName": "$s2P50A11FrameDriverO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5FrameDriver]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5FrameDriver",
+                        "printedName": "P5.P5FrameDriver",
+                        "usr": "s:2P50A11FrameDriverO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",

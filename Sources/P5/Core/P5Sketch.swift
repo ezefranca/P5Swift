@@ -1,4 +1,5 @@
 import CoreGraphics
+import Foundation
 
 /// A native drawing canvas with a lifecycle modeled after a p5.js sketch.
 ///
@@ -7,6 +8,9 @@ import CoreGraphics
 @MainActor
 open class P5Sketch {
     private let internalView: P5SketchInternalView
+    private let clock: any P5Clock
+    private let clockOrigin: TimeInterval
+    private var previousFrameTime: TimeInterval
     var randomGenerator = P5RandomGenerator()
     var noiseGenerator = P5NoiseGenerator()
     var currentAngleMode = P5AngleMode.radians
@@ -27,6 +31,20 @@ open class P5Sketch {
     /// The canvas height in points.
     public let height: CGFloat
 
+    /// The source of frame requests for this sketch.
+    public let frameDriver: P5FrameDriver
+
+    /// The number of frames whose `draw()` callback has begun.
+    public private(set) var frameCount: UInt64 = 0
+
+    /// The elapsed time between the two most recent frames, in milliseconds.
+    ///
+    /// The value is zero before the first frame and whenever two manual frames
+    /// are requested without advancing their clock.
+    public private(set) var deltaTime = 0.0
+
+    private var measuredFramesPerSecond = 0.0
+
     /// The native view that displays the sketch.
     ///
     /// ```swift
@@ -42,12 +60,39 @@ open class P5Sketch {
     /// The initializer invokes ``setup()`` after the canvas is ready.
     ///
     /// - Parameter size: The canvas size in points.
-    public init(size: CGSize) {
-        internalView = P5SketchInternalView(size: size)
+    public convenience init(size: CGSize) {
+        self.init(size: size, clock: P5SystemClock(), frameDriver: .automatic)
+    }
+
+    /// Creates a sketch with an explicit clock and frame driver.
+    ///
+    /// Use ``P5ManualClock`` with ``P5FrameDriver/manual`` when a sketch must
+    /// produce repeatable timing in a test, preview, export, or simulation.
+    ///
+    /// - Parameters:
+    ///   - size: The canvas size in points.
+    ///   - clock: A finite monotonic clock. The sketch measures elapsed time
+    ///     relative to its value during initialization.
+    ///   - frameDriver: The source of frame requests.
+    public init(
+        size: CGSize,
+        clock: any P5Clock,
+        frameDriver: P5FrameDriver
+    ) {
+        let initialTime = clock.now
+        precondition(initialTime.isFinite)
+        self.clock = clock
+        clockOrigin = initialTime
+        previousFrameTime = initialTime
+        self.frameDriver = frameDriver
+        internalView = P5SketchInternalView(
+            size: size,
+            automaticallyDriven: frameDriver == .automatic
+        )
         width = size.width
         height = size.height
         internalView.onDraw = { [weak self] in
-            self?.draw()
+            self?.performFrame()
         }
         setup()
     }
@@ -73,6 +118,18 @@ open class P5Sketch {
     /// [p5.js `draw()`](https://p5js.org/reference/p5/draw/).
     open func draw() {}
 
+    private func performFrame() {
+        let currentTime = clock.now
+        precondition(currentTime.isFinite && currentTime >= previousFrameTime)
+        let elapsed = currentTime - previousFrameTime
+        deltaTime = elapsed * 1_000
+        measuredFramesPerSecond = elapsed > 0 ? 1 / elapsed : 0
+        previousFrameTime = currentTime
+        precondition(frameCount < .max)
+        frameCount += 1
+        draw()
+    }
+
     func queueOperation(_ operation: P5Operation) {
         internalView.addOperation(operation)
     }
@@ -90,6 +147,24 @@ public extension P5Sketch {
     func frameRate(_ framesPerSecond: Double) {
         precondition(framesPerSecond.isFinite && framesPerSecond > 0)
         internalView.framesPerSecond = framesPerSecond
+    }
+
+    /// Returns the measured rate of the most recently drawn frame.
+    ///
+    /// The value is zero before the first frame or when no clock time elapsed
+    /// between two manual frames.
+    func frameRate() -> Double {
+        measuredFramesPerSecond
+    }
+
+    /// Returns milliseconds elapsed since this sketch was initialized.
+    ///
+    /// Unlike wall-clock time, this value cannot be affected by clock changes,
+    /// time zones, or device sleep corrections.
+    func millis() -> Double {
+        let currentTime = clock.now
+        precondition(currentTime.isFinite && currentTime >= clockOrigin)
+        return (currentTime - clockOrigin) * 1_000
     }
 
     /// Creates a vector for positions, motion, and creative-coding math.
@@ -154,6 +229,17 @@ public extension P5Sketch {
         if !internalView.isLooping {
             internalView.userWantsRedraw = true
         }
+    }
+
+    /// Requests one frame from a manually driven sketch.
+    ///
+    /// The method synchronously updates timing and invokes ``draw()``. The native
+    /// view presents the queued drawing operations on its next display pass.
+    /// Advance a ``P5ManualClock`` first to control ``deltaTime``.
+    func advanceFrame() {
+        precondition(frameDriver == .manual)
+        performFrame()
+        internalView.requestManualFrame()
     }
 }
 

@@ -9,6 +9,7 @@ import CoreGraphics
 @MainActor
 final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
     private let renderer: P5Renderer
+    private let automaticallyDriven: Bool
 
     var isLooping = true {
         didSet {
@@ -46,11 +47,14 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         }
     #endif
 
-    init(size: CGSize) {
+    init(size: CGSize, automaticallyDriven: Bool) {
         renderer = P5Renderer()
+        self.automaticallyDriven = automaticallyDriven
         renderer.size = size
         super.init(frame: .init(origin: .zero, size: size))
-        startAnimation()
+        if automaticallyDriven {
+            startAnimation()
+        }
     }
 
     @available(*, unavailable)
@@ -89,9 +93,16 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         renderer.addOperation(operation)
     }
 
+    func requestManualFrame() {
+        userWantsRedraw = true
+    }
+
     private func render(in context: CGContext) {
-        if isLooping || userWantsRedraw {
+        if automaticallyDriven && (isLooping || userWantsRedraw) {
             onDraw()
+            renderer.render(in: context)
+            userWantsRedraw = false
+        } else if userWantsRedraw {
             renderer.render(in: context)
             userWantsRedraw = false
         }

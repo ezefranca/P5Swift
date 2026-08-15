@@ -1,6 +1,7 @@
 import P5
 import Testing
 
+@MainActor
 @Suite("P5 public client")
 struct P5PublicAPITests {
     @Test("The P5 product exposes math APIs without testable import")
@@ -8,6 +9,7 @@ struct P5PublicAPITests {
         let velocity = P5Vector(x: 3, y: 4)
         var random = P5RandomGenerator(seed: 5)
         let noise = P5NoiseGenerator(seed: 5)
+        let clock = P5ManualClock()
         let color = try P5Color(hex: "#336699")
 
         #expect(velocity.mag() == 5)
@@ -23,6 +25,8 @@ struct P5PublicAPITests {
         #expect(P5StrokeJoin.allCases == [.miter, .bevel, .round])
         #expect(P5FillRule.allCases == [.nonZero, .evenOdd])
         #expect(P5BlendMode.allCases == [.normal, .multiply, .screen, .add])
+        #expect(P5FrameDriver.allCases == [.automatic, .manual])
+        #expect(clock.now == 0)
         #expect(color.alpha == 1)
     }
 }
