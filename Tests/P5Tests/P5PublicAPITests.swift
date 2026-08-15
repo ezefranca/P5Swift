@@ -30,6 +30,8 @@ struct P5PublicAPITests {
         #expect(P5PointerPhase.allCases.count == 8)
         #expect(P5PointerButtons.primary.rawValue == 1)
         #expect(P5ModifierKeys.command.rawValue == 8)
+        #expect(P5KeyboardPhase.allCases == [.pressed, .released, .typed, .cancelled])
+        #expect(P5Key.arrowUp != .arrowDown)
         #expect(clock.now == 0)
         #expect(color.alpha == 1)
     }

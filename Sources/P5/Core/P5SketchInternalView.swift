@@ -36,8 +36,13 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
 
     var onDraw: () -> Void = {}
     var onPointerEvent: (P5PointerEvent) -> Void = { _ in }
+    var onKeyboardEvent: (P5KeyboardEvent) -> Void = { _ in }
 
     #if canImport(UIKit)
+        override var canBecomeFirstResponder: Bool {
+            true
+        }
+
         private var displayLink: CADisplayLink?
         private var displayLinkTarget: P5DisplayLinkTarget?
         private var nextTouchID: UInt64 = 1
@@ -109,6 +114,10 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
 
     func deliverPointerEvent(_ event: P5PointerEvent) {
         onPointerEvent(event)
+    }
+
+    func deliverKeyboardEvent(_ event: P5KeyboardEvent) {
+        onKeyboardEvent(event)
     }
 
     private func render(in context: CGContext) {
@@ -325,10 +334,266 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         static func normalizedPressure(_ pressure: Float) -> CGFloat? {
             pressure.isFinite ? CGFloat(min(max(pressure, 0), 1)) : nil
         }
+
+        override func keyDown(with event: NSEvent) {
+            let key = Self.semanticKey(
+                forAppKitKeyCode: event.keyCode,
+                characters: event.charactersIgnoringModifiers
+            )
+            let modifiers = Self.modifierKeys(from: event.modifierFlags)
+            deliverKeyboardEvent(
+                P5KeyboardEvent(
+                    phase: .pressed,
+                    key: key,
+                    characters: Self.nonempty(event.characters),
+                    platformKeyCode: event.keyCode,
+                    modifiers: modifiers,
+                    isRepeat: event.isARepeat,
+                    timestamp: event.timestamp
+                )
+            )
+
+            if key.producesTypedText,
+                !modifiers.contains(.command),
+                !modifiers.contains(.control),
+                let characters = event.characters,
+                !characters.isEmpty
+            {
+                deliverKeyboardEvent(
+                    P5KeyboardEvent(
+                        phase: .typed,
+                        key: key,
+                        characters: characters,
+                        platformKeyCode: event.keyCode,
+                        modifiers: modifiers,
+                        isRepeat: event.isARepeat,
+                        timestamp: event.timestamp
+                    )
+                )
+            }
+        }
+
+        override func keyUp(with event: NSEvent) {
+            deliverKeyboardEvent(
+                P5KeyboardEvent(
+                    phase: .released,
+                    key: Self.semanticKey(
+                        forAppKitKeyCode: event.keyCode,
+                        characters: event.charactersIgnoringModifiers
+                    ),
+                    characters: Self.nonempty(event.characters),
+                    platformKeyCode: event.keyCode,
+                    modifiers: Self.modifierKeys(from: event.modifierFlags),
+                    isRepeat: false,
+                    timestamp: event.timestamp
+                )
+            )
+        }
+
+        override func flagsChanged(with event: NSEvent) {
+            let key = Self.semanticModifier(forAppKitKeyCode: event.keyCode)
+            let modifiers = Self.modifierKeys(from: event.modifierFlags)
+            deliverKeyboardEvent(
+                P5KeyboardEvent(
+                    phase: Self.isModifier(key, heldIn: modifiers) ? .pressed : .released,
+                    key: key,
+                    platformKeyCode: event.keyCode,
+                    modifiers: modifiers,
+                    timestamp: event.timestamp
+                )
+            )
+        }
+
+        static func semanticKey(forAppKitKeyCode keyCode: UInt16, characters: String?) -> P5Key {
+            switch keyCode {
+            case 36, 76: .enter
+            case 48: .tab
+            case 51: .backspace
+            case 117: .delete
+            case 53: .escape
+            case 49: .space
+            case 123: .arrowLeft
+            case 124: .arrowRight
+            case 126: .arrowUp
+            case 125: .arrowDown
+            case 115: .home
+            case 119: .end
+            case 116: .pageUp
+            case 121: .pageDown
+            case 122: .function(1)
+            case 120: .function(2)
+            case 99: .function(3)
+            case 118: .function(4)
+            case 96: .function(5)
+            case 97: .function(6)
+            case 98: .function(7)
+            case 100: .function(8)
+            case 101: .function(9)
+            case 109: .function(10)
+            case 103: .function(11)
+            case 111: .function(12)
+            case 105: .function(13)
+            case 107: .function(14)
+            case 113: .function(15)
+            case 106: .function(16)
+            case 64: .function(17)
+            case 79: .function(18)
+            case 80: .function(19)
+            case 90: .function(20)
+            default:
+                if let characters, !characters.isEmpty {
+                    .character(characters)
+                } else {
+                    .unidentified(keyCode)
+                }
+            }
+        }
+
+        static func semanticModifier(forAppKitKeyCode keyCode: UInt16) -> P5Key {
+            switch keyCode {
+            case 56, 60: .shift
+            case 59, 62: .control
+            case 58, 61: .option
+            case 54, 55: .command
+            case 57: .capsLock
+            case 63: .functionModifier
+            default: .unidentified(keyCode)
+            }
+        }
+
+        static func isModifier(_ key: P5Key, heldIn modifiers: P5ModifierKeys) -> Bool {
+            switch key {
+            case .shift: modifiers.contains(.shift)
+            case .control: modifiers.contains(.control)
+            case .option: modifiers.contains(.option)
+            case .command: modifiers.contains(.command)
+            case .capsLock: modifiers.contains(.capsLock)
+            case .functionModifier: modifiers.contains(.function)
+            default: false
+            }
+        }
+
+        static func nonempty(_ value: String?) -> String? {
+            guard let value, !value.isEmpty else {
+                return nil
+            }
+            return value
+        }
     #endif
 
     #if canImport(UIKit)
+        override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+            for press in orderedPresses(presses) {
+                deliverPress(press, phase: .pressed)
+                guard
+                    let nativeKey = press.key,
+                    let characters = nonempty(nativeKey.characters),
+                    semanticKey(for: nativeKey).producesTypedText,
+                    !nativeKey.modifierFlags.contains(.command),
+                    !nativeKey.modifierFlags.contains(.control)
+                else {
+                    continue
+                }
+                deliverKeyboardEvent(
+                    keyboardEvent(
+                        for: press,
+                        phase: .typed,
+                        characters: characters
+                    )
+                )
+            }
+        }
+
+        override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+            for press in orderedPresses(presses) {
+                deliverPress(press, phase: .released)
+            }
+        }
+
+        override func pressesCancelled(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+            for press in orderedPresses(presses) {
+                deliverPress(press, phase: .cancelled)
+            }
+        }
+
+        private func orderedPresses(_ presses: Set<UIPress>) -> [UIPress] {
+            presses.sorted {
+                ($0.key?.keyCode.rawValue ?? 0) < ($1.key?.keyCode.rawValue ?? 0)
+            }
+        }
+
+        private func deliverPress(_ press: UIPress, phase: P5KeyboardPhase) {
+            deliverKeyboardEvent(keyboardEvent(for: press, phase: phase))
+        }
+
+        private func keyboardEvent(
+            for press: UIPress,
+            phase: P5KeyboardPhase,
+            characters: String? = nil
+        ) -> P5KeyboardEvent {
+            guard let nativeKey = press.key else {
+                return P5KeyboardEvent(
+                    phase: phase,
+                    key: .unidentified(0),
+                    timestamp: press.timestamp
+                )
+            }
+            return P5KeyboardEvent(
+                phase: phase,
+                key: semanticKey(for: nativeKey),
+                characters: characters ?? nonempty(nativeKey.characters),
+                platformKeyCode: UInt16(truncatingIfNeeded: nativeKey.keyCode.rawValue),
+                modifiers: Self.modifierKeys(from: nativeKey.modifierFlags),
+                isRepeat: false,
+                timestamp: press.timestamp
+            )
+        }
+
+        private func semanticKey(for key: UIKey) -> P5Key {
+            Self.semanticKey(
+                forHIDUsage: UInt16(truncatingIfNeeded: key.keyCode.rawValue),
+                characters: nonempty(key.charactersIgnoringModifiers)
+            )
+        }
+
+        private func nonempty(_ value: String) -> String? {
+            value.isEmpty ? nil : value
+        }
+
+        static func semanticKey(forHIDUsage usage: UInt16, characters: String?) -> P5Key {
+            switch usage {
+            case 40: .enter
+            case 43: .tab
+            case 42: .backspace
+            case 76: .delete
+            case 41: .escape
+            case 44: .space
+            case 80: .arrowLeft
+            case 79: .arrowRight
+            case 82: .arrowUp
+            case 81: .arrowDown
+            case 74: .home
+            case 77: .end
+            case 75: .pageUp
+            case 78: .pageDown
+            case 225, 229: .shift
+            case 224, 228: .control
+            case 226, 230: .option
+            case 227, 231: .command
+            case 57: .capsLock
+            case 58...69: .function(Int(usage - 57))
+            case 104...115: .function(Int(usage - 91))
+            default:
+                if let characters, !characters.isEmpty {
+                    .character(characters)
+                } else {
+                    .unidentified(usage)
+                }
+            }
+        }
+
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            becomeFirstResponder()
             for touch in orderedTouches(touches) {
                 let key = ObjectIdentifier(touch)
                 touchOrigins[key] = (touch.location(in: self), touch.timestamp)

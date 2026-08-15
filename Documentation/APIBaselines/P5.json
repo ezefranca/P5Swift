@@ -616,6 +616,174 @@
           },
           {
             "kind": "Var",
+            "name": "pressedKeys",
+            "printedName": "pressedKeys",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<P5.P5Key>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC11pressedKeysShyAA0A3KeyOGvp",
+            "mangledName": "$s2P50A6SketchC11pressedKeysShyAA0A3KeyOGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<P5.P5Key>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC11pressedKeysShyAA0A3KeyOGvg",
+                "mangledName": "$s2P50A6SketchC11pressedKeysShyAA0A3KeyOGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestKeyboardEvent",
+            "printedName": "latestKeyboardEvent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5KeyboardEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardEvent",
+                    "printedName": "P5.P5KeyboardEvent",
+                    "usr": "s:2P50A13KeyboardEventV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC19latestKeyboardEventAA0adE0VSgvp",
+            "mangledName": "$s2P50A6SketchC19latestKeyboardEventAA0adE0VSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "P5.P5KeyboardEvent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5KeyboardEvent",
+                        "printedName": "P5.P5KeyboardEvent",
+                        "usr": "s:2P50A13KeyboardEventV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC19latestKeyboardEventAA0adE0VSgvg",
+                "mangledName": "$s2P50A6SketchC19latestKeyboardEventAA0adE0VSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isKeyPressed",
+            "printedName": "isKeyPressed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC12isKeyPressedSbvp",
+            "mangledName": "$s2P50A6SketchC12isKeyPressedSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC12isKeyPressedSbvg",
+                "mangledName": "$s2P50A6SketchC12isKeyPressedSbvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "frameCount",
             "printedName": "frameCount",
             "children": [
@@ -1115,6 +1283,142 @@
             "declAttributes": [
               "Custom"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "keyPressed",
+            "printedName": "keyPressed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC10keyPressedyyAA0A13KeyboardEventVF",
+            "mangledName": "$s2P50A6SketchC10keyPressedyyAA0A13KeyboardEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "keyReleased",
+            "printedName": "keyReleased(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC11keyReleasedyyAA0A13KeyboardEventVF",
+            "mangledName": "$s2P50A6SketchC11keyReleasedyyAA0A13KeyboardEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "keyTyped",
+            "printedName": "keyTyped(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC8keyTypedyyAA0A13KeyboardEventVF",
+            "mangledName": "$s2P50A6SketchC8keyTypedyyAA0A13KeyboardEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "keyCancelled",
+            "printedName": "keyCancelled(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12keyCancelledyyAA0A13KeyboardEventVF",
+            "mangledName": "$s2P50A6SketchC12keyCancelledyyAA0A13KeyboardEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "keyIsDown",
+            "printedName": "keyIsDown(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Key",
+                "printedName": "P5.P5Key",
+                "usr": "s:2P50A3KeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC9keyIsDownySbAA0A3KeyOF",
+            "mangledName": "$s2P50A6SketchC9keyIsDownySbAA0A3KeyOF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -11023,6 +11327,2275 @@
             "usr": "s:s12CaseIterableP",
             "mangledName": "$ss12CaseIterableP"
           },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Key",
+        "printedName": "P5Key",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "character",
+            "printedName": "character",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> (Swift.String) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5Key",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO9characteryACSScACmF",
+            "mangledName": "$s2P50A3KeyO9characteryACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "enter",
+            "printedName": "enter",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO5enteryA2CmF",
+            "mangledName": "$s2P50A3KeyO5enteryA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "tab",
+            "printedName": "tab",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO3tabyA2CmF",
+            "mangledName": "$s2P50A3KeyO3tabyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "backspace",
+            "printedName": "backspace",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO9backspaceyA2CmF",
+            "mangledName": "$s2P50A3KeyO9backspaceyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "delete",
+            "printedName": "delete",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO6deleteyA2CmF",
+            "mangledName": "$s2P50A3KeyO6deleteyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "escape",
+            "printedName": "escape",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO6escapeyA2CmF",
+            "mangledName": "$s2P50A3KeyO6escapeyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "space",
+            "printedName": "space",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO5spaceyA2CmF",
+            "mangledName": "$s2P50A3KeyO5spaceyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "arrowLeft",
+            "printedName": "arrowLeft",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO9arrowLeftyA2CmF",
+            "mangledName": "$s2P50A3KeyO9arrowLeftyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "arrowRight",
+            "printedName": "arrowRight",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO10arrowRightyA2CmF",
+            "mangledName": "$s2P50A3KeyO10arrowRightyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "arrowUp",
+            "printedName": "arrowUp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO7arrowUpyA2CmF",
+            "mangledName": "$s2P50A3KeyO7arrowUpyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "arrowDown",
+            "printedName": "arrowDown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO9arrowDownyA2CmF",
+            "mangledName": "$s2P50A3KeyO9arrowDownyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "home",
+            "printedName": "home",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO4homeyA2CmF",
+            "mangledName": "$s2P50A3KeyO4homeyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "end",
+            "printedName": "end",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO3endyA2CmF",
+            "mangledName": "$s2P50A3KeyO3endyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "pageUp",
+            "printedName": "pageUp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO6pageUpyA2CmF",
+            "mangledName": "$s2P50A3KeyO6pageUpyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "pageDown",
+            "printedName": "pageDown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO8pageDownyA2CmF",
+            "mangledName": "$s2P50A3KeyO8pageDownyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "shift",
+            "printedName": "shift",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO5shiftyA2CmF",
+            "mangledName": "$s2P50A3KeyO5shiftyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "control",
+            "printedName": "control",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO7controlyA2CmF",
+            "mangledName": "$s2P50A3KeyO7controlyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "option",
+            "printedName": "option",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO6optionyA2CmF",
+            "mangledName": "$s2P50A3KeyO6optionyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "command",
+            "printedName": "command",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO7commandyA2CmF",
+            "mangledName": "$s2P50A3KeyO7commandyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "capsLock",
+            "printedName": "capsLock",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO8capsLockyA2CmF",
+            "mangledName": "$s2P50A3KeyO8capsLockyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "functionModifier",
+            "printedName": "functionModifier",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO16functionModifieryA2CmF",
+            "mangledName": "$s2P50A3KeyO16functionModifieryA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "function",
+            "printedName": "function",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> (Swift.Int) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> P5.P5Key",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO8functionyACSicACmF",
+            "mangledName": "$s2P50A3KeyO8functionyACSicACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "unidentified",
+            "printedName": "unidentified",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5Key.Type) -> (Swift.UInt16) -> P5.P5Key",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.UInt16) -> P5.P5Key",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt16",
+                        "printedName": "Swift.UInt16",
+                        "usr": "s:s6UInt16V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5Key.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Key",
+                        "printedName": "P5.P5Key",
+                        "usr": "s:2P50A3KeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A3KeyO12unidentifiedyACs6UInt16VcACmF",
+            "mangledName": "$s2P50A3KeyO12unidentifiedyACs6UInt16VcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Key",
+                "printedName": "P5.P5Key",
+                "usr": "s:2P50A3KeyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Key",
+                "printedName": "P5.P5Key",
+                "usr": "s:2P50A3KeyO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A3KeyO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A3KeyO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A3KeyO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A3KeyO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A3KeyO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A3KeyO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A3KeyO9hashValueSivp",
+            "mangledName": "$s2P50A3KeyO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A3KeyO9hashValueSivg",
+                "mangledName": "$s2P50A3KeyO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Key",
+                "printedName": "P5.P5Key",
+                "usr": "s:2P50A3KeyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A3KeyO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A3KeyO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A3KeyO",
+        "mangledName": "$s2P50A3KeyO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5KeyboardPhase",
+        "printedName": "P5KeyboardPhase",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "pressed",
+            "printedName": "pressed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5KeyboardPhase.Type) -> P5.P5KeyboardPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardPhase",
+                    "printedName": "P5.P5KeyboardPhase",
+                    "usr": "s:2P50A13KeyboardPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5KeyboardPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5KeyboardPhase",
+                        "printedName": "P5.P5KeyboardPhase",
+                        "usr": "s:2P50A13KeyboardPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13KeyboardPhaseO7pressedyA2CmF",
+            "mangledName": "$s2P50A13KeyboardPhaseO7pressedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "released",
+            "printedName": "released",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5KeyboardPhase.Type) -> P5.P5KeyboardPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardPhase",
+                    "printedName": "P5.P5KeyboardPhase",
+                    "usr": "s:2P50A13KeyboardPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5KeyboardPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5KeyboardPhase",
+                        "printedName": "P5.P5KeyboardPhase",
+                        "usr": "s:2P50A13KeyboardPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13KeyboardPhaseO8releasedyA2CmF",
+            "mangledName": "$s2P50A13KeyboardPhaseO8releasedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "typed",
+            "printedName": "typed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5KeyboardPhase.Type) -> P5.P5KeyboardPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardPhase",
+                    "printedName": "P5.P5KeyboardPhase",
+                    "usr": "s:2P50A13KeyboardPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5KeyboardPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5KeyboardPhase",
+                        "printedName": "P5.P5KeyboardPhase",
+                        "usr": "s:2P50A13KeyboardPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13KeyboardPhaseO5typedyA2CmF",
+            "mangledName": "$s2P50A13KeyboardPhaseO5typedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5KeyboardPhase.Type) -> P5.P5KeyboardPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardPhase",
+                    "printedName": "P5.P5KeyboardPhase",
+                    "usr": "s:2P50A13KeyboardPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5KeyboardPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5KeyboardPhase",
+                        "printedName": "P5.P5KeyboardPhase",
+                        "usr": "s:2P50A13KeyboardPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13KeyboardPhaseO9cancelledyA2CmF",
+            "mangledName": "$s2P50A13KeyboardPhaseO9cancelledyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5KeyboardPhase]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardPhase",
+                    "printedName": "P5.P5KeyboardPhase",
+                    "usr": "s:2P50A13KeyboardPhaseO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A13KeyboardPhaseO8AllCasesa",
+            "mangledName": "$s2P50A13KeyboardPhaseO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardPhase",
+                "printedName": "P5.P5KeyboardPhase",
+                "usr": "s:2P50A13KeyboardPhaseO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardPhase",
+                "printedName": "P5.P5KeyboardPhase",
+                "usr": "s:2P50A13KeyboardPhaseO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13KeyboardPhaseO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A13KeyboardPhaseO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5KeyboardPhase]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardPhase",
+                    "printedName": "P5.P5KeyboardPhase",
+                    "usr": "s:2P50A13KeyboardPhaseO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardPhaseO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A13KeyboardPhaseO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5KeyboardPhase]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5KeyboardPhase",
+                        "printedName": "P5.P5KeyboardPhase",
+                        "usr": "s:2P50A13KeyboardPhaseO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardPhaseO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A13KeyboardPhaseO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13KeyboardPhaseO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A13KeyboardPhaseO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13KeyboardPhaseO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A13KeyboardPhaseO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardPhaseO9hashValueSivp",
+            "mangledName": "$s2P50A13KeyboardPhaseO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardPhaseO9hashValueSivg",
+                "mangledName": "$s2P50A13KeyboardPhaseO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardPhase",
+                "printedName": "P5.P5KeyboardPhase",
+                "usr": "s:2P50A13KeyboardPhaseO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13KeyboardPhaseO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A13KeyboardPhaseO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A13KeyboardPhaseO",
+        "mangledName": "$s2P50A13KeyboardPhaseO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5KeyboardPhase]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5KeyboardPhase",
+                        "printedName": "P5.P5KeyboardPhase",
+                        "usr": "s:2P50A13KeyboardPhaseO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5KeyboardEvent",
+        "printedName": "P5KeyboardEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "phase",
+            "printedName": "phase",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardPhase",
+                "printedName": "P5.P5KeyboardPhase",
+                "usr": "s:2P50A13KeyboardPhaseO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV5phaseAA0aB5PhaseOvp",
+            "mangledName": "$s2P50A13KeyboardEventV5phaseAA0aB5PhaseOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5KeyboardPhase",
+                    "printedName": "P5.P5KeyboardPhase",
+                    "usr": "s:2P50A13KeyboardPhaseO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV5phaseAA0aB5PhaseOvg",
+                "mangledName": "$s2P50A13KeyboardEventV5phaseAA0aB5PhaseOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Key",
+                "printedName": "P5.P5Key",
+                "usr": "s:2P50A3KeyO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV3keyAA0A3KeyOvp",
+            "mangledName": "$s2P50A13KeyboardEventV3keyAA0A3KeyOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Key",
+                    "printedName": "P5.P5Key",
+                    "usr": "s:2P50A3KeyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV3keyAA0A3KeyOvg",
+                "mangledName": "$s2P50A13KeyboardEventV3keyAA0A3KeyOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "characters",
+            "printedName": "characters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV10charactersSSSgvp",
+            "mangledName": "$s2P50A13KeyboardEventV10charactersSSSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV10charactersSSSgvg",
+                "mangledName": "$s2P50A13KeyboardEventV10charactersSSSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "platformKeyCode",
+            "printedName": "platformKeyCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt16?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt16",
+                    "printedName": "Swift.UInt16",
+                    "usr": "s:s6UInt16V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV15platformKeyCodes6UInt16VSgvp",
+            "mangledName": "$s2P50A13KeyboardEventV15platformKeyCodes6UInt16VSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.UInt16?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt16",
+                        "printedName": "Swift.UInt16",
+                        "usr": "s:s6UInt16V"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV15platformKeyCodes6UInt16VSgvg",
+                "mangledName": "$s2P50A13KeyboardEventV15platformKeyCodes6UInt16VSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modifiers",
+            "printedName": "modifiers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV9modifiersAA0A12ModifierKeysVvp",
+            "mangledName": "$s2P50A13KeyboardEventV9modifiersAA0A12ModifierKeysVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV9modifiersAA0A12ModifierKeysVvg",
+                "mangledName": "$s2P50A13KeyboardEventV9modifiersAA0A12ModifierKeysVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isRepeat",
+            "printedName": "isRepeat",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV8isRepeatSbvp",
+            "mangledName": "$s2P50A13KeyboardEventV8isRepeatSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV8isRepeatSbvg",
+                "mangledName": "$s2P50A13KeyboardEventV8isRepeatSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV9timestampSdvp",
+            "mangledName": "$s2P50A13KeyboardEventV9timestampSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimeInterval",
+                    "printedName": "Foundation.TimeInterval",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV9timestampSdvg",
+                "mangledName": "$s2P50A13KeyboardEventV9timestampSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(phase:key:characters:platformKeyCode:modifiers:isRepeat:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardPhase",
+                "printedName": "P5.P5KeyboardPhase",
+                "usr": "s:2P50A13KeyboardPhaseO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Key",
+                "printedName": "P5.P5Key",
+                "usr": "s:2P50A3KeyO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt16?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt16",
+                    "printedName": "Swift.UInt16",
+                    "usr": "s:s6UInt16V"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A12ModifierKeysV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13KeyboardEventV5phase3key10characters15platformKeyCode9modifiers8isRepeat9timestampAcA0aB5PhaseO_AA0aH0OSSSgs6UInt16VSgAA0A12ModifierKeysVSbSdtcfc",
+            "mangledName": "$s2P50A13KeyboardEventV5phase3key10characters15platformKeyCode9modifiers8isRepeat9timestampAcA0aB5PhaseO_AA0aH0OSSSgs6UInt16VSgAA0A12ModifierKeysVSbSdtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13KeyboardEventV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A13KeyboardEventV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5KeyboardEvent",
+                "printedName": "P5.P5KeyboardEvent",
+                "usr": "s:2P50A13KeyboardEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13KeyboardEventV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A13KeyboardEventV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13KeyboardEventV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A13KeyboardEventV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13KeyboardEventV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A13KeyboardEventV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13KeyboardEventV9hashValueSivp",
+            "mangledName": "$s2P50A13KeyboardEventV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13KeyboardEventV9hashValueSivg",
+                "mangledName": "$s2P50A13KeyboardEventV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A13KeyboardEventV",
+        "mangledName": "$s2P50A13KeyboardEventV",
+        "moduleName": "P5",
+        "conformances": [
           {
             "kind": "Conformance",
             "name": "Copyable",

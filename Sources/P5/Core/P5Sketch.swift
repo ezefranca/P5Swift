@@ -52,6 +52,17 @@ open class P5Sketch {
     /// The most recently delivered pointer event, if one exists.
     public private(set) var latestPointerEvent: P5PointerEvent?
 
+    /// The semantic keys currently held down.
+    public private(set) var pressedKeys: Set<P5Key> = []
+
+    /// The most recently delivered keyboard event, if one exists.
+    public private(set) var latestKeyboardEvent: P5KeyboardEvent?
+
+    /// Whether at least one semantic key is currently held.
+    public var isKeyPressed: Bool {
+        !pressedKeys.isEmpty
+    }
+
     /// The number of frames whose `draw()` callback has begun.
     public private(set) var frameCount: UInt64 = 0
 
@@ -115,6 +126,9 @@ open class P5Sketch {
         internalView.onPointerEvent = { [weak self] event in
             self?.handlePointerEvent(event)
         }
+        internalView.onKeyboardEvent = { [weak self] event in
+            self?.handleKeyboardEvent(event)
+        }
         setup()
     }
 
@@ -163,6 +177,18 @@ open class P5Sketch {
     /// Responds when the platform cancels an active pointer interaction.
     open func pointerCancelled(_ event: P5PointerEvent) {}
 
+    /// Responds when a keyboard key becomes pressed or repeats.
+    open func keyPressed(_ event: P5KeyboardEvent) {}
+
+    /// Responds when a keyboard key is released.
+    open func keyReleased(_ event: P5KeyboardEvent) {}
+
+    /// Responds when a key produces printable text.
+    open func keyTyped(_ event: P5KeyboardEvent) {}
+
+    /// Responds when the platform cancels an active key interaction.
+    open func keyCancelled(_ event: P5KeyboardEvent) {}
+
     private func performFrame() {
         let currentTime = clock.now
         precondition(currentTime.isFinite && currentTime >= previousFrameTime)
@@ -205,6 +231,23 @@ open class P5Sketch {
         }
     }
 
+    private func handleKeyboardEvent(_ event: P5KeyboardEvent) {
+        latestKeyboardEvent = event
+        switch event.phase {
+        case .pressed:
+            pressedKeys.insert(event.key)
+            keyPressed(event)
+        case .released:
+            pressedKeys.remove(event.key)
+            keyReleased(event)
+        case .typed:
+            keyTyped(event)
+        case .cancelled:
+            pressedKeys.remove(event.key)
+            keyCancelled(event)
+        }
+    }
+
     func queueOperation(_ operation: P5Operation) {
         internalView.addOperation(operation)
     }
@@ -213,6 +256,11 @@ open class P5Sketch {
 // MARK: - Environment
 
 public extension P5Sketch {
+    /// Returns whether a semantic key is currently held.
+    func keyIsDown(_ key: P5Key) -> Bool {
+        pressedKeys.contains(key)
+    }
+
     /// Sets the target number of frames drawn each second.
     ///
     /// This method corresponds to
