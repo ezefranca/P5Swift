@@ -7,6 +7,8 @@ import CoreGraphics
 @MainActor
 open class P5Sketch {
     private let internalView: P5SketchInternalView
+    var randomGenerator = P5RandomGenerator()
+    var noiseGenerator = P5NoiseGenerator()
 
     /// A human-readable title that clients can use when presenting the sketch.
     public var title: String?
