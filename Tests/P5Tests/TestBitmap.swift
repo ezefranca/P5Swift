@@ -1,5 +1,22 @@
 import CoreGraphics
 
+func makeDeviceRGBColor(
+    red: CGFloat,
+    green: CGFloat,
+    blue: CGFloat,
+    alpha: CGFloat = 1
+) -> CGColor {
+    guard
+        let color = CGColor(
+            colorSpace: CGColorSpaceCreateDeviceRGB(),
+            components: [red, green, blue, alpha]
+        )
+    else {
+        preconditionFailure("Device RGB must accept four color components.")
+    }
+    return color
+}
+
 struct TestPixel: Equatable {
     let red: UInt8
     let green: UInt8
@@ -26,15 +43,17 @@ final class TestBitmap {
         )
         bytes.initialize(repeating: 0, count: bytesPerRow * height)
 
-        guard let context = CGContext(
-            data: bytes,
-            width: width,
-            height: height,
-            bitsPerComponent: 8,
-            bytesPerRow: bytesPerRow,
-            space: CGColorSpaceCreateDeviceRGB(),
-            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
-        ) else {
+        guard
+            let context = CGContext(
+                data: bytes,
+                width: width,
+                height: height,
+                bitsPerComponent: 8,
+                bytesPerRow: bytesPerRow,
+                space: CGColorSpaceCreateDeviceRGB(),
+                bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+            )
+        else {
             bytes.deallocate()
             return nil
         }

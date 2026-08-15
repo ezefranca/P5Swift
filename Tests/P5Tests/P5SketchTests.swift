@@ -2,6 +2,7 @@ import AppKit
 import CoreGraphics
 import SwiftUI
 import Testing
+
 @testable import P5
 
 @MainActor
@@ -17,9 +18,11 @@ struct P5SketchTests {
         #expect(sketch.setupCallCount == 1)
         #expect(sketch.title == "Lifecycle")
         #expect(sketch.view.isFlipped)
+        #expect(sketch.createVector(3, 4, 5) == P5Vector(x: 3, y: 4, z: 5))
     }
 
     @Test
+    @available(*, deprecated)
     func deprecatedInitializerAndDefaultLifecycleRemainFunctional() throws {
         let sketch = P5Sketch(ofSize: CGSize(width: 20, height: 20))
         let bitmap = try #require(TestBitmap(width: 20, height: 20))
@@ -163,14 +166,8 @@ private final class LifecycleSketch: P5Sketch {
     override func draw() {
         drawCallCount += 1
 
-        let red = CGColor(
-            colorSpace: CGColorSpaceCreateDeviceRGB(),
-            components: [1, 0, 0, 1]
-        )!
-        let green = CGColor(
-            colorSpace: CGColorSpaceCreateDeviceRGB(),
-            components: [0, 1, 0, 1]
-        )!
+        let red = makeDeviceRGBColor(red: 1, green: 0, blue: 0)
+        let green = makeDeviceRGBColor(red: 0, green: 1, blue: 0)
 
         background(red)
         fill(green)

@@ -1,5 +1,6 @@
 import CoreGraphics
 import Testing
+
 @testable import P5
 
 @Suite
@@ -227,16 +228,10 @@ struct P5RendererTests {
     }
 
     private var red: CGColor {
-        CGColor(
-            colorSpace: CGColorSpaceCreateDeviceRGB(),
-            components: [1, 0, 0, 1]
-        )!
+        makeDeviceRGBColor(red: 1, green: 0, blue: 0)
     }
 
     private var green: CGColor {
-        CGColor(
-            colorSpace: CGColorSpaceCreateDeviceRGB(),
-            components: [0, 1, 0, 1]
-        )!
+        makeDeviceRGBColor(red: 0, green: 1, blue: 0)
     }
 }

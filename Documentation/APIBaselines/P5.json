@@ -1,0 +1,3170 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "P5",
+    "printedName": "P5",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AppKit",
+        "printedName": "AppKit",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftOnoneSupport",
+        "printedName": "SwiftOnoneSupport",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
+        "name": "_Concurrency",
+        "printedName": "_Concurrency",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
+        "name": "_StringProcessing",
+        "printedName": "_StringProcessing",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
+        "name": "_SwiftConcurrencyShims",
+        "printedName": "_SwiftConcurrencyShims",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Sketch",
+        "printedName": "P5Sketch",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC5titleSSSgvp",
+            "mangledName": "$s2P50A6SketchC5titleSSSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC5titleSSSgvg",
+                "mangledName": "$s2P50A6SketchC5titleSSSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC5titleSSSgvs",
+                "mangledName": "$s2P50A6SketchC5titleSSSgvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "width",
+            "printedName": "width",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC5width14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s2P50A6SketchC5width12CoreGraphics7CGFloatVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC5width14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s2P50A6SketchC5width12CoreGraphics7CGFloatVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "height",
+            "printedName": "height",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC6height14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s2P50A6SketchC6height12CoreGraphics7CGFloatVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC6height14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s2P50A6SketchC6height12CoreGraphics7CGFloatVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "view",
+            "printedName": "view",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "P5CanvasView",
+                "printedName": "P5.P5CanvasView",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSView",
+                    "printedName": "AppKit.NSView",
+                    "usr": "c:objc(cs)NSView"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC4viewSo6NSViewCvp",
+            "mangledName": "$s2P50A6SketchC4viewSo6NSViewCvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "P5CanvasView",
+                    "printedName": "P5.P5CanvasView",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSView",
+                        "printedName": "AppKit.NSView",
+                        "usr": "c:objc(cs)NSView"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC4viewSo6NSViewCvg",
+                "mangledName": "$s2P50A6SketchC4viewSo6NSViewCvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(size:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Sketch",
+                "printedName": "P5.P5Sketch",
+                "usr": "s:2P50A6SketchC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6SketchC4sizeACSo6CGSizeV_tcfc",
+            "mangledName": "$s2P50A6SketchC4sizeACSo6CGSizeV_tcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(ofSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Sketch",
+                "printedName": "P5.P5Sketch",
+                "usr": "s:2P50A6SketchC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6SketchC6ofSizeACSo6CGSizeV_tcfc",
+            "mangledName": "$s2P50A6SketchC6ofSizeACSo6CGSizeV_tcfc",
+            "moduleName": "P5",
+            "deprecated": true,
+            "declAttributes": [
+              "Available",
+              "Custom"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "setup",
+            "printedName": "setup()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC5setupyyF",
+            "mangledName": "$s2P50A6SketchC5setupyyF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "draw",
+            "printedName": "draw()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC4drawyyF",
+            "mangledName": "$s2P50A6SketchC4drawyyF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "frameRate",
+            "printedName": "frameRate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC9frameRateyySdF",
+            "mangledName": "$s2P50A6SketchC9frameRateyySdF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createVector",
+            "printedName": "createVector(_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12createVectoryAA0aD0V14CoreFoundation7CGFloatV_A2ItF",
+            "mangledName": "$s2P50A6SketchC12createVectoryAA0aD0V12CoreGraphics7CGFloatV_A2ItF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "push",
+            "printedName": "push()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC4pushyyF",
+            "mangledName": "$s2P50A6SketchC4pushyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pop",
+            "printedName": "pop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC3popyyF",
+            "mangledName": "$s2P50A6SketchC3popyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loop",
+            "printedName": "loop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC4loopyyF",
+            "mangledName": "$s2P50A6SketchC4loopyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "noLoop",
+            "printedName": "noLoop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6noLoopyyF",
+            "mangledName": "$s2P50A6SketchC6noLoopyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "redraw",
+            "printedName": "redraw()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6redrawyyF",
+            "mangledName": "$s2P50A6SketchC6redrawyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "background",
+            "printedName": "background(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGColor",
+                "printedName": "CoreGraphics.CGColor",
+                "usr": "c:@T@CGColorRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC10backgroundyySo10CGColorRefaF",
+            "mangledName": "$s2P50A6SketchC10backgroundyySo10CGColorRefaF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "line",
+            "printedName": "line(_:_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC4lineyy14CoreFoundation7CGFloatV_A3GtF",
+            "mangledName": "$s2P50A6SketchC4lineyy12CoreGraphics7CGFloatV_A3GtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "rect",
+            "printedName": "rect(_:_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC4rectyy14CoreFoundation7CGFloatV_A3GtF",
+            "mangledName": "$s2P50A6SketchC4rectyy12CoreGraphics7CGFloatV_A3GtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "square",
+            "printedName": "square(_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6squareyy14CoreFoundation7CGFloatV_A2GtF",
+            "mangledName": "$s2P50A6SketchC6squareyy12CoreGraphics7CGFloatV_A2GtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "circle",
+            "printedName": "circle(_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6circleyy14CoreFoundation7CGFloatV_A2GtF",
+            "mangledName": "$s2P50A6SketchC6circleyy12CoreGraphics7CGFloatV_A2GtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "ellipse",
+            "printedName": "ellipse(_:_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC7ellipseyy14CoreFoundation7CGFloatV_A3GtF",
+            "mangledName": "$s2P50A6SketchC7ellipseyy12CoreGraphics7CGFloatV_A3GtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "rotate",
+            "printedName": "rotate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6rotateyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6SketchC6rotateyy12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "translate",
+            "printedName": "translate(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC9translateyy14CoreFoundation7CGFloatV_AGtF",
+            "mangledName": "$s2P50A6SketchC9translateyy12CoreGraphics7CGFloatV_AGtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fill",
+            "printedName": "fill(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGColor",
+                "printedName": "CoreGraphics.CGColor",
+                "usr": "c:@T@CGColorRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC4fillyySo10CGColorRefaF",
+            "mangledName": "$s2P50A6SketchC4fillyySo10CGColorRefaF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "noFill",
+            "printedName": "noFill()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6noFillyyF",
+            "mangledName": "$s2P50A6SketchC6noFillyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stroke",
+            "printedName": "stroke(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGColor",
+                "printedName": "CoreGraphics.CGColor",
+                "usr": "c:@T@CGColorRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC6strokeyySo10CGColorRefaF",
+            "mangledName": "$s2P50A6SketchC6strokeyySo10CGColorRefaF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "noStroke",
+            "printedName": "noStroke()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC8noStrokeyyF",
+            "mangledName": "$s2P50A6SketchC8noStrokeyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "strokeWeight",
+            "printedName": "strokeWeight(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12strokeWeightyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6SketchC12strokeWeightyy12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A6SketchC",
+        "mangledName": "$s2P50A6SketchC",
+        "moduleName": "P5",
+        "isOpen": true,
+        "declAttributes": [
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Vector",
+        "printedName": "P5Vector",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "x",
+            "printedName": "x",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6VectorV1x14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s2P50A6VectorV1x12CoreGraphics7CGFloatVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV1x14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s2P50A6VectorV1x12CoreGraphics7CGFloatVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV1x14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s2P50A6VectorV1x12CoreGraphics7CGFloatVvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "y",
+            "printedName": "y",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6VectorV1y14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s2P50A6VectorV1y12CoreGraphics7CGFloatVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV1y14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s2P50A6VectorV1y12CoreGraphics7CGFloatVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV1y14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s2P50A6VectorV1y12CoreGraphics7CGFloatVvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "z",
+            "printedName": "z",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6VectorV1z14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s2P50A6VectorV1z12CoreGraphics7CGFloatVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV1z14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s2P50A6VectorV1z12CoreGraphics7CGFloatVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV1z14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s2P50A6VectorV1z12CoreGraphics7CGFloatVvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(x:y:z:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6VectorV1x1y1zAC14CoreFoundation7CGFloatV_A2Itcfc",
+            "mangledName": "$s2P50A6VectorV1x1y1zAC12CoreGraphics7CGFloatV_A2Itcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6VectorVyACSo7CGPointVcfc",
+            "mangledName": "$s2P50A6VectorVyACSo7CGPointVcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGVector",
+                "printedName": "CoreFoundation.CGVector",
+                "usr": "c:@S@CGVector"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6VectorVyACSo8CGVectorVcfc",
+            "mangledName": "$s2P50A6VectorVyACSo8CGVectorVcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "zero",
+            "printedName": "zero",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6VectorV4zeroACvpZ",
+            "mangledName": "$s2P50A6VectorV4zeroACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Vector",
+                    "printedName": "P5.P5Vector",
+                    "usr": "s:2P50A6VectorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV4zeroACvgZ",
+                "mangledName": "$s2P50A6VectorV4zeroACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "point",
+            "printedName": "point",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6VectorV5pointSo7CGPointVvp",
+            "mangledName": "$s2P50A6VectorV5pointSo7CGPointVvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPoint",
+                    "printedName": "CoreFoundation.CGPoint",
+                    "usr": "c:@S@CGPoint"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV5pointSo7CGPointVvg",
+                "mangledName": "$s2P50A6VectorV5pointSo7CGPointVvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cgVector",
+            "printedName": "cgVector",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGVector",
+                "printedName": "CoreFoundation.CGVector",
+                "usr": "c:@S@CGVector"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6VectorV02cgB0So8CGVectorVvp",
+            "mangledName": "$s2P50A6VectorV02cgB0So8CGVectorVvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGVector",
+                    "printedName": "CoreFoundation.CGVector",
+                    "usr": "c:@S@CGVector"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV02cgB0So8CGVectorVvg",
+                "mangledName": "$s2P50A6VectorV02cgB0So8CGVectorVvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "copy",
+            "printedName": "copy()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4copyACyF",
+            "mangledName": "$s2P50A6VectorV4copyACyF",
+            "moduleName": "P5",
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "array",
+            "printedName": "array()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CoreGraphics.CGFloat]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV5arraySay14CoreFoundation7CGFloatVGyF",
+            "mangledName": "$s2P50A6VectorV5arraySay12CoreGraphics7CGFloatVGyF",
+            "moduleName": "P5",
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A6VectorV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A6VectorV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A6VectorV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6VectorV9hashValueSivp",
+            "mangledName": "$s2P50A6VectorV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6VectorV9hashValueSivg",
+                "mangledName": "$s2P50A6VectorV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6VectorV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A6VectorV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3setyAC14CoreFoundation7CGFloatV_A2GtF",
+            "mangledName": "$s2P50A6VectorV3setyAC12CoreGraphics7CGFloatV_A2GtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3addyA2CF",
+            "mangledName": "$s2P50A6VectorV3addyA2CF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sub",
+            "printedName": "sub(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3subyA2CF",
+            "mangledName": "$s2P50A6VectorV3subyA2CF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mult",
+            "printedName": "mult(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4multyAC14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6VectorV4multyAC12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "div",
+            "printedName": "div(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3divyAC14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6VectorV3divyAC12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3addyA2C_ACtFZ",
+            "mangledName": "$s2P50A6VectorV3addyA2C_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sub",
+            "printedName": "sub(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3subyA2C_ACtFZ",
+            "mangledName": "$s2P50A6VectorV3subyA2C_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mult",
+            "printedName": "mult(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4multyA2C_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV4multyA2C_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "div",
+            "printedName": "div(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3divyA2C_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV3divyA2C_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "magSq",
+            "printedName": "magSq()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV5magSq14CoreFoundation7CGFloatVyF",
+            "mangledName": "$s2P50A6VectorV5magSq12CoreGraphics7CGFloatVyF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mag",
+            "printedName": "mag()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3mag14CoreFoundation7CGFloatVyF",
+            "mangledName": "$s2P50A6VectorV3mag12CoreGraphics7CGFloatVyF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dot",
+            "printedName": "dot(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV3doty14CoreFoundation7CGFloatVACF",
+            "mangledName": "$s2P50A6VectorV3doty12CoreGraphics7CGFloatVACF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cross",
+            "printedName": "cross(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV5crossyA2CF",
+            "mangledName": "$s2P50A6VectorV5crossyA2CF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dist",
+            "printedName": "dist(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4disty14CoreFoundation7CGFloatVACF",
+            "mangledName": "$s2P50A6VectorV4disty12CoreGraphics7CGFloatVACF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "normalize",
+            "printedName": "normalize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV9normalizeACyF",
+            "mangledName": "$s2P50A6VectorV9normalizeACyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "limit",
+            "printedName": "limit(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV5limityAC14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6VectorV5limityAC12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setMag",
+            "printedName": "setMag(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV6setMagyAC14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6VectorV6setMagyAC12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "heading",
+            "printedName": "heading()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV7heading14CoreFoundation7CGFloatVyF",
+            "mangledName": "$s2P50A6VectorV7heading12CoreGraphics7CGFloatVyF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setHeading",
+            "printedName": "setHeading(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV10setHeadingyAC14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6VectorV10setHeadingyAC12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "rotate",
+            "printedName": "rotate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV6rotateyAC14CoreFoundation7CGFloatVF",
+            "mangledName": "$s2P50A6VectorV6rotateyAC12CoreGraphics7CGFloatVF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "angleBetween",
+            "printedName": "angleBetween(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV12angleBetweeny14CoreFoundation7CGFloatVACF",
+            "mangledName": "$s2P50A6VectorV12angleBetweeny12CoreGraphics7CGFloatVACF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "lerp",
+            "printedName": "lerp(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4lerpyA2C_14CoreFoundation7CGFloatVtF",
+            "mangledName": "$s2P50A6VectorV4lerpyA2C_12CoreGraphics7CGFloatVtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dist",
+            "printedName": "dist(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4disty14CoreFoundation7CGFloatVAC_ACtFZ",
+            "mangledName": "$s2P50A6VectorV4disty12CoreGraphics7CGFloatVAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "normalize",
+            "printedName": "normalize(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV9normalizeyA2CFZ",
+            "mangledName": "$s2P50A6VectorV9normalizeyA2CFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "limit",
+            "printedName": "limit(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV5limityA2C_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV5limityA2C_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setMag",
+            "printedName": "setMag(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV6setMagyA2C_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV6setMagyA2C_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "angleBetween",
+            "printedName": "angleBetween(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV12angleBetweeny14CoreFoundation7CGFloatVAC_ACtFZ",
+            "mangledName": "$s2P50A6VectorV12angleBetweeny12CoreGraphics7CGFloatVAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "lerp",
+            "printedName": "lerp(_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV4lerpyA2C_AC14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV4lerpyA2C_AC12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fromAngle",
+            "printedName": "fromAngle(_:length:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV9fromAngle_6lengthAC14CoreFoundation7CGFloatV_AHtFZ",
+            "mangledName": "$s2P50A6VectorV9fromAngle_6lengthAC12CoreGraphics7CGFloatV_AHtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "random2D",
+            "printedName": "random2D()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV8random2DACyFZ",
+            "mangledName": "$s2P50A6VectorV8random2DACyFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "random2D",
+            "printedName": "random2D(using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "R",
+                "paramValueOwnership": "InOut"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV8random2D5usingACxz_tSGRzlFZ",
+            "mangledName": "$s2P50A6VectorV8random2D5usingACxz_tSGRzlFZ",
+            "moduleName": "P5",
+            "genericSig": "<R where R : Swift.RandomNumberGenerator>",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "-",
+            "printedName": "-(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV1sopyA2CFZ",
+            "mangledName": "$s2P50A6VectorV1sopyA2CFZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "Prefix"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "+",
+            "printedName": "+(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV1poiyA2C_ACtFZ",
+            "mangledName": "$s2P50A6VectorV1poiyA2C_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "-",
+            "printedName": "-(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV1soiyA2C_ACtFZ",
+            "mangledName": "$s2P50A6VectorV1soiyA2C_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "*",
+            "printedName": "*(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV1moiyA2C_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV1moiyA2C_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "*",
+            "printedName": "*(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV1moiyAC14CoreFoundation7CGFloatV_ACtFZ",
+            "mangledName": "$s2P50A6VectorV1moiyAC12CoreGraphics7CGFloatV_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "\/",
+            "printedName": "\/(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV1doiyA2C_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV1doiyA2C_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "+=",
+            "printedName": "+=(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "paramValueOwnership": "InOut",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV2peoiyyACz_ACtFZ",
+            "mangledName": "$s2P50A6VectorV2peoiyyACz_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "-=",
+            "printedName": "-=(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "paramValueOwnership": "InOut",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "usr": "s:2P50A6VectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV2seoiyyACz_ACtFZ",
+            "mangledName": "$s2P50A6VectorV2seoiyyACz_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "*=",
+            "printedName": "*=(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "paramValueOwnership": "InOut",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV2meoiyyACz_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV2meoiyyACz_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "\/=",
+            "printedName": "\/=(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Vector",
+                "printedName": "P5.P5Vector",
+                "paramValueOwnership": "InOut",
+                "usr": "s:2P50A6VectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6VectorV2deoiyyACz_14CoreFoundation7CGFloatVtFZ",
+            "mangledName": "$s2P50A6VectorV2deoiyyACz_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A6VectorV",
+        "mangledName": "$s2P50A6VectorV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Frozen"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeAlias",
+        "name": "P5CanvasView",
+        "printedName": "P5CanvasView",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "NSView",
+            "printedName": "AppKit.NSView",
+            "usr": "c:objc(cs)NSView"
+          }
+        ],
+        "declKind": "TypeAlias",
+        "usr": "s:2P50A10CanvasViewa",
+        "mangledName": "$s2P50A10CanvasViewa",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5SketchView",
+        "printedName": "P5SketchView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(size:makeSketch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5SketchView",
+                "printedName": "P5.P5SketchView<Sketch>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Sketch"
+                  }
+                ],
+                "usr": "s:2P50A10SketchViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreFoundation.CGSize) -> Sketch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Sketch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10SketchViewV4size04makeB0ACyxGSo6CGSizeV_xAHYbScMYcctcfc",
+            "mangledName": "$s2P50A10SketchViewV4size04makeB0ACyxGSo6CGSizeV_xAHYbScMYcctcfc",
+            "moduleName": "P5",
+            "genericSig": "<Sketch where Sketch : P5.P5Sketch>",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10SketchViewV4bodyQrvp",
+            "mangledName": "$s2P50A10SketchViewV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10SketchViewV4bodyQrvg",
+                "mangledName": "$s2P50A10SketchViewV4bodyQrvg",
+                "moduleName": "P5",
+                "genericSig": "<Sketch where Sketch : P5.P5Sketch>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A10SketchViewV4Bodya",
+            "mangledName": "$s2P50A10SketchViewV4Bodya",
+            "moduleName": "P5",
+            "genericSig": "<Sketch where Sketch : P5.P5Sketch>",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A10SketchViewV",
+        "mangledName": "$s2P50A10SketchViewV",
+        "moduleName": "P5",
+        "genericSig": "<Sketch where Sketch : P5.P5Sketch>",
+        "declAttributes": [
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  }
+}

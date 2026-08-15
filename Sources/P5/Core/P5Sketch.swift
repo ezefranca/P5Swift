@@ -77,6 +77,24 @@ public extension P5Sketch {
         precondition(framesPerSecond.isFinite && framesPerSecond > 0)
         internalView.framesPerSecond = framesPerSecond
     }
+
+    /// Creates a vector for positions, motion, and creative-coding math.
+    ///
+    /// This method corresponds to
+    /// [p5.js `createVector()`](https://p5js.org/reference/p5/createVector/).
+    ///
+    /// - Parameters:
+    ///   - x: The x component.
+    ///   - y: The y component.
+    ///   - z: The z component.
+    /// - Returns: A value-semantic ``P5Vector``.
+    func createVector(
+        _ x: CGFloat = 0,
+        _ y: CGFloat = 0,
+        _ z: CGFloat = 0
+    ) -> P5Vector {
+        P5Vector(x: x, y: y, z: z)
+    }
 }
 
 // MARK: - Structure
