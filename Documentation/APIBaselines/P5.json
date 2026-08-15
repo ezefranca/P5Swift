@@ -312,6 +312,310 @@
           },
           {
             "kind": "Var",
+            "name": "pointerPosition",
+            "printedName": "pointerPosition",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC15pointerPositionSo7CGPointVvp",
+            "mangledName": "$s2P50A6SketchC15pointerPositionSo7CGPointVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPoint",
+                    "printedName": "CoreFoundation.CGPoint",
+                    "usr": "c:@S@CGPoint"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC15pointerPositionSo7CGPointVvg",
+                "mangledName": "$s2P50A6SketchC15pointerPositionSo7CGPointVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "previousPointerPosition",
+            "printedName": "previousPointerPosition",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC23previousPointerPositionSo7CGPointVvp",
+            "mangledName": "$s2P50A6SketchC23previousPointerPositionSo7CGPointVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPoint",
+                    "printedName": "CoreFoundation.CGPoint",
+                    "usr": "c:@S@CGPoint"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC23previousPointerPositionSo7CGPointVvg",
+                "mangledName": "$s2P50A6SketchC23previousPointerPositionSo7CGPointVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pointerDelta",
+            "printedName": "pointerDelta",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGVector",
+                "printedName": "CoreFoundation.CGVector",
+                "usr": "c:@S@CGVector"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC12pointerDeltaSo8CGVectorVvp",
+            "mangledName": "$s2P50A6SketchC12pointerDeltaSo8CGVectorVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGVector",
+                    "printedName": "CoreFoundation.CGVector",
+                    "usr": "c:@S@CGVector"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC12pointerDeltaSo8CGVectorVvg",
+                "mangledName": "$s2P50A6SketchC12pointerDeltaSo8CGVectorVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pressedPointerButtons",
+            "printedName": "pressedPointerButtons",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC21pressedPointerButtonsAA0adE0Vvp",
+            "mangledName": "$s2P50A6SketchC21pressedPointerButtonsAA0adE0Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC21pressedPointerButtonsAA0adE0Vvg",
+                "mangledName": "$s2P50A6SketchC21pressedPointerButtonsAA0adE0Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isPointerInside",
+            "printedName": "isPointerInside",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC15isPointerInsideSbvp",
+            "mangledName": "$s2P50A6SketchC15isPointerInsideSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC15isPointerInsideSbvg",
+                "mangledName": "$s2P50A6SketchC15isPointerInsideSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestPointerEvent",
+            "printedName": "latestPointerEvent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5PointerEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerEvent",
+                    "printedName": "P5.P5PointerEvent",
+                    "usr": "s:2P50A12PointerEventV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC18latestPointerEventAA0adE0VSgvp",
+            "mangledName": "$s2P50A6SketchC18latestPointerEventAA0adE0VSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "P5.P5PointerEvent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerEvent",
+                        "printedName": "P5.P5PointerEvent",
+                        "usr": "s:2P50A12PointerEventV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC18latestPointerEventAA0adE0VSgvg",
+                "mangledName": "$s2P50A6SketchC18latestPointerEventAA0adE0VSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "frameCount",
             "printedName": "frameCount",
             "children": [
@@ -590,6 +894,222 @@
             "declKind": "Func",
             "usr": "s:2P50A6SketchC4drawyyF",
             "mangledName": "$s2P50A6SketchC4drawyyF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerEntered",
+            "printedName": "pointerEntered(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC14pointerEnteredyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC14pointerEnteredyyAA0A12PointerEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerExited",
+            "printedName": "pointerExited(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC13pointerExitedyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC13pointerExitedyyAA0A12PointerEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerMoved",
+            "printedName": "pointerMoved(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12pointerMovedyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC12pointerMovedyyAA0A12PointerEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerDragged",
+            "printedName": "pointerDragged(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC14pointerDraggedyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC14pointerDraggedyyAA0A12PointerEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerPressed",
+            "printedName": "pointerPressed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC14pointerPressedyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC14pointerPressedyyAA0A12PointerEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerReleased",
+            "printedName": "pointerReleased(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC15pointerReleasedyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC15pointerReleasedyyAA0A12PointerEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerClicked",
+            "printedName": "pointerClicked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC14pointerClickedyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC14pointerClickedyyAA0A12PointerEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pointerCancelled",
+            "printedName": "pointerCancelled(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC16pointerCancelledyyAA0A12PointerEventVF",
+            "mangledName": "$s2P50A6SketchC16pointerCancelledyyAA0A12PointerEventVF",
             "moduleName": "P5",
             "isOpen": true,
             "declAttributes": [
@@ -10503,6 +11023,3437 @@
             "usr": "s:s12CaseIterableP",
             "mangledName": "$ss12CaseIterableP"
           },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PointerKind",
+        "printedName": "P5PointerKind",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "mouse",
+            "printedName": "mouse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerKind.Type) -> P5.P5PointerKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerKind",
+                        "printedName": "P5.P5PointerKind",
+                        "usr": "s:2P50A11PointerKindO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11PointerKindO5mouseyA2CmF",
+            "mangledName": "$s2P50A11PointerKindO5mouseyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "touch",
+            "printedName": "touch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerKind.Type) -> P5.P5PointerKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerKind",
+                        "printedName": "P5.P5PointerKind",
+                        "usr": "s:2P50A11PointerKindO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11PointerKindO5touchyA2CmF",
+            "mangledName": "$s2P50A11PointerKindO5touchyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "pencil",
+            "printedName": "pencil",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerKind.Type) -> P5.P5PointerKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerKind",
+                        "printedName": "P5.P5PointerKind",
+                        "usr": "s:2P50A11PointerKindO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11PointerKindO6pencilyA2CmF",
+            "mangledName": "$s2P50A11PointerKindO6pencilyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "indirect",
+            "printedName": "indirect",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerKind.Type) -> P5.P5PointerKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerKind",
+                        "printedName": "P5.P5PointerKind",
+                        "usr": "s:2P50A11PointerKindO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11PointerKindO8indirectyA2CmF",
+            "mangledName": "$s2P50A11PointerKindO8indirectyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PointerKind]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A11PointerKindO8AllCasesa",
+            "mangledName": "$s2P50A11PointerKindO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerKind",
+                "printedName": "P5.P5PointerKind",
+                "usr": "s:2P50A11PointerKindO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerKind",
+                "printedName": "P5.P5PointerKind",
+                "usr": "s:2P50A11PointerKindO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11PointerKindO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A11PointerKindO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PointerKind]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11PointerKindO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A11PointerKindO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PointerKind]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerKind",
+                        "printedName": "P5.P5PointerKind",
+                        "usr": "s:2P50A11PointerKindO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11PointerKindO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A11PointerKindO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11PointerKindO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A11PointerKindO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11PointerKindO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A11PointerKindO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11PointerKindO9hashValueSivp",
+            "mangledName": "$s2P50A11PointerKindO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11PointerKindO9hashValueSivg",
+                "mangledName": "$s2P50A11PointerKindO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerKind",
+                "printedName": "P5.P5PointerKind",
+                "usr": "s:2P50A11PointerKindO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11PointerKindO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A11PointerKindO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A11PointerKindO",
+        "mangledName": "$s2P50A11PointerKindO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PointerKind]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerKind",
+                        "printedName": "P5.P5PointerKind",
+                        "usr": "s:2P50A11PointerKindO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PointerPhase",
+        "printedName": "P5PointerPhase",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "entered",
+            "printedName": "entered",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO7enteredyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO7enteredyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "exited",
+            "printedName": "exited",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO6exitedyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO6exitedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "moved",
+            "printedName": "moved",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO5movedyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO5movedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "dragged",
+            "printedName": "dragged",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO7draggedyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO7draggedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "pressed",
+            "printedName": "pressed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO7pressedyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO7pressedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "released",
+            "printedName": "released",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO8releasedyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO8releasedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "clicked",
+            "printedName": "clicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO7clickedyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO7clickedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerPhase.Type) -> P5.P5PointerPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12PointerPhaseO9cancelledyA2CmF",
+            "mangledName": "$s2P50A12PointerPhaseO9cancelledyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PointerPhase]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A12PointerPhaseO8AllCasesa",
+            "mangledName": "$s2P50A12PointerPhaseO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerPhase",
+                "printedName": "P5.P5PointerPhase",
+                "usr": "s:2P50A12PointerPhaseO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerPhase",
+                "printedName": "P5.P5PointerPhase",
+                "usr": "s:2P50A12PointerPhaseO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PointerPhaseO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A12PointerPhaseO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PointerPhase]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerPhaseO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A12PointerPhaseO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PointerPhase]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerPhaseO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A12PointerPhaseO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PointerPhaseO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A12PointerPhaseO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PointerPhaseO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A12PointerPhaseO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerPhaseO9hashValueSivp",
+            "mangledName": "$s2P50A12PointerPhaseO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerPhaseO9hashValueSivg",
+                "mangledName": "$s2P50A12PointerPhaseO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerPhase",
+                "printedName": "P5.P5PointerPhase",
+                "usr": "s:2P50A12PointerPhaseO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A12PointerPhaseO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A12PointerPhaseO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A12PointerPhaseO",
+        "mangledName": "$s2P50A12PointerPhaseO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PointerPhase]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerPhase",
+                        "printedName": "P5.P5PointerPhase",
+                        "usr": "s:2P50A12PointerPhaseO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PointerButton",
+        "printedName": "P5PointerButton",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerButton.Type) -> P5.P5PointerButton",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButton",
+                    "printedName": "P5.P5PointerButton",
+                    "usr": "s:2P50A13PointerButtonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerButton.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerButton",
+                        "printedName": "P5.P5PointerButton",
+                        "usr": "s:2P50A13PointerButtonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13PointerButtonO4noneyA2CmF",
+            "mangledName": "$s2P50A13PointerButtonO4noneyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "primary",
+            "printedName": "primary",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerButton.Type) -> P5.P5PointerButton",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButton",
+                    "printedName": "P5.P5PointerButton",
+                    "usr": "s:2P50A13PointerButtonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerButton.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerButton",
+                        "printedName": "P5.P5PointerButton",
+                        "usr": "s:2P50A13PointerButtonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13PointerButtonO7primaryyA2CmF",
+            "mangledName": "$s2P50A13PointerButtonO7primaryyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "secondary",
+            "printedName": "secondary",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerButton.Type) -> P5.P5PointerButton",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButton",
+                    "printedName": "P5.P5PointerButton",
+                    "usr": "s:2P50A13PointerButtonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerButton.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerButton",
+                        "printedName": "P5.P5PointerButton",
+                        "usr": "s:2P50A13PointerButtonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13PointerButtonO9secondaryyA2CmF",
+            "mangledName": "$s2P50A13PointerButtonO9secondaryyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "middle",
+            "printedName": "middle",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerButton.Type) -> P5.P5PointerButton",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButton",
+                    "printedName": "P5.P5PointerButton",
+                    "usr": "s:2P50A13PointerButtonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerButton.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerButton",
+                        "printedName": "P5.P5PointerButton",
+                        "usr": "s:2P50A13PointerButtonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13PointerButtonO6middleyA2CmF",
+            "mangledName": "$s2P50A13PointerButtonO6middleyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "other",
+            "printedName": "other",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PointerButton.Type) -> (Swift.Int) -> P5.P5PointerButton",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> P5.P5PointerButton",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerButton",
+                        "printedName": "P5.P5PointerButton",
+                        "usr": "s:2P50A13PointerButtonO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PointerButton.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PointerButton",
+                        "printedName": "P5.P5PointerButton",
+                        "usr": "s:2P50A13PointerButtonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13PointerButtonO5otheryACSicACmF",
+            "mangledName": "$s2P50A13PointerButtonO5otheryACSicACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButton",
+                "printedName": "P5.P5PointerButton",
+                "usr": "s:2P50A13PointerButtonO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButton",
+                "printedName": "P5.P5PointerButton",
+                "usr": "s:2P50A13PointerButtonO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13PointerButtonO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A13PointerButtonO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13PointerButtonO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A13PointerButtonO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13PointerButtonO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A13PointerButtonO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13PointerButtonO9hashValueSivp",
+            "mangledName": "$s2P50A13PointerButtonO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13PointerButtonO9hashValueSivg",
+                "mangledName": "$s2P50A13PointerButtonO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButton",
+                "printedName": "P5.P5PointerButton",
+                "usr": "s:2P50A13PointerButtonO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13PointerButtonO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A13PointerButtonO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A13PointerButtonO",
+        "mangledName": "$s2P50A13PointerButtonO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PointerButtons",
+        "printedName": "P5PointerButtons",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt8",
+                "printedName": "Swift.UInt8",
+                "usr": "s:s5UInt8V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14PointerButtonsV8rawValues5UInt8Vvp",
+            "mangledName": "$s2P50A14PointerButtonsV8rawValues5UInt8Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14PointerButtonsV8rawValues5UInt8Vvg",
+                "mangledName": "$s2P50A14PointerButtonsV8rawValues5UInt8Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt8",
+                "printedName": "Swift.UInt8",
+                "usr": "s:s5UInt8V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A14PointerButtonsV8rawValueACs5UInt8V_tcfc",
+            "mangledName": "$s2P50A14PointerButtonsV8rawValueACs5UInt8V_tcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "primary",
+            "printedName": "primary",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14PointerButtonsV7primaryACvpZ",
+            "mangledName": "$s2P50A14PointerButtonsV7primaryACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14PointerButtonsV7primaryACvgZ",
+                "mangledName": "$s2P50A14PointerButtonsV7primaryACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "secondary",
+            "printedName": "secondary",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14PointerButtonsV9secondaryACvpZ",
+            "mangledName": "$s2P50A14PointerButtonsV9secondaryACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14PointerButtonsV9secondaryACvgZ",
+                "mangledName": "$s2P50A14PointerButtonsV9secondaryACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "middle",
+            "printedName": "middle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14PointerButtonsV6middleACvpZ",
+            "mangledName": "$s2P50A14PointerButtonsV6middleACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14PointerButtonsV6middleACvgZ",
+                "mangledName": "$s2P50A14PointerButtonsV6middleACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "other",
+            "printedName": "other",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14PointerButtonsV5otherACvpZ",
+            "mangledName": "$s2P50A14PointerButtonsV5otherACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14PointerButtonsV5otherACvgZ",
+                "mangledName": "$s2P50A14PointerButtonsV5otherACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "ArrayLiteralElement",
+            "printedName": "ArrayLiteralElement",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14PointerButtonsV19ArrayLiteralElementa",
+            "mangledName": "$s2P50A14PointerButtonsV19ArrayLiteralElementa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Element",
+            "printedName": "Element",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14PointerButtonsV7Elementa",
+            "mangledName": "$s2P50A14PointerButtonsV7Elementa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt8",
+                "printedName": "Swift.UInt8",
+                "usr": "s:s5UInt8V"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14PointerButtonsV8RawValuea",
+            "mangledName": "$s2P50A14PointerButtonsV8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A14PointerButtonsV",
+        "mangledName": "$s2P50A14PointerButtonsV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByArrayLiteral",
+            "printedName": "ExpressibleByArrayLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ArrayLiteralElement",
+                "printedName": "ArrayLiteralElement",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByArrayLiteralP",
+            "mangledName": "$ss25ExpressibleByArrayLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OptionSet",
+            "printedName": "OptionSet",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s9OptionSetP",
+            "mangledName": "$ss9OptionSetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SetAlgebra",
+            "printedName": "SetAlgebra",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s10SetAlgebraP",
+            "mangledName": "$ss10SetAlgebraP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ModifierKeys",
+        "printedName": "P5ModifierKeys",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt8",
+                "printedName": "Swift.UInt8",
+                "usr": "s:s5UInt8V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ModifierKeysV8rawValues5UInt8Vvp",
+            "mangledName": "$s2P50A12ModifierKeysV8rawValues5UInt8Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ModifierKeysV8rawValues5UInt8Vvg",
+                "mangledName": "$s2P50A12ModifierKeysV8rawValues5UInt8Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt8",
+                "printedName": "Swift.UInt8",
+                "usr": "s:s5UInt8V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A12ModifierKeysV8rawValueACs5UInt8V_tcfc",
+            "mangledName": "$s2P50A12ModifierKeysV8rawValueACs5UInt8V_tcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "shift",
+            "printedName": "shift",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ModifierKeysV5shiftACvpZ",
+            "mangledName": "$s2P50A12ModifierKeysV5shiftACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ModifierKeysV5shiftACvgZ",
+                "mangledName": "$s2P50A12ModifierKeysV5shiftACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "control",
+            "printedName": "control",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ModifierKeysV7controlACvpZ",
+            "mangledName": "$s2P50A12ModifierKeysV7controlACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ModifierKeysV7controlACvgZ",
+                "mangledName": "$s2P50A12ModifierKeysV7controlACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "option",
+            "printedName": "option",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ModifierKeysV6optionACvpZ",
+            "mangledName": "$s2P50A12ModifierKeysV6optionACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ModifierKeysV6optionACvgZ",
+                "mangledName": "$s2P50A12ModifierKeysV6optionACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "command",
+            "printedName": "command",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ModifierKeysV7commandACvpZ",
+            "mangledName": "$s2P50A12ModifierKeysV7commandACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ModifierKeysV7commandACvgZ",
+                "mangledName": "$s2P50A12ModifierKeysV7commandACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "capsLock",
+            "printedName": "capsLock",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ModifierKeysV8capsLockACvpZ",
+            "mangledName": "$s2P50A12ModifierKeysV8capsLockACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ModifierKeysV8capsLockACvgZ",
+                "mangledName": "$s2P50A12ModifierKeysV8capsLockACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "function",
+            "printedName": "function",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ModifierKeysV8functionACvpZ",
+            "mangledName": "$s2P50A12ModifierKeysV8functionACvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ModifierKeysV8functionACvgZ",
+                "mangledName": "$s2P50A12ModifierKeysV8functionACvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "ArrayLiteralElement",
+            "printedName": "ArrayLiteralElement",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A12ModifierKeysV19ArrayLiteralElementa",
+            "mangledName": "$s2P50A12ModifierKeysV19ArrayLiteralElementa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Element",
+            "printedName": "Element",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A12ModifierKeysV7Elementa",
+            "mangledName": "$s2P50A12ModifierKeysV7Elementa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt8",
+                "printedName": "Swift.UInt8",
+                "usr": "s:s5UInt8V"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A12ModifierKeysV8RawValuea",
+            "mangledName": "$s2P50A12ModifierKeysV8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A12ModifierKeysV",
+        "mangledName": "$s2P50A12ModifierKeysV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByArrayLiteral",
+            "printedName": "ExpressibleByArrayLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ArrayLiteralElement",
+                "printedName": "ArrayLiteralElement",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByArrayLiteralP",
+            "mangledName": "$ss25ExpressibleByArrayLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OptionSet",
+            "printedName": "OptionSet",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s9OptionSetP",
+            "mangledName": "$ss9OptionSetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SetAlgebra",
+            "printedName": "SetAlgebra",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s10SetAlgebraP",
+            "mangledName": "$ss10SetAlgebraP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PointerEvent",
+        "printedName": "P5PointerEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV2ids6UInt64Vvp",
+            "mangledName": "$s2P50A12PointerEventV2ids6UInt64Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV2ids6UInt64Vvg",
+                "mangledName": "$s2P50A12PointerEventV2ids6UInt64Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kind",
+            "printedName": "kind",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerKind",
+                "printedName": "P5.P5PointerKind",
+                "usr": "s:2P50A11PointerKindO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV4kindAA0aB4KindOvp",
+            "mangledName": "$s2P50A12PointerEventV4kindAA0aB4KindOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV4kindAA0aB4KindOvg",
+                "mangledName": "$s2P50A12PointerEventV4kindAA0aB4KindOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "phase",
+            "printedName": "phase",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerPhase",
+                "printedName": "P5.P5PointerPhase",
+                "usr": "s:2P50A12PointerPhaseO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV5phaseAA0aB5PhaseOvp",
+            "mangledName": "$s2P50A12PointerEventV5phaseAA0aB5PhaseOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerPhase",
+                    "printedName": "P5.P5PointerPhase",
+                    "usr": "s:2P50A12PointerPhaseO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV5phaseAA0aB5PhaseOvg",
+                "mangledName": "$s2P50A12PointerEventV5phaseAA0aB5PhaseOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "location",
+            "printedName": "location",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV8locationSo7CGPointVvp",
+            "mangledName": "$s2P50A12PointerEventV8locationSo7CGPointVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPoint",
+                    "printedName": "CoreFoundation.CGPoint",
+                    "usr": "c:@S@CGPoint"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV8locationSo7CGPointVvg",
+                "mangledName": "$s2P50A12PointerEventV8locationSo7CGPointVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "previousLocation",
+            "printedName": "previousLocation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV16previousLocationSo7CGPointVvp",
+            "mangledName": "$s2P50A12PointerEventV16previousLocationSo7CGPointVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPoint",
+                    "printedName": "CoreFoundation.CGPoint",
+                    "usr": "c:@S@CGPoint"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV16previousLocationSo7CGPointVvg",
+                "mangledName": "$s2P50A12PointerEventV16previousLocationSo7CGPointVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "button",
+            "printedName": "button",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButton",
+                "printedName": "P5.P5PointerButton",
+                "usr": "s:2P50A13PointerButtonO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV6buttonAA0aB6ButtonOvp",
+            "mangledName": "$s2P50A12PointerEventV6buttonAA0aB6ButtonOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButton",
+                    "printedName": "P5.P5PointerButton",
+                    "usr": "s:2P50A13PointerButtonO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV6buttonAA0aB6ButtonOvg",
+                "mangledName": "$s2P50A12PointerEventV6buttonAA0aB6ButtonOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pressedButtons",
+            "printedName": "pressedButtons",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "usr": "s:2P50A14PointerButtonsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV14pressedButtonsAA0abE0Vvp",
+            "mangledName": "$s2P50A12PointerEventV14pressedButtonsAA0abE0Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerButtons",
+                    "printedName": "P5.P5PointerButtons",
+                    "usr": "s:2P50A14PointerButtonsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV14pressedButtonsAA0abE0Vvg",
+                "mangledName": "$s2P50A12PointerEventV14pressedButtonsAA0abE0Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modifiers",
+            "printedName": "modifiers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV9modifiersAA0A12ModifierKeysVvp",
+            "mangledName": "$s2P50A12PointerEventV9modifiersAA0A12ModifierKeysVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV9modifiersAA0A12ModifierKeysVvg",
+                "mangledName": "$s2P50A12PointerEventV9modifiersAA0A12ModifierKeysVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pressure",
+            "printedName": "pressure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV8pressure14CoreFoundation7CGFloatVSgvp",
+            "mangledName": "$s2P50A12PointerEventV8pressure12CoreGraphics7CGFloatVSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV8pressure14CoreFoundation7CGFloatVSgvg",
+                "mangledName": "$s2P50A12PointerEventV8pressure12CoreGraphics7CGFloatVSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV9timestampSdvp",
+            "mangledName": "$s2P50A12PointerEventV9timestampSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimeInterval",
+                    "printedName": "Foundation.TimeInterval",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV9timestampSdvg",
+                "mangledName": "$s2P50A12PointerEventV9timestampSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delta",
+            "printedName": "delta",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGVector",
+                "printedName": "CoreFoundation.CGVector",
+                "usr": "c:@S@CGVector"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV5deltaSo8CGVectorVvp",
+            "mangledName": "$s2P50A12PointerEventV5deltaSo8CGVectorVvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGVector",
+                    "printedName": "CoreFoundation.CGVector",
+                    "usr": "c:@S@CGVector"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV5deltaSo8CGVectorVvg",
+                "mangledName": "$s2P50A12PointerEventV5deltaSo8CGVectorVvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:kind:phase:location:previousLocation:button:pressedButtons:modifiers:pressure:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerKind",
+                "printedName": "P5.P5PointerKind",
+                "usr": "s:2P50A11PointerKindO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerPhase",
+                "printedName": "P5.P5PointerPhase",
+                "usr": "s:2P50A12PointerPhaseO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButton",
+                "printedName": "P5.P5PointerButton",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A13PointerButtonO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerButtons",
+                "printedName": "P5.P5PointerButtons",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A14PointerButtonsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A12ModifierKeysV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A12PointerEventV2id4kind5phase8location16previousLocation6button14pressedButtons9modifiers8pressure9timestampACs6UInt64V_AA0aB4KindOAA0aB5PhaseOSo7CGPointVAuA0aB6ButtonOAA0abL0VAA0A12ModifierKeysV14CoreFoundation7CGFloatVSgSdtcfc",
+            "mangledName": "$s2P50A12PointerEventV2id4kind5phase8location16previousLocation6button14pressedButtons9modifiers8pressure9timestampACs6UInt64V_AA0aB4KindOAA0aB5PhaseOSo7CGPointVAuA0aB6ButtonOAA0abL0VAA0A12ModifierKeysV12CoreGraphics7CGFloatVSgSdtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A12PointerEventV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A12PointerEventV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerEvent",
+                "printedName": "P5.P5PointerEvent",
+                "usr": "s:2P50A12PointerEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PointerEventV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A12PointerEventV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PointerEventV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A12PointerEventV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PointerEventV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A12PointerEventV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12PointerEventV9hashValueSivp",
+            "mangledName": "$s2P50A12PointerEventV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12PointerEventV9hashValueSivg",
+                "mangledName": "$s2P50A12PointerEventV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A12PointerEventV",
+        "mangledName": "$s2P50A12PointerEventV",
+        "moduleName": "P5",
+        "conformances": [
           {
             "kind": "Conformance",
             "name": "Copyable",

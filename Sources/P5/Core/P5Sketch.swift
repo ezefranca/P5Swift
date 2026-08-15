@@ -34,6 +34,24 @@ open class P5Sketch {
     /// The source of frame requests for this sketch.
     public let frameDriver: P5FrameDriver
 
+    /// The most recent pointer position in top-left-origin canvas points.
+    public private(set) var pointerPosition = CGPoint.zero
+
+    /// The pointer position preceding ``pointerPosition``.
+    public private(set) var previousPointerPosition = CGPoint.zero
+
+    /// Movement between the two most recent pointer positions.
+    public private(set) var pointerDelta = CGVector.zero
+
+    /// All pointer buttons currently held.
+    public private(set) var pressedPointerButtons: P5PointerButtons = []
+
+    /// Whether the mouse cursor is currently within the canvas.
+    public private(set) var isPointerInside = false
+
+    /// The most recently delivered pointer event, if one exists.
+    public private(set) var latestPointerEvent: P5PointerEvent?
+
     /// The number of frames whose `draw()` callback has begun.
     public private(set) var frameCount: UInt64 = 0
 
@@ -94,6 +112,9 @@ open class P5Sketch {
         internalView.onDraw = { [weak self] in
             self?.performFrame()
         }
+        internalView.onPointerEvent = { [weak self] event in
+            self?.handlePointerEvent(event)
+        }
         setup()
     }
 
@@ -118,6 +139,30 @@ open class P5Sketch {
     /// [p5.js `draw()`](https://p5js.org/reference/p5/draw/).
     open func draw() {}
 
+    /// Responds when a pointer enters the canvas.
+    open func pointerEntered(_ event: P5PointerEvent) {}
+
+    /// Responds when a pointer exits the canvas.
+    open func pointerExited(_ event: P5PointerEvent) {}
+
+    /// Responds when an unpressed pointer moves across the canvas.
+    open func pointerMoved(_ event: P5PointerEvent) {}
+
+    /// Responds when a pressed pointer moves across the canvas.
+    open func pointerDragged(_ event: P5PointerEvent) {}
+
+    /// Responds when a pointer button or touch becomes pressed.
+    open func pointerPressed(_ event: P5PointerEvent) {}
+
+    /// Responds when a pointer button or touch is released.
+    open func pointerReleased(_ event: P5PointerEvent) {}
+
+    /// Responds after a complete click or tap.
+    open func pointerClicked(_ event: P5PointerEvent) {}
+
+    /// Responds when the platform cancels an active pointer interaction.
+    open func pointerCancelled(_ event: P5PointerEvent) {}
+
     private func performFrame() {
         let currentTime = clock.now
         precondition(currentTime.isFinite && currentTime >= previousFrameTime)
@@ -128,6 +173,36 @@ open class P5Sketch {
         precondition(frameCount < .max)
         frameCount += 1
         draw()
+    }
+
+    private func handlePointerEvent(_ event: P5PointerEvent) {
+        previousPointerPosition = event.previousLocation
+        pointerPosition = event.location
+        pointerDelta = event.delta
+        pressedPointerButtons = event.pressedButtons
+        latestPointerEvent = event
+
+        switch event.phase {
+        case .entered:
+            isPointerInside = true
+            pointerEntered(event)
+        case .exited:
+            isPointerInside = false
+            pointerExited(event)
+        case .moved:
+            pointerMoved(event)
+        case .dragged:
+            pointerDragged(event)
+        case .pressed:
+            pointerPressed(event)
+        case .released:
+            pointerReleased(event)
+        case .clicked:
+            pointerClicked(event)
+        case .cancelled:
+            pressedPointerButtons = []
+            pointerCancelled(event)
+        }
     }
 
     func queueOperation(_ operation: P5Operation) {

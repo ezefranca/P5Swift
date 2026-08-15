@@ -26,6 +26,10 @@ struct P5PublicAPITests {
         #expect(P5FillRule.allCases == [.nonZero, .evenOdd])
         #expect(P5BlendMode.allCases == [.normal, .multiply, .screen, .add])
         #expect(P5FrameDriver.allCases == [.automatic, .manual])
+        #expect(P5PointerKind.allCases == [.mouse, .touch, .pencil, .indirect])
+        #expect(P5PointerPhase.allCases.count == 8)
+        #expect(P5PointerButtons.primary.rawValue == 1)
+        #expect(P5ModifierKeys.command.rawValue == 8)
         #expect(clock.now == 0)
         #expect(color.alpha == 1)
     }
