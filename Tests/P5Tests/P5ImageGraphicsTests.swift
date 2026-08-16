@@ -223,6 +223,98 @@ struct P5ImageGraphicsTests {
         }
     }
 
+    @Test("Images crop, resize, mask, filter, sample, and expose typed failures")
+    func imageProcessing() throws {
+        let image = try P5Image(
+            pixelBuffer: P5PixelBuffer(
+                width: 2,
+                height: 2,
+                bytes: [
+                    255, 0, 0, 255,
+                    0, 255, 0, 255,
+                    0, 0, 255, 255,
+                    255, 255, 255, 255,
+                ]
+            )
+        )
+        #expect(try image.color(x: 0, y: 0).red == 1)
+        let crop = try image.cropped(to: CGRect(x: 1, y: 0, width: 1, height: 1))
+        #expect(crop.size == CGSize(width: 1, height: 1))
+        #expect(try crop.color(x: 0, y: 0).green == 1)
+
+        #expect(P5ImageInterpolation.allCases == [.none, .low, .medium, .high])
+        for interpolation in P5ImageInterpolation.allCases {
+            let resized = try image.resized(
+                to: CGSize(width: 4, height: 3),
+                pixelDensity: 2,
+                interpolation: interpolation
+            )
+            #expect(resized.pixelWidth == 8)
+            #expect(resized.pixelHeight == 6)
+            #expect(resized.size == CGSize(width: 4, height: 3))
+        }
+        #expect(try image.resized(to: CGSize(width: 1, height: 1)).pixelDensity == 1)
+
+        let mask = try P5Image(
+            pixelBuffer: P5PixelBuffer(
+                width: 2,
+                height: 2,
+                bytes: [
+                    0, 0, 0, 255,
+                    0, 0, 0, 0,
+                    0, 0, 0, 255,
+                    0, 0, 0, 0,
+                ]
+            )
+        )
+        let masked = try image.masked(with: mask)
+        #expect(try masked.color(x: 0, y: 0).alpha == 1)
+        #expect(try masked.color(x: 1, y: 0).alpha == 0)
+
+        let filters: [P5ImageFilter] = [
+            .invert,
+            .grayscale,
+            .sepia(intensity: 0.6),
+            .gaussianBlur(radius: 1),
+            .posterize(levels: 4),
+        ]
+        for filter in filters {
+            let decoded = try JSONDecoder().decode(
+                P5ImageFilter.self,
+                from: JSONEncoder().encode(filter)
+            )
+            #expect(decoded == filter)
+            #expect(try image.applying(filter).size == image.size)
+        }
+        #expect(try image.applying(.gaussianBlur(radius: 0)).size == image.size)
+
+        #expect(throws: P5ImageError.processingFailed("crop")) {
+            _ = try image.cropped(to: CGRect(x: 0, y: 0, width: 1, height: 1)) { _, _ in nil }
+        }
+        #expect(throws: P5ImageError.processingFailed("filter")) {
+            _ = try image.applying(.invert) { _, _ in nil }
+        }
+        #expect(throws: P5ImageError.bitmapAllocationFailed) {
+            _ = try P5Image.renderBitmap(
+                width: 1,
+                height: 1,
+                makeContext: { _, _ in nil },
+                makeImage: { $0.makeImage() },
+                draw: { _ in }
+            )
+        }
+        #expect(throws: P5ImageError.bitmapAllocationFailed) {
+            _ = try P5Image.renderBitmap(
+                width: 1,
+                height: 1,
+                makeContext: P5ImageProcessingRuntime.makeContext,
+                makeImage: { _ in nil },
+                draw: { _ in }
+            )
+        }
+        #expect(P5ImageError.processingFailed("mask").errorDescription?.contains("mask") == true)
+    }
+
     @Test("Offscreen canvases persist pixels and draw whole, cropped, and tinted images")
     @MainActor
     func offscreenGraphicsAndDrawing() throws {
@@ -277,6 +369,20 @@ struct P5ImageGraphicsTests {
         #expect(pixels.color(x: 5, y: 0).green == 1)
         #expect(pixels.color(x: 7, y: 1).blue == 1)
         #expect(pixels.color(x: 3, y: 4).green == 1)
+        graphics.copy(
+            source,
+            source: CGRect(x: 0, y: 0, width: 2, height: 1),
+            destination: CGRect(x: 0, y: 6, width: 2, height: 1)
+        )
+        for mode in P5BlendMode.allCases {
+            graphics.blend(
+                source,
+                source: CGRect(x: 0, y: 0, width: 2, height: 1),
+                destination: CGRect(x: 2, y: 6, width: 2, height: 1),
+                mode: mode
+            )
+        }
+        #expect(try graphics.snapshot().pixelBuffer().color(x: 0, y: 6).red == 1)
 
         var edited = try graphics.loadPixels()
         edited.setColor(P5Color(red: 1, green: 0, blue: 1), x: 0, y: 0)
@@ -349,6 +455,54 @@ struct P5ImageGraphicsTests {
             await MainActor.run {
                 _ = try! P5Graphics(size: CGSize(width: 1, height: 1), pixelDensity: 0)
             }
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.color(x: -1, y: 0)
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.cropped(to: CGRect(x: 0, y: 0, width: 0, height: 1))
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.cropped(to: CGRect(x: 1, y: 0, width: 1, height: 1))
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.resized(to: CGSize(width: CGFloat.nan, height: 1))
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.resized(to: CGSize(width: 1, height: 1), pixelDensity: 0)
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.applying(.sepia(intensity: .nan))
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.applying(.gaussianBlur(radius: -1))
+        }
+        await #expect(processExitsWith: .failure) {
+            let image = try! P5Image(
+                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+            )
+            _ = try! image.applying(.posterize(levels: 1))
         }
     }
 }

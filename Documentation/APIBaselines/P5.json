@@ -20,6 +20,13 @@
       },
       {
         "kind": "Import",
+        "name": "CoreImage",
+        "printedName": "CoreImage",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5497,6 +5504,90 @@
             "declKind": "Func",
             "usr": "s:2P50A6SketchC6noTintyyF",
             "mangledName": "$s2P50A6SketchC6noTintyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "copy",
+            "printedName": "copy(_:source:destination:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC4copy_6source11destinationyAA0A5ImageV_So6CGRectVAJtF",
+            "mangledName": "$s2P50A6SketchC4copy_6source11destinationyAA0A5ImageV_So6CGRectVAJtF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "blend",
+            "printedName": "blend(_:source:destination:mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5BlendMode",
+                "printedName": "P5.P5BlendMode",
+                "usr": "s:2P50A9BlendModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC5blend_6source11destination4modeyAA0A5ImageV_So6CGRectVAkA0A9BlendModeOtF",
+            "mangledName": "$s2P50A6SketchC5blend_6source11destination4modeyAA0A5ImageV_So6CGRectVAkA0A9BlendModeOtF",
             "moduleName": "P5",
             "declAttributes": [
               "Custom"
@@ -12300,6 +12391,376 @@
             "moduleName": "P5"
           },
           {
+            "kind": "Var",
+            "name": "darken",
+            "printedName": "darken",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO6darkenyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO6darkenyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "lighten",
+            "printedName": "lighten",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO7lightenyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO7lightenyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "difference",
+            "printedName": "difference",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO10differenceyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO10differenceyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "exclusion",
+            "printedName": "exclusion",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO9exclusionyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO9exclusionyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "replace",
+            "printedName": "replace",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO7replaceyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO7replaceyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "overlay",
+            "printedName": "overlay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO7overlayyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO7overlayyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "hardLight",
+            "printedName": "hardLight",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO9hardLightyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO9hardLightyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "softLight",
+            "printedName": "softLight",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO9softLightyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO9softLightyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "colorDodge",
+            "printedName": "colorDodge",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO10colorDodgeyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO10colorDodgeyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "colorBurn",
+            "printedName": "colorBurn",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5BlendMode.Type) -> P5.P5BlendMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5BlendMode",
+                    "printedName": "P5.P5BlendMode",
+                    "usr": "s:2P50A9BlendModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5BlendMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5BlendMode",
+                        "printedName": "P5.P5BlendMode",
+                        "usr": "s:2P50A9BlendModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9BlendModeO9colorBurnyA2CmF",
+            "mangledName": "$s2P50A9BlendModeO9colorBurnyA2CmF",
+            "moduleName": "P5"
+          },
+          {
             "kind": "TypeAlias",
             "name": "AllCases",
             "printedName": "AllCases",
@@ -13382,6 +13843,56 @@
             "declKind": "EnumElement",
             "usr": "s:2P50A10ImageErrorO22bitmapAllocationFailedyA2CmF",
             "mangledName": "$s2P50A10ImageErrorO22bitmapAllocationFailedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "processingFailed",
+            "printedName": "processingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageError.Type) -> (Swift.String) -> P5.P5ImageError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5ImageError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageError",
+                        "printedName": "P5.P5ImageError",
+                        "usr": "s:2P50A10ImageErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageError",
+                        "printedName": "P5.P5ImageError",
+                        "usr": "s:2P50A10ImageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10ImageErrorO16processingFailedyACSScACmF",
+            "mangledName": "$s2P50A10ImageErrorO16processingFailedyACSScACmF",
             "moduleName": "P5"
           },
           {
@@ -15242,6 +15753,164 @@
             "moduleName": "P5",
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "color",
+            "printedName": "color(x:y:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Color",
+                "printedName": "P5.P5Color",
+                "usr": "s:2P50A5ColorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5ImageV5color1x1yAA0A5ColorV14CoreFoundation7CGFloatV_AKtKF",
+            "mangledName": "$s2P50A5ImageV5color1x1yAA0A5ColorV12CoreGraphics7CGFloatV_AKtKF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cropped",
+            "printedName": "cropped(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5ImageV7cropped2toACSo6CGRectV_tKF",
+            "mangledName": "$s2P50A5ImageV7cropped2toACSo6CGRectV_tKF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resized",
+            "printedName": "resized(to:pixelDensity:interpolation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageInterpolation",
+                "printedName": "P5.P5ImageInterpolation",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A18ImageInterpolationO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5ImageV7resized2to12pixelDensity13interpolationACSo6CGSizeV_14CoreFoundation7CGFloatVSgAA0aB13InterpolationOtKF",
+            "mangledName": "$s2P50A5ImageV7resized2to12pixelDensity13interpolationACSo6CGSizeV_12CoreGraphics7CGFloatVSgAA0aB13InterpolationOtKF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "masked",
+            "printedName": "masked(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5ImageV6masked4withA2C_tKF",
+            "mangledName": "$s2P50A5ImageV6masked4withA2C_tKF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "applying",
+            "printedName": "applying(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageFilter",
+                "printedName": "P5.P5ImageFilter",
+                "usr": "s:2P50A11ImageFilterO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5ImageV8applyingyAcA0aB6FilterOKF",
+            "mangledName": "$s2P50A5ImageV8applyingyAcA0aB6FilterOKF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -15262,6 +15931,925 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ImageInterpolation",
+        "printedName": "P5ImageInterpolation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageInterpolation.Type) -> P5.P5ImageInterpolation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageInterpolation",
+                    "printedName": "P5.P5ImageInterpolation",
+                    "usr": "s:2P50A18ImageInterpolationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageInterpolation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageInterpolation",
+                        "printedName": "P5.P5ImageInterpolation",
+                        "usr": "s:2P50A18ImageInterpolationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18ImageInterpolationO4noneyA2CmF",
+            "mangledName": "$s2P50A18ImageInterpolationO4noneyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "low",
+            "printedName": "low",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageInterpolation.Type) -> P5.P5ImageInterpolation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageInterpolation",
+                    "printedName": "P5.P5ImageInterpolation",
+                    "usr": "s:2P50A18ImageInterpolationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageInterpolation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageInterpolation",
+                        "printedName": "P5.P5ImageInterpolation",
+                        "usr": "s:2P50A18ImageInterpolationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18ImageInterpolationO3lowyA2CmF",
+            "mangledName": "$s2P50A18ImageInterpolationO3lowyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "medium",
+            "printedName": "medium",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageInterpolation.Type) -> P5.P5ImageInterpolation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageInterpolation",
+                    "printedName": "P5.P5ImageInterpolation",
+                    "usr": "s:2P50A18ImageInterpolationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageInterpolation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageInterpolation",
+                        "printedName": "P5.P5ImageInterpolation",
+                        "usr": "s:2P50A18ImageInterpolationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18ImageInterpolationO6mediumyA2CmF",
+            "mangledName": "$s2P50A18ImageInterpolationO6mediumyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "high",
+            "printedName": "high",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageInterpolation.Type) -> P5.P5ImageInterpolation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageInterpolation",
+                    "printedName": "P5.P5ImageInterpolation",
+                    "usr": "s:2P50A18ImageInterpolationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageInterpolation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageInterpolation",
+                        "printedName": "P5.P5ImageInterpolation",
+                        "usr": "s:2P50A18ImageInterpolationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18ImageInterpolationO4highyA2CmF",
+            "mangledName": "$s2P50A18ImageInterpolationO4highyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5ImageInterpolation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageInterpolation",
+                    "printedName": "P5.P5ImageInterpolation",
+                    "usr": "s:2P50A18ImageInterpolationO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A18ImageInterpolationO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A18ImageInterpolationO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5ImageInterpolation]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageInterpolation",
+                    "printedName": "P5.P5ImageInterpolation",
+                    "usr": "s:2P50A18ImageInterpolationO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18ImageInterpolationO8AllCasesa",
+            "mangledName": "$s2P50A18ImageInterpolationO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18ImageInterpolationO8RawValuea",
+            "mangledName": "$s2P50A18ImageInterpolationO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5ImageInterpolation]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageInterpolation",
+                    "printedName": "P5.P5ImageInterpolation",
+                    "usr": "s:2P50A18ImageInterpolationO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18ImageInterpolationO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A18ImageInterpolationO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5ImageInterpolation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageInterpolation",
+                        "printedName": "P5.P5ImageInterpolation",
+                        "usr": "s:2P50A18ImageInterpolationO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18ImageInterpolationO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A18ImageInterpolationO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18ImageInterpolationO8rawValueSSvp",
+            "mangledName": "$s2P50A18ImageInterpolationO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18ImageInterpolationO8rawValueSSvg",
+                "mangledName": "$s2P50A18ImageInterpolationO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A18ImageInterpolationO",
+        "mangledName": "$s2P50A18ImageInterpolationO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5ImageInterpolation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageInterpolation",
+                        "printedName": "P5.P5ImageInterpolation",
+                        "usr": "s:2P50A18ImageInterpolationO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ImageFilter",
+        "printedName": "P5ImageFilter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invert",
+            "printedName": "invert",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageFilter.Type) -> P5.P5ImageFilter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageFilter",
+                    "printedName": "P5.P5ImageFilter",
+                    "usr": "s:2P50A11ImageFilterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageFilter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11ImageFilterO6invertyA2CmF",
+            "mangledName": "$s2P50A11ImageFilterO6invertyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "grayscale",
+            "printedName": "grayscale",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageFilter.Type) -> P5.P5ImageFilter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageFilter",
+                    "printedName": "P5.P5ImageFilter",
+                    "usr": "s:2P50A11ImageFilterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageFilter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11ImageFilterO9grayscaleyA2CmF",
+            "mangledName": "$s2P50A11ImageFilterO9grayscaleyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "sepia",
+            "printedName": "sepia",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageFilter.Type) -> (CoreGraphics.CGFloat) -> P5.P5ImageFilter",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreGraphics.CGFloat) -> P5.P5ImageFilter",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(intensity: CoreGraphics.CGFloat)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageFilter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11ImageFilterO5sepiayAC14CoreFoundation7CGFloatV_tcACmF",
+            "mangledName": "$s2P50A11ImageFilterO5sepiayAC12CoreGraphics7CGFloatV_tcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "gaussianBlur",
+            "printedName": "gaussianBlur",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageFilter.Type) -> (CoreGraphics.CGFloat) -> P5.P5ImageFilter",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreGraphics.CGFloat) -> P5.P5ImageFilter",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(radius: CoreGraphics.CGFloat)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageFilter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11ImageFilterO12gaussianBluryAC14CoreFoundation7CGFloatV_tcACmF",
+            "mangledName": "$s2P50A11ImageFilterO12gaussianBluryAC12CoreGraphics7CGFloatV_tcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "posterize",
+            "printedName": "posterize",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageFilter.Type) -> (Swift.Int) -> P5.P5ImageFilter",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> P5.P5ImageFilter",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(levels: Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageFilter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageFilter",
+                        "printedName": "P5.P5ImageFilter",
+                        "usr": "s:2P50A11ImageFilterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A11ImageFilterO9posterizeyACSi_tcACmF",
+            "mangledName": "$s2P50A11ImageFilterO9posterizeyACSi_tcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageFilter",
+                "printedName": "P5.P5ImageFilter",
+                "usr": "s:2P50A11ImageFilterO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageFilter",
+                "printedName": "P5.P5ImageFilter",
+                "usr": "s:2P50A11ImageFilterO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11ImageFilterO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A11ImageFilterO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11ImageFilterO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A11ImageFilterO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11ImageFilterO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A11ImageFilterO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11ImageFilterO9hashValueSivp",
+            "mangledName": "$s2P50A11ImageFilterO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11ImageFilterO9hashValueSivg",
+                "mangledName": "$s2P50A11ImageFilterO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageFilter",
+                "printedName": "P5.P5ImageFilter",
+                "usr": "s:2P50A11ImageFilterO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11ImageFilterO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A11ImageFilterO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A11ImageFilterO",
+        "mangledName": "$s2P50A11ImageFilterO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",

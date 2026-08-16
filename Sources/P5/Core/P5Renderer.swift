@@ -399,6 +399,26 @@ private extension P5BlendMode {
             .screen
         case .add:
             .plusLighter
+        case .darken:
+            .darken
+        case .lighten:
+            .lighten
+        case .difference:
+            .difference
+        case .exclusion:
+            .exclusion
+        case .replace:
+            .copy
+        case .overlay:
+            .overlay
+        case .hardLight:
+            .hardLight
+        case .softLight:
+            .softLight
+        case .colorDodge:
+            .colorDodge
+        case .colorBurn:
+            .colorBurn
         }
     }
 }

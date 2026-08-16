@@ -76,6 +76,36 @@ public enum P5BlendMode: Sendable, Hashable, Codable, CaseIterable {
 
     /// Adds source and destination components for additive light effects.
     case add
+
+    /// Keeps the darker component from source and destination.
+    case darken
+
+    /// Keeps the lighter component from source and destination.
+    case lighten
+
+    /// Uses the absolute difference between source and destination.
+    case difference
+
+    /// Uses a lower-contrast difference blend.
+    case exclusion
+
+    /// Replaces destination pixels with source pixels.
+    case replace
+
+    /// Multiplies or screens according to destination luminance.
+    case overlay
+
+    /// Multiplies or screens according to source luminance.
+    case hardLight
+
+    /// Applies a gentler contrast-changing light blend.
+    case softLight
+
+    /// Brightens destination pixels according to source color.
+    case colorDodge
+
+    /// Darkens destination pixels according to source color.
+    case colorBurn
 }
 
 public extension P5Sketch {

@@ -61,6 +61,30 @@ Coordinates passed to pixel methods are raster coordinates. Use
 ``P5PixelBuffer/pixelDensity`` and ``P5PixelBuffer/size`` when mapping between
 raster pixels and logical points.
 
+## Crop, resize, mask, and filter
+
+Image processing returns new immutable values. ``P5Image/cropped(to:)`` keeps
+source pixels unchanged, while ``P5Image/resized(to:pixelDensity:interpolation:)``
+selects explicit Core Graphics sampling. ``P5Image/masked(with:)`` scales the
+mask to the source extent and multiplies source alpha by mask alpha.
+
+``P5Image/applying(_:)`` supports invert, grayscale, sepia, Gaussian blur, and
+posterize operations from ``P5ImageFilter``. Filters render through a software
+Core Image context so results do not silently vary with GPU availability.
+
+```swift
+let thumbnail = try image.resized(
+    to: CGSize(width: 160, height: 90),
+    interpolation: .high
+)
+let monochrome = try thumbnail.applying(.grayscale)
+```
+
+For canvas compositing, ``P5Sketch/copy(_:source:destination:)`` draws without
+changing the current blend state and
+``P5Sketch/blend(_:source:destination:mode:)`` scopes a ``P5BlendMode`` to one
+operation. The native blend modes map directly to Core Graphics equivalents.
+
 ## Render offscreen
 
 ``P5Graphics`` inherits the two-dimensional `P5Sketch` drawing vocabulary and

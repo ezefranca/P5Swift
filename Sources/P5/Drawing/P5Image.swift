@@ -29,6 +29,8 @@ public enum P5ImageError: Error, Sendable, Hashable, LocalizedError {
     case encodingFailed(P5ImageFormat)
     /// Core Graphics could not allocate a bitmap of the requested size.
     case bitmapAllocationFailed
+    /// A named native image-processing operation could not produce output.
+    case processingFailed(String)
     /// A named image was absent from the selected bundle.
     case resourceNotFound(String)
     /// A remote server returned a status outside the successful `200...299` range.
@@ -43,6 +45,8 @@ public enum P5ImageError: Error, Sendable, Hashable, LocalizedError {
             "The image could not be encoded as \(format.rawValue.uppercased())."
         case .bitmapAllocationFailed:
             "Core Graphics could not allocate the requested bitmap."
+        case .processingFailed(let operation):
+            "The native \(operation) operation could not produce an image."
         case .resourceNotFound(let name):
             "The image resource '\(name)' was not found in the selected bundle."
         case .invalidHTTPStatus(let status):

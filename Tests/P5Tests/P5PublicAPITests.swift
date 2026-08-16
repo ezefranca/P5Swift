@@ -24,7 +24,12 @@ struct P5PublicAPITests {
         #expect(P5StrokeCap.allCases == [.round, .project, .square])
         #expect(P5StrokeJoin.allCases == [.miter, .bevel, .round])
         #expect(P5FillRule.allCases == [.nonZero, .evenOdd])
-        #expect(P5BlendMode.allCases == [.normal, .multiply, .screen, .add])
+        #expect(
+            P5BlendMode.allCases == [
+                .normal, .multiply, .screen, .add, .darken, .lighten, .difference, .exclusion,
+                .replace, .overlay, .hardLight, .softLight, .colorDodge, .colorBurn,
+            ]
+        )
         #expect(P5FrameDriver.allCases == [.automatic, .manual])
         #expect(P5PointerKind.allCases == [.mouse, .touch, .pencil, .indirect])
         #expect(P5PointerPhase.allCases.count == 8)

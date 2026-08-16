@@ -71,7 +71,12 @@ struct P5DrawingStyleTests {
         #expect(P5StrokeCap.allCases == [.round, .project, .square])
         #expect(P5StrokeJoin.allCases == [.miter, .bevel, .round])
         #expect(P5FillRule.allCases == [.nonZero, .evenOdd])
-        #expect(P5BlendMode.allCases == [.normal, .multiply, .screen, .add])
+        #expect(
+            P5BlendMode.allCases == [
+                .normal, .multiply, .screen, .add, .darken, .lighten, .difference, .exclusion,
+                .replace, .overlay, .hardLight, .softLight, .colorDodge, .colorBurn,
+            ]
+        )
         let encoded = try JSONEncoder().encode(P5RectMode.radius)
         #expect(try JSONDecoder().decode(P5RectMode.self, from: encoded) == .radius)
     }
