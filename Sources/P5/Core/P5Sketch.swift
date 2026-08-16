@@ -476,6 +476,16 @@ public extension P5Sketch {
     func canvasMetrics() -> P5CanvasMetrics {
         internalView.canvasMetrics()
     }
+
+    /// Renders queued commands into an immutable image without consuming them.
+    ///
+    /// - Parameter pixelDensity: Optional capture density; the canvas density is the default.
+    /// - Returns: A top-left-origin snapshot suitable for pixels or export.
+    /// - Throws: ``P5ImageError/bitmapAllocationFailed`` when Core Graphics
+    ///   cannot allocate or snapshot the capture bitmap.
+    func captureFrame(pixelDensity: CGFloat? = nil) throws -> P5Image {
+        try internalView.capture(pixelDensity: pixelDensity ?? internalView.pixelDensity)
+    }
 }
 
 // MARK: - 2D primitives

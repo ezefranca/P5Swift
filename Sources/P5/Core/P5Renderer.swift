@@ -28,13 +28,18 @@ final class P5Renderer {
         operations.append(operation)
     }
 
-    func render(in context: CGContext) {
+    func render(in context: CGContext, consumingOperations: Bool = true) {
         var styleStack: [DrawingStyle] = []
         let initialTransform = context.ctm
+        let initialStyle = style
         context.saveGState()
         defer {
             context.restoreGState()
-            operations.removeAll()
+            if consumingOperations {
+                operations.removeAll()
+            } else {
+                style = initialStyle
+            }
         }
 
         for operation in operations {

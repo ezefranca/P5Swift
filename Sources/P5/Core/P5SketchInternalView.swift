@@ -119,6 +119,26 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         renderer.render(in: context)
     }
 
+    func capture(
+        pixelDensity: CGFloat,
+        makeContext: (Int, Int) -> CGContext? = P5SketchCaptureRuntime.makeContext,
+        makeImage: (CGContext) -> CGImage? = { $0.makeImage() }
+    ) throws -> P5Image {
+        precondition(pixelDensity.isFinite && pixelDensity > 0)
+        let pixelWidth = Int((bounds.width * pixelDensity).rounded(.up))
+        let pixelHeight = Int((bounds.height * pixelDensity).rounded(.up))
+        guard let context = makeContext(pixelWidth, pixelHeight) else {
+            throw P5ImageError.bitmapAllocationFailed
+        }
+        context.translateBy(x: 0, y: CGFloat(pixelHeight))
+        context.scaleBy(x: pixelDensity, y: -pixelDensity)
+        renderer.render(in: context, consumingOperations: false)
+        guard let image = makeImage(context) else {
+            throw P5ImageError.bitmapAllocationFailed
+        }
+        return P5Image(cgImage: image, pixelDensity: pixelDensity)
+    }
+
     func resize(to size: CGSize) {
         renderer.size = size
         frame.size = size
@@ -786,4 +806,18 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
             return modifiers
         }
     #endif
+}
+
+enum P5SketchCaptureRuntime {
+    static func makeContext(width: Int, height: Int) -> CGContext? {
+        CGContext(
+            data: nil,
+            width: width,
+            height: height,
+            bitsPerComponent: 8,
+            bytesPerRow: width * 4,
+            space: P5RasterColorSpace.preferred(),
+            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+        )
+    }
 }

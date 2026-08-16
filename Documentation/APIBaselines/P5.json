@@ -3302,6 +3302,44 @@
           },
           {
             "kind": "Function",
+            "name": "captureFrame",
+            "printedName": "captureFrame(pixelDensity:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12captureFrame12pixelDensityAA0A5ImageV14CoreFoundation7CGFloatVSg_tKF",
+            "mangledName": "$s2P50A6SketchC12captureFrame12pixelDensityAA0A5ImageV12CoreGraphics7CGFloatVSg_tKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "clear",
             "printedName": "clear()",
             "children": [
@@ -13376,6 +13414,289 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "P5FrameSequence",
+        "printedName": "P5FrameSequence",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "frames",
+            "printedName": "frames",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5Image]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Image",
+                    "printedName": "P5.P5Image",
+                    "usr": "s:2P50A5ImageV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13FrameSequenceV6framesSayAA0A5ImageVGvp",
+            "mangledName": "$s2P50A13FrameSequenceV6framesSayAA0A5ImageVGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5Image]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Image",
+                        "printedName": "P5.P5Image",
+                        "usr": "s:2P50A5ImageV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13FrameSequenceV6framesSayAA0A5ImageVGvg",
+                "mangledName": "$s2P50A13FrameSequenceV6framesSayAA0A5ImageVGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "framesPerSecond",
+            "printedName": "framesPerSecond",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13FrameSequenceV15framesPerSecondSdvp",
+            "mangledName": "$s2P50A13FrameSequenceV15framesPerSecondSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13FrameSequenceV15framesPerSecondSdvg",
+                "mangledName": "$s2P50A13FrameSequenceV15framesPerSecondSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "loopCount",
+            "printedName": "loopCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13FrameSequenceV9loopCountSivp",
+            "mangledName": "$s2P50A13FrameSequenceV9loopCountSivp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13FrameSequenceV9loopCountSivg",
+                "mangledName": "$s2P50A13FrameSequenceV9loopCountSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frames:framesPerSecond:loopCount:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5FrameSequence",
+                "printedName": "P5.P5FrameSequence",
+                "usr": "s:2P50A13FrameSequenceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5Image]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Image",
+                    "printedName": "P5.P5Image",
+                    "usr": "s:2P50A5ImageV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13FrameSequenceV6frames0D9PerSecond9loopCountACSayAA0A5ImageVG_SdSitcfc",
+            "mangledName": "$s2P50A13FrameSequenceV6frames0D9PerSecond9loopCountACSayAA0A5ImageVG_SdSitcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encodedGIF",
+            "printedName": "encodedGIF()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13FrameSequenceV10encodedGIF10Foundation4DataVyKF",
+            "mangledName": "$s2P50A13FrameSequenceV10encodedGIF10Foundation4DataVyKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeGIF",
+            "printedName": "writeGIF(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13FrameSequenceV8writeGIF2toy10Foundation3URLV_tKF",
+            "mangledName": "$s2P50A13FrameSequenceV8writeGIF2toy10Foundation3URLV_tKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A13FrameSequenceV",
+        "mangledName": "$s2P50A13FrameSequenceV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "P5Graphics",
         "printedName": "P5Graphics",
         "children": [
@@ -14175,6 +14496,43 @@
             "declKind": "EnumElement",
             "usr": "s:2P50A10ImageErrorO16processingFailedyACSScACmF",
             "mangledName": "$s2P50A10ImageErrorO16processingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "animationEncodingFailed",
+            "printedName": "animationEncodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageError.Type) -> P5.P5ImageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageError",
+                    "printedName": "P5.P5ImageError",
+                    "usr": "s:2P50A10ImageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageError",
+                        "printedName": "P5.P5ImageError",
+                        "usr": "s:2P50A10ImageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10ImageErrorO23animationEncodingFailedyA2CmF",
+            "mangledName": "$s2P50A10ImageErrorO23animationEncodingFailedyA2CmF",
             "moduleName": "P5"
           },
           {
