@@ -30,10 +30,10 @@ open class P5Sketch {
     public var title: String?
 
     /// The canvas width in points.
-    public let width: CGFloat
+    public private(set) var width: CGFloat
 
     /// The canvas height in points.
-    public let height: CGFloat
+    public private(set) var height: CGFloat
 
     /// The source of frame requests for this sketch.
     public let frameDriver: P5FrameDriver
@@ -77,6 +77,13 @@ open class P5Sketch {
     public private(set) var deltaTime = 0.0
 
     private var measuredFramesPerSecond = 0.0
+    private var loopsWhenActive = true
+
+    /// Whether automatic frame delivery is suspended for scene or application lifecycle.
+    public private(set) var isPaused = false
+
+    /// Most recently applied application visibility state.
+    public private(set) var scenePhase = P5ScenePhase.active
 
     /// The native view that displays the sketch.
     ///
@@ -119,6 +126,9 @@ open class P5Sketch {
         frameDriver: P5FrameDriver,
         randomGenerator: P5RandomGenerator = P5RandomGenerator()
     ) {
+        precondition(
+            size.width.isFinite && size.width > 0 && size.height.isFinite && size.height > 0
+        )
         let initialTime = clock.now
         precondition(initialTime.isFinite)
         self.clock = clock
@@ -345,7 +355,10 @@ public extension P5Sketch {
     /// This method corresponds to
     /// [p5.js `loop()`](https://p5js.org/reference/p5/loop/).
     func loop() {
-        internalView.isLooping = true
+        loopsWhenActive = true
+        if !isPaused {
+            internalView.isLooping = true
+        }
     }
 
     /// Pauses the draw loop after the current frame.
@@ -353,6 +366,7 @@ public extension P5Sketch {
     /// This method corresponds to
     /// [p5.js `noLoop()`](https://p5js.org/reference/p5/noLoop/).
     func noLoop() {
+        loopsWhenActive = false
         internalView.isLooping = false
     }
 
@@ -375,6 +389,67 @@ public extension P5Sketch {
         precondition(frameDriver == .manual)
         performFrame()
         internalView.requestManualFrame()
+    }
+
+    /// Suspends automatic frame delivery while preserving the user's loop preference.
+    func pause() {
+        guard !isPaused else { return }
+        isPaused = true
+        internalView.isLooping = false
+    }
+
+    /// Resumes automatic frame delivery when the sketch was configured to loop.
+    func resume() {
+        guard isPaused else { return }
+        isPaused = false
+        internalView.isLooping = loopsWhenActive
+    }
+
+    /// Applies a native scene or window lifecycle transition.
+    ///
+    /// Inactive and background scenes pause automatic frames. Returning to active
+    /// resumes only sketches whose loop preference was enabled.
+    func scenePhaseChanged(to phase: P5ScenePhase) {
+        scenePhase = phase
+        switch phase {
+        case .active:
+            resume()
+        case .inactive, .background:
+            pause()
+        }
+    }
+
+    /// Changes the logical canvas extent and native view bounds.
+    ///
+    /// Existing queued drawing commands retain their coordinates. The resize does not
+    /// scale or preserve pixels already presented by the native view.
+    ///
+    /// - Parameters:
+    ///   - width: A finite positive width in points.
+    ///   - height: A finite positive height in points.
+    func resizeCanvas(_ width: CGFloat, _ height: CGFloat) {
+        precondition(width.isFinite && width > 0 && height.isFinite && height > 0)
+        self.width = width
+        self.height = height
+        internalView.resize(to: CGSize(width: width, height: height))
+    }
+
+    /// Sets the requested canvas raster density multiplier.
+    ///
+    /// - Parameter density: A finite positive number of raster pixels per canvas point.
+    func pixelDensity(_ density: CGFloat) {
+        precondition(density.isFinite && density > 0)
+        internalView.pixelDensity = density
+    }
+
+    /// Returns the requested canvas raster density multiplier.
+    func pixelDensity() -> CGFloat {
+        internalView.pixelDensity
+    }
+
+    /// Returns current canvas, native display, safe-area, and full-screen metadata.
+    func canvasMetrics() -> P5CanvasMetrics {
+        internalView.canvasMetrics()
     }
 }
 

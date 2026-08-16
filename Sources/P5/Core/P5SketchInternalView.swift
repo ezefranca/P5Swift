@@ -34,6 +34,13 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         }
     }
 
+    var pixelDensity = CGFloat(1) {
+        didSet {
+            applyPixelDensity()
+            requestDisplay()
+        }
+    }
+
     var onDraw: () -> Void = {}
     var onPointerEvent: (P5PointerEvent) -> Void = { _ in }
     var onKeyboardEvent: (P5KeyboardEvent) -> Void = { _ in }
@@ -108,6 +115,63 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         renderer.addOperation(operation)
     }
 
+    func resize(to size: CGSize) {
+        renderer.size = size
+        frame.size = size
+        bounds.size = size
+        requestDisplay()
+    }
+
+    func canvasMetrics() -> P5CanvasMetrics {
+        #if canImport(UIKit)
+            let scale = window?.screen.scale ?? traitCollection.displayScale
+            let displaySize = window?.screen.bounds.size ?? UIScreen.main.bounds.size
+            let insets = safeAreaInsets
+            let isFullScreen =
+                window.map { window in
+                    window.frame.equalTo(window.screen.bounds)
+                } ?? false
+            return P5CanvasMetrics(
+                size: bounds.size,
+                displayScale: scale,
+                pixelDensity: pixelDensity,
+                displaySize: displaySize,
+                safeAreaInsets: P5EdgeInsets(
+                    top: insets.top,
+                    left: insets.left,
+                    bottom: insets.bottom,
+                    right: insets.right
+                ),
+                isFullScreen: isFullScreen
+            )
+        #elseif canImport(AppKit)
+            let mainScreen = NSScreen.screens[0]
+            let scale = window?.backingScaleFactor ?? mainScreen.backingScaleFactor
+            let displaySize = window?.screen?.frame.size ?? mainScreen.frame.size
+            let insets = safeAreaInsets
+            let isFullScreen = Self.isFullScreen(window?.styleMask)
+            return P5CanvasMetrics(
+                size: bounds.size,
+                displayScale: scale,
+                pixelDensity: pixelDensity,
+                displaySize: displaySize,
+                safeAreaInsets: P5EdgeInsets(
+                    top: insets.top,
+                    left: insets.left,
+                    bottom: insets.bottom,
+                    right: insets.right
+                ),
+                isFullScreen: isFullScreen
+            )
+        #endif
+    }
+
+    #if canImport(AppKit)
+        static func isFullScreen(_ styleMask: NSWindow.StyleMask?) -> Bool {
+            styleMask?.contains(.fullScreen) ?? false
+        }
+    #endif
+
     func requestManualFrame() {
         userWantsRedraw = true
     }
@@ -181,6 +245,15 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
             setNeedsDisplay()
         #elseif canImport(AppKit)
             needsDisplay = true
+        #endif
+    }
+
+    private func applyPixelDensity() {
+        #if canImport(UIKit)
+            contentScaleFactor = pixelDensity
+        #elseif canImport(AppKit)
+            wantsLayer = true
+            layer?.contentsScale = pixelDensity
         #endif
     }
 

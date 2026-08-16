@@ -23,6 +23,93 @@ struct P5SketchTests {
     }
 
     @Test
+    func canvasResizingDensityAndDisplayMetricsStaySynchronized() throws {
+        let sketch = P5Sketch(size: CGSize(width: 20, height: 10))
+        sketch.noLoop()
+
+        let detached = sketch.canvasMetrics()
+        #expect(detached.size == CGSize(width: 20, height: 10))
+        #expect(detached.displayScale > 0)
+        #expect(detached.pixelDensity == 1)
+        #expect(detached.displaySize.width > 0)
+        #expect(detached.displaySize.height > 0)
+        #expect(detached.safeAreaInsets == P5EdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        #expect(detached.isFullScreen == false)
+
+        sketch.resizeCanvas(32, 24)
+        sketch.pixelDensity(2)
+        #expect(sketch.width == 32)
+        #expect(sketch.height == 24)
+        #expect(sketch.view.frame.size == CGSize(width: 32, height: 24))
+        #expect(sketch.view.bounds.size == CGSize(width: 32, height: 24))
+        #expect(sketch.pixelDensity() == 2)
+        #expect(sketch.view.layer?.contentsScale == 2)
+
+        let window = NSWindow(
+            contentRect: CGRect(x: 0, y: 0, width: 32, height: 24),
+            styleMask: [.borderless],
+            backing: .buffered,
+            defer: false
+        )
+        window.contentView = sketch.view
+        let attached = sketch.canvasMetrics()
+        #expect(attached.size == CGSize(width: 32, height: 24))
+        #expect(attached.displayScale == window.backingScaleFactor)
+        #expect(attached.pixelDensity == 2)
+        #expect(attached.isFullScreen == false)
+        #expect(P5SketchInternalView.isFullScreen(nil) == false)
+        #expect(P5SketchInternalView.isFullScreen(.fullScreen))
+
+        let bitmap = try #require(TestBitmap(width: 32, height: 24))
+        sketch.background(CGColor(red: 1, green: 0, blue: 0, alpha: 1))
+        sketch.redraw()
+        draw(sketch, in: bitmap)
+        let resizedPixel = bitmap.pixel(atX: 31, y: 23)
+        #expect(resizedPixel.red == 255)
+        #expect(resizedPixel.alpha == 255)
+    }
+
+    @Test
+    func sceneTransitionsPreserveTheExplicitLoopPreference() throws {
+        let sketch = P5Sketch(size: CGSize(width: 20, height: 20))
+        let canvas = try #require(sketch.view as? P5SketchInternalView)
+        #expect(P5ScenePhase.allCases == [.active, .inactive, .background])
+        #expect(
+            try JSONDecoder().decode(
+                P5ScenePhase.self,
+                from: JSONEncoder().encode(P5ScenePhase.background)
+            ) == .background
+        )
+
+        sketch.pause()
+        sketch.pause()
+        #expect(sketch.isPaused)
+        #expect(canvas.isLooping == false)
+        sketch.loop()
+        #expect(canvas.isLooping == false)
+        sketch.resume()
+        sketch.resume()
+        #expect(sketch.isPaused == false)
+        #expect(canvas.isLooping)
+
+        sketch.scenePhaseChanged(to: .inactive)
+        #expect(sketch.scenePhase == .inactive)
+        #expect(sketch.isPaused)
+        sketch.noLoop()
+        sketch.scenePhaseChanged(to: .background)
+        sketch.scenePhaseChanged(to: .active)
+        #expect(sketch.isPaused == false)
+        #expect(canvas.isLooping == false)
+
+        sketch.loop()
+        #expect(canvas.isLooping)
+        sketch.scenePhaseChanged(to: .background)
+        sketch.scenePhaseChanged(to: .active)
+        #expect(canvas.isLooping)
+        sketch.noLoop()
+    }
+
+    @Test
     @available(*, deprecated)
     func deprecatedInitializerAndDefaultLifecycleRemainFunctional() throws {
         let sketch = P5Sketch(ofSize: CGSize(width: 20, height: 20))
@@ -125,6 +212,72 @@ struct P5SketchTests {
                 let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
                 sketch.frameRate(0)
             }
+        }
+    }
+
+    @Test
+    func invalidCanvasConfigurationTerminatesTheProcess() async {
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                _ = P5Sketch(size: CGSize(width: 0, height: 1))
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                _ = P5Sketch(size: CGSize(width: CGFloat.nan, height: 1))
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                _ = P5Sketch(size: CGSize(width: 1, height: 0))
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                _ = P5Sketch(size: CGSize(width: 1, height: CGFloat.infinity))
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(-1, 1)
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                P5Sketch(size: CGSize(width: 1, height: 1))
+                    .resizeCanvas(.infinity, 1)
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(1, -1)
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(1, .nan)
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(0)
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(-.infinity)
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            await MainActor.run {
+                P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(.nan)
+            }
+        }
+        await #expect(processExitsWith: .failure) {
+            _ = P5EdgeInsets(top: -1, left: 0, bottom: 0, right: 0)
+        }
+        await #expect(processExitsWith: .failure) {
+            _ = P5EdgeInsets(top: 0, left: .nan, bottom: 0, right: 0)
         }
     }
 
