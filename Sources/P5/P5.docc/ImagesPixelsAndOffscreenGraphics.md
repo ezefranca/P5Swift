@@ -42,7 +42,7 @@ noTint()
 
 Tint is implemented with native Core Graphics compositing and preserves the
 source alpha mask. ``P5Sketch/clear()`` removes pixels to transparent black;
-``P5Sketch/background(_:)`` paints the full canvas independently of the current
+``P5Sketch/background(_:)-(P5Color)`` paints the full canvas independently of the current
 user transform.
 
 ## Edit RGBA pixels

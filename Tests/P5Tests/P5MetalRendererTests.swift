@@ -292,6 +292,7 @@
         @Test("Renderer initialization reports every native construction failure")
         func rendererInitializationFailures() async throws {
             let device = try metalDevice()
+            _ = P5MetalResourceFactory.system.makeDefaultLibrary(device)
 
             var factory = makeFactory(device: device)
             factory.makeDevice = { nil }
@@ -304,9 +305,18 @@
 
             factory = makeFactory(device: device)
             factory.loadShaderSource = { nil }
+            factory.makeDefaultLibrary = { _ in nil }
             #expect(throws: P5Metal3DError.shaderSourceUnavailable) {
                 _ = try P5MetalRenderer(resourceFactory: factory, executionHooks: .system)
             }
+
+            factory = makeFactory(device: device)
+            factory.loadShaderSource = { nil }
+            factory.makeDefaultLibrary = { device in
+                try? device.makeLibrary(source: p5TestShaderSource, options: nil)
+            }
+            let compiled = try P5MetalRenderer(resourceFactory: factory, executionHooks: .system)
+            #expect(compiled.deviceName == device.name)
 
             factory = makeFactory(device: device)
             factory.makeLibrary = { _, _ in throw P5MetalTestError.injected }
@@ -360,7 +370,7 @@
         @Test("Shaders, meshes, and textures own validated GPU resources")
         func resources() async throws {
             let device = try metalDevice()
-            let source = try #require(P5MetalResourceFactory.system.loadShaderSource())
+            let source = p5TestShaderSource
             #expect(P5MetalResourceFactory.shaderSource(at: nil) == nil)
             #expect(
                 P5MetalResourceFactory.shaderSource(
@@ -840,7 +850,7 @@
                 from: testImage(),
                 configuration: P5TextureConfiguration3D(generatesMipmaps: false)
             )
-            let source = try #require(P5MetalResourceFactory.system.loadShaderSource())
+            let source = p5TestShaderSource
             let shader = try await renderer.makeShader(
                 source: source,
                 vertexFunction: "p5Vertex3D",
@@ -1194,6 +1204,55 @@
                 _ = try await cancelledAfterCompletion.value
             }
         }
+
+        @Test("Renderer wrappers release while long-running submissions remain bounded")
+        func resourceLifetime() async throws {
+            let device = try metalDevice()
+            let renderer = try P5MetalRenderer(device: device)
+            weak var releasedMesh: P5MetalMesh?
+            weak var releasedTexture: P5MetalTexture?
+            weak var releasedShader: P5MetalShader?
+            do {
+                let mesh = try await renderer.makeMesh(P5Mesh.plane())
+                let texture = try await renderer.makeTexture(
+                    from: testImage(),
+                    configuration: P5TextureConfiguration3D(generatesMipmaps: false)
+                )
+                let source = p5TestShaderSource
+                let shader = try await renderer.makeShader(
+                    source: source,
+                    vertexFunction: "p5Vertex3D",
+                    fragmentFunction: "p5Fragment3D"
+                )
+                releasedMesh = mesh
+                releasedTexture = texture
+                releasedShader = shader
+                #expect(releasedMesh != nil)
+                #expect(releasedTexture != nil)
+                #expect(releasedShader != nil)
+            }
+            #expect(releasedMesh == nil)
+            #expect(releasedTexture == nil)
+            #expect(releasedShader == nil)
+
+            let camera = try P5Camera3D()
+            let target = try await renderer.makeRenderTarget(width: 4, height: 4)
+            let scene = P5Scene3D(camera: camera, lights: [], instances: [])
+            for _ in 0..<100 {
+                _ = try await renderer.render(
+                    scene,
+                    to: target,
+                    configuration: P5RenderConfiguration3D(
+                        depthMode: .disabled,
+                        cullMode: .none
+                    )
+                )
+            }
+            let statistics = await renderer.statistics()
+            #expect(statistics.submittedFrames == 100)
+            #expect(statistics.completedFrames == 100)
+            #expect(statistics.lastDrawCallCount == 0)
+        }
     }
 
     private enum P5MetalTestError: String, Error, LocalizedError {
@@ -1216,8 +1275,39 @@
     private func makeFactory(device: any MTLDevice) -> P5MetalResourceFactory {
         var factory = P5MetalResourceFactory.system
         factory.makeDevice = { device }
+        factory.loadShaderSource = { p5TestShaderSource }
         return factory
     }
+
+    private let p5TestShaderSource = """
+        #include <metal_stdlib>
+        using namespace metal;
+
+        struct TestVertex {
+            float3 position;
+            float3 normal;
+            float2 textureCoordinate;
+            float4 color;
+        };
+
+        struct TestOutput {
+            float4 position [[position]];
+        };
+
+        vertex TestOutput p5Vertex3D(
+            uint vertexID [[vertex_id]],
+            const device TestVertex *vertices [[buffer(0)]])
+        {
+            TestOutput output;
+            output.position = float4(vertices[vertexID].position, 1.0);
+            return output;
+        }
+
+        fragment float4 p5Fragment3D(TestOutput input [[stage_in]])
+        {
+            return float4(1.0);
+        }
+        """
 
     private func expectRoundTrip<Value: Codable & Equatable>(_ value: Value) throws {
         #expect(try JSONDecoder().decode(Value.self, from: JSONEncoder().encode(value)) == value)

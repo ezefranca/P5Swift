@@ -31,22 +31,42 @@ struct P5PersistenceTests {
             }
         }
 
-        await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("") }
-        await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>(".") }
-        await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("..") }
-        await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>(" bad") }
-        await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("bad ") }
-        await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("bad/name") }
-        await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("café") }
-        await #expect(processExitsWith: .failure) {
-            _ = P5StorageKey<String>(String(repeating: "x", count: 129))
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Preferences(namespace: "invalid namespace")
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5FileStore(directory: URL(string: "https://example.com/store")!)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("") }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>(".") }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("..") }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>(" bad") }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("bad ") }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("bad/name") }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5StorageKey<String>("café") }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5StorageKey<String>(String(repeating: "x", count: 129))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Preferences(namespace: "invalid namespace")
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5FileStore(directory: URL(string: "https://example.com/store")!)
+            }
+        #endif
     }
 
     @Test("Persistence envelopes are stable, versioned, and diagnostic")

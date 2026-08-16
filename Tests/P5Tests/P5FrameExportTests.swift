@@ -116,40 +116,50 @@ struct P5FrameExportTests {
 
     @Test("Invalid frame capture and animation values terminate at public boundaries")
     func invalidValuesTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5FrameSequence(frames: [], framesPerSecond: 1)
-        }
-        await #expect(processExitsWith: .failure) {
-            let frame = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = P5FrameSequence(frames: [frame], framesPerSecond: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            let frame = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = P5FrameSequence(frames: [frame], framesPerSecond: 1, loopCount: -1)
-        }
-        await #expect(processExitsWith: .failure) {
-            let first = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            let second = try! P5Image(
-                pixelBuffer: P5PixelBuffer(
-                    width: 2, height: 1,
-                    bytes: [
-                        0, 0, 0, 0, 0, 0, 0, 0,
-                    ])
-            )
-            _ = P5FrameSequence(frames: [first, second], framesPerSecond: 1)
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = try! P5Sketch(size: CGSize(width: 1, height: 1)).captureFrame(
-                    pixelDensity: 0
-                )
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5FrameSequence(frames: [], framesPerSecond: 1)
             }
-        }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let frame = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = P5FrameSequence(frames: [frame], framesPerSecond: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let frame = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = P5FrameSequence(frames: [frame], framesPerSecond: 1, loopCount: -1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let first = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                let second = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(
+                        width: 2, height: 1,
+                        bytes: [
+                            0, 0, 0, 0, 0, 0, 0, 0,
+                        ])
+                )
+                _ = P5FrameSequence(frames: [first, second], framesPerSecond: 1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = try! P5Sketch(size: CGSize(width: 1, height: 1)).captureFrame(
+                        pixelDensity: 0
+                    )
+                }
+            }
+        #endif
     }
 }

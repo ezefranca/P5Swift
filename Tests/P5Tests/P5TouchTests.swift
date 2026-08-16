@@ -111,81 +111,95 @@ struct P5TouchTests {
 
     @Test("Invalid touch values terminate at public boundaries")
     nonisolated func invalidValuesTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5Touch(
-                id: 1,
-                kind: .mouse,
-                location: .zero,
-                previousLocation: .zero,
-                timestamp: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Touch(
-                id: 1,
-                kind: .touch,
-                location: CGPoint(x: CGFloat.nan, y: 0),
-                previousLocation: .zero,
-                timestamp: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Touch(
-                id: 1,
-                kind: .touch,
-                location: .zero,
-                previousLocation: CGPoint(x: 0, y: CGFloat.infinity),
-                pressure: 2,
-                timestamp: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Touch(
-                id: 1,
-                kind: .touch,
-                location: .zero,
-                previousLocation: .zero,
-                timestamp: -1
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5TouchEvent(
-                phase: .started,
-                changedTouches: [],
-                activeTouches: [],
-                timestamp: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            let touch = P5Touch(
-                id: 1,
-                kind: .touch,
-                location: .zero,
-                previousLocation: .zero,
-                timestamp: 0
-            )
-            _ = P5TouchEvent(
-                phase: .moved,
-                changedTouches: [touch, touch],
-                activeTouches: [touch],
-                timestamp: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            let touch = P5Touch(
-                id: 1,
-                kind: .touch,
-                location: .zero,
-                previousLocation: .zero,
-                timestamp: 0
-            )
-            _ = P5TouchEvent(
-                phase: .moved,
-                changedTouches: [touch],
-                activeTouches: [touch, touch],
-                timestamp: .nan
-            )
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Touch(
+                    id: 1,
+                    kind: .mouse,
+                    location: .zero,
+                    previousLocation: .zero,
+                    timestamp: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Touch(
+                    id: 1,
+                    kind: .touch,
+                    location: CGPoint(x: CGFloat.nan, y: 0),
+                    previousLocation: .zero,
+                    timestamp: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Touch(
+                    id: 1,
+                    kind: .touch,
+                    location: .zero,
+                    previousLocation: CGPoint(x: 0, y: CGFloat.infinity),
+                    pressure: 2,
+                    timestamp: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Touch(
+                    id: 1,
+                    kind: .touch,
+                    location: .zero,
+                    previousLocation: .zero,
+                    timestamp: -1
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5TouchEvent(
+                    phase: .started,
+                    changedTouches: [],
+                    activeTouches: [],
+                    timestamp: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let touch = P5Touch(
+                    id: 1,
+                    kind: .touch,
+                    location: .zero,
+                    previousLocation: .zero,
+                    timestamp: 0
+                )
+                _ = P5TouchEvent(
+                    phase: .moved,
+                    changedTouches: [touch, touch],
+                    activeTouches: [touch],
+                    timestamp: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let touch = P5Touch(
+                    id: 1,
+                    kind: .touch,
+                    location: .zero,
+                    previousLocation: .zero,
+                    timestamp: 0
+                )
+                _ = P5TouchEvent(
+                    phase: .moved,
+                    changedTouches: [touch],
+                    activeTouches: [touch, touch],
+                    timestamp: .nan
+                )
+            }
+        #endif
     }
 
     private func event(

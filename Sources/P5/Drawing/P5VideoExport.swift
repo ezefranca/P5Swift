@@ -293,13 +293,6 @@ final class P5AVVideoPipeline: P5VideoPipeline, @unchecked Sendable {
         writer.startSession(atSourceTime: .zero)
 
         for (index, frame) in frames.enumerated() {
-            while runtime.isReady(input) == false {
-                try Task.checkCancellation()
-                if runtime.status(writer) == .failed {
-                    throw writingError(fallback: "AVAssetWriter failed while awaiting input.")
-                }
-                await Task.yield()
-            }
             try Task.checkCancellation()
             guard let pool = runtime.pixelBufferPool(adaptor) else {
                 throw P5VideoExportError.frameConversionFailed(index)
@@ -312,6 +305,14 @@ final class P5AVVideoPipeline: P5VideoPipeline, @unchecked Sendable {
                 height: height,
                 preservesAlpha: preservesAlpha
             )
+            while runtime.isReady(input) == false || input.isReadyForMoreMediaData == false {
+                try Task.checkCancellation()
+                if runtime.status(writer) == .failed {
+                    throw writingError(fallback: "AVAssetWriter failed while awaiting input.")
+                }
+                await Task.yield()
+            }
+            try Task.checkCancellation()
             let presentationTime = CMTime(
                 seconds: Double(index) / framesPerSecond,
                 preferredTimescale: 60_000

@@ -365,79 +365,101 @@ struct P5VideoPlaybackTests {
 
     @Test("Invalid video values terminate at their public boundaries")
     func invalidValues() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoMetadata(
-                duration: .nan,
-                naturalSize: CGSize(width: 1, height: 1),
-                nominalFrameRate: 1,
-                hasAudio: false
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoMetadata(
-                duration: 1,
-                naturalSize: CGSize(width: 0, height: 1),
-                nominalFrameRate: 1,
-                hasAudio: false
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoMetadata(
-                duration: 1,
-                naturalSize: CGSize(width: 1, height: CGFloat.infinity),
-                nominalFrameRate: 1,
-                hasAudio: false
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoMetadata(
-                duration: 1,
-                naturalSize: CGSize(width: 1, height: 1),
-                nominalFrameRate: -.infinity,
-                hasAudio: false
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoFrameExtractionConfiguration(toleranceBefore: -1)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoFrameExtractionConfiguration(toleranceAfter: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoFrameExtractionConfiguration(
-                maximumSize: CGSize(width: 1, height: 0)
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoFrame(
-                image: try! Self.image(),
-                requestedTime: .nan,
-                actualTime: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoFrame(
-                image: try! Self.image(),
-                requestedTime: 0,
-                actualTime: -1
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let player = P5VideoPlayer(
-                    video: P5Video(url: URL(fileURLWithPath: "/movie.mov"))
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoMetadata(
+                    duration: .nan,
+                    naturalSize: CGSize(width: 1, height: 1),
+                    nominalFrameRate: 1,
+                    hasAudio: false
                 )
-                player.volume = .nan
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let player = P5VideoPlayer(
-                    video: P5Video(url: URL(fileURLWithPath: "/movie.mov"))
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoMetadata(
+                    duration: 1,
+                    naturalSize: CGSize(width: 0, height: 1),
+                    nominalFrameRate: 1,
+                    hasAudio: false
                 )
-                player.volume = 2
             }
-        }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoMetadata(
+                    duration: 1,
+                    naturalSize: CGSize(width: 1, height: CGFloat.infinity),
+                    nominalFrameRate: 1,
+                    hasAudio: false
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoMetadata(
+                    duration: 1,
+                    naturalSize: CGSize(width: 1, height: 1),
+                    nominalFrameRate: -.infinity,
+                    hasAudio: false
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoFrameExtractionConfiguration(toleranceBefore: -1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoFrameExtractionConfiguration(toleranceAfter: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoFrameExtractionConfiguration(
+                    maximumSize: CGSize(width: 1, height: 0)
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoFrame(
+                    image: try! Self.image(),
+                    requestedTime: .nan,
+                    actualTime: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoFrame(
+                    image: try! Self.image(),
+                    requestedTime: 0,
+                    actualTime: -1
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let player = P5VideoPlayer(
+                        video: P5Video(url: URL(fileURLWithPath: "/movie.mov"))
+                    )
+                    player.volume = .nan
+                }
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let player = P5VideoPlayer(
+                        video: P5Video(url: URL(fileURLWithPath: "/movie.mov"))
+                    )
+                    player.volume = 2
+                }
+            }
+        #endif
     }
 
     private static func writeVideo(to url: URL) async throws {

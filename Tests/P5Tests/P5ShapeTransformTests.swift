@@ -1,4 +1,3 @@
-import AppKit
 import CoreGraphics
 import Foundation
 import Testing
@@ -115,59 +114,67 @@ struct P5ShapeTransformTests {
 
         let bitmap = try #require(TestBitmap(width: 32, height: 24))
         sketch.redraw()
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
         #expect(bitmap.pixel(atX: 3, y: 3).red == 255)
         #expect(bitmap.pixel(atX: 13, y: 3).red == 255)
     }
 
-    @MainActor
-    private func draw(_ sketch: P5Sketch, in bitmap: TestBitmap) {
-        NSGraphicsContext.saveGraphicsState()
-        defer {
-            NSGraphicsContext.restoreGraphicsState()
-        }
-
-        NSGraphicsContext.current = NSGraphicsContext(
-            cgContext: bitmap.context,
-            flipped: true
-        )
-        sketch.view.draw(sketch.view.bounds)
-    }
-
     @Test("Invalid transform and shape coordinates terminate at the public boundary")
     func invalidGeometryTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform(a: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform.identity.translatedBy(x: .nan, y: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform.identity.translatedBy(x: 0, y: .infinity)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform.identity.rotated(by: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform.identity.scaledBy(x: .infinity, y: 1)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform.identity.scaledBy(x: 1, y: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform.identity.applying(to: CGPoint(x: CGFloat.nan, y: 0))
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Transform.identity.applying(to: CGPoint(x: 0, y: CGFloat.infinity))
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Shape(elements: [.move(to: CGPoint(x: CGFloat.nan, y: 0))])
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Shape(elements: []).contains(CGPoint(x: CGFloat.infinity, y: 0))
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Shape(elements: []).contains(CGPoint(x: 0, y: CGFloat.nan))
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform(a: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform.identity.translatedBy(x: .nan, y: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform.identity.translatedBy(x: 0, y: .infinity)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform.identity.rotated(by: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform.identity.scaledBy(x: .infinity, y: 1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform.identity.scaledBy(x: 1, y: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform.identity.applying(to: CGPoint(x: CGFloat.nan, y: 0))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Transform.identity.applying(to: CGPoint(x: 0, y: CGFloat.infinity))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Shape(elements: [.move(to: CGPoint(x: CGFloat.nan, y: 0))])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Shape(elements: []).contains(CGPoint(x: CGFloat.infinity, y: 0))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Shape(elements: []).contains(CGPoint(x: 0, y: CGFloat.nan))
+            }
+        #endif
     }
 }

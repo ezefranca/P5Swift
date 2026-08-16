@@ -1,60 +1,154 @@
-//
-//  ViewController.swift
-//  P5Demo
-//
-//  Created by Juan Hurtado on 13/06/23.
-//
-
 import P5
 import UIKit
 
-class ViewController: UIViewController {
-    lazy var examples: [P5Sketch] = [
-        FractalOrganicTree(size: view.bounds.size),
-        GameOfLife(size: view.bounds.size),
-        Starfield(size: view.bounds.size),
-        FourierSeries(size: view.bounds.size)
+@MainActor
+final class ViewController: UITableViewController {
+    fileprivate struct Example {
+        let title: String
+        let summary: String
+        let makeSketch: @MainActor @Sendable (CGSize) -> P5Sketch
+    }
+
+    private let examples: [Example] = [
+        Example(
+            title: String(localized: "Fractal tree"),
+            summary: String(localized: "Recursive branching and transforms"),
+            makeSketch: FractalOrganicTree.init(size:)
+        ),
+        Example(
+            title: String(localized: "Game of Life"),
+            summary: String(localized: "A cellular automaton on a pixel grid"),
+            makeSketch: GameOfLife.init(size:)
+        ),
+        Example(
+            title: String(localized: "Starfield"),
+            summary: String(localized: "Depth and motion from simple geometry"),
+            makeSketch: Starfield.init(size:)
+        ),
+        Example(
+            title: String(localized: "Fourier series"),
+            summary: String(localized: "Epicycles drawing a periodic wave"),
+            makeSketch: FourierSeries.init(size:)
+        ),
     ]
-    
+
+    init() {
+        super.init(style: .insetGrouped)
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.dataSource = self
-        tableView.delegate = self
-        view.addSubview(tableView)
-        
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        
-        title = "Examples"
+        title = String(localized: "P5 Gallery")
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Example")
+        tableView.accessibilityLabel = String(localized: "Creative coding examples")
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        examples.count
+    }
+
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let example = examples[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Example", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = example.title
+        content.secondaryText = example.summary
+        content.textProperties.font = .preferredFont(forTextStyle: .headline)
+        content.secondaryTextProperties.font = .preferredFont(forTextStyle: .subheadline)
+        content.textProperties.adjustsFontForContentSizeCategory = true
+        content.secondaryTextProperties.adjustsFontForContentSizeCategory = true
+        cell.contentConfiguration = content
+        cell.accessoryType = .disclosureIndicator
+        cell.accessibilityHint = String(localized: "Opens the animated sketch")
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let example = examples[indexPath.row]
+        navigationController?.pushViewController(
+            SketchHostViewController(example: example),
+            animated: !UIAccessibility.isReduceMotionEnabled
+        )
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.selectionStyle = .none
-        cell.textLabel?.text = examples[indexPath.row].title
-        return cell
+@MainActor
+private final class SketchHostViewController: UIViewController {
+    private let example: ViewController.Example
+    private var sketch: P5Sketch?
+
+    init(example: ViewController.Example) {
+        self.example = example
+        super.init(nibName: nil, bundle: nil)
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
+
+    required init?(coder: NSCoder) {
+        fatalError("Storyboard construction is unsupported.")
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        examples.count
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = example.title
+        view.backgroundColor = .systemBackground
+        installSketch()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(reduceMotionChanged),
+            name: UIAccessibility.reduceMotionStatusDidChangeNotification,
+            object: nil
+        )
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let example = examples[indexPath.row]
-        example.redraw()
-        let viewController = UIViewController()
-        viewController.title = example.title
-        viewController.view.addSubview(example.view)
-        navigationController?.pushViewController(viewController, animated: true)
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateMotion()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        sketch?.pause()
+    }
+
+    private func installSketch() {
+        let availableSize = view.bounds.inset(by: view.safeAreaInsets).size
+        let canvasSize = CGSize(
+            width: max(availableSize.width, 1),
+            height: max(availableSize.height, 1)
+        )
+        let sketch = example.makeSketch(canvasSize)
+        sketch.accessibilityLabel = example.title
+        sketch.accessibilityHint = example.summary
+        sketch.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(sketch.view)
+        NSLayoutConstraint.activate([
+            sketch.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            sketch.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            sketch.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            sketch.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+        self.sketch = sketch
+    }
+
+    @objc private func reduceMotionChanged() {
+        updateMotion()
+    }
+
+    private func updateMotion() {
+        if UIAccessibility.isReduceMotionEnabled {
+            sketch?.noLoop()
+            sketch?.redraw()
+        } else {
+            sketch?.loop()
+        }
     }
 }

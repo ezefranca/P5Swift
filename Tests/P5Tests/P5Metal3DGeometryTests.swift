@@ -308,28 +308,46 @@ struct P5Metal3DGeometryTests {
 
     @Test("Invalid matrix and bounds construction terminates at public boundaries")
     func invalidConstruction() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5Matrix4x4(
-                column0: SIMD4(.nan, 0, 0, 0),
-                column1: SIMD4(0, 1, 0, 0),
-                column2: SIMD4(0, 0, 1, 0),
-                column3: SIMD4(0, 0, 0, 1)
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Matrix4x4.translation(x: .nan, y: 0, z: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Matrix4x4.scale(x: 1, y: .nan, z: 1)
-        }
-        await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.rotationX(.nan) }
-        await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.rotationY(.nan) }
-        await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.rotationZ(.nan) }
-        await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.identity[-1, 0] }
-        await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.identity[0, 4] }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Bounds3D(minimum: P5Vector(x: 1), maximum: .zero)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Matrix4x4(
+                    column0: SIMD4(.nan, 0, 0, 0),
+                    column1: SIMD4(0, 1, 0, 0),
+                    column2: SIMD4(0, 0, 1, 0),
+                    column3: SIMD4(0, 0, 0, 1)
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Matrix4x4.translation(x: .nan, y: 0, z: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Matrix4x4.scale(x: 1, y: .nan, z: 1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.rotationX(.nan) }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.rotationY(.nan) }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.rotationZ(.nan) }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.identity[-1, 0] }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) { _ = P5Matrix4x4.identity[0, 4] }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Bounds3D(minimum: P5Vector(x: 1), maximum: .zero)
+            }
+        #endif
     }
 
     @Test("OBJ parser triangulates, resolves indices, and reports malformed input")

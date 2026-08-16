@@ -887,11 +887,20 @@ struct P5AudioEngineRuntime: @unchecked Sendable {
         (AVAudioMixerNode, AVAudioFrameCount, @escaping @Sendable (AVAudioPCMBuffer) -> Void) ->
             Void = {
                 node, size, process in
-                node.installTap(onBus: 0, bufferSize: size, format: nil) { buffer, _ in
-                    process(buffer)
-                }
+                node.installTap(
+                    onBus: 0,
+                    bufferSize: size,
+                    format: nil,
+                    block: Self.tapHandler(process)
+                )
             }
     var removeTap: (AVAudioMixerNode) -> Void = { $0.removeTap(onBus: 0) }
+
+    static func tapHandler(
+        _ process: @escaping @Sendable (AVAudioPCMBuffer) -> Void
+    ) -> @Sendable (AVAudioPCMBuffer, AVAudioTime) -> Void {
+        { buffer, _ in process(buffer) }
+    }
 }
 
 struct P5AudioAnalysisRuntime: @unchecked Sendable {

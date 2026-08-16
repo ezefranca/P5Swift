@@ -874,7 +874,7 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
 
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             applyGestureCoexistence()
-            becomeFirstResponder()
+            _ = becomeFirstResponder()
             for touch in orderedTouches(touches) {
                 let key = ObjectIdentifier(touch)
                 touchOrigins[key] = (touch.location(in: self), touch.timestamp)

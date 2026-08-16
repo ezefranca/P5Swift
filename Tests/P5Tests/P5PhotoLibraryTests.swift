@@ -269,22 +269,26 @@ struct P5PhotoLibraryTests {
 
     @Test("Invalid Photos image quality terminates at the public boundary")
     func invalidQuality() async {
-        await #expect(processExitsWith: .failure) {
-            let state = PhotoState()
-            state.status = .authorized
-            _ = try! await Self.makeLibrary(state: state).save(
-                try! Self.sampleImage(),
-                quality: .nan
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            let state = PhotoState()
-            state.status = .authorized
-            _ = try! await Self.makeLibrary(state: state).save(
-                try! Self.sampleImage(),
-                quality: 1.1
-            )
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let state = PhotoState()
+                state.status = .authorized
+                _ = try! await Self.makeLibrary(state: state).save(
+                    try! Self.sampleImage(),
+                    quality: .nan
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let state = PhotoState()
+                state.status = .authorized
+                _ = try! await Self.makeLibrary(state: state).save(
+                    try! Self.sampleImage(),
+                    quality: 1.1
+                )
+            }
+        #endif
     }
 
     private static func makeLibrary(state: PhotoState) -> P5PhotoLibrary {

@@ -151,33 +151,45 @@ struct P5TextTests {
 
     @Test("Invalid typography values terminate at public boundaries")
     func invalidValuesTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = try! P5Font.load(from: URL(string: "https://example.com/font.ttf")!)
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).textSize(0)
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = try! P5Font.load(from: URL(string: "https://example.com/font.ttf")!)
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).textLeading(.nan)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).textSize(0)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).text("x", .infinity, 0)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).textLeading(.nan)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).text("x", 0, 0, 0, 1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).text("x", .infinity, 0)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5Sketch(size: CGSize(width: 10, height: 10)).textBounds("x", width: 0)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).text("x", 0, 0, 0, 1)
+                }
             }
-        }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5Sketch(size: CGSize(width: 10, height: 10)).textBounds("x", width: 0)
+                }
+            }
+        #endif
     }
 }

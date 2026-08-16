@@ -412,97 +412,135 @@ struct P5ImageGraphicsTests {
 
     @Test("Invalid image and pixel arguments terminate at public boundaries")
     func invalidInputsTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5PixelBuffer(width: 0, height: 1, bytes: [])
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5PixelBuffer(width: 1, height: 0, bytes: [])
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5PixelBuffer(width: 1, height: 1, pixelDensity: 0, bytes: [0, 0, 0, 0])
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5PixelBuffer(width: 1, height: 1, bytes: [])
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0]).color(x: -1, y: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            var pixels = P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            pixels.setColor(P5Color(gray: 0), x: 0, y: 1)
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = P5Image(cgImage: image.cgImage, pixelDensity: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = try! P5Image.decode(P5ImageURLProtocol.pngData, pixelDensity: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.encoded(as: .png, quality: 2)
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = try! P5Graphics(size: CGSize(width: 0, height: 1))
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PixelBuffer(width: 0, height: 1, bytes: [])
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = try! P5Graphics(size: CGSize(width: 1, height: 1), pixelDensity: 0)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PixelBuffer(width: 1, height: 0, bytes: [])
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.color(x: -1, y: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.cropped(to: CGRect(x: 0, y: 0, width: 0, height: 1))
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.cropped(to: CGRect(x: 1, y: 0, width: 1, height: 1))
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.resized(to: CGSize(width: CGFloat.nan, height: 1))
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.resized(to: CGSize(width: 1, height: 1), pixelDensity: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.applying(.sepia(intensity: .nan))
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.applying(.gaussianBlur(radius: -1))
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = try! image.applying(.posterize(levels: 1))
-        }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PixelBuffer(width: 1, height: 1, pixelDensity: 0, bytes: [0, 0, 0, 0])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PixelBuffer(width: 1, height: 1, bytes: [])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0]).color(x: -1, y: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var pixels = P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                pixels.setColor(P5Color(gray: 0), x: 0, y: 1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = P5Image(cgImage: image.cgImage, pixelDensity: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = try! P5Image.decode(P5ImageURLProtocol.pngData, pixelDensity: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.encoded(as: .png, quality: 2)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = try! P5Graphics(size: CGSize(width: 0, height: 1))
+                }
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = try! P5Graphics(size: CGSize(width: 1, height: 1), pixelDensity: 0)
+                }
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.color(x: -1, y: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.cropped(to: CGRect(x: 0, y: 0, width: 0, height: 1))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.cropped(to: CGRect(x: 1, y: 0, width: 1, height: 1))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.resized(to: CGSize(width: CGFloat.nan, height: 1))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.resized(to: CGSize(width: 1, height: 1), pixelDensity: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.applying(.sepia(intensity: .nan))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.applying(.gaussianBlur(radius: -1))
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = try! image.applying(.posterize(levels: 1))
+            }
+        #endif
     }
 }

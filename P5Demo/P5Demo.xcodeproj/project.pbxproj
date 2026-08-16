@@ -17,7 +17,6 @@
 		2F74E0932A38FD9200ED173F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F74E0912A38FD9200ED173F /* Main.storyboard */; };
 		2F74E0952A38FD9300ED173F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F74E0942A38FD9300ED173F /* Assets.xcassets */; };
 		2F74E0982A38FD9300ED173F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F74E0962A38FD9300ED173F /* LaunchScreen.storyboard */; };
-		2F74E0BD2A38FDFA00ED173F /* P5 in Frameworks */ = {isa = PBXBuildFile; productRef = 2F74E0BC2A38FDFA00ED173F /* P5 */; };
 		2F74E0C02A3908C000ED173F /* P5 in Frameworks */ = {isa = PBXBuildFile; productRef = 2F74E0BF2A3908C000ED173F /* P5 */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F74E0BD2A38FDFA00ED173F /* P5 in Frameworks */,
 				2F74E0C02A3908C000ED173F /* P5 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +106,6 @@
 			);
 			name = P5Demo;
 			packageProductDependencies = (
-				2F74E0BC2A38FDFA00ED173F /* P5 */,
 				2F74E0BF2A3908C000ED173F /* P5 */,
 			);
 			productName = P5Demo;
@@ -339,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.2;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.juandahurt.P5Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezefranca.p5swift.gallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -366,7 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.2;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.juandahurt.P5Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezefranca.p5swift.gallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -405,10 +402,6 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2F74E0BC2A38FDFA00ED173F /* P5 */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = P5;
-		};
 		2F74E0BF2A3908C000ED173F /* P5 */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = P5;

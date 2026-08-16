@@ -47,15 +47,21 @@ struct P5MathTests {
 
     @Test
     func invalidMathRangesTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5Math.constrain(1, 2, 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Math.map(1, from: 0, to: 0, onto: 0, to: 1)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Math.squareRoot(-1)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Math.constrain(1, 2, 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Math.map(1, from: 0, to: 0, onto: 0, to: 1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Math.squareRoot(-1)
+            }
+        #endif
     }
 }
 
@@ -168,53 +174,75 @@ struct P5RandomGeneratorTests {
 
     @Test
     func nonfiniteRandomParametersTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.random(.infinity, 1)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.random(0, .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomGaussian(mean: .infinity)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomGaussian(standardDeviation: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomWeighted([1], weights: [])
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomWeighted([1], weights: [-1])
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomWeighted([1], weights: [.nan])
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomWeighted([1], weights: [0])
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomWeighted(
-                [1, 2],
-                weights: [.greatestFiniteMagnitude, .greatestFiniteMagnitude]
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomExponential(rate: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5RandomGenerator(seed: 0)
-            _ = generator.randomExponential(rate: .infinity)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.random(.infinity, 1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.random(0, .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomGaussian(mean: .infinity)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomGaussian(standardDeviation: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomWeighted([1], weights: [])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomWeighted([1], weights: [-1])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomWeighted([1], weights: [.nan])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomWeighted([1], weights: [0])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomWeighted(
+                    [1, 2],
+                    weights: [.greatestFiniteMagnitude, .greatestFiniteMagnitude]
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomExponential(rate: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5RandomGenerator(seed: 0)
+                _ = generator.randomExponential(rate: .infinity)
+            }
+        #endif
     }
 }
 
@@ -256,34 +284,48 @@ struct P5NoiseGeneratorTests {
 
     @Test
     func invalidNoiseConfigurationTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            var generator = P5NoiseGenerator(seed: 0)
-            generator.detail(octaves: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5NoiseGenerator(seed: 0)
-            generator.detail(octaves: 1, falloff: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5NoiseGenerator(seed: 0)
-            generator.detail(octaves: 1, falloff: -0.1)
-        }
-        await #expect(processExitsWith: .failure) {
-            var generator = P5NoiseGenerator(seed: 0)
-            generator.detail(octaves: 1, falloff: 1.1)
-        }
-        await #expect(processExitsWith: .failure) {
-            let generator = P5NoiseGenerator(seed: 0)
-            _ = generator.noise(.nan, 0, 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            let generator = P5NoiseGenerator(seed: 0)
-            _ = generator.noise(0, .infinity, 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            let generator = P5NoiseGenerator(seed: 0)
-            _ = generator.noise(0, 0, -.infinity)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5NoiseGenerator(seed: 0)
+                generator.detail(octaves: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5NoiseGenerator(seed: 0)
+                generator.detail(octaves: 1, falloff: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5NoiseGenerator(seed: 0)
+                generator.detail(octaves: 1, falloff: -0.1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var generator = P5NoiseGenerator(seed: 0)
+                generator.detail(octaves: 1, falloff: 1.1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let generator = P5NoiseGenerator(seed: 0)
+                _ = generator.noise(.nan, 0, 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let generator = P5NoiseGenerator(seed: 0)
+                _ = generator.noise(0, .infinity, 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let generator = P5NoiseGenerator(seed: 0)
+                _ = generator.noise(0, 0, -.infinity)
+            }
+        #endif
     }
 }
 

@@ -1,8 +1,11 @@
-import AppKit
 import SwiftUI
 import Testing
 
 @testable import P5
+
+#if canImport(AppKit)
+    import AppKit
+#endif
 
 @MainActor
 @Suite("P5 native controls", .serialized)
@@ -61,72 +64,74 @@ struct P5ControlsTests {
         _ = P5ColorPicker("Tint", selection: .constant(.blue), supportsOpacity: false).body
     }
 
-    @Test("AppKit factories produce configured controls and retain callbacks")
-    func appKitControls() {
-        _ = NSApplication.shared
-        let state = ControlCallbackState()
+    #if canImport(AppKit)
+        @Test("AppKit factories produce configured controls and retain callbacks")
+        func appKitControls() {
+            _ = NSApplication.shared
+            let state = ControlCallbackState()
 
-        let button = P5NativeControlFactory.button("Run") { state.buttonPresses += 1 }
-        #expect(button.title == "Run")
-        #expect(button.accessibilityLabel() == "Run")
-        #expect(button.sendAction(button.action, to: button.target))
-        #expect(state.buttonPresses == 1)
+            let button = P5NativeControlFactory.button("Run") { state.buttonPresses += 1 }
+            #expect(button.title == "Run")
+            #expect(button.accessibilityLabel() == "Run")
+            #expect(button.sendAction(button.action, to: button.target))
+            #expect(state.buttonPresses == 1)
 
-        let customButton = P5NativeControlFactory.button(
-            "Delete",
-            accessibilityLabel: "Delete particle"
-        ) {}
-        #expect(customButton.accessibilityLabel() == "Delete particle")
+            let customButton = P5NativeControlFactory.button(
+                "Delete",
+                accessibilityLabel: "Delete particle"
+            ) {}
+            #expect(customButton.accessibilityLabel() == "Delete particle")
 
-        let slider = P5NativeControlFactory.slider(
-            value: 0.5,
-            in: 0...2,
-            accessibilityLabel: "Speed"
-        ) { state.sliderValue = $0 }
-        #expect(slider.minValue == 0)
-        #expect(slider.maxValue == 2)
-        #expect(slider.accessibilityLabel() == "Speed")
-        slider.doubleValue = 1.5
-        #expect(slider.sendAction(slider.action, to: slider.target))
-        #expect(state.sliderValue == 1.5)
+            let slider = P5NativeControlFactory.slider(
+                value: 0.5,
+                in: 0...2,
+                accessibilityLabel: "Speed"
+            ) { state.sliderValue = $0 }
+            #expect(slider.minValue == 0)
+            #expect(slider.maxValue == 2)
+            #expect(slider.accessibilityLabel() == "Speed")
+            slider.doubleValue = 1.5
+            #expect(slider.sendAction(slider.action, to: slider.target))
+            #expect(state.sliderValue == 1.5)
 
-        let field = P5NativeControlFactory.textField(
-            text: "before",
-            placeholder: "Name",
-            accessibilityLabel: "Particle name"
-        ) { state.text = $0 }
-        #expect(field.stringValue == "before")
-        #expect(field.placeholderString == "Name")
-        #expect(field.accessibilityLabel() == "Particle name")
-        field.stringValue = "after"
-        #expect(field.sendAction(field.action, to: field.target))
-        #expect(state.text == "after")
+            let field = P5NativeControlFactory.textField(
+                text: "before",
+                placeholder: "Name",
+                accessibilityLabel: "Particle name"
+            ) { state.text = $0 }
+            #expect(field.stringValue == "before")
+            #expect(field.placeholderString == "Name")
+            #expect(field.accessibilityLabel() == "Particle name")
+            field.stringValue = "after"
+            #expect(field.sendAction(field.action, to: field.target))
+            #expect(state.text == "after")
 
-        let emptyField = P5NativeControlFactory.textField { _ in }
-        #expect(emptyField.stringValue.isEmpty)
-        #expect(emptyField.placeholderString == nil)
+            let emptyField = P5NativeControlFactory.textField { _ in }
+            #expect(emptyField.stringValue.isEmpty)
+            #expect(emptyField.placeholderString == nil)
 
-        let label = P5NativeControlFactory.label("Count: 3")
-        #expect(label.stringValue == "Count: 3")
-        #expect(label.isEditable == false)
+            let label = P5NativeControlFactory.label("Count: 3")
+            #expect(label.stringValue == "Count: 3")
+            #expect(label.isEditable == false)
 
-        let toggle = P5NativeControlFactory.toggle("Trails", isOn: false) {
-            state.toggleValue = $0
+            let toggle = P5NativeControlFactory.toggle("Trails", isOn: false) {
+                state.toggleValue = $0
+            }
+            #expect(toggle.state == .off)
+            #expect(toggle.accessibilityLabel() == "Trails")
+            toggle.state = .on
+            #expect(toggle.sendAction(toggle.action, to: toggle.target))
+            #expect(state.toggleValue == true)
+
+            let onToggle = P5NativeControlFactory.toggle(
+                "Sound",
+                isOn: true,
+                accessibilityLabel: "Sound enabled"
+            ) { _ in }
+            #expect(onToggle.state == .on)
+            #expect(onToggle.accessibilityLabel() == "Sound enabled")
         }
-        #expect(toggle.state == .off)
-        #expect(toggle.accessibilityLabel() == "Trails")
-        toggle.state = .on
-        #expect(toggle.sendAction(toggle.action, to: toggle.target))
-        #expect(state.toggleValue == true)
-
-        let onToggle = P5NativeControlFactory.toggle(
-            "Sound",
-            isOn: true,
-            accessibilityLabel: "Sound enabled"
-        ) { _ in }
-        #expect(onToggle.state == .on)
-        #expect(onToggle.accessibilityLabel() == "Sound enabled")
-    }
+    #endif
 
     @Test("Control validation rejects invalid slider and picker state")
     func validation() async {
@@ -165,15 +170,21 @@ struct P5ControlsTests {
         )
         #expect(P5ControlValidation.isValidNativeSlider(value: 2, range: 0...1) == false)
 
-        await #expect(processExitsWith: .failure) {
-            P5ControlValidation.validateSlider(range: -.infinity...1, step: nil)
-        }
-        await #expect(processExitsWith: .failure) {
-            P5ControlValidation.validatePicker(selection: 1, options: [])
-        }
-        await #expect(processExitsWith: .failure) {
-            P5ControlValidation.validateNativeSlider(value: 2, range: 0...1)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                P5ControlValidation.validateSlider(range: -.infinity...1, step: nil)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                P5ControlValidation.validatePicker(selection: 1, options: [])
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                P5ControlValidation.validateNativeSlider(value: 2, range: 0...1)
+            }
+        #endif
     }
 }
 

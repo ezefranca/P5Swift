@@ -421,15 +421,21 @@ struct P5VideoExportTests {
 
     @Test("Invalid video options terminate at public boundaries")
     func invalidOptionsTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoExportConfiguration(averageBitRate: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoExportConfiguration(codec: .proRes422, fileType: .mpeg4)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5VideoExportConfiguration(codec: .proRes4444, fileType: .mpeg4)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoExportConfiguration(averageBitRate: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoExportConfiguration(codec: .proRes422, fileType: .mpeg4)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5VideoExportConfiguration(codec: .proRes4444, fileType: .mpeg4)
+            }
+        #endif
     }
 
     private func frameSequence() throws -> P5FrameSequence {

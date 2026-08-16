@@ -75,18 +75,22 @@ struct P5ImageDocumentTests {
 
     @Test("Invalid document quality terminates at the public boundary")
     func invalidQualityTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = P5ImageDocument(image: image, quality: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            let image = try! P5Image(
-                pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
-            )
-            _ = P5ImageDocument(image: image, quality: 2)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = P5ImageDocument(image: image, quality: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let image = try! P5Image(
+                    pixelBuffer: P5PixelBuffer(width: 1, height: 1, bytes: [0, 0, 0, 0])
+                )
+                _ = P5ImageDocument(image: image, quality: 2)
+            }
+        #endif
     }
 
     private func readConfiguration(

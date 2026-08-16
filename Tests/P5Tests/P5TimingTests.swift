@@ -1,4 +1,3 @@
-import AppKit
 import CoreGraphics
 import Foundation
 import Testing
@@ -29,11 +28,11 @@ struct P5TimingTests {
         #expect(sketch.deltaTime == 0)
         #expect(sketch.frameRate() == 0)
         #expect(sketch.drawCallCount == 1)
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
 
         clock.advance(by: 0.02)
         sketch.advanceFrame()
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
 
         #expect(sketch.frameCount == 2)
         #expect(abs(sketch.deltaTime - 20) < 0.000_001)
@@ -41,7 +40,7 @@ struct P5TimingTests {
         #expect(abs(sketch.millis() - 20) < 0.000_001)
         #expect(sketch.drawCallCount == 2)
 
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
         #expect(sketch.drawCallCount == 2)
     }
 
@@ -60,62 +59,62 @@ struct P5TimingTests {
 
     @Test
     func invalidClockAndDriverOperationsTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5ManualClock(initialTime: -.infinity)
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5ManualClock(initialTime: -.infinity)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5ManualClock().advance(by: -1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5ManualClock().advance(by: -1)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let clock = P5ManualClock(initialTime: .greatestFiniteMagnitude)
-                clock.advance(by: .greatestFiniteMagnitude)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let clock = P5ManualClock(initialTime: .greatestFiniteMagnitude)
+                    clock.advance(by: .greatestFiniteMagnitude)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5Sketch(
-                    size: CGSize(width: 1, height: 1),
-                    clock: MutableTestClock(now: .nan),
-                    frameDriver: .manual
-                )
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5Sketch(
+                        size: CGSize(width: 1, height: 1),
+                        clock: MutableTestClock(now: .nan),
+                        frameDriver: .manual
+                    )
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let clock = MutableTestClock(now: 2)
-                let sketch = P5Sketch(
-                    size: CGSize(width: 1, height: 1),
-                    clock: clock,
-                    frameDriver: .manual
-                )
-                clock.now = 1
-                _ = sketch.millis()
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let clock = MutableTestClock(now: 2)
+                    let sketch = P5Sketch(
+                        size: CGSize(width: 1, height: 1),
+                        clock: clock,
+                        frameDriver: .manual
+                    )
+                    clock.now = 1
+                    _ = sketch.millis()
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1)).advanceFrame()
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1)).advanceFrame()
+                }
             }
-        }
+        #endif
     }
 
-    private func draw(_ sketch: P5Sketch, in bitmap: TestBitmap) {
-        NSGraphicsContext.saveGraphicsState()
-        defer {
-            NSGraphicsContext.restoreGraphicsState()
-        }
-
-        NSGraphicsContext.current = NSGraphicsContext(
-            cgContext: bitmap.context,
-            flipped: true
-        )
-        sketch.view.draw(sketch.view.bounds)
-    }
 }
 
 @MainActor

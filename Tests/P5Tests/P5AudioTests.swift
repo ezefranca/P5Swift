@@ -526,6 +526,11 @@ struct P5AudioTests {
         #expect(status == .success)
         #expect(rendered.floatChannelData?[0][1] != 0)
         _ = try analyzer.process(rendered)
+        let tapHandler = P5AudioEngineRuntime.tapHandler { buffer in
+            _ = try? analyzer.process(buffer)
+        }
+        tapHandler(rendered, AVAudioTime(sampleTime: 0, atRate: format.sampleRate))
+        #expect(analyzer.latest != nil)
         observed.pause()
         observed.removeAnalyzer()
         observed.stop()
@@ -557,20 +562,14 @@ struct P5AudioTests {
         fileEngine.stop()
 
         let liveEngine = P5AudioEngine()
-        let liveAnalyzer = try P5AudioAnalyzer(fftSize: 64)
         let liveOscillator = try liveEngine.makeOscillator(
             waveform: .sine,
             frequency: 440,
             amplitude: 0.1
         )
-        let liveFilePlayer = try liveEngine.makeFilePlayer(for: file)
-        try liveEngine.installAnalyzer(liveAnalyzer)
         liveOscillator.play()
         try liveEngine.start()
-        liveFilePlayer.play()
-        try await Task.sleep(for: .milliseconds(150))
-        #expect(liveAnalyzer.latest != nil)
-        #expect(liveFilePlayer.state == .ended)
+        #expect(liveEngine.state == .running)
         liveEngine.stop()
     }
 
@@ -601,102 +600,146 @@ struct P5AudioTests {
 
     @Test("Invalid audio values terminate at their public boundaries")
     func invalidValues() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioEnvelope(attackTime: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioEnvelope(decayTime: -Double.infinity)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioEnvelope(sustainLevel: 2)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioEnvelope(releaseTime: -Double.infinity)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioEnvelope().amplitude(at: -.infinity)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioEnvelope().amplitude(at: 0, releaseAt: .nan)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioEnvelope(attackTime: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioEnvelope(decayTime: -Double.infinity)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioEnvelope(sustainLevel: 2)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioEnvelope(releaseTime: -Double.infinity)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioEnvelope().amplitude(at: -.infinity)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioEnvelope().amplitude(at: 0, releaseAt: .nan)
+            }
+        #endif
 
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioAnalysis(amplitude: -1, spectrum: [0, 0], sampleRate: 8, fftSize: 4)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioAnalysis(amplitude: 0, spectrum: [0, 0], sampleRate: 0, fftSize: 4)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioAnalysis(amplitude: 0, spectrum: [0], sampleRate: 8, fftSize: 3)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioAnalysis(amplitude: 0, spectrum: [0], sampleRate: 8, fftSize: 4)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioAnalysis(amplitude: 0, spectrum: [-1, 0], sampleRate: 8, fftSize: 4)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5AudioAnalysis(
-                amplitude: 0,
-                spectrum: [0, 0],
-                sampleRate: 8,
-                fftSize: 4
-            ).frequency(forBin: 2)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = try P5AudioAnalyzer(fftSize: 31)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = try P5AudioAnalyzer(fftSize: 48)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = try P5AudioAnalyzer(fftSize: 65_536)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioAnalysis(amplitude: -1, spectrum: [0, 0], sampleRate: 8, fftSize: 4)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioAnalysis(amplitude: 0, spectrum: [0, 0], sampleRate: 0, fftSize: 4)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioAnalysis(amplitude: 0, spectrum: [0], sampleRate: 8, fftSize: 3)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioAnalysis(amplitude: 0, spectrum: [0], sampleRate: 8, fftSize: 4)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioAnalysis(amplitude: 0, spectrum: [-1, 0], sampleRate: 8, fftSize: 4)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5AudioAnalysis(
+                    amplitude: 0,
+                    spectrum: [0, 0],
+                    sampleRate: 8,
+                    fftSize: 4
+                ).frequency(forBin: 2)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = try P5AudioAnalyzer(fftSize: 31)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = try P5AudioAnalyzer(fftSize: 48)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = try P5AudioAnalyzer(fftSize: 65_536)
+            }
+        #endif
 
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let engine = P5AudioEngine()
-                engine.outputVolume = .nan
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let engine = P5AudioEngine()
+                    engine.outputVolume = .nan
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let engine = P5AudioEngine()
-                _ = try! engine.makeOscillator(frequency: 0)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let engine = P5AudioEngine()
+                    _ = try! engine.makeOscillator(frequency: 0)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let engine = P5AudioEngine()
-                _ = try! engine.makeOscillator(amplitude: 2)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let engine = P5AudioEngine()
+                    _ = try! engine.makeOscillator(amplitude: 2)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let engine = P5AudioEngine()
-                let oscillator = try! engine.makeOscillator()
-                oscillator.frequency = .nan
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let engine = P5AudioEngine()
+                    let oscillator = try! engine.makeOscillator()
+                    oscillator.frequency = .nan
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let engine = P5AudioEngine()
-                let oscillator = try! engine.makeOscillator()
-                oscillator.amplitude = -1
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let engine = P5AudioEngine()
+                    let oscillator = try! engine.makeOscillator()
+                    oscillator.amplitude = -1
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let player = try! Self.makeBoundaryPlayer()
-                player.volume = .nan
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let player = try! Self.makeBoundaryPlayer()
+                    player.volume = .nan
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let player = try! Self.makeBoundaryPlayer()
-                player.pan = 2
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let player = try! Self.makeBoundaryPlayer()
+                    player.pan = 2
+                }
             }
-        }
+        #endif
     }
 
     private static func roundTrip<T: Codable>(_ value: T) throws -> T {

@@ -476,8 +476,7 @@ struct P5CaptureFrameDecoder: @unchecked Sendable {
     var imageBuffer: (CMSampleBuffer) -> CVImageBuffer? = CMSampleBufferGetImageBuffer
     var presentationTime: (CMSampleBuffer) -> CMTime = CMSampleBufferGetPresentationTimeStamp
     var makeImage: (CVImageBuffer) -> CGImage? = {
-        CIContext().createCGImage(
-            CIImage(cvImageBuffer: $0), from: CIImage(cvImageBuffer: $0).extent)
+        p5CaptureImageRenderer.makeImage(from: $0)
     }
 
     func decode(_ sampleBuffer: CMSampleBuffer) throws -> P5CaptureFrame {
@@ -490,5 +489,28 @@ struct P5CaptureFrameDecoder: @unchecked Sendable {
             throw P5CaptureError.frameConversionFailed
         }
         return P5CaptureFrame(image: P5Image(cgImage: cgImage), timestamp: timestamp)
+    }
+}
+
+private let p5CaptureImageRenderer = P5CaptureImageRenderer()
+
+/// `CIContext` is documented for concurrent use.
+///
+/// Keeping it in a sendable wrapper avoids recompiling Core Image pipelines for every
+/// camera frame.
+private struct P5CaptureImageRenderer: @unchecked Sendable {
+    private let context: CIContext
+
+    init() {
+        #if targetEnvironment(simulator)
+            context = CIContext(options: [.useSoftwareRenderer: true])
+        #else
+            context = CIContext()
+        #endif
+    }
+
+    func makeImage(from imageBuffer: CVImageBuffer) -> CGImage? {
+        let image = CIImage(cvImageBuffer: imageBuffer)
+        return context.createCGImage(image, from: image.extent)
     }
 }

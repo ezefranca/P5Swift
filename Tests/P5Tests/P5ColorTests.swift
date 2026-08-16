@@ -1,4 +1,3 @@
-import AppKit
 import CoreGraphics
 import Foundation
 import Testing
@@ -133,30 +132,46 @@ struct P5ColorTests {
 
     @Test
     func invalidNormalizedComponentsTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(red: -.infinity, green: 0, blue: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(red: 0, green: 2, blue: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(red: 0, green: 0, blue: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(red: 0, green: 0, blue: 0, alpha: -1)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(hue: 2, saturation: 0, brightness: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(hue: 0, saturation: 2, brightness: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(hue: 0, saturation: 0, brightness: 2)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5Color(hue: 0, saturation: 0, brightness: 0, alpha: 2)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(red: -.infinity, green: 0, blue: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(red: 0, green: 2, blue: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(red: 0, green: 0, blue: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(red: 0, green: 0, blue: 0, alpha: -1)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(hue: 2, saturation: 0, brightness: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(hue: 0, saturation: 2, brightness: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(hue: 0, saturation: 0, brightness: 2)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5Color(hue: 0, saturation: 0, brightness: 0, alpha: 2)
+            }
+        #endif
     }
 }
 
@@ -196,28 +211,21 @@ struct P5SketchColorTests {
         let midpoint = sketch.lerpColor(P5Color(gray: 0), P5Color(gray: 1), 0.5)
         #expect(midpoint == P5Color(gray: 0.5))
 
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
         #expect(bitmap.pixel(atX: 6, y: 6).green > 0)
     }
 
     @Test
     func invalidColorRangeTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).colorMode(.rgb, maximum: 0)
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).colorMode(.rgb, maximum: 0)
+                }
             }
-        }
+        #endif
     }
 
-    private func draw(_ sketch: P5Sketch, in bitmap: TestBitmap) {
-        NSGraphicsContext.saveGraphicsState()
-        defer { NSGraphicsContext.restoreGraphicsState() }
-        NSGraphicsContext.current = NSGraphicsContext(
-            cgContext: bitmap.context,
-            flipped: true
-        )
-        sketch.view.draw(sketch.view.bounds)
-    }
 }
 
 private extension CGFloat {

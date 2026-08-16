@@ -418,12 +418,16 @@ struct P5CaptureSessionTests {
 
     @Test("Invalid captured frame timestamps terminate at the public boundary")
     func invalidFrameTimestamp() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5CaptureFrame(image: try! Self.image(), timestamp: .nan)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5CaptureFrame(image: try! Self.image(), timestamp: -1)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5CaptureFrame(image: try! Self.image(), timestamp: .nan)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5CaptureFrame(image: try! Self.image(), timestamp: -1)
+            }
+        #endif
     }
 
     @Test("Default hardware factories are bound without requesting permission")
@@ -435,10 +439,12 @@ struct P5CaptureSessionTests {
         _ = runtime.cameraDevice(.video, .unspecified)
         _ = runtime.microphoneDevice(.audio)
 
-        await #expect(processExitsWith: .failure) {
-            let device = Self.uninitialized(AVCaptureDevice.self)
-            _ = try! P5CaptureRuntime().makeInput(device)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                let device = Self.uninitialized(AVCaptureDevice.self)
+                _ = try! P5CaptureRuntime().makeInput(device)
+            }
+        #endif
     }
 
     @MainActor

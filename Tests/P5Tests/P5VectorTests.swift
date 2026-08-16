@@ -202,10 +202,12 @@ struct P5VectorTests {
 
     @Test
     func invalidSphericalInterpolationTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            var vector = P5Vector(x: 1)
-            vector.slerp(P5Vector(y: 1), .nan)
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                var vector = P5Vector(x: 1)
+                vector.slerp(P5Vector(y: 1), .nan)
+            }
+        #endif
     }
 }
 

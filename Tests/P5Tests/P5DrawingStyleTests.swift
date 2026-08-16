@@ -1,4 +1,3 @@
-import AppKit
 import CoreGraphics
 import Foundation
 import Testing
@@ -57,7 +56,7 @@ struct P5DrawingStyleTests {
         sketch.opacity(0.75)
         sketch.line(2, 24, 40, 24)
 
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
 
         #expect(bitmap.pixel(atX: 2, y: 2).red > 0)
         #expect(bitmap.pixel(atX: 9, y: 2).red > 0)
@@ -83,55 +82,62 @@ struct P5DrawingStyleTests {
 
     @Test
     func invalidStyleValuesTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).strokeMiterLimit(0)
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).strokeMiterLimit(0)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([1], phase: .nan)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([1], phase: .nan)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([-.infinity])
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([-.infinity])
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([-1])
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([-1])
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([0, 0])
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).strokeDash([0, 0])
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).opacity(.nan)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).opacity(.nan)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).opacity(-0.1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).opacity(-0.1)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).opacity(1.1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).opacity(1.1)
+                }
             }
-        }
+        #endif
     }
 
-    private func draw(_ sketch: P5Sketch, in bitmap: TestBitmap) {
-        NSGraphicsContext.saveGraphicsState()
-        defer { NSGraphicsContext.restoreGraphicsState() }
-        NSGraphicsContext.current = NSGraphicsContext(
-            cgContext: bitmap.context,
-            flipped: true
-        )
-        sketch.view.draw(sketch.view.bounds)
-    }
 }

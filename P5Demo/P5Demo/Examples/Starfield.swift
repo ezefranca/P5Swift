@@ -5,9 +5,9 @@
 //  Created by Juan Hurtado on 18/06/23.
 //
 
-import UIKit
 import CoreFoundation
 import P5
+import UIKit
 
 /// A Starfield simulation.
 ///
@@ -19,7 +19,7 @@ import P5
 class Starfield: P5Sketch {
     let numStars = 150
     var stars: [Star] = []
-    
+
     override func setup() {
         title = "Starfield simulation"
         frameRate(60)
@@ -27,7 +27,7 @@ class Starfield: P5Sketch {
             .init(canvasSize: .init(width: width, height: height))
         }
     }
-    
+
     override func draw() {
         background(UIColor.black.cgColor)
         translate(width / 2, height / 2)
@@ -36,7 +36,7 @@ class Starfield: P5Sketch {
             showStar(atIndex: index)
         }
     }
-    
+
     func showStar(atIndex index: Int) {
         var star = stars[index]
         fill(UIColor.white.cgColor)
@@ -46,30 +46,30 @@ class Starfield: P5Sketch {
         let radius = (1.0 - star.z / width) * 16.0
         circle(star.x, star.y, radius * 2)
     }
-    
+
     struct Star {
         var x: CGFloat
         var y: CGFloat
         var z: CGFloat
-        
+
         let size: CGSize
-        
+
         init(canvasSize size: CGSize) {
-            x = .random(in: -size.width/2..<size.width/2)
-            y = .random(in: -size.height/2..<size.height/2)
+            x = .random(in: -size.width / 2..<size.width / 2)
+            y = .random(in: -size.height / 2..<size.height / 2)
             z = .random(in: 0..<size.width)
             self.size = size
         }
-        
+
         mutating func update() {
             z -= 10
             if z < 1 {
                 z = size.width
-                x = .random(in: -size.width/2..<size.width/2)
-                y = .random(in: -size.height/2..<size.height/2)
+                x = .random(in: -size.width / 2..<size.width / 2)
+                y = .random(in: -size.height / 2..<size.height / 2)
             }
         }
-        
+
         mutating func updateCoordinates(x: CGFloat, y: CGFloat) {
             self.x = x
             self.y = y

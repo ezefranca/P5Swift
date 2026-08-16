@@ -298,6 +298,7 @@
     struct P5MetalResourceFactory: @unchecked Sendable {
         var makeDevice: () -> (any MTLDevice)?
         var loadShaderSource: () -> String?
+        var makeDefaultLibrary: (any MTLDevice) -> (any MTLLibrary)?
         var makeLibrary: (any MTLDevice, String) throws -> any MTLLibrary
         var makeFunction: (any MTLLibrary, String) -> (any MTLFunction)?
         var makeCommandQueue: (any MTLDevice) -> (any MTLCommandQueue)?
@@ -324,6 +325,9 @@
                         withExtension: "metal"
                     )
                 )
+            },
+            makeDefaultLibrary: { device in
+                try? device.makeDefaultLibrary(bundle: Bundle.module)
             },
             makeLibrary: { device, source in
                 try device.makeLibrary(source: source, options: nil)
@@ -443,14 +447,17 @@
             guard let device = resourceFactory.makeDevice() else {
                 throw P5Metal3DError.unavailable
             }
-            guard let source = resourceFactory.loadShaderSource() else {
-                throw P5Metal3DError.shaderSourceUnavailable
-            }
             let library: any MTLLibrary
-            do {
-                library = try resourceFactory.makeLibrary(device, source)
-            } catch {
-                throw P5Metal3DError.shaderCompilationFailed(error.localizedDescription)
+            if let source = resourceFactory.loadShaderSource() {
+                do {
+                    library = try resourceFactory.makeLibrary(device, source)
+                } catch {
+                    throw P5Metal3DError.shaderCompilationFailed(error.localizedDescription)
+                }
+            } else if let compiledLibrary = resourceFactory.makeDefaultLibrary(device) {
+                library = compiledLibrary
+            } else {
+                throw P5Metal3DError.shaderSourceUnavailable
             }
             guard let vertex = resourceFactory.makeFunction(library, "p5Vertex3D") else {
                 throw P5Metal3DError.shaderFunctionUnavailable("p5Vertex3D")
@@ -662,8 +669,9 @@
             if let stencil = configuration.stencil {
                 encoder.setStencilReferenceValue(stencil.referenceValue)
             }
-            let depthState = try depthState(configuration)
-            encoder.setDepthStencilState(depthState)
+            if let depthState = try depthState(configuration) {
+                encoder.setDepthStencilState(depthState)
+            }
 
             var gpuLights =
                 lights.isEmpty

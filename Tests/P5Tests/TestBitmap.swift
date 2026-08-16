@@ -1,5 +1,13 @@
 import CoreGraphics
 
+@testable import P5
+
+#if canImport(AppKit)
+    import AppKit
+#elseif canImport(UIKit)
+    import UIKit
+#endif
+
 func makeDeviceRGBColor(
     red: CGFloat,
     green: CGFloat,
@@ -80,4 +88,21 @@ final class TestBitmap {
     deinit {
         bytes.deallocate()
     }
+}
+
+@MainActor
+func drawSketch(_ sketch: P5Sketch, in bitmap: TestBitmap) {
+    #if canImport(AppKit)
+        NSGraphicsContext.saveGraphicsState()
+        defer { NSGraphicsContext.restoreGraphicsState() }
+        NSGraphicsContext.current = NSGraphicsContext(
+            cgContext: bitmap.context,
+            flipped: true
+        )
+        sketch.view.draw(sketch.view.bounds)
+    #elseif canImport(UIKit)
+        UIGraphicsPushContext(bitmap.context)
+        defer { UIGraphicsPopContext() }
+        sketch.view.draw(sketch.view.bounds)
+    #endif
 }

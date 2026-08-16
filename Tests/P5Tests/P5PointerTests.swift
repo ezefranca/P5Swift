@@ -1,9 +1,12 @@
-import AppKit
 import CoreGraphics
 import Foundation
 import Testing
 
 @testable import P5
+
+#if canImport(AppKit)
+    import AppKit
+#endif
 
 @MainActor
 @Suite(.serialized)
@@ -76,124 +79,134 @@ struct P5PointerTests {
         #expect(baseSketch.latestPointerEvent?.pressure == nil)
     }
 
-    @Test
-    func appKitAdapterMapsNativeMouseEventsAndHelpers() throws {
-        let sketch = RecordingPointerSketch(size: CGSize(width: 100, height: 80))
-        let canvas = try #require(sketch.view as? P5SketchInternalView)
-        let event = try #require(
-            NSEvent.mouseEvent(
-                with: .leftMouseDown,
-                location: CGPoint(x: 12, y: 18),
-                modifierFlags: [.shift, .control, .option, .command, .capsLock, .function],
-                timestamp: 3,
-                windowNumber: 0,
-                context: nil,
-                eventNumber: 1,
-                clickCount: 1,
-                pressure: 0.5
+    #if canImport(AppKit)
+        @Test
+        func appKitAdapterMapsNativeMouseEventsAndHelpers() throws {
+            let sketch = RecordingPointerSketch(size: CGSize(width: 100, height: 80))
+            let canvas = try #require(sketch.view as? P5SketchInternalView)
+            let event = try #require(
+                NSEvent.mouseEvent(
+                    with: .leftMouseDown,
+                    location: CGPoint(x: 12, y: 18),
+                    modifierFlags: [.shift, .control, .option, .command, .capsLock, .function],
+                    timestamp: 3,
+                    windowNumber: 0,
+                    context: nil,
+                    eventNumber: 1,
+                    clickCount: 1,
+                    pressure: 0.5
+                )
             )
-        )
-        let eventWithoutClick = try #require(
-            NSEvent.mouseEvent(
-                with: .leftMouseUp,
-                location: CGPoint(x: 13, y: 20),
-                modifierFlags: [],
-                timestamp: 4,
-                windowNumber: 0,
-                context: nil,
-                eventNumber: 2,
-                clickCount: 0,
-                pressure: 0
+            let eventWithoutClick = try #require(
+                NSEvent.mouseEvent(
+                    with: .leftMouseUp,
+                    location: CGPoint(x: 13, y: 20),
+                    modifierFlags: [],
+                    timestamp: 4,
+                    windowNumber: 0,
+                    context: nil,
+                    eventNumber: 2,
+                    clickCount: 0,
+                    pressure: 0
+                )
             )
-        )
 
-        canvas.updateTrackingAreas()
-        canvas.updateTrackingAreas()
-        #expect(canvas.acceptsFirstResponder)
-        canvas.mouseEntered(with: event)
-        canvas.mouseExited(with: event)
-        canvas.mouseMoved(with: event)
-        canvas.mouseDragged(with: event)
-        canvas.rightMouseDragged(with: event)
-        canvas.otherMouseDragged(with: event)
-        canvas.mouseDown(with: event)
-        canvas.rightMouseDown(with: event)
-        canvas.otherMouseDown(with: event)
-        canvas.mouseUp(with: event)
-        canvas.rightMouseUp(with: event)
-        canvas.otherMouseUp(with: event)
-        canvas.mouseUp(with: eventWithoutClick)
+            canvas.updateTrackingAreas()
+            canvas.updateTrackingAreas()
+            #expect(canvas.acceptsFirstResponder)
+            canvas.mouseEntered(with: event)
+            canvas.mouseExited(with: event)
+            canvas.mouseMoved(with: event)
+            canvas.mouseDragged(with: event)
+            canvas.rightMouseDragged(with: event)
+            canvas.otherMouseDragged(with: event)
+            canvas.mouseDown(with: event)
+            canvas.rightMouseDown(with: event)
+            canvas.otherMouseDown(with: event)
+            canvas.mouseUp(with: event)
+            canvas.rightMouseUp(with: event)
+            canvas.otherMouseUp(with: event)
+            canvas.mouseUp(with: eventWithoutClick)
 
-        #expect(sketch.receivedPhases.contains(.entered))
-        #expect(sketch.receivedPhases.contains(.exited))
-        #expect(sketch.receivedPhases.contains(.moved))
-        #expect(sketch.receivedPhases.contains(.dragged))
-        #expect(sketch.receivedPhases.contains(.pressed))
-        #expect(sketch.receivedPhases.contains(.released))
-        #expect(sketch.receivedPhases.contains(.clicked))
-        #expect(sketch.latestPointerEvent?.modifiers.isEmpty == true)
+            #expect(sketch.receivedPhases.contains(.entered))
+            #expect(sketch.receivedPhases.contains(.exited))
+            #expect(sketch.receivedPhases.contains(.moved))
+            #expect(sketch.receivedPhases.contains(.dragged))
+            #expect(sketch.receivedPhases.contains(.pressed))
+            #expect(sketch.receivedPhases.contains(.released))
+            #expect(sketch.receivedPhases.contains(.clicked))
+            #expect(sketch.latestPointerEvent?.modifiers.isEmpty == true)
 
-        #expect(P5SketchInternalView.pointerButton(forButtonNumber: 0) == .primary)
-        #expect(P5SketchInternalView.pointerButton(forButtonNumber: 1) == .secondary)
-        #expect(P5SketchInternalView.pointerButton(forButtonNumber: 2) == .middle)
-        #expect(P5SketchInternalView.pointerButton(forButtonNumber: 8) == .other(8))
-        #expect(
-            P5SketchInternalView.pointerButtons(from: 0b1111)
-                == [.primary, .secondary, .middle, .other]
-        )
-        #expect(
-            P5SketchInternalView.modifierKeys(
-                from: [.shift, .control, .option, .command, .capsLock, .function]
-            ) == [.shift, .control, .option, .command, .capsLock, .function]
-        )
-        #expect(P5SketchInternalView.normalizedPressure(-1) == 0)
-        #expect(P5SketchInternalView.normalizedPressure(2) == 1)
-        #expect(P5SketchInternalView.normalizedPressure(.infinity) == nil)
-    }
+            #expect(P5SketchInternalView.pointerButton(forButtonNumber: 0) == .primary)
+            #expect(P5SketchInternalView.pointerButton(forButtonNumber: 1) == .secondary)
+            #expect(P5SketchInternalView.pointerButton(forButtonNumber: 2) == .middle)
+            #expect(P5SketchInternalView.pointerButton(forButtonNumber: 8) == .other(8))
+            #expect(
+                P5SketchInternalView.pointerButtons(from: 0b1111)
+                    == [.primary, .secondary, .middle, .other]
+            )
+            #expect(
+                P5SketchInternalView.modifierKeys(
+                    from: [.shift, .control, .option, .command, .capsLock, .function]
+                ) == [.shift, .control, .option, .command, .capsLock, .function]
+            )
+            #expect(P5SketchInternalView.normalizedPressure(-1) == 0)
+            #expect(P5SketchInternalView.normalizedPressure(2) == 1)
+            #expect(P5SketchInternalView.normalizedPressure(.infinity) == nil)
+        }
+    #endif
 
     @Test
     func invalidPointerValuesTerminateTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            _ = P5PointerEvent(
-                id: 0,
-                kind: .mouse,
-                phase: .moved,
-                location: CGPoint(x: CGFloat.nan, y: 0),
-                previousLocation: .zero,
-                timestamp: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5PointerEvent(
-                id: 0,
-                kind: .mouse,
-                phase: .moved,
-                location: .zero,
-                previousLocation: CGPoint(x: 0, y: CGFloat.infinity),
-                timestamp: 0
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5PointerEvent(
-                id: 0,
-                kind: .mouse,
-                phase: .moved,
-                location: .zero,
-                previousLocation: .zero,
-                timestamp: -1
-            )
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5PointerEvent(
-                id: 0,
-                kind: .mouse,
-                phase: .moved,
-                location: .zero,
-                previousLocation: .zero,
-                pressure: 2,
-                timestamp: 0
-            )
-        }
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PointerEvent(
+                    id: 0,
+                    kind: .mouse,
+                    phase: .moved,
+                    location: CGPoint(x: CGFloat.nan, y: 0),
+                    previousLocation: .zero,
+                    timestamp: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PointerEvent(
+                    id: 0,
+                    kind: .mouse,
+                    phase: .moved,
+                    location: .zero,
+                    previousLocation: CGPoint(x: 0, y: CGFloat.infinity),
+                    timestamp: 0
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PointerEvent(
+                    id: 0,
+                    kind: .mouse,
+                    phase: .moved,
+                    location: .zero,
+                    previousLocation: .zero,
+                    timestamp: -1
+                )
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5PointerEvent(
+                    id: 0,
+                    kind: .mouse,
+                    phase: .moved,
+                    location: .zero,
+                    previousLocation: .zero,
+                    pressure: 2,
+                    timestamp: 0
+                )
+            }
+        #endif
     }
 
     private func makeEvent(

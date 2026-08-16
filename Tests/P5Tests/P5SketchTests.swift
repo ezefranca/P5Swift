@@ -1,10 +1,13 @@
-import AppKit
 import CoreGraphics
 import Foundation
 import SwiftUI
 import Testing
 
 @testable import P5
+
+#if canImport(AppKit)
+    import AppKit
+#endif
 
 @MainActor
 @Suite(.serialized)
@@ -18,7 +21,9 @@ struct P5SketchTests {
         #expect(sketch.view.frame.size == CGSize(width: 100, height: 80))
         #expect(sketch.setupCallCount == 1)
         #expect(sketch.title == "Lifecycle")
-        #expect(sketch.view.isFlipped)
+        #if canImport(AppKit)
+            #expect(sketch.view.isFlipped)
+        #endif
         #expect(sketch.createVector(3, 4, 5) == P5Vector(x: 3, y: 4, z: 5))
     }
 
@@ -43,27 +48,33 @@ struct P5SketchTests {
         #expect(sketch.view.frame.size == CGSize(width: 32, height: 24))
         #expect(sketch.view.bounds.size == CGSize(width: 32, height: 24))
         #expect(sketch.pixelDensity() == 2)
-        #expect(sketch.view.layer?.contentsScale == 2)
+        #if canImport(AppKit)
+            #expect(sketch.view.layer?.contentsScale == 2)
+        #else
+            #expect(sketch.view.layer.contentsScale == 2)
+        #endif
 
-        let window = NSWindow(
-            contentRect: CGRect(x: 0, y: 0, width: 32, height: 24),
-            styleMask: [.borderless],
-            backing: .buffered,
-            defer: false
-        )
-        window.contentView = sketch.view
-        let attached = sketch.canvasMetrics()
-        #expect(attached.size == CGSize(width: 32, height: 24))
-        #expect(attached.displayScale == window.backingScaleFactor)
-        #expect(attached.pixelDensity == 2)
-        #expect(attached.isFullScreen == false)
-        #expect(P5SketchInternalView.isFullScreen(nil) == false)
-        #expect(P5SketchInternalView.isFullScreen(.fullScreen))
+        #if canImport(AppKit)
+            let window = NSWindow(
+                contentRect: CGRect(x: 0, y: 0, width: 32, height: 24),
+                styleMask: [.borderless],
+                backing: .buffered,
+                defer: false
+            )
+            window.contentView = sketch.view
+            let attached = sketch.canvasMetrics()
+            #expect(attached.size == CGSize(width: 32, height: 24))
+            #expect(attached.displayScale == window.backingScaleFactor)
+            #expect(attached.pixelDensity == 2)
+            #expect(attached.isFullScreen == false)
+            #expect(P5SketchInternalView.isFullScreen(nil) == false)
+            #expect(P5SketchInternalView.isFullScreen(.fullScreen))
+        #endif
 
         let bitmap = try #require(TestBitmap(width: 32, height: 24))
         sketch.background(CGColor(red: 1, green: 0, blue: 0, alpha: 1))
         sketch.redraw()
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
         let resizedPixel = bitmap.pixel(atX: 31, y: 23)
         #expect(resizedPixel.red == 255)
         #expect(resizedPixel.alpha == 255)
@@ -115,7 +126,7 @@ struct P5SketchTests {
         let sketch = P5Sketch(ofSize: CGSize(width: 20, height: 20))
         let bitmap = try #require(TestBitmap(width: 20, height: 20))
 
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
 
         #expect(sketch.width == 20)
         #expect(sketch.height == 20)
@@ -141,16 +152,16 @@ struct P5SketchTests {
         sketch.redraw()
 
         let bitmap = try #require(TestBitmap(width: 100, height: 80))
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
 
         #expect(sketch.drawCallCount == 1)
         #expect(bitmap.pixel(atX: 0, y: 0).alpha == 255)
 
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
         #expect(sketch.drawCallCount == 1)
 
         sketch.loop()
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
         sketch.noLoop()
 
         #expect(sketch.drawCallCount == 2)
@@ -175,120 +186,152 @@ struct P5SketchTests {
         #expect(originalSketch.view.superview == nil)
     }
 
-    @Test
-    func swiftUIViewCreatesAndUpdatesItsNativeCanvas() {
-        _ = NSApplication.shared
-        var createdSizes: [CGSize] = []
+    #if canImport(AppKit)
+        @Test
+        func swiftUIViewCreatesAndUpdatesItsNativeCanvas() {
+            _ = NSApplication.shared
+            var createdSizes: [CGSize] = []
 
-        let initialView = P5SketchView(
-            size: CGSize(width: 100, height: 80)
-        ) { size in
-            createdSizes.append(size)
-            return LifecycleSketch(size: size)
+            let initialView = P5SketchView(
+                size: CGSize(width: 100, height: 80)
+            ) { size in
+                createdSizes.append(size)
+                return LifecycleSketch(size: size)
+            }
+            let hostingView = NSHostingView(rootView: initialView)
+            hostingView.frame = CGRect(x: 0, y: 0, width: 100, height: 80)
+            hostingView.layoutSubtreeIfNeeded()
+            _ = hostingView.fittingSize
+
+            hostingView.rootView = P5SketchView(
+                size: CGSize(width: 120, height: 90)
+            ) { size in
+                createdSizes.append(size)
+                return LifecycleSketch(size: size)
+            }
+            hostingView.frame.size = CGSize(width: 120, height: 90)
+            hostingView.layoutSubtreeIfNeeded()
+            _ = hostingView.fittingSize
+
+            #expect(createdSizes.first == CGSize(width: 100, height: 80))
+            #expect(createdSizes.last == CGSize(width: 120, height: 90))
         }
-        let hostingView = NSHostingView(rootView: initialView)
-        hostingView.frame = CGRect(x: 0, y: 0, width: 100, height: 80)
-        hostingView.layoutSubtreeIfNeeded()
-        _ = hostingView.fittingSize
-
-        hostingView.rootView = P5SketchView(
-            size: CGSize(width: 120, height: 90)
-        ) { size in
-            createdSizes.append(size)
-            return LifecycleSketch(size: size)
-        }
-        hostingView.frame.size = CGSize(width: 120, height: 90)
-        hostingView.layoutSubtreeIfNeeded()
-        _ = hostingView.fittingSize
-
-        #expect(createdSizes.first == CGSize(width: 100, height: 80))
-        #expect(createdSizes.last == CGSize(width: 120, height: 90))
-    }
+    #endif
 
     @Test
     func invalidFrameRateTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.frameRate(0)
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.frameRate(0)
+                }
             }
-        }
+        #endif
     }
 
     @Test
     func invalidCanvasConfigurationTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5Sketch(size: CGSize(width: 0, height: 1))
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5Sketch(size: CGSize(width: 0, height: 1))
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5Sketch(size: CGSize(width: CGFloat.nan, height: 1))
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5Sketch(size: CGSize(width: CGFloat.nan, height: 1))
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5Sketch(size: CGSize(width: 1, height: 0))
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5Sketch(size: CGSize(width: 1, height: 0))
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5Sketch(size: CGSize(width: 1, height: CGFloat.infinity))
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5Sketch(size: CGSize(width: 1, height: CGFloat.infinity))
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(-1, 1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(-1, 1)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1))
-                    .resizeCanvas(.infinity, 1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1))
+                        .resizeCanvas(.infinity, 1)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(1, -1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(1, -1)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(1, .nan)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1)).resizeCanvas(1, .nan)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(0)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(0)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(-.infinity)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(-.infinity)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(.nan)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 1, height: 1)).pixelDensity(.nan)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5EdgeInsets(top: -1, left: 0, bottom: 0, right: 0)
-        }
-        await #expect(processExitsWith: .failure) {
-            _ = P5EdgeInsets(top: 0, left: .nan, bottom: 0, right: 0)
-        }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5EdgeInsets(top: -1, left: 0, bottom: 0, right: 0)
+            }
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                _ = P5EdgeInsets(top: 0, left: .nan, bottom: 0, right: 0)
+            }
+        #endif
     }
 
     @Test
     func invalidStrokeWeightTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.strokeWeight(0)
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.strokeWeight(0)
+                }
             }
-        }
+        #endif
     }
 
     @Test
@@ -346,7 +389,7 @@ struct P5SketchTests {
         sketch.endContour()
         sketch.endShape(.close)
 
-        draw(sketch, in: bitmap)
+        drawSketch(sketch, in: bitmap)
 
         #expect(bitmap.pixel(atX: 6, y: 4) == .red)
         #expect(bitmap.pixel(atX: 18, y: 18).red > 0)
@@ -358,106 +401,116 @@ struct P5SketchTests {
 
     @Test
     func invalidGeometryStateTerminatesTheProcess() async {
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).vertex(0, 0)
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).vertex(0, 0)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.beginShape()
-                sketch.beginShape()
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.beginShape()
+                    sketch.beginShape()
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.beginShape()
-                sketch.bezierVertex(0, 0, 1, 1, 2, 2)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.beginShape()
+                    sketch.bezierVertex(0, 0, 1, 1, 2, 2)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.beginShape()
-                sketch.quadraticVertex(0, 0, 1, 1)
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.beginShape()
+                    sketch.quadraticVertex(0, 0, 1, 1)
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.beginShape()
-                sketch.beginContour()
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.beginShape()
+                    sketch.beginContour()
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.beginShape()
-                sketch.vertex(0, 0)
-                sketch.endContour()
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.beginShape()
+                    sketch.vertex(0, 0)
+                    sketch.endContour()
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                _ = P5Sketch(size: CGSize(width: 10, height: 10)).endShape()
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    _ = P5Sketch(size: CGSize(width: 10, height: 10)).endShape()
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
-                sketch.beginShape()
-                sketch.vertex(0, 0)
-                sketch.beginContour()
-                sketch.vertex(1, 1)
-                sketch.endShape()
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    let sketch = P5Sketch(size: CGSize(width: 10, height: 10))
+                    sketch.beginShape()
+                    sketch.vertex(0, 0)
+                    sketch.beginContour()
+                    sketch.vertex(1, 1)
+                    sketch.endShape()
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).regularPolygon(
-                    0,
-                    0,
-                    radius: 1,
-                    sides: 2
-                )
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).regularPolygon(
+                        0,
+                        0,
+                        radius: 1,
+                        sides: 2
+                    )
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).regularPolygon(
-                    0,
-                    0,
-                    radius: .nan,
-                    sides: 3
-                )
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).regularPolygon(
+                        0,
+                        0,
+                        radius: .nan,
+                        sides: 3
+                    )
+                }
             }
-        }
-        await #expect(processExitsWith: .failure) {
-            await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).regularPolygon(
-                    0,
-                    0,
-                    radius: -1,
-                    sides: 3
-                )
+        #endif
+        #if os(macOS)
+            await #expect(processExitsWith: .failure) {
+                await MainActor.run {
+                    P5Sketch(size: CGSize(width: 10, height: 10)).regularPolygon(
+                        0,
+                        0,
+                        radius: -1,
+                        sides: 3
+                    )
+                }
             }
-        }
+        #endif
     }
 
-    private func draw(_ sketch: P5Sketch, in bitmap: TestBitmap) {
-        NSGraphicsContext.saveGraphicsState()
-        defer {
-            NSGraphicsContext.restoreGraphicsState()
-        }
-
-        NSGraphicsContext.current = NSGraphicsContext(
-            cgContext: bitmap.context,
-            flipped: true
-        )
-        sketch.view.draw(sketch.view.bounds)
-    }
 }
 
 @MainActor
