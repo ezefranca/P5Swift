@@ -38888,6 +38888,3468 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "P5CameraPosition",
+        "printedName": "P5CameraPosition",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unspecified",
+            "printedName": "unspecified",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CameraPosition.Type) -> P5.P5CameraPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CameraPosition",
+                    "printedName": "P5.P5CameraPosition",
+                    "usr": "s:2P50A14CameraPositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CameraPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CameraPosition",
+                        "printedName": "P5.P5CameraPosition",
+                        "usr": "s:2P50A14CameraPositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14CameraPositionO11unspecifiedyA2CmF",
+            "mangledName": "$s2P50A14CameraPositionO11unspecifiedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "front",
+            "printedName": "front",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CameraPosition.Type) -> P5.P5CameraPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CameraPosition",
+                    "printedName": "P5.P5CameraPosition",
+                    "usr": "s:2P50A14CameraPositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CameraPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CameraPosition",
+                        "printedName": "P5.P5CameraPosition",
+                        "usr": "s:2P50A14CameraPositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14CameraPositionO5frontyA2CmF",
+            "mangledName": "$s2P50A14CameraPositionO5frontyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "back",
+            "printedName": "back",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CameraPosition.Type) -> P5.P5CameraPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CameraPosition",
+                    "printedName": "P5.P5CameraPosition",
+                    "usr": "s:2P50A14CameraPositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CameraPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CameraPosition",
+                        "printedName": "P5.P5CameraPosition",
+                        "usr": "s:2P50A14CameraPositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14CameraPositionO4backyA2CmF",
+            "mangledName": "$s2P50A14CameraPositionO4backyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5CameraPosition?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CameraPosition",
+                    "printedName": "P5.P5CameraPosition",
+                    "usr": "s:2P50A14CameraPositionO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A14CameraPositionO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A14CameraPositionO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5CameraPosition]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CameraPosition",
+                    "printedName": "P5.P5CameraPosition",
+                    "usr": "s:2P50A14CameraPositionO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14CameraPositionO8AllCasesa",
+            "mangledName": "$s2P50A14CameraPositionO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14CameraPositionO8RawValuea",
+            "mangledName": "$s2P50A14CameraPositionO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5CameraPosition]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CameraPosition",
+                    "printedName": "P5.P5CameraPosition",
+                    "usr": "s:2P50A14CameraPositionO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CameraPositionO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A14CameraPositionO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5CameraPosition]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CameraPosition",
+                        "printedName": "P5.P5CameraPosition",
+                        "usr": "s:2P50A14CameraPositionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CameraPositionO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A14CameraPositionO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CameraPositionO8rawValueSSvp",
+            "mangledName": "$s2P50A14CameraPositionO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CameraPositionO8rawValueSSvg",
+                "mangledName": "$s2P50A14CameraPositionO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A14CameraPositionO",
+        "mangledName": "$s2P50A14CameraPositionO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5CameraPosition]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CameraPosition",
+                        "printedName": "P5.P5CameraPosition",
+                        "usr": "s:2P50A14CameraPositionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5CaptureQuality",
+        "printedName": "P5CaptureQuality",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "low",
+            "printedName": "low",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureQuality.Type) -> P5.P5CaptureQuality",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureQuality.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureQuality",
+                        "printedName": "P5.P5CaptureQuality",
+                        "usr": "s:2P50A14CaptureQualityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14CaptureQualityO3lowyA2CmF",
+            "mangledName": "$s2P50A14CaptureQualityO3lowyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "medium",
+            "printedName": "medium",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureQuality.Type) -> P5.P5CaptureQuality",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureQuality.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureQuality",
+                        "printedName": "P5.P5CaptureQuality",
+                        "usr": "s:2P50A14CaptureQualityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14CaptureQualityO6mediumyA2CmF",
+            "mangledName": "$s2P50A14CaptureQualityO6mediumyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "high",
+            "printedName": "high",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureQuality.Type) -> P5.P5CaptureQuality",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureQuality.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureQuality",
+                        "printedName": "P5.P5CaptureQuality",
+                        "usr": "s:2P50A14CaptureQualityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14CaptureQualityO4highyA2CmF",
+            "mangledName": "$s2P50A14CaptureQualityO4highyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "hd1280x720",
+            "printedName": "hd1280x720",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureQuality.Type) -> P5.P5CaptureQuality",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureQuality.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureQuality",
+                        "printedName": "P5.P5CaptureQuality",
+                        "usr": "s:2P50A14CaptureQualityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14CaptureQualityO10hd1280x720yA2CmF",
+            "mangledName": "$s2P50A14CaptureQualityO10hd1280x720yA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5CaptureQuality?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A14CaptureQualityO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A14CaptureQualityO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5CaptureQuality]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14CaptureQualityO8AllCasesa",
+            "mangledName": "$s2P50A14CaptureQualityO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14CaptureQualityO8RawValuea",
+            "mangledName": "$s2P50A14CaptureQualityO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5CaptureQuality]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureQualityO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A14CaptureQualityO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5CaptureQuality]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureQuality",
+                        "printedName": "P5.P5CaptureQuality",
+                        "usr": "s:2P50A14CaptureQualityO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureQualityO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A14CaptureQualityO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureQualityO8rawValueSSvp",
+            "mangledName": "$s2P50A14CaptureQualityO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureQualityO8rawValueSSvg",
+                "mangledName": "$s2P50A14CaptureQualityO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A14CaptureQualityO",
+        "mangledName": "$s2P50A14CaptureQualityO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5CaptureQuality]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureQuality",
+                        "printedName": "P5.P5CaptureQuality",
+                        "usr": "s:2P50A14CaptureQualityO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5CaptureConfiguration",
+        "printedName": "P5CaptureConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cameraPosition",
+            "printedName": "cameraPosition",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CameraPosition",
+                "printedName": "P5.P5CameraPosition",
+                "usr": "s:2P50A14CameraPositionO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A20CaptureConfigurationV14cameraPositionAA0a6CameraE0Ovp",
+            "mangledName": "$s2P50A20CaptureConfigurationV14cameraPositionAA0a6CameraE0Ovp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CameraPosition",
+                    "printedName": "P5.P5CameraPosition",
+                    "usr": "s:2P50A14CameraPositionO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A20CaptureConfigurationV14cameraPositionAA0a6CameraE0Ovg",
+                "mangledName": "$s2P50A20CaptureConfigurationV14cameraPositionAA0a6CameraE0Ovg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "quality",
+            "printedName": "quality",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureQuality",
+                "printedName": "P5.P5CaptureQuality",
+                "usr": "s:2P50A14CaptureQualityO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A20CaptureConfigurationV7qualityAA0aB7QualityOvp",
+            "mangledName": "$s2P50A20CaptureConfigurationV7qualityAA0aB7QualityOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureQuality",
+                    "printedName": "P5.P5CaptureQuality",
+                    "usr": "s:2P50A14CaptureQualityO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A20CaptureConfigurationV7qualityAA0aB7QualityOvg",
+                "mangledName": "$s2P50A20CaptureConfigurationV7qualityAA0aB7QualityOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "includesAudio",
+            "printedName": "includesAudio",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A20CaptureConfigurationV13includesAudioSbvp",
+            "mangledName": "$s2P50A20CaptureConfigurationV13includesAudioSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A20CaptureConfigurationV13includesAudioSbvg",
+                "mangledName": "$s2P50A20CaptureConfigurationV13includesAudioSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "discardsLateVideoFrames",
+            "printedName": "discardsLateVideoFrames",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A20CaptureConfigurationV23discardsLateVideoFramesSbvp",
+            "mangledName": "$s2P50A20CaptureConfigurationV23discardsLateVideoFramesSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A20CaptureConfigurationV23discardsLateVideoFramesSbvg",
+                "mangledName": "$s2P50A20CaptureConfigurationV23discardsLateVideoFramesSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(cameraPosition:quality:includesAudio:discardsLateVideoFrames:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureConfiguration",
+                "printedName": "P5.P5CaptureConfiguration",
+                "usr": "s:2P50A20CaptureConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CameraPosition",
+                "printedName": "P5.P5CameraPosition",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A14CameraPositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureQuality",
+                "printedName": "P5.P5CaptureQuality",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A14CaptureQualityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A20CaptureConfigurationV14cameraPosition7quality13includesAudio23discardsLateVideoFramesAcA0a6CameraE0O_AA0aB7QualityOS2btcfc",
+            "mangledName": "$s2P50A20CaptureConfigurationV14cameraPosition7quality13includesAudio23discardsLateVideoFramesAcA0a6CameraE0O_AA0aB7QualityOS2btcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureConfiguration",
+                "printedName": "P5.P5CaptureConfiguration",
+                "usr": "s:2P50A20CaptureConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureConfiguration",
+                "printedName": "P5.P5CaptureConfiguration",
+                "usr": "s:2P50A20CaptureConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20CaptureConfigurationV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A20CaptureConfigurationV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20CaptureConfigurationV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A20CaptureConfigurationV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20CaptureConfigurationV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A20CaptureConfigurationV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A20CaptureConfigurationV9hashValueSivp",
+            "mangledName": "$s2P50A20CaptureConfigurationV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A20CaptureConfigurationV9hashValueSivg",
+                "mangledName": "$s2P50A20CaptureConfigurationV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureConfiguration",
+                "printedName": "P5.P5CaptureConfiguration",
+                "usr": "s:2P50A20CaptureConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A20CaptureConfigurationV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A20CaptureConfigurationV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A20CaptureConfigurationV",
+        "mangledName": "$s2P50A20CaptureConfigurationV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5CaptureSessionState",
+        "printedName": "P5CaptureSessionState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "idle",
+            "printedName": "idle",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureSessionState.Type) -> P5.P5CaptureSessionState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureSessionState",
+                    "printedName": "P5.P5CaptureSessionState",
+                    "usr": "s:2P50A19CaptureSessionStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureSessionState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A19CaptureSessionStateO4idleyA2CmF",
+            "mangledName": "$s2P50A19CaptureSessionStateO4idleyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "running",
+            "printedName": "running",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureSessionState.Type) -> P5.P5CaptureSessionState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureSessionState",
+                    "printedName": "P5.P5CaptureSessionState",
+                    "usr": "s:2P50A19CaptureSessionStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureSessionState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A19CaptureSessionStateO7runningyA2CmF",
+            "mangledName": "$s2P50A19CaptureSessionStateO7runningyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "recording",
+            "printedName": "recording",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureSessionState.Type) -> P5.P5CaptureSessionState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureSessionState",
+                    "printedName": "P5.P5CaptureSessionState",
+                    "usr": "s:2P50A19CaptureSessionStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureSessionState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A19CaptureSessionStateO9recordingyA2CmF",
+            "mangledName": "$s2P50A19CaptureSessionStateO9recordingyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "stopped",
+            "printedName": "stopped",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureSessionState.Type) -> P5.P5CaptureSessionState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureSessionState",
+                    "printedName": "P5.P5CaptureSessionState",
+                    "usr": "s:2P50A19CaptureSessionStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureSessionState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A19CaptureSessionStateO7stoppedyA2CmF",
+            "mangledName": "$s2P50A19CaptureSessionStateO7stoppedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureSessionState.Type) -> (Swift.String) -> P5.P5CaptureSessionState",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5CaptureSessionState",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureSessionState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A19CaptureSessionStateO6failedyACSScACmF",
+            "mangledName": "$s2P50A19CaptureSessionStateO6failedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureSessionState",
+                "printedName": "P5.P5CaptureSessionState",
+                "usr": "s:2P50A19CaptureSessionStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureSessionState",
+                "printedName": "P5.P5CaptureSessionState",
+                "usr": "s:2P50A19CaptureSessionStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A19CaptureSessionStateO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A19CaptureSessionStateO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A19CaptureSessionStateO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A19CaptureSessionStateO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A19CaptureSessionStateO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A19CaptureSessionStateO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A19CaptureSessionStateO9hashValueSivp",
+            "mangledName": "$s2P50A19CaptureSessionStateO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A19CaptureSessionStateO9hashValueSivg",
+                "mangledName": "$s2P50A19CaptureSessionStateO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureSessionState",
+                "printedName": "P5.P5CaptureSessionState",
+                "usr": "s:2P50A19CaptureSessionStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A19CaptureSessionStateO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A19CaptureSessionStateO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A19CaptureSessionStateO",
+        "mangledName": "$s2P50A19CaptureSessionStateO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5CaptureFrame",
+        "printedName": "P5CaptureFrame",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12CaptureFrameV5imageAA0A5ImageVvp",
+            "mangledName": "$s2P50A12CaptureFrameV5imageAA0A5ImageVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Image",
+                    "printedName": "P5.P5Image",
+                    "usr": "s:2P50A5ImageV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12CaptureFrameV5imageAA0A5ImageVvg",
+                "mangledName": "$s2P50A12CaptureFrameV5imageAA0A5ImageVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12CaptureFrameV9timestampSdvp",
+            "mangledName": "$s2P50A12CaptureFrameV9timestampSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12CaptureFrameV9timestampSdvg",
+                "mangledName": "$s2P50A12CaptureFrameV9timestampSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(image:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureFrame",
+                "printedName": "P5.P5CaptureFrame",
+                "usr": "s:2P50A12CaptureFrameV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A12CaptureFrameV5image9timestampAcA0A5ImageV_Sdtcfc",
+            "mangledName": "$s2P50A12CaptureFrameV5image9timestampAcA0A5ImageV_Sdtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A12CaptureFrameV",
+        "mangledName": "$s2P50A12CaptureFrameV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5CaptureError",
+        "printedName": "P5CaptureError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cameraUnavailable",
+            "printedName": "cameraUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> (P5.P5CameraPosition) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5CameraPosition) -> P5.P5CaptureError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CameraPosition",
+                        "printedName": "P5.P5CameraPosition",
+                        "usr": "s:2P50A14CameraPositionO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO17cameraUnavailableyAcA0A14CameraPositionOcACmF",
+            "mangledName": "$s2P50A12CaptureErrorO17cameraUnavailableyAcA0A14CameraPositionOcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "microphoneUnavailable",
+            "printedName": "microphoneUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureError",
+                    "printedName": "P5.P5CaptureError",
+                    "usr": "s:2P50A12CaptureErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO21microphoneUnavailableyA2CmF",
+            "mangledName": "$s2P50A12CaptureErrorO21microphoneUnavailableyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "inputCreationFailed",
+            "printedName": "inputCreationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> (P5.P5MediaCaptureKind, Swift.String) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5MediaCaptureKind, Swift.String) -> P5.P5CaptureError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(P5.P5MediaCaptureKind, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5MediaCaptureKind",
+                            "printedName": "P5.P5MediaCaptureKind",
+                            "usr": "s:2P50A16MediaCaptureKindO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO19inputCreationFailedyAcA0a5MediaB4KindO_SStcACmF",
+            "mangledName": "$s2P50A12CaptureErrorO19inputCreationFailedyAcA0a5MediaB4KindO_SStcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "cannotAddInput",
+            "printedName": "cannotAddInput",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> (P5.P5MediaCaptureKind) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5MediaCaptureKind) -> P5.P5CaptureError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaCaptureKind",
+                        "printedName": "P5.P5MediaCaptureKind",
+                        "usr": "s:2P50A16MediaCaptureKindO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO14cannotAddInputyAcA0a5MediaB4KindOcACmF",
+            "mangledName": "$s2P50A12CaptureErrorO14cannotAddInputyAcA0a5MediaB4KindOcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "cannotAddOutput",
+            "printedName": "cannotAddOutput",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> (Swift.String) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5CaptureError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO15cannotAddOutputyACSScACmF",
+            "mangledName": "$s2P50A12CaptureErrorO15cannotAddOutputyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidState",
+            "printedName": "invalidState",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> (P5.P5CaptureSessionState) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5CaptureSessionState) -> P5.P5CaptureError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO12invalidStateyAcA0ab7SessionE0OcACmF",
+            "mangledName": "$s2P50A12CaptureErrorO12invalidStateyAcA0ab7SessionE0OcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "recordingDestinationIsNotFileURL",
+            "printedName": "recordingDestinationIsNotFileURL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureError",
+                    "printedName": "P5.P5CaptureError",
+                    "usr": "s:2P50A12CaptureErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO32recordingDestinationIsNotFileURLyA2CmF",
+            "mangledName": "$s2P50A12CaptureErrorO32recordingDestinationIsNotFileURLyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "recordingDestinationAlreadyExists",
+            "printedName": "recordingDestinationAlreadyExists",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureError",
+                    "printedName": "P5.P5CaptureError",
+                    "usr": "s:2P50A12CaptureErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO33recordingDestinationAlreadyExistsyA2CmF",
+            "mangledName": "$s2P50A12CaptureErrorO33recordingDestinationAlreadyExistsyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "frameConversionFailed",
+            "printedName": "frameConversionFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureError",
+                    "printedName": "P5.P5CaptureError",
+                    "usr": "s:2P50A12CaptureErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO21frameConversionFailedyA2CmF",
+            "mangledName": "$s2P50A12CaptureErrorO21frameConversionFailedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "recordingFailed",
+            "printedName": "recordingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5CaptureError.Type) -> (Swift.String) -> P5.P5CaptureError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5CaptureError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5CaptureError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureError",
+                        "printedName": "P5.P5CaptureError",
+                        "usr": "s:2P50A12CaptureErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A12CaptureErrorO15recordingFailedyACSScACmF",
+            "mangledName": "$s2P50A12CaptureErrorO15recordingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12CaptureErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A12CaptureErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12CaptureErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A12CaptureErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureError",
+                "printedName": "P5.P5CaptureError",
+                "usr": "s:2P50A12CaptureErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureError",
+                "printedName": "P5.P5CaptureError",
+                "usr": "s:2P50A12CaptureErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12CaptureErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A12CaptureErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12CaptureErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A12CaptureErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12CaptureErrorO9hashValueSivp",
+            "mangledName": "$s2P50A12CaptureErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12CaptureErrorO9hashValueSivg",
+                "mangledName": "$s2P50A12CaptureErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A12CaptureErrorO",
+        "mangledName": "$s2P50A12CaptureErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5CaptureSession",
+        "printedName": "P5CaptureSession",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "configuration",
+            "printedName": "configuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureConfiguration",
+                "printedName": "P5.P5CaptureConfiguration",
+                "usr": "s:2P50A20CaptureConfigurationV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureSessionC13configurationAA0aB13ConfigurationVvp",
+            "mangledName": "$s2P50A14CaptureSessionC13configurationAA0aB13ConfigurationVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureConfiguration",
+                    "printedName": "P5.P5CaptureConfiguration",
+                    "usr": "s:2P50A20CaptureConfigurationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC13configurationAA0aB13ConfigurationVvg",
+                "mangledName": "$s2P50A14CaptureSessionC13configurationAA0aB13ConfigurationVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureSessionState",
+                "printedName": "P5.P5CaptureSessionState",
+                "usr": "s:2P50A19CaptureSessionStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureSessionC5stateAA0abC5StateOvp",
+            "mangledName": "$s2P50A14CaptureSessionC5stateAA0abC5StateOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureSessionState",
+                    "printedName": "P5.P5CaptureSessionState",
+                    "usr": "s:2P50A19CaptureSessionStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC5stateAA0abC5StateOvg",
+                "mangledName": "$s2P50A14CaptureSessionC5stateAA0abC5StateOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestFrame",
+            "printedName": "latestFrame",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5CaptureFrame?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5CaptureFrame",
+                    "printedName": "P5.P5CaptureFrame",
+                    "usr": "s:2P50A12CaptureFrameV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureSessionC11latestFrameAA0abE0VSgvp",
+            "mangledName": "$s2P50A14CaptureSessionC11latestFrameAA0abE0VSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "P5.P5CaptureFrame?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureFrame",
+                        "printedName": "P5.P5CaptureFrame",
+                        "usr": "s:2P50A12CaptureFrameV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC11latestFrameAA0abE0VSgvg",
+                "mangledName": "$s2P50A14CaptureSessionC11latestFrameAA0abE0VSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "frameCaptured",
+            "printedName": "frameCaptured",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((P5.P5CaptureFrame) -> Swift.Void)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5CaptureFrame) -> Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNameAlias",
+                        "name": "Void",
+                        "printedName": "Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureFrame",
+                        "printedName": "P5.P5CaptureFrame",
+                        "usr": "s:2P50A12CaptureFrameV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureSessionC13frameCapturedyAA0aB5FrameVYbScMYccSgvp",
+            "mangledName": "$s2P50A14CaptureSessionC13frameCapturedyAA0aB5FrameVYbScMYccSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5CaptureFrame) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5CaptureFrame) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5CaptureFrame",
+                            "printedName": "P5.P5CaptureFrame",
+                            "usr": "s:2P50A12CaptureFrameV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC13frameCapturedyAA0aB5FrameVYbScMYccSgvg",
+                "mangledName": "$s2P50A14CaptureSessionC13frameCapturedyAA0aB5FrameVYbScMYccSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5CaptureFrame) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5CaptureFrame) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5CaptureFrame",
+                            "printedName": "P5.P5CaptureFrame",
+                            "usr": "s:2P50A12CaptureFrameV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC13frameCapturedyAA0aB5FrameVYbScMYccSgvs",
+                "mangledName": "$s2P50A14CaptureSessionC13frameCapturedyAA0aB5FrameVYbScMYccSgvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "recordingFinished",
+            "printedName": "recordingFinished",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<Foundation.URL, any Swift.Error>) -> Swift.Void)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<Foundation.URL, any Swift.Error>) -> Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNameAlias",
+                        "name": "Void",
+                        "printedName": "Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<Foundation.URL, any Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureSessionC17recordingFinishedys6ResultOy10Foundation3URLVs5Error_pGYbScMYccSgvp",
+            "mangledName": "$s2P50A14CaptureSessionC17recordingFinishedys6ResultOy10Foundation3URLVs5Error_pGYbScMYccSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<Foundation.URL, any Swift.Error>) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<Foundation.URL, any Swift.Error>) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<Foundation.URL, any Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "URL",
+                                "printedName": "Foundation.URL",
+                                "usr": "s:10Foundation3URLV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC17recordingFinishedys6ResultOy10Foundation3URLVs5Error_pGYbScMYccSgvg",
+                "mangledName": "$s2P50A14CaptureSessionC17recordingFinishedys6ResultOy10Foundation3URLVs5Error_pGYbScMYccSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<Foundation.URL, any Swift.Error>) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<Foundation.URL, any Swift.Error>) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<Foundation.URL, any Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "URL",
+                                "printedName": "Foundation.URL",
+                                "usr": "s:10Foundation3URLV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC17recordingFinishedys6ResultOy10Foundation3URLVs5Error_pGYbScMYccSgvs",
+                "mangledName": "$s2P50A14CaptureSessionC17recordingFinishedys6ResultOy10Foundation3URLVs5Error_pGYbScMYccSgvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "stateChanged",
+            "printedName": "stateChanged",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((P5.P5CaptureSessionState) -> Swift.Void)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5CaptureSessionState) -> Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNameAlias",
+                        "name": "Void",
+                        "printedName": "Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5CaptureSessionState",
+                        "printedName": "P5.P5CaptureSessionState",
+                        "usr": "s:2P50A19CaptureSessionStateO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14CaptureSessionC12stateChangedyAA0abC5StateOYbScMYccSgvp",
+            "mangledName": "$s2P50A14CaptureSessionC12stateChangedyAA0abC5StateOYbScMYccSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5CaptureSessionState) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5CaptureSessionState) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5CaptureSessionState",
+                            "printedName": "P5.P5CaptureSessionState",
+                            "usr": "s:2P50A19CaptureSessionStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC12stateChangedyAA0abC5StateOYbScMYccSgvg",
+                "mangledName": "$s2P50A14CaptureSessionC12stateChangedyAA0abC5StateOYbScMYccSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5CaptureSessionState) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5CaptureSessionState) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5CaptureSessionState",
+                            "printedName": "P5.P5CaptureSessionState",
+                            "usr": "s:2P50A19CaptureSessionStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14CaptureSessionC12stateChangedyAA0abC5StateOYbScMYccSgvs",
+                "mangledName": "$s2P50A14CaptureSessionC12stateChangedyAA0abC5StateOYbScMYccSgvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureSession",
+                "printedName": "P5.P5CaptureSession",
+                "usr": "s:2P50A14CaptureSessionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5CaptureConfiguration",
+                "printedName": "P5.P5CaptureConfiguration",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A20CaptureConfigurationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A14CaptureSessionC13configurationAcA0aB13ConfigurationV_tcfc",
+            "mangledName": "$s2P50A14CaptureSessionC13configurationAcA0aB13ConfigurationV_tcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A14CaptureSessionC5startyyYaKF",
+            "mangledName": "$s2P50A14CaptureSessionC5startyyYaKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A14CaptureSessionC4stopyyYaKF",
+            "mangledName": "$s2P50A14CaptureSessionC4stopyyYaKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startRecording",
+            "printedName": "startRecording(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A14CaptureSessionC14startRecording2toy10Foundation3URLV_tKF",
+            "mangledName": "$s2P50A14CaptureSessionC14startRecording2toy10Foundation3URLV_tKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopRecording",
+            "printedName": "stopRecording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A14CaptureSessionC13stopRecording10Foundation3URLVyYaKF",
+            "mangledName": "$s2P50A14CaptureSessionC13stopRecording10Foundation3URLVyYaKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scenePhaseChanged",
+            "printedName": "scenePhaseChanged(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ScenePhase",
+                "printedName": "P5.P5ScenePhase",
+                "usr": "s:2P50A10ScenePhaseO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A14CaptureSessionC17scenePhaseChanged2toyAA0a5SceneE0O_tYaKF",
+            "mangledName": "$s2P50A14CaptureSessionC17scenePhaseChanged2toyAA0a5SceneE0O_tYaKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A14CaptureSessionC",
+        "mangledName": "$s2P50A14CaptureSessionC",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Final",
+          "Custom"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "P5ImageDocumentError",
         "printedName": "P5ImageDocumentError",
         "children": [
