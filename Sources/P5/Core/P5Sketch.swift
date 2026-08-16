@@ -67,6 +67,27 @@ open class P5Sketch {
     /// Most recently delivered deterministic multi-touch update.
     public private(set) var latestTouchEvent: P5TouchEvent?
 
+    /// Whether the native canvas currently owns keyboard focus.
+    public private(set) var isFocused = false
+
+    /// Whether a mouse or indirect pointer is hovering inside the canvas.
+    public private(set) var isHovered = false
+
+    /// Most recently delivered focus transition.
+    public private(set) var latestFocusEvent: P5FocusEvent?
+
+    /// Most recently delivered hover transition.
+    public private(set) var latestHoverEvent: P5HoverEvent?
+
+    /// Most recently delivered scrolling update.
+    public private(set) var latestScrollEvent: P5ScrollEvent?
+
+    /// Most recently delivered drag/drop update.
+    public private(set) var latestDropEvent: P5DropEvent?
+
+    /// Most recently requested accessibility action.
+    public private(set) var latestAccessibilityEvent: P5AccessibilityEvent?
+
     /// The semantic keys currently held down.
     public private(set) var pressedKeys: Set<P5Key> = []
 
@@ -98,6 +119,21 @@ open class P5Sketch {
 
     /// Current host gesture recognizer cooperation policy.
     public private(set) var gestureCoexistenceMode = P5GestureCoexistence.nativeDefault
+
+    /// VoiceOver label applied to the native canvas.
+    public var accessibilityLabel: String? {
+        didSet { updateAccessibilityMetadata() }
+    }
+
+    /// VoiceOver value applied to the native canvas.
+    public var accessibilityValue: String? {
+        didSet { updateAccessibilityMetadata() }
+    }
+
+    /// VoiceOver hint applied to the native canvas.
+    public var accessibilityHint: String? {
+        didSet { updateAccessibilityMetadata() }
+    }
 
     /// Whether automatic frame delivery is suspended for scene or application lifecycle.
     public private(set) var isPaused = false
@@ -171,6 +207,15 @@ open class P5Sketch {
         internalView.onKeyboardEvent = { [weak self] event in
             self?.handleKeyboardEvent(event)
         }
+        internalView.onFocusEvent = { [weak self] event in
+            self?.injectFocusEvent(event)
+        }
+        internalView.onScrollEvent = { [weak self] event in
+            self?.injectScrollEvent(event)
+        }
+        internalView.onAccessibilityEvent = { [weak self] event in
+            self?.performAccessibilityAction(event) ?? false
+        }
         setup()
     }
 
@@ -234,6 +279,38 @@ open class P5Sketch {
     /// Responds when the platform cancels a touch.
     open func touchesCancelled(_ event: P5TouchEvent) {}
 
+    /// Responds to every native focus transition.
+    open func focusChanged(_ event: P5FocusEvent) {}
+
+    /// Responds after the canvas gains focus.
+    open func focusGained(_ event: P5FocusEvent) {}
+
+    /// Responds after the canvas loses focus.
+    open func focusLost(_ event: P5FocusEvent) {}
+
+    /// Responds to every hover transition.
+    open func hoverChanged(_ event: P5HoverEvent) {}
+
+    /// Responds when hover enters the canvas.
+    open func hoverEntered(_ event: P5HoverEvent) {}
+
+    /// Responds when hover moves inside the canvas.
+    open func hoverMoved(_ event: P5HoverEvent) {}
+
+    /// Responds when hover exits the canvas.
+    open func hoverExited(_ event: P5HoverEvent) {}
+
+    /// Responds to precision, wheel, and momentum scrolling.
+    open func scrolled(_ event: P5ScrollEvent) {}
+
+    /// Responds to a host-integrated drag/drop update.
+    open func dropChanged(_ event: P5DropEvent) {}
+
+    /// Handles a semantic accessibility action.
+    ///
+    /// - Returns: `true` when the sketch handled the action.
+    open func accessibilityAction(_ event: P5AccessibilityEvent) -> Bool { false }
+
     /// Responds when a keyboard key becomes pressed or repeats.
     open func keyPressed(_ event: P5KeyboardEvent) {}
 
@@ -293,6 +370,30 @@ open class P5Sketch {
         if let touchEvent {
             dispatchTouchEvent(touchEvent)
         }
+        if let hoverEvent = hoverEvent(from: event) {
+            injectHoverEvent(hoverEvent)
+        }
+    }
+
+    private func hoverEvent(from event: P5PointerEvent) -> P5HoverEvent? {
+        guard event.kind == .mouse || event.kind == .indirect else { return nil }
+        let phase: P5HoverPhase
+        switch event.phase {
+        case .entered:
+            phase = .entered
+        case .moved:
+            phase = .moved
+        case .exited:
+            phase = .exited
+        case .dragged, .pressed, .released, .clicked, .cancelled:
+            return nil
+        }
+        return P5HoverEvent(
+            phase: phase,
+            location: event.location,
+            modifiers: event.modifiers,
+            timestamp: event.timestamp
+        )
     }
 
     private func updateTouchState(from event: P5PointerEvent) -> P5TouchEvent? {
@@ -357,6 +458,14 @@ open class P5Sketch {
         }
     }
 
+    private func updateAccessibilityMetadata() {
+        internalView.updateAccessibility(
+            label: accessibilityLabel,
+            value: accessibilityValue,
+            hint: accessibilityHint
+        )
+    }
+
     func queueOperation(_ operation: P5Operation) {
         internalView.addOperation(operation)
     }
@@ -369,6 +478,60 @@ open class P5Sketch {
 // MARK: - Environment
 
 public extension P5Sketch {
+    /// Requests native keyboard focus for the canvas.
+    @discardableResult
+    func requestFocus() -> Bool {
+        internalView.requestFocus()
+    }
+
+    /// Injects or replays a focus transition on the main actor.
+    func injectFocusEvent(_ event: P5FocusEvent) {
+        isFocused = event.isFocused
+        latestFocusEvent = event
+        focusChanged(event)
+        if event.isFocused {
+            focusGained(event)
+        } else {
+            focusLost(event)
+        }
+    }
+
+    /// Injects or replays a hover transition on the main actor.
+    func injectHoverEvent(_ event: P5HoverEvent) {
+        isHovered = event.phase != .exited
+        latestHoverEvent = event
+        hoverChanged(event)
+        switch event.phase {
+        case .entered:
+            hoverEntered(event)
+        case .moved:
+            hoverMoved(event)
+        case .exited:
+            hoverExited(event)
+        }
+    }
+
+    /// Injects or replays a scrolling update on the main actor.
+    func injectScrollEvent(_ event: P5ScrollEvent) {
+        latestScrollEvent = event
+        scrolled(event)
+    }
+
+    /// Injects a drag/drop update from SwiftUI or another host adapter.
+    func injectDropEvent(_ event: P5DropEvent) {
+        latestDropEvent = event
+        dropChanged(event)
+    }
+
+    /// Requests a semantic accessibility action.
+    ///
+    /// - Returns: `true` when ``accessibilityAction(_:)`` handled the request.
+    @discardableResult
+    func performAccessibilityAction(_ event: P5AccessibilityEvent) -> Bool {
+        latestAccessibilityEvent = event
+        return accessibilityAction(event)
+    }
+
     /// Selects how existing host gesture recognizers interact with UIKit touches.
     func gestureCoexistence(_ mode: P5GestureCoexistence) {
         gestureCoexistenceMode = mode

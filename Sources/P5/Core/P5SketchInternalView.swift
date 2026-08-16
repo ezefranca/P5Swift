@@ -50,6 +50,9 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
     var onDraw: () -> Void = {}
     var onPointerEvent: (P5PointerEvent) -> Void = { _ in }
     var onKeyboardEvent: (P5KeyboardEvent) -> Void = { _ in }
+    var onFocusEvent: (P5FocusEvent) -> Void = { _ in }
+    var onScrollEvent: (P5ScrollEvent) -> Void = { _ in }
+    var onAccessibilityEvent: (P5AccessibilityEvent) -> Bool = { _ in false }
 
     #if canImport(UIKit)
         override var canBecomeFirstResponder: Bool {
@@ -214,6 +217,47 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         onKeyboardEvent(event)
     }
 
+    func deliverFocusEvent(_ event: P5FocusEvent) {
+        onFocusEvent(event)
+    }
+
+    func deliverScrollEvent(_ event: P5ScrollEvent) {
+        onScrollEvent(event)
+    }
+
+    @discardableResult
+    func deliverAccessibilityAction(_ action: P5AccessibilityAction) -> Bool {
+        onAccessibilityEvent(
+            P5AccessibilityEvent(
+                action: action,
+                timestamp: ProcessInfo.processInfo.systemUptime
+            )
+        )
+    }
+
+    @discardableResult
+    func requestFocus() -> Bool {
+        #if canImport(UIKit)
+            becomeFirstResponder()
+        #elseif canImport(AppKit)
+            window?.makeFirstResponder(self) ?? false
+        #endif
+    }
+
+    func updateAccessibility(label: String?, value: String?, hint: String?) {
+        #if canImport(UIKit)
+            isAccessibilityElement = label != nil || value != nil || hint != nil
+            accessibilityLabel = label
+            accessibilityValue = value
+            accessibilityHint = hint
+        #elseif canImport(AppKit)
+            setAccessibilityElement(label != nil || value != nil || hint != nil)
+            setAccessibilityLabel(label)
+            setAccessibilityValue(value)
+            setAccessibilityHelp(hint)
+        #endif
+    }
+
     private func render(in context: CGContext) {
         if automaticallyDriven && (isLooping || userWantsRedraw) {
             onDraw()
@@ -315,6 +359,50 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
             true
         }
 
+        override func becomeFirstResponder() -> Bool {
+            let accepted = super.becomeFirstResponder()
+            if accepted {
+                deliverFocusEvent(
+                    P5FocusEvent(
+                        isFocused: true,
+                        cause: .system,
+                        timestamp: ProcessInfo.processInfo.systemUptime
+                    )
+                )
+            }
+            return accepted
+        }
+
+        override func resignFirstResponder() -> Bool {
+            let accepted = super.resignFirstResponder()
+            if accepted {
+                deliverFocusEvent(
+                    P5FocusEvent(
+                        isFocused: false,
+                        cause: .system,
+                        timestamp: ProcessInfo.processInfo.systemUptime
+                    )
+                )
+            }
+            return accepted
+        }
+
+        override func accessibilityPerformPress() -> Bool {
+            deliverAccessibilityAction(.activate) || super.accessibilityPerformPress()
+        }
+
+        override func accessibilityPerformIncrement() -> Bool {
+            deliverAccessibilityAction(.increment) || super.accessibilityPerformIncrement()
+        }
+
+        override func accessibilityPerformDecrement() -> Bool {
+            deliverAccessibilityAction(.decrement) || super.accessibilityPerformDecrement()
+        }
+
+        override func accessibilityPerformCancel() -> Bool {
+            deliverAccessibilityAction(.escape) || super.accessibilityPerformCancel()
+        }
+
         override func updateTrackingAreas() {
             super.updateTrackingAreas()
             if let pointerTrackingArea {
@@ -339,6 +427,36 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
 
         override func mouseMoved(with event: NSEvent) {
             deliverMouseEvent(event, phase: .moved, button: .none)
+        }
+
+        override func scrollWheel(with event: NSEvent) {
+            let location = convert(event.locationInWindow, from: nil)
+            deliverScrollEvent(
+                P5ScrollEvent(
+                    phase: Self.scrollPhase(
+                        phase: event.phase,
+                        momentumPhase: event.momentumPhase
+                    ),
+                    delta: CGVector(dx: event.scrollingDeltaX, dy: event.scrollingDeltaY),
+                    location: location,
+                    modifiers: Self.modifierKeys(from: event.modifierFlags),
+                    isPrecise: event.hasPreciseScrollingDeltas,
+                    isDirectionInverted: event.isDirectionInvertedFromDevice,
+                    isMomentum: event.momentumPhase.isEmpty == false,
+                    timestamp: event.timestamp
+                )
+            )
+        }
+
+        static func scrollPhase(
+            phase: NSEvent.Phase,
+            momentumPhase: NSEvent.Phase
+        ) -> P5ScrollPhase {
+            let effective = momentumPhase.isEmpty ? phase : momentumPhase
+            if effective.contains(.began) { return .began }
+            if effective.contains(.ended) { return .ended }
+            if effective.contains(.cancelled) { return .cancelled }
+            return .changed
         }
 
         override func mouseDragged(with event: NSEvent) {
@@ -596,6 +714,54 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
     #endif
 
     #if canImport(UIKit)
+        override func becomeFirstResponder() -> Bool {
+            let accepted = super.becomeFirstResponder()
+            if accepted {
+                deliverFocusEvent(
+                    P5FocusEvent(
+                        isFocused: true,
+                        cause: .system,
+                        timestamp: ProcessInfo.processInfo.systemUptime
+                    )
+                )
+            }
+            return accepted
+        }
+
+        override func resignFirstResponder() -> Bool {
+            let accepted = super.resignFirstResponder()
+            if accepted {
+                deliverFocusEvent(
+                    P5FocusEvent(
+                        isFocused: false,
+                        cause: .system,
+                        timestamp: ProcessInfo.processInfo.systemUptime
+                    )
+                )
+            }
+            return accepted
+        }
+
+        override func accessibilityActivate() -> Bool {
+            deliverAccessibilityAction(.activate) || super.accessibilityActivate()
+        }
+
+        override func accessibilityIncrement() {
+            if deliverAccessibilityAction(.increment) == false {
+                super.accessibilityIncrement()
+            }
+        }
+
+        override func accessibilityDecrement() {
+            if deliverAccessibilityAction(.decrement) == false {
+                super.accessibilityDecrement()
+            }
+        }
+
+        override func accessibilityPerformEscape() -> Bool {
+            deliverAccessibilityAction(.escape) || super.accessibilityPerformEscape()
+        }
+
         override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
             for press in orderedPresses(presses) {
                 deliverPress(press, phase: .pressed)
