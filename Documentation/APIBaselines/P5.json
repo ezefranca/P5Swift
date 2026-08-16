@@ -39616,6 +39616,1343 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "P5MediaCaptureKind",
+        "printedName": "P5MediaCaptureKind",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "camera",
+            "printedName": "camera",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaCaptureKind.Type) -> P5.P5MediaCaptureKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaCaptureKind",
+                    "printedName": "P5.P5MediaCaptureKind",
+                    "usr": "s:2P50A16MediaCaptureKindO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaCaptureKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaCaptureKind",
+                        "printedName": "P5.P5MediaCaptureKind",
+                        "usr": "s:2P50A16MediaCaptureKindO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16MediaCaptureKindO6camerayA2CmF",
+            "mangledName": "$s2P50A16MediaCaptureKindO6camerayA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "microphone",
+            "printedName": "microphone",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaCaptureKind.Type) -> P5.P5MediaCaptureKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaCaptureKind",
+                    "printedName": "P5.P5MediaCaptureKind",
+                    "usr": "s:2P50A16MediaCaptureKindO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaCaptureKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaCaptureKind",
+                        "printedName": "P5.P5MediaCaptureKind",
+                        "usr": "s:2P50A16MediaCaptureKindO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16MediaCaptureKindO10microphoneyA2CmF",
+            "mangledName": "$s2P50A16MediaCaptureKindO10microphoneyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5MediaCaptureKind?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaCaptureKind",
+                    "printedName": "P5.P5MediaCaptureKind",
+                    "usr": "s:2P50A16MediaCaptureKindO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A16MediaCaptureKindO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A16MediaCaptureKindO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5MediaCaptureKind]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaCaptureKind",
+                    "printedName": "P5.P5MediaCaptureKind",
+                    "usr": "s:2P50A16MediaCaptureKindO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A16MediaCaptureKindO8AllCasesa",
+            "mangledName": "$s2P50A16MediaCaptureKindO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A16MediaCaptureKindO8RawValuea",
+            "mangledName": "$s2P50A16MediaCaptureKindO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5MediaCaptureKind]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaCaptureKind",
+                    "printedName": "P5.P5MediaCaptureKind",
+                    "usr": "s:2P50A16MediaCaptureKindO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A16MediaCaptureKindO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A16MediaCaptureKindO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5MediaCaptureKind]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaCaptureKind",
+                        "printedName": "P5.P5MediaCaptureKind",
+                        "usr": "s:2P50A16MediaCaptureKindO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A16MediaCaptureKindO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A16MediaCaptureKindO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A16MediaCaptureKindO8rawValueSSvp",
+            "mangledName": "$s2P50A16MediaCaptureKindO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A16MediaCaptureKindO8rawValueSSvg",
+                "mangledName": "$s2P50A16MediaCaptureKindO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A16MediaCaptureKindO",
+        "mangledName": "$s2P50A16MediaCaptureKindO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5MediaCaptureKind]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaCaptureKind",
+                        "printedName": "P5.P5MediaCaptureKind",
+                        "usr": "s:2P50A16MediaCaptureKindO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5MediaAuthorizationStatus",
+        "printedName": "P5MediaAuthorizationStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "notDetermined",
+            "printedName": "notDetermined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaAuthorizationStatus.Type) -> P5.P5MediaAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationStatus",
+                        "printedName": "P5.P5MediaAuthorizationStatus",
+                        "usr": "s:2P50A24MediaAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24MediaAuthorizationStatusO13notDeterminedyA2CmF",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO13notDeterminedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "restricted",
+            "printedName": "restricted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaAuthorizationStatus.Type) -> P5.P5MediaAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationStatus",
+                        "printedName": "P5.P5MediaAuthorizationStatus",
+                        "usr": "s:2P50A24MediaAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24MediaAuthorizationStatusO10restrictedyA2CmF",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO10restrictedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "denied",
+            "printedName": "denied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaAuthorizationStatus.Type) -> P5.P5MediaAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationStatus",
+                        "printedName": "P5.P5MediaAuthorizationStatus",
+                        "usr": "s:2P50A24MediaAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24MediaAuthorizationStatusO6deniedyA2CmF",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO6deniedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "authorized",
+            "printedName": "authorized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaAuthorizationStatus.Type) -> P5.P5MediaAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationStatus",
+                        "printedName": "P5.P5MediaAuthorizationStatus",
+                        "usr": "s:2P50A24MediaAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24MediaAuthorizationStatusO10authorizedyA2CmF",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO10authorizedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaAuthorizationStatus.Type) -> P5.P5MediaAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationStatus",
+                        "printedName": "P5.P5MediaAuthorizationStatus",
+                        "usr": "s:2P50A24MediaAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24MediaAuthorizationStatusO7unknownyA2CmF",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO7unknownyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5MediaAuthorizationStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A24MediaAuthorizationStatusO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5MediaAuthorizationStatus]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A24MediaAuthorizationStatusO8AllCasesa",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A24MediaAuthorizationStatusO8RawValuea",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5MediaAuthorizationStatus]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5MediaAuthorizationStatus",
+                    "printedName": "P5.P5MediaAuthorizationStatus",
+                    "usr": "s:2P50A24MediaAuthorizationStatusO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24MediaAuthorizationStatusO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5MediaAuthorizationStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationStatus",
+                        "printedName": "P5.P5MediaAuthorizationStatus",
+                        "usr": "s:2P50A24MediaAuthorizationStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24MediaAuthorizationStatusO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A24MediaAuthorizationStatusO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24MediaAuthorizationStatusO8rawValueSSvp",
+            "mangledName": "$s2P50A24MediaAuthorizationStatusO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24MediaAuthorizationStatusO8rawValueSSvg",
+                "mangledName": "$s2P50A24MediaAuthorizationStatusO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A24MediaAuthorizationStatusO",
+        "mangledName": "$s2P50A24MediaAuthorizationStatusO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5MediaAuthorizationStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationStatus",
+                        "printedName": "P5.P5MediaAuthorizationStatus",
+                        "usr": "s:2P50A24MediaAuthorizationStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5MediaAuthorizationError",
+        "printedName": "P5MediaAuthorizationError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "authorizationNotDetermined",
+            "printedName": "authorizationNotDetermined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaAuthorizationError.Type) -> (P5.P5MediaCaptureKind) -> P5.P5MediaAuthorizationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5MediaCaptureKind) -> P5.P5MediaAuthorizationError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationError",
+                        "printedName": "P5.P5MediaAuthorizationError",
+                        "usr": "s:2P50A23MediaAuthorizationErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaCaptureKind",
+                        "printedName": "P5.P5MediaCaptureKind",
+                        "usr": "s:2P50A16MediaCaptureKindO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaAuthorizationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationError",
+                        "printedName": "P5.P5MediaAuthorizationError",
+                        "usr": "s:2P50A23MediaAuthorizationErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A23MediaAuthorizationErrorO26authorizationNotDeterminedyAcA0aB11CaptureKindOcACmF",
+            "mangledName": "$s2P50A23MediaAuthorizationErrorO26authorizationNotDeterminedyAcA0aB11CaptureKindOcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "accessUnavailable",
+            "printedName": "accessUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5MediaAuthorizationError.Type) -> (P5.P5MediaCaptureKind, P5.P5MediaAuthorizationStatus) -> P5.P5MediaAuthorizationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5MediaCaptureKind, P5.P5MediaAuthorizationStatus) -> P5.P5MediaAuthorizationError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationError",
+                        "printedName": "P5.P5MediaAuthorizationError",
+                        "usr": "s:2P50A23MediaAuthorizationErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(P5.P5MediaCaptureKind, P5.P5MediaAuthorizationStatus)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5MediaCaptureKind",
+                            "printedName": "P5.P5MediaCaptureKind",
+                            "usr": "s:2P50A16MediaCaptureKindO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5MediaAuthorizationStatus",
+                            "printedName": "P5.P5MediaAuthorizationStatus",
+                            "usr": "s:2P50A24MediaAuthorizationStatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5MediaAuthorizationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5MediaAuthorizationError",
+                        "printedName": "P5.P5MediaAuthorizationError",
+                        "usr": "s:2P50A23MediaAuthorizationErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A23MediaAuthorizationErrorO17accessUnavailableyAcA0aB11CaptureKindO_AA0abC6StatusOtcACmF",
+            "mangledName": "$s2P50A23MediaAuthorizationErrorO17accessUnavailableyAcA0aB11CaptureKindO_AA0abC6StatusOtcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A23MediaAuthorizationErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A23MediaAuthorizationErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A23MediaAuthorizationErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A23MediaAuthorizationErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaAuthorizationError",
+                "printedName": "P5.P5MediaAuthorizationError",
+                "usr": "s:2P50A23MediaAuthorizationErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaAuthorizationError",
+                "printedName": "P5.P5MediaAuthorizationError",
+                "usr": "s:2P50A23MediaAuthorizationErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A23MediaAuthorizationErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A23MediaAuthorizationErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A23MediaAuthorizationErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A23MediaAuthorizationErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A23MediaAuthorizationErrorO9hashValueSivp",
+            "mangledName": "$s2P50A23MediaAuthorizationErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A23MediaAuthorizationErrorO9hashValueSivg",
+                "mangledName": "$s2P50A23MediaAuthorizationErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A23MediaAuthorizationErrorO",
+        "mangledName": "$s2P50A23MediaAuthorizationErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5MediaAuthorization",
+        "printedName": "P5MediaAuthorization",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaAuthorization",
+                "printedName": "P5.P5MediaAuthorization",
+                "usr": "s:2P50A18MediaAuthorizationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A18MediaAuthorizationVACycfc",
+            "mangledName": "$s2P50A18MediaAuthorizationVACycfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "status",
+            "printedName": "status(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaAuthorizationStatus",
+                "printedName": "P5.P5MediaAuthorizationStatus",
+                "usr": "s:2P50A24MediaAuthorizationStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaCaptureKind",
+                "printedName": "P5.P5MediaCaptureKind",
+                "usr": "s:2P50A16MediaCaptureKindO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A18MediaAuthorizationV6status3forAA0abC6StatusOAA0aB11CaptureKindO_tF",
+            "mangledName": "$s2P50A18MediaAuthorizationV6status3forAA0abC6StatusOAA0aB11CaptureKindO_tF",
+            "moduleName": "P5",
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "requestAuthorization",
+            "printedName": "requestAuthorization(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaAuthorizationStatus",
+                "printedName": "P5.P5MediaAuthorizationStatus",
+                "usr": "s:2P50A24MediaAuthorizationStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaCaptureKind",
+                "printedName": "P5.P5MediaCaptureKind",
+                "usr": "s:2P50A16MediaCaptureKindO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A18MediaAuthorizationV07requestC03forAA0abC6StatusOAA0aB11CaptureKindO_tYaKF",
+            "mangledName": "$s2P50A18MediaAuthorizationV07requestC03forAA0abC6StatusOAA0aB11CaptureKindO_tYaKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "requireAuthorization",
+            "printedName": "requireAuthorization(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5MediaCaptureKind",
+                "printedName": "P5.P5MediaCaptureKind",
+                "usr": "s:2P50A16MediaCaptureKindO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A18MediaAuthorizationV07requireC03foryAA0aB11CaptureKindO_tKF",
+            "mangledName": "$s2P50A18MediaAuthorizationV07requireC03foryAA0aB11CaptureKindO_tKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A18MediaAuthorizationV",
+        "mangledName": "$s2P50A18MediaAuthorizationV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "P5PhotoLibraryAccess",
         "printedName": "P5PhotoLibraryAccess",
         "children": [
