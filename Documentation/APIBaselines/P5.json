@@ -47265,6 +47265,2408 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "P5DataError",
+        "printedName": "P5DataError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "loadingFailed",
+            "printedName": "loadingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.String) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO13loadingFailedyACSScACmF",
+            "mangledName": "$s2P50A9DataErrorO13loadingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidHTTPStatus",
+            "printedName": "invalidHTTPStatus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.Int) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO17invalidHTTPStatusyACSicACmF",
+            "mangledName": "$s2P50A9DataErrorO17invalidHTTPStatusyACSicACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "textDecodingFailed",
+            "printedName": "textDecodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5DataError",
+                    "printedName": "P5.P5DataError",
+                    "usr": "s:2P50A9DataErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO18textDecodingFailedyA2CmF",
+            "mangledName": "$s2P50A9DataErrorO18textDecodingFailedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "jsonDecodingFailed",
+            "printedName": "jsonDecodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.String) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO18jsonDecodingFailedyACSScACmF",
+            "mangledName": "$s2P50A9DataErrorO18jsonDecodingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "emptyTable",
+            "printedName": "emptyTable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5DataError",
+                    "printedName": "P5.P5DataError",
+                    "usr": "s:2P50A9DataErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO10emptyTableyA2CmF",
+            "mangledName": "$s2P50A9DataErrorO10emptyTableyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "malformedTable",
+            "printedName": "malformedTable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.Int, Swift.String) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, Swift.String) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(row: Swift.Int, reason: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO14malformedTableyACSi_SStcACmF",
+            "mangledName": "$s2P50A9DataErrorO14malformedTableyACSi_SStcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "duplicateColumn",
+            "printedName": "duplicateColumn",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.String) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO15duplicateColumnyACSScACmF",
+            "mangledName": "$s2P50A9DataErrorO15duplicateColumnyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "unknownColumn",
+            "printedName": "unknownColumn",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.String) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO13unknownColumnyACSScACmF",
+            "mangledName": "$s2P50A9DataErrorO13unknownColumnyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "rowOutOfBounds",
+            "printedName": "rowOutOfBounds",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.Int) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO14rowOutOfBoundsyACSicACmF",
+            "mangledName": "$s2P50A9DataErrorO14rowOutOfBoundsyACSicACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "numberParsingFailed",
+            "printedName": "numberParsingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5DataError.Type) -> (Swift.String) -> P5.P5DataError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5DataError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5DataError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5DataError",
+                        "printedName": "P5.P5DataError",
+                        "usr": "s:2P50A9DataErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A9DataErrorO19numberParsingFailedyACSScACmF",
+            "mangledName": "$s2P50A9DataErrorO19numberParsingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9DataErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A9DataErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9DataErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A9DataErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5DataError",
+                "printedName": "P5.P5DataError",
+                "usr": "s:2P50A9DataErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5DataError",
+                "printedName": "P5.P5DataError",
+                "usr": "s:2P50A9DataErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A9DataErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A9DataErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A9DataErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A9DataErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9DataErrorO9hashValueSivp",
+            "mangledName": "$s2P50A9DataErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9DataErrorO9hashValueSivg",
+                "mangledName": "$s2P50A9DataErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A9DataErrorO",
+        "mangledName": "$s2P50A9DataErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5TableDelimiter",
+        "printedName": "P5TableDelimiter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "comma",
+            "printedName": "comma",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TableDelimiter.Type) -> P5.P5TableDelimiter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TableDelimiter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TableDelimiter",
+                        "printedName": "P5.P5TableDelimiter",
+                        "usr": "s:2P50A14TableDelimiterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14TableDelimiterO5commayA2CmF",
+            "mangledName": "$s2P50A14TableDelimiterO5commayA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "tab",
+            "printedName": "tab",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TableDelimiter.Type) -> P5.P5TableDelimiter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TableDelimiter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TableDelimiter",
+                        "printedName": "P5.P5TableDelimiter",
+                        "usr": "s:2P50A14TableDelimiterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14TableDelimiterO3tabyA2CmF",
+            "mangledName": "$s2P50A14TableDelimiterO3tabyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "semicolon",
+            "printedName": "semicolon",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TableDelimiter.Type) -> P5.P5TableDelimiter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TableDelimiter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TableDelimiter",
+                        "printedName": "P5.P5TableDelimiter",
+                        "usr": "s:2P50A14TableDelimiterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14TableDelimiterO9semicolonyA2CmF",
+            "mangledName": "$s2P50A14TableDelimiterO9semicolonyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "pipe",
+            "printedName": "pipe",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TableDelimiter.Type) -> P5.P5TableDelimiter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TableDelimiter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TableDelimiter",
+                        "printedName": "P5.P5TableDelimiter",
+                        "usr": "s:2P50A14TableDelimiterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A14TableDelimiterO4pipeyA2CmF",
+            "mangledName": "$s2P50A14TableDelimiterO4pipeyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5TableDelimiter?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A14TableDelimiterO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A14TableDelimiterO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5TableDelimiter]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14TableDelimiterO8AllCasesa",
+            "mangledName": "$s2P50A14TableDelimiterO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A14TableDelimiterO8RawValuea",
+            "mangledName": "$s2P50A14TableDelimiterO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5TableDelimiter]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14TableDelimiterO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A14TableDelimiterO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5TableDelimiter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TableDelimiter",
+                        "printedName": "P5.P5TableDelimiter",
+                        "usr": "s:2P50A14TableDelimiterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14TableDelimiterO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A14TableDelimiterO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A14TableDelimiterO8rawValueSSvp",
+            "mangledName": "$s2P50A14TableDelimiterO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A14TableDelimiterO8rawValueSSvg",
+                "mangledName": "$s2P50A14TableDelimiterO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A14TableDelimiterO",
+        "mangledName": "$s2P50A14TableDelimiterO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5TableDelimiter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TableDelimiter",
+                        "printedName": "P5.P5TableDelimiter",
+                        "usr": "s:2P50A14TableDelimiterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5TableParsingOptions",
+        "printedName": "P5TableParsingOptions",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delimiter",
+            "printedName": "delimiter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableDelimiter",
+                "printedName": "P5.P5TableDelimiter",
+                "usr": "s:2P50A14TableDelimiterO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A19TableParsingOptionsV9delimiterAA0aB9DelimiterOvp",
+            "mangledName": "$s2P50A19TableParsingOptionsV9delimiterAA0aB9DelimiterOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TableDelimiter",
+                    "printedName": "P5.P5TableDelimiter",
+                    "usr": "s:2P50A14TableDelimiterO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A19TableParsingOptionsV9delimiterAA0aB9DelimiterOvg",
+                "mangledName": "$s2P50A19TableParsingOptionsV9delimiterAA0aB9DelimiterOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasHeader",
+            "printedName": "hasHeader",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A19TableParsingOptionsV9hasHeaderSbvp",
+            "mangledName": "$s2P50A19TableParsingOptionsV9hasHeaderSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A19TableParsingOptionsV9hasHeaderSbvg",
+                "mangledName": "$s2P50A19TableParsingOptionsV9hasHeaderSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trimsWhitespace",
+            "printedName": "trimsWhitespace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A19TableParsingOptionsV15trimsWhitespaceSbvp",
+            "mangledName": "$s2P50A19TableParsingOptionsV15trimsWhitespaceSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A19TableParsingOptionsV15trimsWhitespaceSbvg",
+                "mangledName": "$s2P50A19TableParsingOptionsV15trimsWhitespaceSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(delimiter:hasHeader:trimsWhitespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableParsingOptions",
+                "printedName": "P5.P5TableParsingOptions",
+                "usr": "s:2P50A19TableParsingOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableDelimiter",
+                "printedName": "P5.P5TableDelimiter",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A14TableDelimiterO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A19TableParsingOptionsV9delimiter9hasHeader15trimsWhitespaceAcA0aB9DelimiterO_S2btcfc",
+            "mangledName": "$s2P50A19TableParsingOptionsV9delimiter9hasHeader15trimsWhitespaceAcA0aB9DelimiterO_S2btcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableParsingOptions",
+                "printedName": "P5.P5TableParsingOptions",
+                "usr": "s:2P50A19TableParsingOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableParsingOptions",
+                "printedName": "P5.P5TableParsingOptions",
+                "usr": "s:2P50A19TableParsingOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A19TableParsingOptionsV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A19TableParsingOptionsV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A19TableParsingOptionsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A19TableParsingOptionsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A19TableParsingOptionsV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A19TableParsingOptionsV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A19TableParsingOptionsV9hashValueSivp",
+            "mangledName": "$s2P50A19TableParsingOptionsV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A19TableParsingOptionsV9hashValueSivg",
+                "mangledName": "$s2P50A19TableParsingOptionsV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableParsingOptions",
+                "printedName": "P5.P5TableParsingOptions",
+                "usr": "s:2P50A19TableParsingOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A19TableParsingOptionsV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A19TableParsingOptionsV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A19TableParsingOptionsV",
+        "mangledName": "$s2P50A19TableParsingOptionsV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Table",
+        "printedName": "P5Table",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "columns",
+            "printedName": "columns",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TableV7columnsSaySSGvp",
+            "mangledName": "$s2P50A5TableV7columnsSaySSGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TableV7columnsSaySSGvg",
+                "mangledName": "$s2P50A5TableV7columnsSaySSGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rows",
+            "printedName": "rows",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TableV4rowsSaySaySSGGvp",
+            "mangledName": "$s2P50A5TableV4rowsSaySaySSGGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[Swift.String]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TableV4rowsSaySaySSGGvg",
+                "mangledName": "$s2P50A5TableV4rowsSaySaySSGGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rowCount",
+            "printedName": "rowCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TableV8rowCountSivp",
+            "mangledName": "$s2P50A5TableV8rowCountSivp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TableV8rowCountSivg",
+                "mangledName": "$s2P50A5TableV8rowCountSivg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "columnCount",
+            "printedName": "columnCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TableV11columnCountSivp",
+            "mangledName": "$s2P50A5TableV11columnCountSivp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TableV11columnCountSivg",
+                "mangledName": "$s2P50A5TableV11columnCountSivg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(columns:rows:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Table",
+                "printedName": "P5.P5Table",
+                "usr": "s:2P50A5TableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A5TableV7columns4rowsACSaySSG_SayAFGtKcfc",
+            "mangledName": "$s2P50A5TableV7columns4rowsACSaySSG_SayAFGtKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Table",
+                "printedName": "P5.P5Table",
+                "usr": "s:2P50A5TableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A5TableV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A5TableV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TableV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A5TableV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(row:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TableV5value3row6columnSSSi_SitKF",
+            "mangledName": "$s2P50A5TableV5value3row6columnSSSi_SitKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(row:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TableV5value3row6columnSSSi_SStKF",
+            "mangledName": "$s2P50A5TableV5value3row6columnSSSi_SStKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dictionary",
+            "printedName": "dictionary(row:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TableV10dictionary3rowSDyS2SGSi_tKF",
+            "mangledName": "$s2P50A5TableV10dictionary3rowSDyS2SGSi_tKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "double",
+            "printedName": "double(row:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TableV6double3row6columnSdSi_SStKF",
+            "mangledName": "$s2P50A5TableV6double3row6columnSdSi_SStKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Table",
+                "printedName": "P5.P5Table",
+                "usr": "s:2P50A5TableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Table",
+                "printedName": "P5.P5Table",
+                "usr": "s:2P50A5TableV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TableV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A5TableV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TableV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A5TableV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TableV9hashValueSivp",
+            "mangledName": "$s2P50A5TableV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TableV9hashValueSivg",
+                "mangledName": "$s2P50A5TableV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A5TableV",
+        "mangledName": "$s2P50A5TableV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5DataLoader",
+        "printedName": "P5DataLoader",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5DataLoader",
+                "printedName": "P5.P5DataLoader",
+                "usr": "s:2P50A10DataLoaderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSession",
+                "printedName": "Foundation.URLSession",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSURLSession"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10DataLoaderV7sessionACSo12NSURLSessionC_tcfc",
+            "mangledName": "$s2P50A10DataLoaderV7sessionACSo12NSURLSessionC_tcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10DataLoaderV4data4from10Foundation0B0VAF3URLV_tYaKF",
+            "mangledName": "$s2P50A10DataLoaderV4data4from10Foundation0B0VAF3URLV_tYaKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "text",
+            "printedName": "text(from:encoding:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoding",
+                "printedName": "Swift.String.Encoding",
+                "hasDefaultArg": true,
+                "usr": "s:SS10FoundationE8EncodingV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10DataLoaderV4text4from8encodingSS10Foundation3URLV_SSAGE8EncodingVtYaKF",
+            "mangledName": "$s2P50A10DataLoaderV4text4from8encodingSS10Foundation3URLV_SSAGE8EncodingVtYaKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "json",
+            "printedName": "json(_:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "Value.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10DataLoaderV4json_4fromxxm_10Foundation3URLVtYaKSeRzs8SendableRzlF",
+            "mangledName": "$s2P50A10DataLoaderV4json_4fromxxm_10Foundation3URLVtYaKSeRzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "table",
+            "printedName": "table(from:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Table",
+                "printedName": "P5.P5Table",
+                "usr": "s:2P50A5TableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableParsingOptions",
+                "printedName": "P5.P5TableParsingOptions",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A19TableParsingOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10DataLoaderV5table4from7optionsAA0A5TableV10Foundation3URLV_AA0aG14ParsingOptionsVtYaKF",
+            "mangledName": "$s2P50A10DataLoaderV5table4from7optionsAA0A5TableV10Foundation3URLV_AA0aG14ParsingOptionsVtYaKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "table",
+            "printedName": "table(text:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Table",
+                "printedName": "P5.P5Table",
+                "usr": "s:2P50A5TableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TableParsingOptions",
+                "printedName": "P5.P5TableParsingOptions",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A19TableParsingOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10DataLoaderV5table4text7optionsAA0A5TableVSS_AA0aG14ParsingOptionsVtKF",
+            "mangledName": "$s2P50A10DataLoaderV5table4text7optionsAA0A5TableVSS_AA0aG14ParsingOptionsVtKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A10DataLoaderV",
+        "mangledName": "$s2P50A10DataLoaderV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "P5ImageDocumentError",
         "printedName": "P5ImageDocumentError",
         "children": [
