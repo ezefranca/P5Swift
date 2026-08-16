@@ -12,8 +12,29 @@ from pathlib import Path
 from urllib.parse import quote
 
 
-PACKAGE_NAME = "p5.swift"
-MODULE_NAME = "p5"
+REPOSITORY = Path(__file__).resolve().parent.parent
+PACKAGE_NAME = REPOSITORY.name
+MODULE_SUMMARIES = {
+    "P5": "Native creative coding with Core Graphics, Metal, and SwiftUI.",
+    "Matter": "Deterministic, Metal-first native physics.",
+    "ML5": "Typed on-device machine learning with Core ML and MPSGraph.",
+}
+PRODUCT_NAMES = tuple(
+    json.loads(
+        (REPOSITORY / "Configuration/ModuleBoundaries.json").read_text(
+            encoding="utf-8"
+        )
+    )["products"]
+)
+MODULES = tuple(
+    {
+        "name": name,
+        "slug": name.lower(),
+        "summary": MODULE_SUMMARIES[name],
+    }
+    for name in PRODUCT_NAMES
+)
+PACKAGE_SUMMARY = " ".join(module["summary"] for module in MODULES)
 
 
 def arguments() -> argparse.Namespace:
@@ -29,13 +50,13 @@ def arguments() -> argparse.Namespace:
 def abstract_text(document: dict[str, object]) -> str:
     fragments = document.get("abstract", [])
     if not isinstance(fragments, list):
-        return "Native p5 creative coding for Swift."
+        return PACKAGE_SUMMARY
     text = "".join(
         fragment.get("text", "")
         for fragment in fragments
         if isinstance(fragment, dict) and isinstance(fragment.get("text"), str)
     )
-    return text or "Native p5 creative coding for Swift."
+    return text or PACKAGE_SUMMARY
 
 
 def route_path(document: dict[str, object]) -> str | None:
@@ -73,24 +94,47 @@ def seo_shell(
     return template.replace("<title>Documentation</title>", metadata, 1)
 
 
-def landing_shell(template: str, documentation_url: str) -> str:
-    safe_url = html.escape(documentation_url, quote=True)
-    javascript_url = json.dumps(documentation_url)
-    root_url = documentation_url.removesuffix(f"documentation/{MODULE_NAME}/")
-    metadata = (
-        f"<title>{PACKAGE_NAME} Documentation</title>"
-        '<meta name="description" content="Native p5 creative coding for Swift, SwiftUI, UIKit, and AppKit.">'
-        f'<link rel="canonical" href="{safe_url}">'
-        f'<link rel="alternate" type="text/plain" href="{root_url}llms.txt" title="{PACKAGE_NAME} documentation for language models">'
-        f'<meta http-equiv="refresh" content="0; url={safe_url}">'
-        '<meta property="og:type" content="website">'
-        f'<meta property="og:title" content="{PACKAGE_NAME} Documentation">'
-        '<meta property="og:description" content="Native p5 creative coding for Swift, with a roadmap toward broad p5.js capability parity.">'
-        f'<meta property="og:url" content="{safe_url}">'
-        '<meta name="twitter:card" content="summary">'
-        f"<script>window.location.replace({javascript_url});</script>"
-    )
-    return template.replace("<title>Documentation</title>", metadata, 1)
+def landing_page(base_url: str, version: str) -> str:
+    cards = []
+    for module in MODULES:
+        route = f"{base_url}/documentation/{module['slug']}/"
+        cards.append(
+            '<a class="card" href="'
+            + html.escape(route, quote=True)
+            + '"><span class="eyebrow">Swift package product</span><h2>'
+            + html.escape(module["name"])
+            + "</h2><p>"
+            + html.escape(module["summary"])
+            + "</p><span class=\"link\">Open documentation →</span></a>"
+        )
+    safe_base_url = html.escape(base_url, quote=True)
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{PACKAGE_NAME} Documentation</title>
+<meta name="description" content="{html.escape(PACKAGE_SUMMARY, quote=True)}">
+<link rel="canonical" href="{safe_base_url}/">
+<link rel="alternate" type="text/plain" href="{safe_base_url}/llms.txt" title="Documentation for language models">
+<meta property="og:type" content="website"><meta property="og:title" content="{PACKAGE_NAME} Documentation">
+<meta property="og:description" content="{html.escape(PACKAGE_SUMMARY, quote=True)}">
+<style>
+:root{{color-scheme:light dark;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;background:#f5f5f7;color:#1d1d1f}}
+*{{box-sizing:border-box}}body{{margin:0}}main{{max-width:1080px;margin:auto;padding:clamp(3rem,9vw,8rem) 1.5rem}}
+.eyebrow{{font-size:.78rem;font-weight:650;letter-spacing:.04em;text-transform:uppercase;color:#6e6e73}}
+h1{{font-size:clamp(2.8rem,8vw,6rem);letter-spacing:-.055em;line-height:.95;margin:.35rem 0 1.4rem;max-width:850px}}
+.intro{{font-size:clamp(1.15rem,2.4vw,1.6rem);line-height:1.45;color:#6e6e73;max-width:760px}}
+.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:3.5rem}}
+.card{{display:block;min-height:250px;padding:1.6rem;border-radius:24px;background:#fff;color:inherit;text-decoration:none;box-shadow:0 4px 28px #0000000a;transition:transform .2s,box-shadow .2s}}
+.card:hover{{transform:translateY(-3px);box-shadow:0 12px 36px #00000018}}h2{{font-size:2rem;margin:.55rem 0}}p{{line-height:1.5;color:#6e6e73}}.link{{display:block;margin-top:2.2rem;color:#06c;font-weight:600}}
+footer{{margin-top:3rem;color:#6e6e73;font-size:.9rem}}footer a{{color:inherit}}
+@media(prefers-color-scheme:dark){{:root{{background:#000;color:#f5f5f7}}.card{{background:#1d1d1f}}.eyebrow,.intro,p,footer{{color:#a1a1a6}}.link{{color:#2997ff}}}}
+@media(prefers-reduced-motion:reduce){{.card{{transition:none}}}}
+</style></head><body><main><span class="eyebrow">Version {html.escape(version)}</span>
+<h1>{html.escape(MODULES[0]["name"])}. Native to Swift.</h1>
+<p class="intro">One independently versioned Swift package for Apple platforms. Explore its API reference, architecture, compatibility, and migration guidance.</p>
+<section class="grid" aria-label="Package products">{''.join(cards)}</section>
+<footer><a href="llms.txt">Agent-readable index</a> · <a href="llms-full.txt">Complete context</a> · <a href="agent-context.json">Structured metadata</a></footer>
+</main></body></html>"""
 
 
 def encoded_url(base_url: str, route: str) -> str:
@@ -151,7 +195,9 @@ def write_sitemap(
     today = dt.datetime.now(dt.timezone.utc).date().isoformat()
     entries = []
     for item in routes:
-        if item["route"] == f"/documentation/{MODULE_NAME}":
+        if item["route"] in {
+            f"/documentation/{module['slug']}" for module in MODULES
+        }:
             priority = "1.0"
         else:
             priority = "0.8" if item["kind"] == "article" else "0.6"
@@ -180,49 +226,46 @@ def write_agent_resources(
     repository: Path,
     repository_url: str,
 ) -> None:
-    docs_url = f"{base_url}/documentation/{MODULE_NAME}/"
+    documentation_links = "\n".join(
+        f"- [{module['name']} documentation]({base_url}/documentation/{module['slug']}/): {module['summary']}"
+        for module in MODULES
+    )
+    render_data = "\n".join(
+        f"- [{module['name']} DocC render data]({base_url}/data/documentation/{module['slug']}.json)"
+        for module in MODULES
+    )
     llms = f"""# {PACKAGE_NAME}
 
-> Native p5 creative coding for Swift, with Core Graphics rendering, SwiftUI integration, and a roadmap toward broad p5.js capability parity.
+> {PACKAGE_SUMMARY}
 
 Current documented release: {version}
 
-## Start here
+## Products
 
-- [Documentation overview]({docs_url})
-- [SwiftUI and Swift Playgrounds]({docs_url}swiftuiandplaygrounds/)
-- [P5 parity roadmap]({docs_url}p5parityroadmap/)
-
-## API reference
-
-- [P5Sketch]({docs_url}p5sketch/)
-- [P5SketchView]({docs_url}p5sketchview/)
-- [P5CanvasView]({docs_url}p5canvasview/)
+{documentation_links}
 
 ## Agent resources
 
 - [Complete documentation context]({base_url}/llms-full.txt)
 - [Structured project context]({base_url}/agent-context.json)
-- [DocC render data]({base_url}/data/documentation/{MODULE_NAME}.json)
+{render_data}
 - [Source repository]({repository_url})
 """
     (site / "llms.txt").write_text(llms, encoding="utf-8")
 
-    documentation_sources = [
-        "README.md",
-        "Sources/P5/P5.docc/P5.md",
-        "Sources/P5/P5.docc/SwiftUIAndPlaygrounds.md",
-        "Sources/P5/P5.docc/P5ParityRoadmap.md",
-        "Sources/P5/P5.swift",
-        "Sources/P5/Core/P5Sketch.swift",
-        "Sources/P5/Core/P5Operation.swift",
-        "Sources/P5/SwiftUI/P5SketchView.swift",
-    ]
+    documentation_sources = ["README.md", "TODO.md"]
+    for product in PRODUCT_NAMES:
+        source_root = repository / "Sources" / product
+        documentation_sources.extend(
+            str(path.relative_to(repository))
+            for path in sorted(source_root.rglob("*"))
+            if path.suffix in {".swift", ".md", ".metal"}
+        )
     full_context = [
         f"# {PACKAGE_NAME}: Complete Documentation Context",
         "",
         f"Documented release: {version}",
-        f"Canonical documentation: {docs_url}",
+        f"Canonical documentation: {base_url}/",
         "",
         "This file combines the authored guides and public API source for "
         "coding agents. The rendered DocC site remains the canonical human "
@@ -248,13 +291,11 @@ Current documented release: {version}
     )
 
     context = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "name": PACKAGE_NAME,
         "version": version,
-        "summary": (
-            "Native p5 creative coding for Swift, SwiftUI, UIKit, and AppKit."
-        ),
-        "canonicalDocumentation": docs_url,
+        "summary": PACKAGE_SUMMARY,
+        "canonicalDocumentation": f"{base_url}/",
         "repository": repository_url,
         "license": "MIT",
         "platforms": [
@@ -262,23 +303,28 @@ Current documented release: {version}
             {"name": "macOS", "minimumVersion": "14.0"},
         ],
         "language": {"name": "Swift", "minimumVersion": "6.2", "mode": "6"},
-        "packageProduct": "P5",
-        "importModule": "P5",
-        "recommendedIntegration": (
-            "P5SketchView(size: size, makeSketch: MySketch.init(size:))"
-        ),
+        "products": [
+            {
+                "name": module["name"],
+                "importModule": module["name"],
+                "documentation": f"{base_url}/documentation/{module['slug']}/",
+                "summary": module["summary"],
+            }
+            for module in MODULES
+        ],
         "importantConstraints": [
-            "Sketches and their native views are main-actor isolated.",
-            "A P5Sketch canvas has fixed dimensions.",
-            "Browser-only objects receive native capability mappings rather than literal ports.",
-            "The current release implements the 2D foundation, not the complete parity roadmap.",
+            "The package has no production package dependencies.",
+            "Mutable native resources are actor-owned or main-actor isolated.",
+            "JavaScript and browser concepts receive native capability mappings rather than literal emulation.",
+            "Capability failures, cancellation, and validation errors are explicit.",
         ],
         "agentResources": {
             "index": f"{base_url}/llms.txt",
             "fullContext": f"{base_url}/llms-full.txt",
-            "doccData": (
-                f"{base_url}/data/documentation/{MODULE_NAME}.json"
-            ),
+            "doccData": {
+                module["name"]: f"{base_url}/data/documentation/{module['slug']}.json"
+                for module in MODULES
+            },
         },
     }
     (site / "agent-context.json").write_text(
@@ -312,9 +358,8 @@ def main() -> None:
     routes = write_route_pages(site, base_url, docc_template)
     fallback_path.write_text(docc_template, encoding="utf-8")
 
-    docs_url = f"{base_url}/documentation/{MODULE_NAME}/"
     docc_index.write_text(
-        landing_shell(docc_template, docs_url),
+        landing_page(base_url, options.version),
         encoding="utf-8",
     )
     (site / ".nojekyll").touch()

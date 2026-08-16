@@ -5,9 +5,9 @@
 //  Created by Juan Hurtado on 17/06/23.
 //
 
-import UIKit
 import CoreGraphics
 import P5
+import UIKit
 
 /// The game of life!
 ///
@@ -18,12 +18,12 @@ import P5
 class GameOfLife: P5Sketch {
     let rows = 70
     let cols = 50
-    
+
     let fps = 10.0
     let alpha = 0.15
-    
+
     var population: [[Cell]] = []
-    
+
     override func setup() {
         title = "Game of life"
         frameRate(fps)
@@ -35,7 +35,7 @@ class GameOfLife: P5Sketch {
             population.append(row)
         }
     }
-    
+
     override func draw() {
         let cellWidth = width / CGFloat(cols)
         let cellHeight = height / CGFloat(rows)
@@ -46,21 +46,21 @@ class GameOfLife: P5Sketch {
                 rect(Double(col) * cellWidth, CGFloat(row) * cellHeight, cellWidth, cellHeight)
             }
         }
-        
+
         newGeneration()
     }
-    
+
     func getColor(forCell cell: Cell) -> CGColor {
         return cell.state == .alive ? UIColor.black.cgColor : UIColor.white.cgColor
     }
-    
+
     func newGeneration() {
         var newPopulation: [[Cell]] = []
         newPopulation.append([Cell](repeating: .init(state: .dead), count: rows))
-        for rowIndex in 1..<rows-1 {
+        for rowIndex in 1..<rows - 1 {
             var newRow = [Cell]()
             newRow.append(.init(state: .dead))
-            for colIndex in 1..<cols-1 {
+            for colIndex in 1..<cols - 1 {
                 let cell = population[rowIndex][colIndex]
                 var lives = 0
                 for neighRowOffset in -1...1 {

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "9A33B0C0-78CC-4AC2-94A2-5E8D8E2E1B71",
+      "name" : "Default",
+      "options" : {
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:",
+      "identifier" : "P5",
+      "name" : "P5"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "P5Tests",
+        "name" : "P5Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
