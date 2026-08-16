@@ -61,6 +61,12 @@ open class P5Sketch {
     /// The most recently delivered pointer event, if one exists.
     public private(set) var latestPointerEvent: P5PointerEvent?
 
+    /// Active direct, Pencil, and indirect touches sorted by stable identifier.
+    public private(set) var touches: [P5Touch] = []
+
+    /// Most recently delivered deterministic multi-touch update.
+    public private(set) var latestTouchEvent: P5TouchEvent?
+
     /// The semantic keys currently held down.
     public private(set) var pressedKeys: Set<P5Key> = []
 
@@ -88,6 +94,10 @@ open class P5Sketch {
 
     private var measuredFramesPerSecond = 0.0
     private var loopsWhenActive = true
+    private var activeTouchesByID: [UInt64: P5Touch] = [:]
+
+    /// Current host gesture recognizer cooperation policy.
+    public private(set) var gestureCoexistenceMode = P5GestureCoexistence.nativeDefault
 
     /// Whether automatic frame delivery is suspended for scene or application lifecycle.
     public private(set) var isPaused = false
@@ -209,6 +219,21 @@ open class P5Sketch {
     /// Responds when the platform cancels an active pointer interaction.
     open func pointerCancelled(_ event: P5PointerEvent) {}
 
+    /// Responds to every ordered multi-touch collection update.
+    open func touchesChanged(_ event: P5TouchEvent) {}
+
+    /// Responds when a touch becomes active.
+    open func touchesStarted(_ event: P5TouchEvent) {}
+
+    /// Responds when an active touch changes position or pressure.
+    open func touchesMoved(_ event: P5TouchEvent) {}
+
+    /// Responds when a touch ends normally.
+    open func touchesEnded(_ event: P5TouchEvent) {}
+
+    /// Responds when the platform cancels a touch.
+    open func touchesCancelled(_ event: P5TouchEvent) {}
+
     /// Responds when a keyboard key becomes pressed or repeats.
     open func keyPressed(_ event: P5KeyboardEvent) {}
 
@@ -242,6 +267,7 @@ open class P5Sketch {
         pointerDelta = event.delta
         pressedPointerButtons = event.pressedButtons
         latestPointerEvent = event
+        let touchEvent = updateTouchState(from: event)
 
         switch event.phase {
         case .entered:
@@ -263,6 +289,54 @@ open class P5Sketch {
         case .cancelled:
             pressedPointerButtons = []
             pointerCancelled(event)
+        }
+        if let touchEvent {
+            dispatchTouchEvent(touchEvent)
+        }
+    }
+
+    private func updateTouchState(from event: P5PointerEvent) -> P5TouchEvent? {
+        guard event.kind != .mouse else { return nil }
+        let touch = P5Touch(pointerEvent: event)
+        let phase: P5TouchPhase
+        switch event.phase {
+        case .pressed:
+            activeTouchesByID[event.id] = touch
+            phase = .started
+        case .moved, .dragged:
+            activeTouchesByID[event.id] = touch
+            phase = .moved
+        case .released:
+            activeTouchesByID[event.id] = nil
+            phase = .ended
+        case .cancelled:
+            activeTouchesByID[event.id] = nil
+            phase = .cancelled
+        case .entered, .exited, .clicked:
+            return nil
+        }
+        touches = activeTouchesByID.values.sorted { $0.id < $1.id }
+        return P5TouchEvent(
+            phase: phase,
+            changedTouches: [touch],
+            activeTouches: touches,
+            modifiers: event.modifiers,
+            timestamp: event.timestamp
+        )
+    }
+
+    private func dispatchTouchEvent(_ event: P5TouchEvent) {
+        latestTouchEvent = event
+        touchesChanged(event)
+        switch event.phase {
+        case .started:
+            touchesStarted(event)
+        case .moved:
+            touchesMoved(event)
+        case .ended:
+            touchesEnded(event)
+        case .cancelled:
+            touchesCancelled(event)
         }
     }
 
@@ -295,6 +369,12 @@ open class P5Sketch {
 // MARK: - Environment
 
 public extension P5Sketch {
+    /// Selects how existing host gesture recognizers interact with UIKit touches.
+    func gestureCoexistence(_ mode: P5GestureCoexistence) {
+        gestureCoexistenceMode = mode
+        internalView.gestureCoexistence = mode
+    }
+
     /// Returns whether a semantic key is currently held.
     func keyIsDown(_ key: P5Key) -> Bool {
         pressedKeys.contains(key)

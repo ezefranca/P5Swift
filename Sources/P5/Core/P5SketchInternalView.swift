@@ -41,6 +41,12 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         }
     }
 
+    var gestureCoexistence = P5GestureCoexistence.nativeDefault {
+        didSet {
+            applyGestureCoexistence()
+        }
+    }
+
     var onDraw: () -> Void = {}
     var onPointerEvent: (P5PointerEvent) -> Void = { _ in }
     var onKeyboardEvent: (P5KeyboardEvent) -> Void = { _ in }
@@ -278,6 +284,17 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         #elseif canImport(AppKit)
             wantsLayer = true
             layer?.contentsScale = pixelDensity
+        #endif
+    }
+
+    private func applyGestureCoexistence() {
+        #if canImport(UIKit)
+            guard gestureCoexistence == .cooperative else { return }
+            for recognizer in gestureRecognizers ?? [] {
+                recognizer.cancelsTouchesInView = false
+                recognizer.delaysTouchesBegan = false
+                recognizer.delaysTouchesEnded = false
+            }
         #endif
     }
 
@@ -690,6 +707,7 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         }
 
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            applyGestureCoexistence()
             becomeFirstResponder()
             for touch in orderedTouches(touches) {
                 let key = ObjectIdentifier(touch)

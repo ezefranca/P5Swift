@@ -1939,6 +1939,134 @@
           },
           {
             "kind": "Var",
+            "name": "touches",
+            "printedName": "touches",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5Touch]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Touch",
+                    "printedName": "P5.P5Touch",
+                    "usr": "s:2P50A5TouchV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC7touchesSayAA0A5TouchVGvp",
+            "mangledName": "$s2P50A6SketchC7touchesSayAA0A5TouchVGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5Touch]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Touch",
+                        "printedName": "P5.P5Touch",
+                        "usr": "s:2P50A5TouchV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC7touchesSayAA0A5TouchVGvg",
+                "mangledName": "$s2P50A6SketchC7touchesSayAA0A5TouchVGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestTouchEvent",
+            "printedName": "latestTouchEvent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5TouchEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchEvent",
+                    "printedName": "P5.P5TouchEvent",
+                    "usr": "s:2P50A10TouchEventV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC16latestTouchEventAA0adE0VSgvp",
+            "mangledName": "$s2P50A6SketchC16latestTouchEventAA0adE0VSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "P5.P5TouchEvent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TouchEvent",
+                        "printedName": "P5.P5TouchEvent",
+                        "usr": "s:2P50A10TouchEventV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC16latestTouchEventAA0adE0VSgvg",
+                "mangledName": "$s2P50A6SketchC16latestTouchEventAA0adE0VSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "pressedKeys",
             "printedName": "pressedKeys",
             "children": [
@@ -2237,6 +2365,54 @@
                 "usr": "s:2P50A6SketchC16currentTransformAA0aD0Vvg",
                 "mangledName": "$s2P50A6SketchC16currentTransformAA0aD0Vvg",
                 "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "gestureCoexistenceMode",
+            "printedName": "gestureCoexistenceMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5GestureCoexistence",
+                "printedName": "P5.P5GestureCoexistence",
+                "usr": "s:2P50A18GestureCoexistenceO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC22gestureCoexistenceModeAA0a7GestureD0Ovp",
+            "mangledName": "$s2P50A6SketchC22gestureCoexistenceModeAA0a7GestureD0Ovp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5GestureCoexistence",
+                    "printedName": "P5.P5GestureCoexistence",
+                    "usr": "s:2P50A18GestureCoexistenceO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC22gestureCoexistenceModeAA0a7GestureD0Ovg",
+                "mangledName": "$s2P50A6SketchC22gestureCoexistenceModeAA0a7GestureD0Ovg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -2753,6 +2929,141 @@
           },
           {
             "kind": "Function",
+            "name": "touchesChanged",
+            "printedName": "touchesChanged(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC14touchesChangedyyAA0A10TouchEventVF",
+            "mangledName": "$s2P50A6SketchC14touchesChangedyyAA0A10TouchEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "touchesStarted",
+            "printedName": "touchesStarted(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC14touchesStartedyyAA0A10TouchEventVF",
+            "mangledName": "$s2P50A6SketchC14touchesStartedyyAA0A10TouchEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "touchesMoved",
+            "printedName": "touchesMoved(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12touchesMovedyyAA0A10TouchEventVF",
+            "mangledName": "$s2P50A6SketchC12touchesMovedyyAA0A10TouchEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "touchesEnded",
+            "printedName": "touchesEnded(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC12touchesEndedyyAA0A10TouchEventVF",
+            "mangledName": "$s2P50A6SketchC12touchesEndedyyAA0A10TouchEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "touchesCancelled",
+            "printedName": "touchesCancelled(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC16touchesCancelledyyAA0A10TouchEventVF",
+            "mangledName": "$s2P50A6SketchC16touchesCancelledyyAA0A10TouchEventVF",
+            "moduleName": "P5",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "keyPressed",
             "printedName": "keyPressed(_:)",
             "children": [
@@ -2857,6 +3168,33 @@
             "declAttributes": [
               "Custom"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gestureCoexistence",
+            "printedName": "gestureCoexistence(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5GestureCoexistence",
+                "printedName": "P5.P5GestureCoexistence",
+                "usr": "s:2P50A18GestureCoexistenceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC18gestureCoexistenceyyAA0a7GestureD0OF",
+            "mangledName": "$s2P50A6SketchC18gestureCoexistenceyyAA0a7GestureD0OF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -28178,6 +28516,2035 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Touch",
+        "printedName": "P5Touch",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV2ids6UInt64Vvp",
+            "mangledName": "$s2P50A5TouchV2ids6UInt64Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV2ids6UInt64Vvg",
+                "mangledName": "$s2P50A5TouchV2ids6UInt64Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kind",
+            "printedName": "kind",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerKind",
+                "printedName": "P5.P5PointerKind",
+                "usr": "s:2P50A11PointerKindO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV4kindAA0A11PointerKindOvp",
+            "mangledName": "$s2P50A5TouchV4kindAA0A11PointerKindOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PointerKind",
+                    "printedName": "P5.P5PointerKind",
+                    "usr": "s:2P50A11PointerKindO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV4kindAA0A11PointerKindOvg",
+                "mangledName": "$s2P50A5TouchV4kindAA0A11PointerKindOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "location",
+            "printedName": "location",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV8locationSo7CGPointVvp",
+            "mangledName": "$s2P50A5TouchV8locationSo7CGPointVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPoint",
+                    "printedName": "CoreFoundation.CGPoint",
+                    "usr": "c:@S@CGPoint"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV8locationSo7CGPointVvg",
+                "mangledName": "$s2P50A5TouchV8locationSo7CGPointVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "previousLocation",
+            "printedName": "previousLocation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV16previousLocationSo7CGPointVvp",
+            "mangledName": "$s2P50A5TouchV16previousLocationSo7CGPointVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPoint",
+                    "printedName": "CoreFoundation.CGPoint",
+                    "usr": "c:@S@CGPoint"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV16previousLocationSo7CGPointVvg",
+                "mangledName": "$s2P50A5TouchV16previousLocationSo7CGPointVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pressure",
+            "printedName": "pressure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV8pressure14CoreFoundation7CGFloatVSgvp",
+            "mangledName": "$s2P50A5TouchV8pressure12CoreGraphics7CGFloatVSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV8pressure14CoreFoundation7CGFloatVSgvg",
+                "mangledName": "$s2P50A5TouchV8pressure12CoreGraphics7CGFloatVSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV9timestampSdvp",
+            "mangledName": "$s2P50A5TouchV9timestampSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimeInterval",
+                    "printedName": "Foundation.TimeInterval",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV9timestampSdvg",
+                "mangledName": "$s2P50A5TouchV9timestampSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delta",
+            "printedName": "delta",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGVector",
+                "printedName": "CoreFoundation.CGVector",
+                "usr": "c:@S@CGVector"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV5deltaSo8CGVectorVvp",
+            "mangledName": "$s2P50A5TouchV5deltaSo8CGVectorVvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGVector",
+                    "printedName": "CoreFoundation.CGVector",
+                    "usr": "c:@S@CGVector"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV5deltaSo8CGVectorVvg",
+                "mangledName": "$s2P50A5TouchV5deltaSo8CGVectorVvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:kind:location:previousLocation:pressure:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Touch",
+                "printedName": "P5.P5Touch",
+                "usr": "s:2P50A5TouchV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PointerKind",
+                "printedName": "P5.P5PointerKind",
+                "usr": "s:2P50A11PointerKindO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A5TouchV2id4kind8location16previousLocation8pressure9timestampACs6UInt64V_AA0A11PointerKindOSo7CGPointVAO14CoreFoundation7CGFloatVSgSdtcfc",
+            "mangledName": "$s2P50A5TouchV2id4kind8location16previousLocation8pressure9timestampACs6UInt64V_AA0A11PointerKindOSo7CGPointVAO12CoreGraphics7CGFloatVSgSdtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Touch",
+                "printedName": "P5.P5Touch",
+                "usr": "s:2P50A5TouchV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A5TouchV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A5TouchV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Touch",
+                "printedName": "P5.P5Touch",
+                "usr": "s:2P50A5TouchV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Touch",
+                "printedName": "P5.P5Touch",
+                "usr": "s:2P50A5TouchV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TouchV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A5TouchV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TouchV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A5TouchV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A5TouchV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A5TouchV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5TouchV9hashValueSivp",
+            "mangledName": "$s2P50A5TouchV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5TouchV9hashValueSivg",
+                "mangledName": "$s2P50A5TouchV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A5TouchV",
+        "mangledName": "$s2P50A5TouchV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5TouchPhase",
+        "printedName": "P5TouchPhase",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "started",
+            "printedName": "started",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TouchPhase.Type) -> P5.P5TouchPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TouchPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TouchPhase",
+                        "printedName": "P5.P5TouchPhase",
+                        "usr": "s:2P50A10TouchPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10TouchPhaseO7startedyA2CmF",
+            "mangledName": "$s2P50A10TouchPhaseO7startedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "moved",
+            "printedName": "moved",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TouchPhase.Type) -> P5.P5TouchPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TouchPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TouchPhase",
+                        "printedName": "P5.P5TouchPhase",
+                        "usr": "s:2P50A10TouchPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10TouchPhaseO5movedyA2CmF",
+            "mangledName": "$s2P50A10TouchPhaseO5movedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "ended",
+            "printedName": "ended",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TouchPhase.Type) -> P5.P5TouchPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TouchPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TouchPhase",
+                        "printedName": "P5.P5TouchPhase",
+                        "usr": "s:2P50A10TouchPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10TouchPhaseO5endedyA2CmF",
+            "mangledName": "$s2P50A10TouchPhaseO5endedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5TouchPhase.Type) -> P5.P5TouchPhase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5TouchPhase.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TouchPhase",
+                        "printedName": "P5.P5TouchPhase",
+                        "usr": "s:2P50A10TouchPhaseO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10TouchPhaseO9cancelledyA2CmF",
+            "mangledName": "$s2P50A10TouchPhaseO9cancelledyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5TouchPhase?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10TouchPhaseO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A10TouchPhaseO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5TouchPhase]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A10TouchPhaseO8AllCasesa",
+            "mangledName": "$s2P50A10TouchPhaseO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A10TouchPhaseO8RawValuea",
+            "mangledName": "$s2P50A10TouchPhaseO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5TouchPhase]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchPhaseO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A10TouchPhaseO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5TouchPhase]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TouchPhase",
+                        "printedName": "P5.P5TouchPhase",
+                        "usr": "s:2P50A10TouchPhaseO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchPhaseO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A10TouchPhaseO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchPhaseO8rawValueSSvp",
+            "mangledName": "$s2P50A10TouchPhaseO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchPhaseO8rawValueSSvg",
+                "mangledName": "$s2P50A10TouchPhaseO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A10TouchPhaseO",
+        "mangledName": "$s2P50A10TouchPhaseO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5TouchPhase]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5TouchPhase",
+                        "printedName": "P5.P5TouchPhase",
+                        "usr": "s:2P50A10TouchPhaseO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5TouchEvent",
+        "printedName": "P5TouchEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "phase",
+            "printedName": "phase",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchPhase",
+                "printedName": "P5.P5TouchPhase",
+                "usr": "s:2P50A10TouchPhaseO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchEventV5phaseAA0aB5PhaseOvp",
+            "mangledName": "$s2P50A10TouchEventV5phaseAA0aB5PhaseOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5TouchPhase",
+                    "printedName": "P5.P5TouchPhase",
+                    "usr": "s:2P50A10TouchPhaseO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchEventV5phaseAA0aB5PhaseOvg",
+                "mangledName": "$s2P50A10TouchEventV5phaseAA0aB5PhaseOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "changedTouches",
+            "printedName": "changedTouches",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5Touch]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Touch",
+                    "printedName": "P5.P5Touch",
+                    "usr": "s:2P50A5TouchV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchEventV14changedTouchesSayAA0aB0VGvp",
+            "mangledName": "$s2P50A10TouchEventV14changedTouchesSayAA0aB0VGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5Touch]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Touch",
+                        "printedName": "P5.P5Touch",
+                        "usr": "s:2P50A5TouchV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchEventV14changedTouchesSayAA0aB0VGvg",
+                "mangledName": "$s2P50A10TouchEventV14changedTouchesSayAA0aB0VGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "activeTouches",
+            "printedName": "activeTouches",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5Touch]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Touch",
+                    "printedName": "P5.P5Touch",
+                    "usr": "s:2P50A5TouchV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchEventV13activeTouchesSayAA0aB0VGvp",
+            "mangledName": "$s2P50A10TouchEventV13activeTouchesSayAA0aB0VGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5Touch]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5Touch",
+                        "printedName": "P5.P5Touch",
+                        "usr": "s:2P50A5TouchV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchEventV13activeTouchesSayAA0aB0VGvg",
+                "mangledName": "$s2P50A10TouchEventV13activeTouchesSayAA0aB0VGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modifiers",
+            "printedName": "modifiers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "usr": "s:2P50A12ModifierKeysV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchEventV9modifiersAA0A12ModifierKeysVvp",
+            "mangledName": "$s2P50A10TouchEventV9modifiersAA0A12ModifierKeysVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ModifierKeys",
+                    "printedName": "P5.P5ModifierKeys",
+                    "usr": "s:2P50A12ModifierKeysV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchEventV9modifiersAA0A12ModifierKeysVvg",
+                "mangledName": "$s2P50A10TouchEventV9modifiersAA0A12ModifierKeysVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchEventV9timestampSdvp",
+            "mangledName": "$s2P50A10TouchEventV9timestampSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimeInterval",
+                    "printedName": "Foundation.TimeInterval",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchEventV9timestampSdvg",
+                "mangledName": "$s2P50A10TouchEventV9timestampSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(phase:changedTouches:activeTouches:modifiers:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchPhase",
+                "printedName": "P5.P5TouchPhase",
+                "usr": "s:2P50A10TouchPhaseO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5Touch]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Touch",
+                    "printedName": "P5.P5Touch",
+                    "usr": "s:2P50A5TouchV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5Touch]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Touch",
+                    "printedName": "P5.P5Touch",
+                    "usr": "s:2P50A5TouchV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ModifierKeys",
+                "printedName": "P5.P5ModifierKeys",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A12ModifierKeysV"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "TimeInterval",
+                "printedName": "Foundation.TimeInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10TouchEventV5phase14changedTouches06activeF09modifiers9timestampAcA0aB5PhaseO_SayAA0aB0VGAmA0A12ModifierKeysVSdtcfc",
+            "mangledName": "$s2P50A10TouchEventV5phase14changedTouches06activeF09modifiers9timestampAcA0aB5PhaseO_SayAA0aB0VGAmA0A12ModifierKeysVSdtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10TouchEventV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A10TouchEventV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5TouchEvent",
+                "printedName": "P5.P5TouchEvent",
+                "usr": "s:2P50A10TouchEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10TouchEventV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A10TouchEventV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10TouchEventV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A10TouchEventV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10TouchEventV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A10TouchEventV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10TouchEventV9hashValueSivp",
+            "mangledName": "$s2P50A10TouchEventV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10TouchEventV9hashValueSivg",
+                "mangledName": "$s2P50A10TouchEventV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A10TouchEventV",
+        "mangledName": "$s2P50A10TouchEventV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5GestureCoexistence",
+        "printedName": "P5GestureCoexistence",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nativeDefault",
+            "printedName": "nativeDefault",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5GestureCoexistence.Type) -> P5.P5GestureCoexistence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5GestureCoexistence",
+                    "printedName": "P5.P5GestureCoexistence",
+                    "usr": "s:2P50A18GestureCoexistenceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5GestureCoexistence.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5GestureCoexistence",
+                        "printedName": "P5.P5GestureCoexistence",
+                        "usr": "s:2P50A18GestureCoexistenceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18GestureCoexistenceO13nativeDefaultyA2CmF",
+            "mangledName": "$s2P50A18GestureCoexistenceO13nativeDefaultyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "cooperative",
+            "printedName": "cooperative",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5GestureCoexistence.Type) -> P5.P5GestureCoexistence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5GestureCoexistence",
+                    "printedName": "P5.P5GestureCoexistence",
+                    "usr": "s:2P50A18GestureCoexistenceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5GestureCoexistence.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5GestureCoexistence",
+                        "printedName": "P5.P5GestureCoexistence",
+                        "usr": "s:2P50A18GestureCoexistenceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18GestureCoexistenceO11cooperativeyA2CmF",
+            "mangledName": "$s2P50A18GestureCoexistenceO11cooperativeyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5GestureCoexistence?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5GestureCoexistence",
+                    "printedName": "P5.P5GestureCoexistence",
+                    "usr": "s:2P50A18GestureCoexistenceO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A18GestureCoexistenceO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A18GestureCoexistenceO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5GestureCoexistence]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5GestureCoexistence",
+                    "printedName": "P5.P5GestureCoexistence",
+                    "usr": "s:2P50A18GestureCoexistenceO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18GestureCoexistenceO8AllCasesa",
+            "mangledName": "$s2P50A18GestureCoexistenceO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18GestureCoexistenceO8RawValuea",
+            "mangledName": "$s2P50A18GestureCoexistenceO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5GestureCoexistence]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5GestureCoexistence",
+                    "printedName": "P5.P5GestureCoexistence",
+                    "usr": "s:2P50A18GestureCoexistenceO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18GestureCoexistenceO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A18GestureCoexistenceO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5GestureCoexistence]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5GestureCoexistence",
+                        "printedName": "P5.P5GestureCoexistence",
+                        "usr": "s:2P50A18GestureCoexistenceO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18GestureCoexistenceO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A18GestureCoexistenceO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18GestureCoexistenceO8rawValueSSvp",
+            "mangledName": "$s2P50A18GestureCoexistenceO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18GestureCoexistenceO8rawValueSSvg",
+                "mangledName": "$s2P50A18GestureCoexistenceO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A18GestureCoexistenceO",
+        "mangledName": "$s2P50A18GestureCoexistenceO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5GestureCoexistence]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5GestureCoexistence",
+                        "printedName": "P5.P5GestureCoexistence",
+                        "usr": "s:2P50A18GestureCoexistenceO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
           },
           {
             "kind": "Conformance",
