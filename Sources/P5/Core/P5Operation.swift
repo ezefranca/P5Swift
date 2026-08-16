@@ -14,7 +14,10 @@ enum P5Operation {
     case antialias(Bool)
     case blendMode(P5BlendMode)
     case opacity(CGFloat)
+    case tint(CGColor)
+    case noTint
 
+    case clear
     case background(CGColor)
     case line(x1: CGFloat, y1: CGFloat, x2: CGFloat, y2: CGFloat)
     case rect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat)
@@ -34,6 +37,7 @@ enum P5Operation {
     case roundedRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, cornerRadius: CGFloat)
     case shape(commands: [P5PathCommand], closure: P5ShapeClosure)
     case reusableShape(P5Shape)
+    case image(P5Image, source: CGRect?, destination: CGRect)
 
     case rotate(CGFloat)
     case translate(x: CGFloat, y: CGFloat)

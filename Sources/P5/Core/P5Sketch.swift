@@ -25,6 +25,7 @@ open class P5Sketch {
     var colorConfiguration = P5ColorConfiguration()
     var currentRectMode = P5RectMode.corner
     var currentEllipseMode = P5EllipseMode.center
+    var currentImageMode = P5ImageMode.corner
     var currentTransformValue = P5Transform.identity
     var transformStack: [P5Transform] = []
 
@@ -282,6 +283,10 @@ open class P5Sketch {
     func queueOperation(_ operation: P5Operation) {
         internalView.addOperation(operation)
     }
+
+    func renderQueuedOperations(in context: CGContext) {
+        internalView.renderQueuedOperations(in: context)
+    }
 }
 
 // MARK: - Environment
@@ -469,6 +474,11 @@ public extension P5Sketch {
 // MARK: - 2D primitives
 
 public extension P5Sketch {
+    /// Removes every pixel from the canvas to transparent black.
+    func clear() {
+        internalView.addOperation(.clear)
+    }
+
     /// Paints the entire canvas with a color.
     ///
     /// This method corresponds to

@@ -14,6 +14,7 @@ final class P5Renderer {
         var shouldAntialias = true
         var blendMode = P5BlendMode.normal
         var opacity: CGFloat = 1
+        var tintColor: CGColor?
     }
 
     var size: CGSize = .zero
@@ -28,6 +29,11 @@ final class P5Renderer {
     func render(in context: CGContext) {
         var styleStack: [DrawingStyle] = []
         let initialTransform = context.ctm
+        context.saveGState()
+        defer {
+            context.restoreGState()
+            operations.removeAll()
+        }
 
         for operation in operations {
             switch operation {
@@ -58,8 +64,14 @@ final class P5Renderer {
                 style.blendMode = mode
             case .opacity(let opacity):
                 style.opacity = opacity
+            case .tint(let color):
+                style.tintColor = color
+            case .noTint:
+                style.tintColor = nil
+            case .clear:
+                clear(in: context, initialTransform: initialTransform)
             case .background(let bgColor):
-                background(bgColor, in: context)
+                background(bgColor, in: context, initialTransform: initialTransform)
             case .line(let x1, let y1, let x2, let y2):
                 line(x1, y1, x2, y2, in: context)
             case .rect(let x, let y, let w, let h):
@@ -106,6 +118,8 @@ final class P5Renderer {
                 shape(commands, closure: closure, in: context)
             case .reusableShape(let reusableShape):
                 shape(reusableShape, in: context)
+            case .image(let image, let source, let destination):
+                drawImage(image, source: source, destination: destination, in: context)
             case .rotate(let angle):
                 context.rotate(by: angle)
             case .translate(let x, let y):
@@ -132,14 +146,33 @@ final class P5Renderer {
                 style = savedStyle
             }
         }
-        operations.removeAll()
     }
 
-    private func background(_ color: CGColor, in context: CGContext) {
+    private func clear(in context: CGContext, initialTransform: CGAffineTransform) {
         context.saveGState()
+        restoreInitialTransform(in: context, initialTransform: initialTransform)
+        context.clear(CGRect(origin: .zero, size: size))
+        context.restoreGState()
+    }
+
+    private func background(
+        _ color: CGColor,
+        in context: CGContext,
+        initialTransform: CGAffineTransform
+    ) {
+        context.saveGState()
+        restoreInitialTransform(in: context, initialTransform: initialTransform)
         context.setFillColor(color)
         context.fill(CGRect(origin: .zero, size: size))
         context.restoreGState()
+    }
+
+    private func restoreInitialTransform(
+        in context: CGContext,
+        initialTransform: CGAffineTransform
+    ) {
+        context.concatenate(context.ctm.inverted())
+        context.concatenate(initialTransform)
     }
 
     private func line(
@@ -264,6 +297,38 @@ final class P5Renderer {
         context.beginPath()
         context.addPath(shape.cgPath)
         drawCurrentPath(in: context, usesEvenOddFill: shape.fillRule == .evenOdd)
+    }
+
+    private func drawImage(
+        _ image: P5Image,
+        source: CGRect?,
+        destination: CGRect,
+        in context: CGContext
+    ) {
+        let sourceImage: CGImage
+        if let source {
+            guard let cropped = image.cgImage.cropping(to: source) else { return }
+            sourceImage = cropped
+        } else {
+            sourceImage = image.cgImage
+        }
+
+        context.saveGState()
+        applyStyle(to: context)
+        context.translateBy(x: destination.minX, y: destination.maxY)
+        context.scaleBy(x: 1, y: -1)
+        let localRectangle = CGRect(origin: .zero, size: destination.size)
+        if let tintColor = style.tintColor {
+            context.beginTransparencyLayer(auxiliaryInfo: nil)
+            context.draw(sourceImage, in: localRectangle)
+            context.setBlendMode(.sourceAtop)
+            context.setFillColor(tintColor)
+            context.fill(localRectangle)
+            context.endTransparencyLayer()
+        } else {
+            context.draw(sourceImage, in: localRectangle)
+        }
+        context.restoreGState()
     }
 
     private func drawCurrentPath(in context: CGContext, usesEvenOddFill: Bool = false) {

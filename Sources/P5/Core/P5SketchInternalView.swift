@@ -115,6 +115,10 @@ final class P5SketchInternalView: P5CanvasView, P5SketchInternal {
         renderer.addOperation(operation)
     }
 
+    func renderQueuedOperations(in context: CGContext) {
+        renderer.render(in: context)
+    }
+
     func resize(to size: CGSize) {
         renderer.size = size
         frame.size = size
