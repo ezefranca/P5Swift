@@ -1,5 +1,6 @@
 import Foundation
 import P5
+import SwiftUI
 import Testing
 
 @MainActor
@@ -15,6 +16,14 @@ struct P5PublicAPITests {
         let persistenceKey = P5StorageKey<Int>("frame-count")
         let preferences = P5Preferences(namespace: "PublicAPI")
         let fileStore = P5FileStore(directory: FileManager.default.temporaryDirectory)
+        let controlState = P5ControlState(0.5)
+        let controlOption = P5ControlOption("Flow", value: "flow")
+        let slider = P5Slider(value: controlState.binding, label: "Speed")
+        let picker = P5Picker(
+            "Motion",
+            selection: .constant("flow"),
+            options: [controlOption]
+        )
 
         #expect(velocity.mag() == 5)
         #expect(P5Vector.add(velocity, P5Vector(x: 1, y: 2)) == P5Vector(x: 4, y: 6))
@@ -46,5 +55,14 @@ struct P5PublicAPITests {
         #expect(persistenceKey.name == "frame-count")
         #expect(preferences.namespace == "PublicAPI")
         #expect(fileStore.directory.isFileURL)
+        #expect(controlState.value == 0.5)
+        #expect(controlOption.id == "flow")
+        _ = slider.body
+        _ = picker.body
+        _ = P5Button("Run") {}.body
+        _ = P5TextField("Name", text: .constant("")).body
+        _ = P5Label("Particles").body
+        _ = P5Toggle("Trails", isOn: .constant(true)).body
+        _ = P5ColorPicker("Tint", selection: .constant(.red)).body
     }
 }

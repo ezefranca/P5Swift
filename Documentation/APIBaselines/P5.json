@@ -69,6 +69,13 @@
       },
       {
         "kind": "Import",
+        "name": "Observation",
+        "printedName": "Observation",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
         "name": "Photos",
         "printedName": "Photos",
         "declKind": "Import",
@@ -47232,6 +47239,2481 @@
           "Custom"
         ],
         "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ControlState",
+        "printedName": "P5ControlState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ControlStateC5valuexvp",
+            "mangledName": "$s2P50A12ControlStateC5valuexvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ControlStateC5valuexvg",
+                "mangledName": "$s2P50A12ControlStateC5valuexvg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ControlStateC5valuexvs",
+                "mangledName": "$s2P50A12ControlStateC5valuexvs",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ControlState",
+                "printedName": "P5.P5ControlState<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A12ControlStateC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A12ControlStateCyACyxGxcfc",
+            "mangledName": "$s2P50A12ControlStateCyACyxGxcfc",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Sendable>",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "binding",
+            "printedName": "binding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Binding",
+                "printedName": "SwiftUI.Binding<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:7SwiftUI7BindingV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A12ControlStateC7binding7SwiftUI7BindingVyxGvp",
+            "mangledName": "$s2P50A12ControlStateC7binding7SwiftUI7BindingVyxGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Binding",
+                    "printedName": "SwiftUI.Binding<Value>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "Value"
+                      }
+                    ],
+                    "usr": "s:7SwiftUI7BindingV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A12ControlStateC7binding7SwiftUI7BindingVyxGvg",
+                "mangledName": "$s2P50A12ControlStateC7binding7SwiftUI7BindingVyxGvg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A12ControlStateC",
+        "mangledName": "$s2P50A12ControlStateC",
+        "moduleName": "P5",
+        "genericSig": "<Value where Value : Swift.Sendable>",
+        "declAttributes": [
+          "Final",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Observable",
+            "printedName": "Observable",
+            "usr": "s:11Observation10ObservableP",
+            "mangledName": "$s11Observation10ObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ControlOption",
+        "printedName": "P5ControlOption",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ControlOptionV5valuexvp",
+            "mangledName": "$s2P50A13ControlOptionV5valuexvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ControlOptionV5valuexvg",
+                "mangledName": "$s2P50A13ControlOptionV5valuexvg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ControlOptionV5titleSSvp",
+            "mangledName": "$s2P50A13ControlOptionV5titleSSvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ControlOptionV5titleSSvg",
+                "mangledName": "$s2P50A13ControlOptionV5titleSSvg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ControlOption",
+                "printedName": "P5.P5ControlOption<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A13ControlOptionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13ControlOptionV_5valueACyxGSS_xtcfc",
+            "mangledName": "$s2P50A13ControlOptionV_5valueACyxGSS_xtcfc",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ControlOptionV2idxvp",
+            "mangledName": "$s2P50A13ControlOptionV2idxvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ControlOptionV2idxvg",
+                "mangledName": "$s2P50A13ControlOptionV2idxvg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "ID",
+            "printedName": "ID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A13ControlOptionV2IDa",
+            "mangledName": "$s2P50A13ControlOptionV2IDa",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+            "implicit": true
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ControlOption",
+                "printedName": "P5.P5ControlOption<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A13ControlOptionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ControlOption",
+                "printedName": "P5.P5ControlOption<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A13ControlOptionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13ControlOptionV23__derived_struct_equalsySbACyxG_AEtFZ",
+            "mangledName": "$s2P50A13ControlOptionV23__derived_struct_equalsySbACyxG_AEtFZ",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13ControlOptionV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A13ControlOptionV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ControlOptionV9hashValueSivp",
+            "mangledName": "$s2P50A13ControlOptionV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ControlOptionV9hashValueSivg",
+                "mangledName": "$s2P50A13ControlOptionV9hashValueSivg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A13ControlOptionV",
+        "mangledName": "$s2P50A13ControlOptionV",
+        "moduleName": "P5",
+        "genericSig": "<Value where Value : Swift.Hashable, Value : Swift.Sendable>",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Button",
+        "printedName": "P5Button",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:role:action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Button",
+                "printedName": "P5.P5Button",
+                "usr": "s:2P50A6ButtonV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.ButtonRole?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ButtonRole",
+                    "printedName": "SwiftUI.ButtonRole",
+                    "usr": "s:7SwiftUI10ButtonRoleV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6ButtonV_4role6actionACSS_7SwiftUI0B4RoleVSgyyctcfc",
+            "mangledName": "$s2P50A6ButtonV_4role6actionACSS_7SwiftUI0B4RoleVSgyyctcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6ButtonV4bodyQrvp",
+            "mangledName": "$s2P50A6ButtonV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6ButtonV4bodyQrvg",
+                "mangledName": "$s2P50A6ButtonV4bodyQrvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A6ButtonV4Bodya",
+            "mangledName": "$s2P50A6ButtonV4Bodya",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A6ButtonV",
+        "mangledName": "$s2P50A6ButtonV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Slider",
+        "printedName": "P5Slider",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(value:in:step:label:onEditingChanged:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Slider",
+                "printedName": "P5.P5Slider",
+                "usr": "s:2P50A6SliderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Binding",
+                "printedName": "SwiftUI.Binding<Swift.Double>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:7SwiftUI7BindingV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClosedRange",
+                "printedName": "Swift.ClosedRange<Swift.Double>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SN"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6SliderV5value2in4step5label16onEditingChangedAC7SwiftUI7BindingVySdG_SNySdGSdSgSSySbctcfc",
+            "mangledName": "$s2P50A6SliderV5value2in4step5label16onEditingChangedAC7SwiftUI7BindingVySdG_SNySdGSdSgSSySbctcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SliderV4bodyQrvp",
+            "mangledName": "$s2P50A6SliderV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SliderV4bodyQrvg",
+                "mangledName": "$s2P50A6SliderV4bodyQrvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A6SliderV4Bodya",
+            "mangledName": "$s2P50A6SliderV4Bodya",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A6SliderV",
+        "mangledName": "$s2P50A6SliderV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5TextField",
+        "printedName": "P5TextField",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:text:prompt:onSubmit:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5TextField",
+                "printedName": "P5.P5TextField",
+                "usr": "s:2P50A9TextFieldV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Binding",
+                "printedName": "SwiftUI.Binding<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:7SwiftUI7BindingV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "hasDefaultArg": true
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A9TextFieldV_4text6prompt8onSubmitACSS_7SwiftUI7BindingVySSGSSSgyyctcfc",
+            "mangledName": "$s2P50A9TextFieldV_4text6prompt8onSubmitACSS_7SwiftUI7BindingVySSGSSSgyyctcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9TextFieldV4bodyQrvp",
+            "mangledName": "$s2P50A9TextFieldV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9TextFieldV4bodyQrvg",
+                "mangledName": "$s2P50A9TextFieldV4bodyQrvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A9TextFieldV4Bodya",
+            "mangledName": "$s2P50A9TextFieldV4Bodya",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A9TextFieldV",
+        "mangledName": "$s2P50A9TextFieldV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Label",
+        "printedName": "P5Label",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Label",
+                "printedName": "P5.P5Label",
+                "usr": "s:2P50A5LabelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A5LabelVyACSScfc",
+            "mangledName": "$s2P50A5LabelVyACSScfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A5LabelV4bodyQrvp",
+            "mangledName": "$s2P50A5LabelV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A5LabelV4bodyQrvg",
+                "mangledName": "$s2P50A5LabelV4bodyQrvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A5LabelV4Bodya",
+            "mangledName": "$s2P50A5LabelV4Bodya",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A5LabelV",
+        "mangledName": "$s2P50A5LabelV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Toggle",
+        "printedName": "P5Toggle",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:isOn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Toggle",
+                "printedName": "P5.P5Toggle",
+                "usr": "s:2P50A6ToggleV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Binding",
+                "printedName": "SwiftUI.Binding<Swift.Bool>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:7SwiftUI7BindingV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6ToggleV_4isOnACSS_7SwiftUI7BindingVySbGtcfc",
+            "mangledName": "$s2P50A6ToggleV_4isOnACSS_7SwiftUI7BindingVySbGtcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6ToggleV4bodyQrvp",
+            "mangledName": "$s2P50A6ToggleV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6ToggleV4bodyQrvg",
+                "mangledName": "$s2P50A6ToggleV4bodyQrvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A6ToggleV4Bodya",
+            "mangledName": "$s2P50A6ToggleV4Bodya",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A6ToggleV",
+        "mangledName": "$s2P50A6ToggleV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Picker",
+        "printedName": "P5Picker",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:selection:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Picker",
+                "printedName": "P5.P5Picker<Selection>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Selection"
+                  }
+                ],
+                "usr": "s:2P50A6PickerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Binding",
+                "printedName": "SwiftUI.Binding<Selection>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Selection"
+                  }
+                ],
+                "usr": "s:7SwiftUI7BindingV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5ControlOption<Selection>]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ControlOption",
+                    "printedName": "P5.P5ControlOption<Selection>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "Selection"
+                      }
+                    ],
+                    "usr": "s:2P50A13ControlOptionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A6PickerV_9selection7optionsACyxGSS_7SwiftUI7BindingVyxGSayAA0A13ControlOptionVyxGGtcfc",
+            "mangledName": "$s2P50A6PickerV_9selection7optionsACyxGSS_7SwiftUI7BindingVyxGSayAA0A13ControlOptionVyxGGtcfc",
+            "moduleName": "P5",
+            "genericSig": "<Selection where Selection : Swift.Hashable, Selection : Swift.Sendable>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6PickerV4bodyQrvp",
+            "mangledName": "$s2P50A6PickerV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6PickerV4bodyQrvg",
+                "mangledName": "$s2P50A6PickerV4bodyQrvg",
+                "moduleName": "P5",
+                "genericSig": "<Selection where Selection : Swift.Hashable, Selection : Swift.Sendable>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A6PickerV4Bodya",
+            "mangledName": "$s2P50A6PickerV4Bodya",
+            "moduleName": "P5",
+            "genericSig": "<Selection where Selection : Swift.Hashable, Selection : Swift.Sendable>",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A6PickerV",
+        "mangledName": "$s2P50A6PickerV",
+        "moduleName": "P5",
+        "genericSig": "<Selection where Selection : Swift.Hashable, Selection : Swift.Sendable>",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ColorPicker",
+        "printedName": "P5ColorPicker",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:selection:supportsOpacity:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ColorPicker",
+                "printedName": "P5.P5ColorPicker",
+                "usr": "s:2P50A11ColorPickerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Binding",
+                "printedName": "SwiftUI.Binding<SwiftUI.Color>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Color",
+                    "printedName": "SwiftUI.Color",
+                    "usr": "s:7SwiftUI5ColorV"
+                  }
+                ],
+                "usr": "s:7SwiftUI7BindingV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11ColorPickerV_9selection15supportsOpacityACSS_7SwiftUI7BindingVyAF0B0VGSbtcfc",
+            "mangledName": "$s2P50A11ColorPickerV_9selection15supportsOpacityACSS_7SwiftUI7BindingVyAF0B0VGSbtcfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11ColorPickerV4bodyQrvp",
+            "mangledName": "$s2P50A11ColorPickerV4bodyQrvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11ColorPickerV4bodyQrvg",
+                "mangledName": "$s2P50A11ColorPickerV4bodyQrvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Body",
+            "printedName": "Body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A11ColorPickerV4Bodya",
+            "mangledName": "$s2P50A11ColorPickerV4Bodya",
+            "moduleName": "P5",
+            "implicit": true
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A11ColorPickerV",
+        "mangledName": "$s2P50A11ColorPickerV",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5NativeControlFactory",
+        "printedName": "P5NativeControlFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "button",
+            "printedName": "button(_:accessibilityLabel:action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSButton",
+                "printedName": "AppKit.NSButton",
+                "usr": "c:objc(cs)NSButton"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20NativeControlFactoryO6button_18accessibilityLabel6actionSo8NSButtonCSS_SSSgyyYbScMYcctFZ",
+            "mangledName": "$s2P50A20NativeControlFactoryO6button_18accessibilityLabel6actionSo8NSButtonCSS_SSSgyyYbScMYcctFZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "slider",
+            "printedName": "slider(value:in:accessibilityLabel:onChange:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSSlider",
+                "printedName": "AppKit.NSSlider",
+                "usr": "c:objc(cs)NSSlider"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ClosedRange",
+                "printedName": "Swift.ClosedRange<Swift.Double>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SN"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Double) -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20NativeControlFactoryO6slider5value2in18accessibilityLabel8onChangeSo8NSSliderCSd_SNySdGSSySdYbScMYcctFZ",
+            "mangledName": "$s2P50A20NativeControlFactoryO6slider5value2in18accessibilityLabel8onChangeSo8NSSliderCSd_SNySdGSSySdYbScMYcctFZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "textField",
+            "printedName": "textField(text:placeholder:accessibilityLabel:onCommit:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSTextField",
+                "printedName": "AppKit.NSTextField",
+                "usr": "c:objc(cs)NSTextField"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String) -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20NativeControlFactoryO9textField0E011placeholder18accessibilityLabel8onCommitSo06NSTextF0CSS_SSSgSSySSYbScMYcctFZ",
+            "mangledName": "$s2P50A20NativeControlFactoryO9textField0E011placeholder18accessibilityLabel8onCommitSo06NSTextF0CSS_SSSgSSySSYbScMYcctFZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "label",
+            "printedName": "label(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSTextField",
+                "printedName": "AppKit.NSTextField",
+                "usr": "c:objc(cs)NSTextField"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20NativeControlFactoryO5labelySo11NSTextFieldCSSFZ",
+            "mangledName": "$s2P50A20NativeControlFactoryO5labelySo11NSTextFieldCSSFZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toggle",
+            "printedName": "toggle(_:isOn:accessibilityLabel:onChange:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSButton",
+                "printedName": "AppKit.NSButton",
+                "usr": "c:objc(cs)NSButton"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20NativeControlFactoryO6toggle_4isOn18accessibilityLabel8onChangeSo8NSButtonCSS_SbSSSgySbYbScMYcctFZ",
+            "mangledName": "$s2P50A20NativeControlFactoryO6toggle_4isOn18accessibilityLabel8onChangeSo8NSButtonCSS_SbSSSgySbYbScMYcctFZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A20NativeControlFactoryO",
+        "mangledName": "$s2P50A20NativeControlFactoryO",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Custom"
+        ],
+        "isEnumExhaustive": true,
         "conformances": [
           {
             "kind": "Conformance",
