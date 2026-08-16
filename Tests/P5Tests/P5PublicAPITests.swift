@@ -1,3 +1,4 @@
+import Foundation
 import P5
 import Testing
 
@@ -11,6 +12,9 @@ struct P5PublicAPITests {
         let noise = P5NoiseGenerator(seed: 5)
         let clock = P5ManualClock()
         let color = try P5Color(hex: "#336699")
+        let persistenceKey = P5StorageKey<Int>("frame-count")
+        let preferences = P5Preferences(namespace: "PublicAPI")
+        let fileStore = P5FileStore(directory: FileManager.default.temporaryDirectory)
 
         #expect(velocity.mag() == 5)
         #expect(P5Vector.add(velocity, P5Vector(x: 1, y: 2)) == P5Vector(x: 4, y: 6))
@@ -39,5 +43,8 @@ struct P5PublicAPITests {
         #expect(P5Key.arrowUp != .arrowDown)
         #expect(clock.now == 0)
         #expect(color.alpha == 1)
+        #expect(persistenceKey.name == "frame-count")
+        #expect(preferences.namespace == "PublicAPI")
+        #expect(fileStore.directory.isFileURL)
     }
 }

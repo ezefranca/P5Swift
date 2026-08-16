@@ -51732,6 +51732,1430 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "P5PersistenceError",
+        "printedName": "P5PersistenceError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "encodingFailed",
+            "printedName": "encodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PersistenceError.Type) -> (Swift.String) -> P5.P5PersistenceError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5PersistenceError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PersistenceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16PersistenceErrorO14encodingFailedyACSScACmF",
+            "mangledName": "$s2P50A16PersistenceErrorO14encodingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "decodingFailed",
+            "printedName": "decodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PersistenceError.Type) -> (Swift.String) -> P5.P5PersistenceError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5PersistenceError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PersistenceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16PersistenceErrorO14decodingFailedyACSScACmF",
+            "mangledName": "$s2P50A16PersistenceErrorO14decodingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "unsupportedFormatVersion",
+            "printedName": "unsupportedFormatVersion",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PersistenceError.Type) -> (Swift.Int) -> P5.P5PersistenceError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> P5.P5PersistenceError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PersistenceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16PersistenceErrorO24unsupportedFormatVersionyACSicACmF",
+            "mangledName": "$s2P50A16PersistenceErrorO24unsupportedFormatVersionyACSicACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "fileReadFailed",
+            "printedName": "fileReadFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PersistenceError.Type) -> (Swift.String) -> P5.P5PersistenceError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5PersistenceError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PersistenceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16PersistenceErrorO14fileReadFailedyACSScACmF",
+            "mangledName": "$s2P50A16PersistenceErrorO14fileReadFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "fileWriteFailed",
+            "printedName": "fileWriteFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PersistenceError.Type) -> (Swift.String) -> P5.P5PersistenceError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5PersistenceError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PersistenceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16PersistenceErrorO15fileWriteFailedyACSScACmF",
+            "mangledName": "$s2P50A16PersistenceErrorO15fileWriteFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "fileRemovalFailed",
+            "printedName": "fileRemovalFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PersistenceError.Type) -> (Swift.String) -> P5.P5PersistenceError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5PersistenceError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PersistenceError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PersistenceError",
+                        "printedName": "P5.P5PersistenceError",
+                        "usr": "s:2P50A16PersistenceErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16PersistenceErrorO17fileRemovalFailedyACSScACmF",
+            "mangledName": "$s2P50A16PersistenceErrorO17fileRemovalFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A16PersistenceErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A16PersistenceErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A16PersistenceErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A16PersistenceErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PersistenceError",
+                "printedName": "P5.P5PersistenceError",
+                "usr": "s:2P50A16PersistenceErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PersistenceError",
+                "printedName": "P5.P5PersistenceError",
+                "usr": "s:2P50A16PersistenceErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A16PersistenceErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A16PersistenceErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A16PersistenceErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A16PersistenceErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A16PersistenceErrorO9hashValueSivp",
+            "mangledName": "$s2P50A16PersistenceErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A16PersistenceErrorO9hashValueSivg",
+                "mangledName": "$s2P50A16PersistenceErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A16PersistenceErrorO",
+        "mangledName": "$s2P50A16PersistenceErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5StorageKey",
+        "printedName": "P5StorageKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10StorageKeyV4nameSSvp",
+            "mangledName": "$s2P50A10StorageKeyV4nameSSvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10StorageKeyV4nameSSvg",
+                "mangledName": "$s2P50A10StorageKeyV4nameSSvg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10StorageKeyVyACyxGSScfc",
+            "mangledName": "$s2P50A10StorageKeyVyACyxGSScfc",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10StorageKeyV4fromACyxGs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A10StorageKeyV4fromACyxGs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10StorageKeyV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A10StorageKeyV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10StorageKeyV23__derived_struct_equalsySbACyxG_AEtFZ",
+            "mangledName": "$s2P50A10StorageKeyV23__derived_struct_equalsySbACyxG_AEtFZ",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10StorageKeyV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A10StorageKeyV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10StorageKeyV9hashValueSivp",
+            "mangledName": "$s2P50A10StorageKeyV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10StorageKeyV9hashValueSivg",
+                "mangledName": "$s2P50A10StorageKeyV9hashValueSivg",
+                "moduleName": "P5",
+                "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A10StorageKeyV",
+        "mangledName": "$s2P50A10StorageKeyV",
+        "moduleName": "P5",
+        "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Preferences",
+        "printedName": "P5Preferences",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "namespace",
+            "printedName": "namespace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11PreferencesV9namespaceSSvp",
+            "mangledName": "$s2P50A11PreferencesV9namespaceSSvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11PreferencesV9namespaceSSvg",
+                "mangledName": "$s2P50A11PreferencesV9namespaceSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(userDefaults:namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Preferences",
+                "printedName": "P5.P5Preferences",
+                "usr": "s:2P50A11PreferencesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSUserDefaults"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11PreferencesV12userDefaults9namespaceACSo06NSUserD0C_SStcfc",
+            "mangledName": "$s2P50A11PreferencesV12userDefaults9namespaceACSo06NSUserD0C_SStcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "contains",
+            "printedName": "contains(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11PreferencesV8containsySbAA0A10StorageKeyVyxGSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A11PreferencesV8containsySbAA0A10StorageKeyVyxGSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11PreferencesV3set_3foryx_AA0A10StorageKeyVyxGtKSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A11PreferencesV3set_3foryx_AA0A10StorageKeyVyxGtKSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Value?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11PreferencesV5value3forxSgAA0A10StorageKeyVyxG_tKSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A11PreferencesV5value3forxSgAA0A10StorageKeyVyxG_tKSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeValue",
+            "printedName": "removeValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11PreferencesV11removeValue3foryAA0A10StorageKeyVyxG_tSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A11PreferencesV11removeValue3foryAA0A10StorageKeyVyxG_tSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A11PreferencesV",
+        "mangledName": "$s2P50A11PreferencesV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5FileStore",
+        "printedName": "P5FileStore",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "directory",
+            "printedName": "directory",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9FileStoreC9directory10Foundation3URLVvp",
+            "mangledName": "$s2P50A9FileStoreC9directory10Foundation3URLVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Nonisolated",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9FileStoreC9directory10Foundation3URLVvg",
+                "mangledName": "$s2P50A9FileStoreC9directory10Foundation3URLVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(directory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5FileStore",
+                "printedName": "P5.P5FileStore",
+                "usr": "s:2P50A9FileStoreC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A9FileStoreC9directoryAC10Foundation3URLV_tcfc",
+            "mangledName": "$s2P50A9FileStoreC9directoryAC10Foundation3URLV_tcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "contains",
+            "printedName": "contains(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A9FileStoreC8containsySbAA0A10StorageKeyVyxGYaKSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A9FileStoreC8containsySbAA0A10StorageKeyVyxGYaKSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(_:for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "Value"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A9FileStoreC4save_3foryx_AA0A10StorageKeyVyxGtYaKSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A9FileStoreC4save_3foryx_AA0A10StorageKeyVyxGtYaKSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Value?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A9FileStoreC5value3forxSgAA0A10StorageKeyVyxG_tYaKSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A9FileStoreC5value3forxSgAA0A10StorageKeyVyxG_tYaKSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeValue",
+            "printedName": "removeValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5StorageKey",
+                "printedName": "P5.P5StorageKey<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Value"
+                  }
+                ],
+                "usr": "s:2P50A10StorageKeyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A9FileStoreC11removeValue3foryAA0A10StorageKeyVyxG_tYaKSeRzSERzs8SendableRzlF",
+            "mangledName": "$s2P50A9FileStoreC11removeValue3foryAA0A10StorageKeyVyxG_tYaKSeRzSERzs8SendableRzlF",
+            "moduleName": "P5",
+            "genericSig": "<Value where Value : Swift.Decodable, Value : Swift.Encodable, Value : Swift.Sendable>",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "unownedExecutor",
+            "printedName": "unownedExecutor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnownedSerialExecutor",
+                "printedName": "_Concurrency.UnownedSerialExecutor",
+                "usr": "s:Sce"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9FileStoreC15unownedExecutorScevp",
+            "mangledName": "$s2P50A9FileStoreC15unownedExecutorScevp",
+            "moduleName": "P5",
+            "implicit": true,
+            "intro_Macosx": "10.15",
+            "intro_iOS": "13.0",
+            "intro_tvOS": "13.0",
+            "intro_watchOS": "6.0",
+            "declAttributes": [
+              "Available",
+              "Available",
+              "Available",
+              "Available",
+              "Final",
+              "Nonisolated",
+              "Semantics"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnownedSerialExecutor",
+                    "printedName": "_Concurrency.UnownedSerialExecutor",
+                    "usr": "s:Sce"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9FileStoreC15unownedExecutorScevg",
+                "mangledName": "$s2P50A9FileStoreC15unownedExecutorScevg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A9FileStoreC",
+        "mangledName": "$s2P50A9FileStoreC",
+        "moduleName": "P5",
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Actor",
+            "printedName": "Actor",
+            "usr": "s:ScA",
+            "mangledName": "$sScA"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "P5PhotoLibraryAccess",
         "printedName": "P5PhotoLibraryAccess",
         "children": [

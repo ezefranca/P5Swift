@@ -82,6 +82,9 @@ Provide optional integrations rather than cloning the browser DOM:
 - Drag and drop, clipboard, file dialogs, and sharing.
 - URLSession networking and native persistence helpers.
 
+The shipped persistence layer uses typed keys, namespaced UserDefaults, and an
+actor-isolated atomic file store. See <doc:Persistence>.
+
 ## Compatibility policy
 
 Each implemented API should:
