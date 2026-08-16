@@ -62,6 +62,13 @@
       },
       {
         "kind": "Import",
+        "name": "Photos",
+        "printedName": "Photos",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftOnoneSupport",
         "printedName": "SwiftOnoneSupport",
         "declKind": "Import",
@@ -39604,6 +39611,1557 @@
             "printedName": "FileDocument",
             "usr": "s:7SwiftUI12FileDocumentP",
             "mangledName": "$s7SwiftUI12FileDocumentP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PhotoLibraryAccess",
+        "printedName": "P5PhotoLibraryAccess",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "addOnly",
+            "printedName": "addOnly",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryAccess.Type) -> P5.P5PhotoLibraryAccess",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryAccess",
+                    "printedName": "P5.P5PhotoLibraryAccess",
+                    "usr": "s:2P50A18PhotoLibraryAccessO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryAccess.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryAccess",
+                        "printedName": "P5.P5PhotoLibraryAccess",
+                        "usr": "s:2P50A18PhotoLibraryAccessO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18PhotoLibraryAccessO7addOnlyyA2CmF",
+            "mangledName": "$s2P50A18PhotoLibraryAccessO7addOnlyyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "readWrite",
+            "printedName": "readWrite",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryAccess.Type) -> P5.P5PhotoLibraryAccess",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryAccess",
+                    "printedName": "P5.P5PhotoLibraryAccess",
+                    "usr": "s:2P50A18PhotoLibraryAccessO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryAccess.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryAccess",
+                        "printedName": "P5.P5PhotoLibraryAccess",
+                        "usr": "s:2P50A18PhotoLibraryAccessO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18PhotoLibraryAccessO9readWriteyA2CmF",
+            "mangledName": "$s2P50A18PhotoLibraryAccessO9readWriteyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5PhotoLibraryAccess?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryAccess",
+                    "printedName": "P5.P5PhotoLibraryAccess",
+                    "usr": "s:2P50A18PhotoLibraryAccessO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A18PhotoLibraryAccessO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A18PhotoLibraryAccessO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PhotoLibraryAccess]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryAccess",
+                    "printedName": "P5.P5PhotoLibraryAccess",
+                    "usr": "s:2P50A18PhotoLibraryAccessO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18PhotoLibraryAccessO8AllCasesa",
+            "mangledName": "$s2P50A18PhotoLibraryAccessO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18PhotoLibraryAccessO8RawValuea",
+            "mangledName": "$s2P50A18PhotoLibraryAccessO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PhotoLibraryAccess]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryAccess",
+                    "printedName": "P5.P5PhotoLibraryAccess",
+                    "usr": "s:2P50A18PhotoLibraryAccessO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18PhotoLibraryAccessO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A18PhotoLibraryAccessO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PhotoLibraryAccess]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryAccess",
+                        "printedName": "P5.P5PhotoLibraryAccess",
+                        "usr": "s:2P50A18PhotoLibraryAccessO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18PhotoLibraryAccessO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A18PhotoLibraryAccessO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18PhotoLibraryAccessO8rawValueSSvp",
+            "mangledName": "$s2P50A18PhotoLibraryAccessO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18PhotoLibraryAccessO8rawValueSSvg",
+                "mangledName": "$s2P50A18PhotoLibraryAccessO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A18PhotoLibraryAccessO",
+        "mangledName": "$s2P50A18PhotoLibraryAccessO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PhotoLibraryAccess]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryAccess",
+                        "printedName": "P5.P5PhotoLibraryAccess",
+                        "usr": "s:2P50A18PhotoLibraryAccessO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PhotoAuthorizationStatus",
+        "printedName": "P5PhotoAuthorizationStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "notDetermined",
+            "printedName": "notDetermined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoAuthorizationStatus.Type) -> P5.P5PhotoAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO13notDeterminedyA2CmF",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO13notDeterminedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "restricted",
+            "printedName": "restricted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoAuthorizationStatus.Type) -> P5.P5PhotoAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO10restrictedyA2CmF",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO10restrictedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "denied",
+            "printedName": "denied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoAuthorizationStatus.Type) -> P5.P5PhotoAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO6deniedyA2CmF",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO6deniedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "authorized",
+            "printedName": "authorized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoAuthorizationStatus.Type) -> P5.P5PhotoAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO10authorizedyA2CmF",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO10authorizedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "limited",
+            "printedName": "limited",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoAuthorizationStatus.Type) -> P5.P5PhotoAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO7limitedyA2CmF",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO7limitedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoAuthorizationStatus.Type) -> P5.P5PhotoAuthorizationStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoAuthorizationStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO7unknownyA2CmF",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO7unknownyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5PhotoAuthorizationStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PhotoAuthorizationStatus]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO8AllCasesa",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO8RawValuea",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5PhotoAuthorizationStatus]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoAuthorizationStatus",
+                    "printedName": "P5.P5PhotoAuthorizationStatus",
+                    "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PhotoAuthorizationStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24PhotoAuthorizationStatusO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A24PhotoAuthorizationStatusO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24PhotoAuthorizationStatusO8rawValueSSvp",
+            "mangledName": "$s2P50A24PhotoAuthorizationStatusO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24PhotoAuthorizationStatusO8rawValueSSvg",
+                "mangledName": "$s2P50A24PhotoAuthorizationStatusO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A24PhotoAuthorizationStatusO",
+        "mangledName": "$s2P50A24PhotoAuthorizationStatusO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5PhotoAuthorizationStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PhotoLibraryError",
+        "printedName": "P5PhotoLibraryError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "authorizationNotDetermined",
+            "printedName": "authorizationNotDetermined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryError.Type) -> P5.P5PhotoLibraryError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryError",
+                    "printedName": "P5.P5PhotoLibraryError",
+                    "usr": "s:2P50A17PhotoLibraryErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A17PhotoLibraryErrorO26authorizationNotDeterminedyA2CmF",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO26authorizationNotDeterminedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "accessUnavailable",
+            "printedName": "accessUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryError.Type) -> (P5.P5PhotoAuthorizationStatus) -> P5.P5PhotoLibraryError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5PhotoAuthorizationStatus) -> P5.P5PhotoLibraryError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoAuthorizationStatus",
+                        "printedName": "P5.P5PhotoAuthorizationStatus",
+                        "usr": "s:2P50A24PhotoAuthorizationStatusO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A17PhotoLibraryErrorO17accessUnavailableyAcA0aB19AuthorizationStatusOcACmF",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO17accessUnavailableyAcA0aB19AuthorizationStatusOcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "videoIsNotFileURL",
+            "printedName": "videoIsNotFileURL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryError.Type) -> P5.P5PhotoLibraryError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryError",
+                    "printedName": "P5.P5PhotoLibraryError",
+                    "usr": "s:2P50A17PhotoLibraryErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A17PhotoLibraryErrorO17videoIsNotFileURLyA2CmF",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO17videoIsNotFileURLyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "videoDoesNotExist",
+            "printedName": "videoDoesNotExist",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryError.Type) -> P5.P5PhotoLibraryError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryError",
+                    "printedName": "P5.P5PhotoLibraryError",
+                    "usr": "s:2P50A17PhotoLibraryErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A17PhotoLibraryErrorO17videoDoesNotExistyA2CmF",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO17videoDoesNotExistyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "missingAssetIdentifier",
+            "printedName": "missingAssetIdentifier",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryError.Type) -> P5.P5PhotoLibraryError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5PhotoLibraryError",
+                    "printedName": "P5.P5PhotoLibraryError",
+                    "usr": "s:2P50A17PhotoLibraryErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A17PhotoLibraryErrorO22missingAssetIdentifieryA2CmF",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO22missingAssetIdentifieryA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "changeFailed",
+            "printedName": "changeFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5PhotoLibraryError.Type) -> (Swift.String) -> P5.P5PhotoLibraryError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5PhotoLibraryError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5PhotoLibraryError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5PhotoLibraryError",
+                        "printedName": "P5.P5PhotoLibraryError",
+                        "usr": "s:2P50A17PhotoLibraryErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A17PhotoLibraryErrorO12changeFailedyACSScACmF",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO12changeFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A17PhotoLibraryErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A17PhotoLibraryErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A17PhotoLibraryErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PhotoLibraryError",
+                "printedName": "P5.P5PhotoLibraryError",
+                "usr": "s:2P50A17PhotoLibraryErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PhotoLibraryError",
+                "printedName": "P5.P5PhotoLibraryError",
+                "usr": "s:2P50A17PhotoLibraryErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A17PhotoLibraryErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A17PhotoLibraryErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A17PhotoLibraryErrorO9hashValueSivp",
+            "mangledName": "$s2P50A17PhotoLibraryErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A17PhotoLibraryErrorO9hashValueSivg",
+                "mangledName": "$s2P50A17PhotoLibraryErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A17PhotoLibraryErrorO",
+        "mangledName": "$s2P50A17PhotoLibraryErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5PhotoLibrary",
+        "printedName": "P5PhotoLibrary",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PhotoLibrary",
+                "printedName": "P5.P5PhotoLibrary",
+                "usr": "s:2P50A12PhotoLibraryV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A12PhotoLibraryVACycfc",
+            "mangledName": "$s2P50A12PhotoLibraryVACycfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "authorizationStatus",
+            "printedName": "authorizationStatus(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PhotoAuthorizationStatus",
+                "printedName": "P5.P5PhotoAuthorizationStatus",
+                "usr": "s:2P50A24PhotoAuthorizationStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PhotoLibraryAccess",
+                "printedName": "P5.P5PhotoLibraryAccess",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A18PhotoLibraryAccessO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PhotoLibraryV19authorizationStatus3forAA0ab13AuthorizationE0OAA0abC6AccessO_tF",
+            "mangledName": "$s2P50A12PhotoLibraryV19authorizationStatus3forAA0ab13AuthorizationE0OAA0abC6AccessO_tF",
+            "moduleName": "P5",
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "requestAuthorization",
+            "printedName": "requestAuthorization(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5PhotoAuthorizationStatus",
+                "printedName": "P5.P5PhotoAuthorizationStatus",
+                "usr": "s:2P50A24PhotoAuthorizationStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5PhotoLibraryAccess",
+                "printedName": "P5.P5PhotoLibraryAccess",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A18PhotoLibraryAccessO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PhotoLibraryV20requestAuthorization3forAA0abE6StatusOAA0abC6AccessO_tYaKF",
+            "mangledName": "$s2P50A12PhotoLibraryV20requestAuthorization3forAA0abE6StatusOAA0abC6AccessO_tYaKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(_:as:quality:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageFormat",
+                "printedName": "P5.P5ImageFormat",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A11ImageFormatO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PhotoLibraryV4save_2as7qualitySSAA0A5ImageV_AA0aG6FormatOSdtYaKF",
+            "mangledName": "$s2P50A12PhotoLibraryV4save_2as7qualitySSAA0A5ImageV_AA0aG6FormatOSdtYaKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "saveVideo",
+            "printedName": "saveVideo(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A12PhotoLibraryV9saveVideo2atSS10Foundation3URLV_tYaKF",
+            "mangledName": "$s2P50A12PhotoLibraryV9saveVideo2atSS10Foundation3URLV_tYaKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A12PhotoLibraryV",
+        "mangledName": "$s2P50A12PhotoLibraryV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
