@@ -24,6 +24,8 @@ struct P5PublicAPITests {
             selection: .constant("flow"),
             options: [controlOption]
         )
+        let camera = try P5Camera3D()
+        let mesh = try P5Mesh.box()
 
         #expect(velocity.mag() == 5)
         #expect(P5Vector.add(velocity, P5Vector(x: 1, y: 2)) == P5Vector(x: 4, y: 6))
@@ -64,5 +66,7 @@ struct P5PublicAPITests {
         _ = P5Label("Particles").body
         _ = P5Toggle("Trails", isOn: .constant(true)).body
         _ = P5ColorPicker("Tint", selection: .constant(.red)).body
+        #expect(camera.viewMatrix[3, 3] == 1)
+        #expect(mesh.indices.count == 36)
     }
 }
