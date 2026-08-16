@@ -28,6 +28,8 @@ open class P5Sketch {
     var currentImageMode = P5ImageMode.corner
     var currentTransformValue = P5Transform.identity
     var transformStack: [P5Transform] = []
+    var currentTextConfiguration = P5TextConfiguration()
+    var textConfigurationStack: [P5TextConfiguration] = []
 
     /// A human-readable title that clients can use when presenting the sketch.
     public var title: String?
@@ -230,6 +232,7 @@ open class P5Sketch {
         frameCount += 1
         currentTransformValue = .identity
         transformStack.removeAll(keepingCapacity: true)
+        textConfigurationStack.removeAll(keepingCapacity: true)
         draw()
     }
 
@@ -354,6 +357,7 @@ public extension P5Sketch {
     /// [p5.js `push()`](https://p5js.org/reference/p5/push/).
     func push() {
         transformStack.append(currentTransformValue)
+        textConfigurationStack.append(currentTextConfiguration)
         internalView.addOperation(.push)
     }
 
@@ -364,6 +368,9 @@ public extension P5Sketch {
     func pop() {
         if let transform = transformStack.popLast() {
             currentTransformValue = transform
+        }
+        if let configuration = textConfigurationStack.popLast() {
+            currentTextConfiguration = configuration
         }
         internalView.addOperation(.pop)
     }

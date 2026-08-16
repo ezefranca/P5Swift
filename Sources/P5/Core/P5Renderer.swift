@@ -1,4 +1,5 @@
 import CoreGraphics
+import CoreText
 
 final class P5Renderer {
     private struct DrawingStyle {
@@ -15,6 +16,7 @@ final class P5Renderer {
         var blendMode = P5BlendMode.normal
         var opacity: CGFloat = 1
         var tintColor: CGColor?
+        var textConfiguration = P5TextConfiguration()
     }
 
     var size: CGSize = .zero
@@ -68,6 +70,17 @@ final class P5Renderer {
                 style.tintColor = color
             case .noTint:
                 style.tintColor = nil
+            case .textFont(let font):
+                style.textConfiguration.font = font
+            case .textSize(let size):
+                style.textConfiguration.size = size
+            case .textLeading(let leading):
+                style.textConfiguration.leading = leading
+            case .textAlignment(let horizontal, let vertical):
+                style.textConfiguration.horizontalAlignment = horizontal
+                style.textConfiguration.verticalAlignment = vertical
+            case .textWrap(let mode):
+                style.textConfiguration.wrapMode = mode
             case .clear:
                 clear(in: context, initialTransform: initialTransform)
             case .background(let bgColor):
@@ -120,6 +133,8 @@ final class P5Renderer {
                 shape(reusableShape, in: context)
             case .image(let image, let source, let destination):
                 drawImage(image, source: source, destination: destination, in: context)
+            case .text(let text, let rectangle):
+                drawText(text, rectangle: rectangle, in: context)
             case .rotate(let angle):
                 context.rotate(by: angle)
             case .translate(let x, let y):
@@ -327,6 +342,77 @@ final class P5Renderer {
             context.endTransparencyLayer()
         } else {
             context.draw(sourceImage, in: localRectangle)
+        }
+        context.restoreGState()
+    }
+
+    private func drawText(_ text: String, rectangle: CGRect, in context: CGContext) {
+        guard style.fillColor != nil || style.strokeColor != nil else { return }
+        let configuration = style.textConfiguration
+        let constrained = rectangle.width > 0 && rectangle.height > 0
+        let metrics = configuration.metrics(for: text, width: constrained ? rectangle.width : nil)
+        let attributed = configuration.attributedString(
+            text,
+            fillColor: style.fillColor,
+            strokeColor: style.strokeColor,
+            strokeWeight: style.strokeWeight
+        )
+        context.saveGState()
+        applyStyle(to: context)
+        context.textMatrix = .identity
+        if constrained {
+            let contentHeight = min(rectangle.height, max(1, metrics.bounds.height))
+            let top: CGFloat
+            switch configuration.verticalAlignment {
+            case .top:
+                top = rectangle.minY
+            case .center:
+                top = rectangle.minY + (rectangle.height - contentHeight) / 2
+            case .baseline:
+                top = rectangle.minY - metrics.ascent
+            case .bottom:
+                top = rectangle.maxY - contentHeight
+            }
+            context.translateBy(x: rectangle.minX, y: top + contentHeight)
+            context.scaleBy(x: 1, y: -1)
+            let framesetter = CTFramesetterCreateWithAttributedString(attributed)
+            let frame = CTFramesetterCreateFrame(
+                framesetter,
+                CFRange(location: 0, length: attributed.length),
+                CGPath(
+                    rect: CGRect(x: 0, y: 0, width: rectangle.width, height: contentHeight),
+                    transform: nil
+                ),
+                nil
+            )
+            CTFrameDraw(frame, context)
+        } else {
+            let line = CTLineCreateWithAttributedString(attributed)
+            let lineWidth = CGFloat(CTLineGetTypographicBounds(line, nil, nil, nil))
+            let x: CGFloat
+            switch configuration.horizontalAlignment {
+            case .left:
+                x = rectangle.minX
+            case .center:
+                x = rectangle.minX - lineWidth / 2
+            case .right:
+                x = rectangle.minX - lineWidth
+            }
+            let baseline: CGFloat
+            switch configuration.verticalAlignment {
+            case .top:
+                baseline = rectangle.minY + metrics.ascent
+            case .center:
+                baseline = rectangle.minY + (metrics.ascent - metrics.descent) / 2
+            case .baseline:
+                baseline = rectangle.minY
+            case .bottom:
+                baseline = rectangle.minY - metrics.descent
+            }
+            context.translateBy(x: x, y: baseline)
+            context.scaleBy(x: 1, y: -1)
+            context.textPosition = .zero
+            CTLineDraw(line, context)
         }
         context.restoreGState()
     }

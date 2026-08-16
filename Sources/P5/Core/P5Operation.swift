@@ -16,6 +16,11 @@ enum P5Operation {
     case opacity(CGFloat)
     case tint(CGColor)
     case noTint
+    case textFont(P5Font)
+    case textSize(CGFloat)
+    case textLeading(CGFloat)
+    case textAlignment(P5TextHorizontalAlignment, P5TextVerticalAlignment)
+    case textWrap(P5TextWrapMode)
 
     case clear
     case background(CGColor)
@@ -38,6 +43,7 @@ enum P5Operation {
     case shape(commands: [P5PathCommand], closure: P5ShapeClosure)
     case reusableShape(P5Shape)
     case image(P5Image, source: CGRect?, destination: CGRect)
+    case text(String, rectangle: CGRect)
 
     case rotate(CGFloat)
     case translate(x: CGFloat, y: CGFloat)
