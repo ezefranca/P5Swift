@@ -624,27 +624,61 @@ private final class CaptureObservation: @unchecked Sendable {
 }
 
 private final class FakeAVCaptureSession: AVCaptureSession, @unchecked Sendable {
-    var beginCount = 0
-    var commitCount = 0
-    var inputCount = 0
-    var outputCount = 0
-    var startCount = 0
-    var stopCount = 0
-    var rejectedInputIndex: Int?
-    var rejectedOutputIndex: Int?
+    private let lock = NSLock()
+    private var storedBeginCount = 0
+    private var storedCommitCount = 0
+    private var storedInputCount = 0
+    private var storedOutputCount = 0
+    private var storedStartCount = 0
+    private var storedStopCount = 0
+    private var storedRejectedInputIndex: Int?
+    private var storedRejectedOutputIndex: Int?
 
-    override func beginConfiguration() { beginCount += 1 }
-    override func commitConfiguration() { commitCount += 1 }
+    var beginCount: Int { synchronized { storedBeginCount } }
+    var commitCount: Int { synchronized { storedCommitCount } }
+    var inputCount: Int { synchronized { storedInputCount } }
+    var outputCount: Int { synchronized { storedOutputCount } }
+    var startCount: Int { synchronized { storedStartCount } }
+    var stopCount: Int { synchronized { storedStopCount } }
+    var rejectedInputIndex: Int? {
+        get { synchronized { storedRejectedInputIndex } }
+        set { synchronized { storedRejectedInputIndex = newValue } }
+    }
+    var rejectedOutputIndex: Int? {
+        get { synchronized { storedRejectedOutputIndex } }
+        set { synchronized { storedRejectedOutputIndex = newValue } }
+    }
+
+    override func beginConfiguration() {
+        synchronized { storedBeginCount += 1 }
+    }
+    override func commitConfiguration() {
+        synchronized { storedCommitCount += 1 }
+    }
     override func canAddInput(_ input: AVCaptureInput) -> Bool {
-        inputCount != rejectedInputIndex
+        synchronized { storedInputCount != storedRejectedInputIndex }
     }
-    override func addInput(_ input: AVCaptureInput) { inputCount += 1 }
+    override func addInput(_ input: AVCaptureInput) {
+        synchronized { storedInputCount += 1 }
+    }
     override func canAddOutput(_ output: AVCaptureOutput) -> Bool {
-        outputCount != rejectedOutputIndex
+        synchronized { storedOutputCount != storedRejectedOutputIndex }
     }
-    override func addOutput(_ output: AVCaptureOutput) { outputCount += 1 }
-    override func startRunning() { startCount += 1 }
-    override func stopRunning() { stopCount += 1 }
+    override func addOutput(_ output: AVCaptureOutput) {
+        synchronized { storedOutputCount += 1 }
+    }
+    override func startRunning() {
+        synchronized { storedStartCount += 1 }
+    }
+    override func stopRunning() {
+        synchronized { storedStopCount += 1 }
+    }
+
+    private func synchronized<T>(_ operation: () -> T) -> T {
+        lock.lock()
+        defer { lock.unlock() }
+        return operation()
+    }
 }
 
 private final class FakeMovieOutput: AVCaptureMovieFileOutput, @unchecked Sendable {
