@@ -11,7 +11,11 @@ open class P5Sketch {
     private let clock: any P5Clock
     private let clockOrigin: TimeInterval
     private var previousFrameTime: TimeInterval
-    var randomGenerator = P5RandomGenerator()
+    /// The sketch's copyable and serializable random state.
+    ///
+    /// Assign an explicitly seeded or previously archived generator before drawing
+    /// to inject a reproducible sequence.
+    public var randomGenerator: P5RandomGenerator
     var noiseGenerator = P5NoiseGenerator()
     var currentAngleMode = P5AngleMode.radians
     var shapeCommands: [P5PathCommand] = []
@@ -90,7 +94,12 @@ open class P5Sketch {
     ///
     /// - Parameter size: The canvas size in points.
     public convenience init(size: CGSize) {
-        self.init(size: size, clock: P5SystemClock(), frameDriver: .automatic)
+        self.init(
+            size: size,
+            clock: P5SystemClock(),
+            frameDriver: .automatic,
+            randomGenerator: P5RandomGenerator()
+        )
     }
 
     /// Creates a sketch with an explicit clock and frame driver.
@@ -103,10 +112,12 @@ open class P5Sketch {
     ///   - clock: A finite monotonic clock. The sketch measures elapsed time
     ///     relative to its value during initialization.
     ///   - frameDriver: The source of frame requests.
+    ///   - randomGenerator: Initial copyable random state for the sketch.
     public init(
         size: CGSize,
         clock: any P5Clock,
-        frameDriver: P5FrameDriver
+        frameDriver: P5FrameDriver,
+        randomGenerator: P5RandomGenerator = P5RandomGenerator()
     ) {
         let initialTime = clock.now
         precondition(initialTime.isFinite)
@@ -114,6 +125,7 @@ open class P5Sketch {
         clockOrigin = initialTime
         previousFrameTime = initialTime
         self.frameDriver = frameDriver
+        self.randomGenerator = randomGenerator
         internalView = P5SketchInternalView(
             size: size,
             automaticallyDriven: frameDriver == .automatic

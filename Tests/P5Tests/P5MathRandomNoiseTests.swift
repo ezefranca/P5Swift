@@ -1,4 +1,5 @@
 import CoreGraphics
+import Foundation
 import Testing
 
 @testable import P5
@@ -110,6 +111,56 @@ struct P5RandomGeneratorTests {
     }
 
     @Test
+    func weightedAndExponentialSamplingCoverEverySelectionPath() throws {
+        var generator = P5RandomGenerator(seed: 44)
+
+        #expect(generator.randomWeighted([1, 2, 3], weights: [1, 0, 0]) == 1)
+        #expect(generator.randomWeighted([1, 2, 3], weights: [0, 1, 0]) == 2)
+        #expect(generator.randomWeighted([1, 2, 3], weights: [0, 0, 1]) == 3)
+        #expect(generator.randomWeighted([Int](), weights: []) == nil)
+        #expect(generator.randomExponential(rate: 2) >= 0)
+
+        _ = generator.randomGaussian()
+        let data = try JSONEncoder().encode(generator)
+        var restored = try JSONDecoder().decode(P5RandomGenerator.self, from: data)
+        #expect(restored == generator)
+        #expect(restored.hashValue == generator.hashValue)
+        #expect(restored.next() == generator.next())
+    }
+
+    @Test
+    func deterministicSamplesMeetDistributionMoments() {
+        var generator = P5RandomGenerator(seed: 0xC0FF_EE)
+        let sampleCount = 50_000
+        var uniformTotal = CGFloat.zero
+        var gaussianTotal = CGFloat.zero
+        var gaussianSquares = CGFloat.zero
+        var exponentialTotal = CGFloat.zero
+        var weightedCounts = [0, 0, 0]
+
+        for _ in 0..<sampleCount {
+            uniformTotal += generator.random()
+            let gaussian = generator.randomGaussian()
+            gaussianTotal += gaussian
+            gaussianSquares += gaussian * gaussian
+            exponentialTotal += generator.randomExponential(rate: 2)
+            let selected = generator.randomWeighted([0, 1, 2], weights: [1, 2, 7])
+            weightedCounts[selected ?? 0] += 1
+        }
+
+        let count = CGFloat(sampleCount)
+        let gaussianMean = gaussianTotal / count
+        let gaussianVariance = gaussianSquares / count - gaussianMean * gaussianMean
+        #expect(abs(uniformTotal / count - 0.5) < 0.01)
+        #expect(abs(gaussianMean) < 0.02)
+        #expect(abs(gaussianVariance - 1) < 0.03)
+        #expect(abs(exponentialTotal / count - 0.5) < 0.015)
+        #expect(abs(CGFloat(weightedCounts[0]) / count - 0.1) < 0.01)
+        #expect(abs(CGFloat(weightedCounts[1]) / count - 0.2) < 0.01)
+        #expect(abs(CGFloat(weightedCounts[2]) / count - 0.7) < 0.01)
+    }
+
+    @Test
     func systemSeededGeneratorProducesValidValues() {
         var generator = P5RandomGenerator()
         #expect((0..<1).contains(generator.random()))
@@ -132,6 +183,37 @@ struct P5RandomGeneratorTests {
         await #expect(processExitsWith: .failure) {
             var generator = P5RandomGenerator(seed: 0)
             _ = generator.randomGaussian(standardDeviation: .nan)
+        }
+        await #expect(processExitsWith: .failure) {
+            var generator = P5RandomGenerator(seed: 0)
+            _ = generator.randomWeighted([1], weights: [])
+        }
+        await #expect(processExitsWith: .failure) {
+            var generator = P5RandomGenerator(seed: 0)
+            _ = generator.randomWeighted([1], weights: [-1])
+        }
+        await #expect(processExitsWith: .failure) {
+            var generator = P5RandomGenerator(seed: 0)
+            _ = generator.randomWeighted([1], weights: [.nan])
+        }
+        await #expect(processExitsWith: .failure) {
+            var generator = P5RandomGenerator(seed: 0)
+            _ = generator.randomWeighted([1], weights: [0])
+        }
+        await #expect(processExitsWith: .failure) {
+            var generator = P5RandomGenerator(seed: 0)
+            _ = generator.randomWeighted(
+                [1, 2],
+                weights: [.greatestFiniteMagnitude, .greatestFiniteMagnitude]
+            )
+        }
+        await #expect(processExitsWith: .failure) {
+            var generator = P5RandomGenerator(seed: 0)
+            _ = generator.randomExponential(rate: 0)
+        }
+        await #expect(processExitsWith: .failure) {
+            var generator = P5RandomGenerator(seed: 0)
+            _ = generator.randomExponential(rate: .infinity)
         }
     }
 }
@@ -256,8 +338,23 @@ struct P5SketchMathTests {
         let selection = sketch.random([1, 2, 3])
         _ = try #require(selection)
         _ = sketch.randomGaussian()
+        #expect(sketch.randomWeighted([1, 2], weights: [1, 0]) == 1)
+        #expect(sketch.randomExponential() >= 0)
         sketch.randomSeed(77)
         #expect(sketch.random() == firstRandom)
+
+        let injected = P5RandomGenerator(seed: 91)
+        let injectedSketch = P5Sketch(
+            size: CGSize(width: 10, height: 10),
+            clock: P5ManualClock(),
+            frameDriver: .manual,
+            randomGenerator: injected
+        )
+        var expected = injected
+        #expect(injectedSketch.random() == expected.random())
+        injectedSketch.randomGenerator = P5RandomGenerator(seed: 92)
+        var replacement = P5RandomGenerator(seed: 92)
+        #expect(injectedSketch.random() == replacement.random())
 
         sketch.noiseSeed(88)
         let firstNoise = sketch.noise(0.1)

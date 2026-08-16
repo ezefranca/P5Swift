@@ -67,6 +67,79 @@
         "children": [
           {
             "kind": "Var",
+            "name": "randomGenerator",
+            "printedName": "randomGenerator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5RandomGenerator",
+                "printedName": "P5.P5RandomGenerator",
+                "usr": "s:2P50A15RandomGeneratorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A6SketchC15randomGeneratorAA0a6RandomD0Vvp",
+            "mangledName": "$s2P50A6SketchC15randomGeneratorAA0a6RandomD0Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5RandomGenerator",
+                    "printedName": "P5.P5RandomGenerator",
+                    "usr": "s:2P50A15RandomGeneratorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC15randomGeneratorAA0a6RandomD0Vvg",
+                "mangledName": "$s2P50A6SketchC15randomGeneratorAA0a6RandomD0Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5RandomGenerator",
+                    "printedName": "P5.P5RandomGenerator",
+                    "usr": "s:2P50A15RandomGeneratorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A6SketchC15randomGeneratorAA0a6RandomD0Vvs",
+                "mangledName": "$s2P50A6SketchC15randomGeneratorAA0a6RandomD0Vvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "title",
             "printedName": "title",
             "children": [
@@ -962,7 +1035,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(size:clock:frameDriver:)",
+            "printedName": "init(size:clock:frameDriver:randomGenerator:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -987,11 +1060,18 @@
                 "name": "P5FrameDriver",
                 "printedName": "P5.P5FrameDriver",
                 "usr": "s:2P50A11FrameDriverO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5RandomGenerator",
+                "printedName": "P5.P5RandomGenerator",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A15RandomGeneratorV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:2P50A6SketchC4size5clock11frameDriverACSo6CGSizeV_AA0A5Clock_pAA0a5FrameF0Otcfc",
-            "mangledName": "$s2P50A6SketchC4size5clock11frameDriverACSo6CGSizeV_AA0A5Clock_pAA0a5FrameF0Otcfc",
+            "usr": "s:2P50A6SketchC4size5clock11frameDriver15randomGeneratorACSo6CGSizeV_AA0A5Clock_pAA0a5FrameF0OAA0a6RandomH0Vtcfc",
+            "mangledName": "$s2P50A6SketchC4size5clock11frameDriver15randomGeneratorACSo6CGSizeV_AA0A5Clock_pAA0a5FrameF0OAA0a6RandomH0Vtcfc",
             "moduleName": "P5",
             "declAttributes": [
               "Custom"
@@ -4968,6 +5048,92 @@
             "mangledName": "$s2P50A6SketchC6randomyxSgSayxGlF",
             "moduleName": "P5",
             "genericSig": "<Element>",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "randomWeighted",
+            "printedName": "randomWeighted(_:weights:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Element?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Element"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Element]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Element"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CoreGraphics.CGFloat]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC14randomWeighted_7weightsxSgSayxG_Say14CoreFoundation7CGFloatVGtlF",
+            "mangledName": "$s2P50A6SketchC14randomWeighted_7weightsxSgSayxG_Say12CoreGraphics7CGFloatVGtlF",
+            "moduleName": "P5",
+            "genericSig": "<Element>",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "randomExponential",
+            "printedName": "randomExponential(rate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A6SketchC17randomExponential4rate14CoreFoundation7CGFloatVAH_tF",
+            "mangledName": "$s2P50A6SketchC17randomExponential4rate12CoreGraphics7CGFloatVAH_tF",
+            "moduleName": "P5",
             "declAttributes": [
               "Custom"
             ],
@@ -18798,6 +18964,84 @@
           },
           {
             "kind": "Function",
+            "name": "randomWeighted",
+            "printedName": "randomWeighted(_:weights:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Element?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Element"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Element]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "Element"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CoreGraphics.CGFloat]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15RandomGeneratorV14randomWeighted_7weightsxSgSayxG_Say14CoreFoundation7CGFloatVGtlF",
+            "mangledName": "$s2P50A15RandomGeneratorV14randomWeighted_7weightsxSgSayxG_Say12CoreGraphics7CGFloatVGtlF",
+            "moduleName": "P5",
+            "genericSig": "<Element>",
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "randomExponential",
+            "printedName": "randomExponential(rate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15RandomGeneratorV17randomExponential4rate14CoreFoundation7CGFloatVAH_tF",
+            "mangledName": "$s2P50A15RandomGeneratorV17randomExponential4rate12CoreGraphics7CGFloatVAH_tF",
+            "moduleName": "P5",
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
             "name": "randomGaussian",
             "printedName": "randomGaussian(mean:standardDeviation:)",
             "children": [
@@ -18827,6 +19071,156 @@
             "mangledName": "$s2P50A15RandomGeneratorV14randomGaussian4mean17standardDeviation12CoreGraphics7CGFloatVAI_AItF",
             "moduleName": "P5",
             "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5RandomGenerator",
+                "printedName": "P5.P5RandomGenerator",
+                "usr": "s:2P50A15RandomGeneratorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5RandomGenerator",
+                "printedName": "P5.P5RandomGenerator",
+                "usr": "s:2P50A15RandomGeneratorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15RandomGeneratorV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A15RandomGeneratorV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15RandomGeneratorV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A15RandomGeneratorV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15RandomGeneratorV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A15RandomGeneratorV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15RandomGeneratorV9hashValueSivp",
+            "mangledName": "$s2P50A15RandomGeneratorV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15RandomGeneratorV9hashValueSivg",
+                "mangledName": "$s2P50A15RandomGeneratorV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5RandomGenerator",
+                "printedName": "P5.P5RandomGenerator",
+                "usr": "s:2P50A15RandomGeneratorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A15RandomGeneratorV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A15RandomGeneratorV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Struct",
@@ -18843,10 +19237,38 @@
           },
           {
             "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Escapable",
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",

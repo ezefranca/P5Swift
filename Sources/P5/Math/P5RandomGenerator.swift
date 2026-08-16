@@ -5,7 +5,7 @@ import Foundation
 ///
 /// The generator uses SplitMix64, so a given seed produces the same sequence on
 /// every supported Apple platform and Swift toolchain.
-public struct P5RandomGenerator: RandomNumberGenerator, Sendable {
+public struct P5RandomGenerator: RandomNumberGenerator, Sendable, Hashable, Codable {
     private var state: UInt64
     private var spareGaussian: CGFloat?
 
@@ -68,6 +68,46 @@ public struct P5RandomGenerator: RandomNumberGenerator, Sendable {
         return values[index]
     }
 
+    /// Selects an element according to nonnegative relative weights.
+    ///
+    /// Zero-weight elements are never selected. Weights do not need to sum to one.
+    ///
+    /// - Parameters:
+    ///   - values: Candidate values in stable selection order.
+    ///   - weights: One finite, nonnegative relative weight per candidate.
+    /// - Returns: A weighted element, or `nil` when both arrays are empty.
+    /// - Precondition: The arrays have equal counts, every weight is finite and
+    ///   nonnegative, and a nonempty collection has a positive finite total weight.
+    public mutating func randomWeighted<Element>(
+        _ values: [Element],
+        weights: [CGFloat]
+    ) -> Element? {
+        precondition(values.count == weights.count)
+        guard !values.isEmpty else { return nil }
+        precondition(weights.allSatisfy { $0.isFinite && $0 >= 0 })
+        let total = weights.reduce(0, +)
+        precondition(total.isFinite && total > 0)
+
+        var remaining = random() * total
+        for index in values.indices.dropLast() {
+            if remaining < weights[index] {
+                return values[index]
+            }
+            remaining -= weights[index]
+        }
+        return values[values.index(before: values.endIndex)]
+    }
+
+    /// Returns an exponentially distributed nonnegative value.
+    ///
+    /// - Parameter rate: A finite positive event rate whose reciprocal is the mean.
+    /// - Returns: A sample generated with inverse-transform sampling.
+    /// - Precondition: `rate` is finite and greater than zero.
+    public mutating func randomExponential(rate: CGFloat = 1) -> CGFloat {
+        precondition(rate.isFinite && rate > 0)
+        return -log1p(-random()) / rate
+    }
+
     /// Returns a normally distributed value using the Box-Muller transform.
     ///
     /// - Parameters:
@@ -116,6 +156,27 @@ public extension P5Sketch {
     /// Selects a uniformly distributed element, or returns `nil` for an empty array.
     func random<Element>(_ values: [Element]) -> Element? {
         randomGenerator.random(values)
+    }
+
+    /// Selects an element according to nonnegative relative weights.
+    ///
+    /// - Parameters:
+    ///   - values: Candidate values in stable selection order.
+    ///   - weights: One finite, nonnegative relative weight per candidate.
+    /// - Returns: A weighted element, or `nil` when both arrays are empty.
+    func randomWeighted<Element>(
+        _ values: [Element],
+        weights: [CGFloat]
+    ) -> Element? {
+        randomGenerator.randomWeighted(values, weights: weights)
+    }
+
+    /// Returns an exponentially distributed nonnegative value.
+    ///
+    /// - Parameter rate: A finite positive event rate whose reciprocal is the mean.
+    /// - Returns: A sample generated with inverse-transform sampling.
+    func randomExponential(rate: CGFloat = 1) -> CGFloat {
+        randomGenerator.randomExponential(rate: rate)
     }
 
     /// Returns a normally distributed value using the Box-Muller transform.
