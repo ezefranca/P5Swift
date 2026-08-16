@@ -3,6 +3,10 @@ import P5
 import SwiftUI
 import Testing
 
+#if canImport(Metal)
+    import Metal
+#endif
+
 @MainActor
 @Suite("P5 public client")
 struct P5PublicAPITests {
@@ -26,6 +30,19 @@ struct P5PublicAPITests {
         )
         let camera = try P5Camera3D()
         let mesh = try P5Mesh.box()
+        #if canImport(Metal)
+            let renderConfiguration = try P5RenderConfiguration3D(
+                sampleCount: 4,
+                depthMode: .readOnly,
+                blendMode: .alpha
+            )
+            let material = try P5Material3D(isUnlit: true)
+            let light = P5Light3D.directional(
+                direction: P5Vector(z: -1),
+                color: SIMD3(repeating: 1),
+                intensity: 1
+            )
+        #endif
 
         #expect(velocity.mag() == 5)
         #expect(P5Vector.add(velocity, P5Vector(x: 1, y: 2)) == P5Vector(x: 4, y: 6))
@@ -68,5 +85,15 @@ struct P5PublicAPITests {
         _ = P5ColorPicker("Tint", selection: .constant(.red)).body
         #expect(camera.viewMatrix[3, 3] == 1)
         #expect(mesh.indices.count == 36)
+        #if canImport(Metal)
+            #expect(renderConfiguration.sampleCount == 4)
+            #expect(material.isUnlit)
+            #expect(light == light)
+            #expect(P5MetalRenderer.maximumLightCount == 8)
+            if let device = MTLCreateSystemDefaultDevice() {
+                let metalRenderer = try P5MetalRenderer(device: device)
+                #expect(metalRenderer.deviceName == device.name)
+            }
+        #endif
     }
 }
