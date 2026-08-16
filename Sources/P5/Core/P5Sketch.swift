@@ -25,6 +25,8 @@ open class P5Sketch {
     var colorConfiguration = P5ColorConfiguration()
     var currentRectMode = P5RectMode.corner
     var currentEllipseMode = P5EllipseMode.center
+    var currentTransformValue = P5Transform.identity
+    var transformStack: [P5Transform] = []
 
     /// A human-readable title that clients can use when presenting the sketch.
     public var title: String?
@@ -75,6 +77,11 @@ open class P5Sketch {
     /// The value is zero before the first frame and whenever two manual frames
     /// are requested without advancing their clock.
     public private(set) var deltaTime = 0.0
+
+    /// Current user-space affine transformation for queued drawing operations.
+    public var currentTransform: P5Transform {
+        currentTransformValue
+    }
 
     private var measuredFramesPerSecond = 0.0
     private var loopsWhenActive = true
@@ -220,6 +227,8 @@ open class P5Sketch {
         previousFrameTime = currentTime
         precondition(frameCount < .max)
         frameCount += 1
+        currentTransformValue = .identity
+        transformStack.removeAll(keepingCapacity: true)
         draw()
     }
 
@@ -339,6 +348,7 @@ public extension P5Sketch {
     /// This method corresponds to
     /// [p5.js `push()`](https://p5js.org/reference/p5/push/).
     func push() {
+        transformStack.append(currentTransformValue)
         internalView.addOperation(.push)
     }
 
@@ -347,6 +357,9 @@ public extension P5Sketch {
     /// This method corresponds to
     /// [p5.js `pop()`](https://p5js.org/reference/p5/pop/).
     func pop() {
+        if let transform = transformStack.popLast() {
+            currentTransformValue = transform
+        }
         internalView.addOperation(.pop)
     }
 
@@ -744,7 +757,9 @@ public extension P5Sketch {
     ///
     /// - Parameter angle: The clockwise rotation.
     func rotate(_ angle: CGFloat) {
-        internalView.addOperation(.rotate(currentAngleMode.radians(from: angle)))
+        let radians = currentAngleMode.radians(from: angle)
+        currentTransformValue = currentTransformValue.rotated(by: radians)
+        internalView.addOperation(.rotate(radians))
     }
 
     /// Moves the origin of the coordinate system.
@@ -756,6 +771,7 @@ public extension P5Sketch {
     ///   - x: The horizontal translation.
     ///   - y: The vertical translation.
     func translate(_ x: CGFloat, _ y: CGFloat) {
+        currentTransformValue = currentTransformValue.translatedBy(x: x, y: y)
         internalView.addOperation(.translate(x: x, y: y))
     }
 
@@ -766,26 +782,40 @@ public extension P5Sketch {
 
     /// Scales the horizontal and vertical coordinate axes independently.
     func scale(_ x: CGFloat, _ y: CGFloat) {
+        currentTransformValue = currentTransformValue.scaledBy(x: x, y: y)
         internalView.addOperation(.scale(x: x, y: y))
     }
 
     /// Shears the horizontal axis by an angle in the current angle mode.
     func shearX(_ angle: CGFloat) {
-        internalView.addOperation(.shearX(tan(currentAngleMode.radians(from: angle))))
+        let amount = tan(currentAngleMode.radians(from: angle))
+        let transform = P5Transform(a: 1, b: 0, c: amount, d: 1)
+        currentTransformValue = currentTransformValue.concatenating(transform)
+        internalView.addOperation(.shearX(amount))
     }
 
     /// Shears the vertical axis by an angle in the current angle mode.
     func shearY(_ angle: CGFloat) {
-        internalView.addOperation(.shearY(tan(currentAngleMode.radians(from: angle))))
+        let amount = tan(currentAngleMode.radians(from: angle))
+        let transform = P5Transform(a: 1, b: amount, c: 0, d: 1)
+        currentTransformValue = currentTransformValue.concatenating(transform)
+        internalView.addOperation(.shearY(amount))
     }
 
     /// Concatenates a Core Graphics affine transformation.
     func applyMatrix(_ transform: CGAffineTransform) {
-        internalView.addOperation(.applyMatrix(transform))
+        applyMatrix(P5Transform(transform))
+    }
+
+    /// Concatenates a reusable value-semantic affine transformation.
+    func applyMatrix(_ transform: P5Transform) {
+        currentTransformValue = currentTransformValue.concatenating(transform)
+        internalView.addOperation(.applyMatrix(transform.cgAffineTransform))
     }
 
     /// Restores the coordinate system used at the beginning of the frame.
     func resetMatrix() {
+        currentTransformValue = .identity
         internalView.addOperation(.resetMatrix)
     }
 }

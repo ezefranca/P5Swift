@@ -315,7 +315,7 @@ struct P5SketchTests {
         sketch.scale(1, 1)
         sketch.shearX(10)
         sketch.shearY(10)
-        sketch.applyMatrix(.identity)
+        sketch.applyMatrix(CGAffineTransform.identity)
         sketch.resetMatrix()
         sketch.pop()
 
@@ -401,7 +401,7 @@ struct P5SketchTests {
         }
         await #expect(processExitsWith: .failure) {
             await MainActor.run {
-                P5Sketch(size: CGSize(width: 10, height: 10)).endShape()
+                _ = P5Sketch(size: CGSize(width: 10, height: 10)).endShape()
             }
         }
         await #expect(processExitsWith: .failure) {

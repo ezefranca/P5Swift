@@ -33,6 +33,7 @@ enum P5Operation {
     )
     case roundedRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, cornerRadius: CGFloat)
     case shape(commands: [P5PathCommand], closure: P5ShapeClosure)
+    case reusableShape(P5Shape)
 
     case rotate(CGFloat)
     case translate(x: CGFloat, y: CGFloat)

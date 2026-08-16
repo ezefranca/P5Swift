@@ -104,6 +104,8 @@ final class P5Renderer {
                 )
             case .shape(let commands, let closure):
                 shape(commands, closure: closure, in: context)
+            case .reusableShape(let reusableShape):
+                shape(reusableShape, in: context)
             case .rotate(let angle):
                 context.rotate(by: angle)
             case .translate(let x, let y):
@@ -255,72 +257,13 @@ final class P5Renderer {
         closure: P5ShapeClosure,
         in context: CGContext
     ) {
-        let path = CGMutablePath()
-        var hasPoint = false
-        var curvePoints: [CGPoint] = []
-        var usesEvenOddFill = false
+        shape(P5Shape(commands: commands, closure: closure), in: context)
+    }
 
-        func flushCurvePoints() {
-            guard curvePoints.count >= 4 else {
-                curvePoints.removeAll()
-                return
-            }
-            for index in 0...(curvePoints.count - 4) {
-                let firstControl = curvePoints[index]
-                let start = curvePoints[index + 1]
-                let end = curvePoints[index + 2]
-                let lastControl = curvePoints[index + 3]
-                if !hasPoint {
-                    path.move(to: start)
-                    hasPoint = true
-                }
-                path.addCurve(
-                    to: end,
-                    control1: start + ((end - firstControl) / 6),
-                    control2: end - ((lastControl - start) / 6)
-                )
-            }
-            curvePoints.removeAll()
-        }
-
-        for command in commands {
-            switch command {
-            case .curve(let point):
-                curvePoints.append(point)
-            case .vertex(let point):
-                flushCurvePoints()
-                if hasPoint {
-                    path.addLine(to: point)
-                } else {
-                    path.move(to: point)
-                    hasPoint = true
-                }
-            case .bezier(let control1, let control2, let end):
-                flushCurvePoints()
-                path.addCurve(to: end, control1: control1, control2: control2)
-                hasPoint = true
-            case .quadratic(let control, let end):
-                flushCurvePoints()
-                path.addQuadCurve(to: end, control: control)
-                hasPoint = true
-            case .beginContour:
-                flushCurvePoints()
-                path.closeSubpath()
-                hasPoint = false
-                usesEvenOddFill = true
-            case .endContour:
-                flushCurvePoints()
-                path.closeSubpath()
-                hasPoint = false
-            }
-        }
-        flushCurvePoints()
-        if closure == .close {
-            path.closeSubpath()
-        }
+    private func shape(_ shape: P5Shape, in context: CGContext) {
         context.beginPath()
-        context.addPath(path)
-        drawCurrentPath(in: context, usesEvenOddFill: usesEvenOddFill)
+        context.addPath(shape.cgPath)
+        drawCurrentPath(in: context, usesEvenOddFill: shape.fillRule == .evenOdd)
     }
 
     private func drawCurrentPath(in context: CGContext, usesEvenOddFill: Bool = false) {
@@ -393,20 +336,4 @@ private extension P5BlendMode {
             .plusLighter
         }
     }
-}
-
-private func + (lhs: CGPoint, rhs: CGVector) -> CGPoint {
-    CGPoint(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
-}
-
-private func - (lhs: CGPoint, rhs: CGPoint) -> CGVector {
-    CGVector(dx: lhs.x - rhs.x, dy: lhs.y - rhs.y)
-}
-
-private func - (lhs: CGPoint, rhs: CGVector) -> CGPoint {
-    CGPoint(x: lhs.x - rhs.dx, y: lhs.y - rhs.dy)
-}
-
-private func / (lhs: CGVector, rhs: CGFloat) -> CGVector {
-    CGVector(dx: lhs.dx / rhs, dy: lhs.dy / rhs)
 }
