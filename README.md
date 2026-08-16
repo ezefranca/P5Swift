@@ -1,34 +1,21 @@
 # p5.swift
 
+<p align="center"><img src="Assets/P5.svg" width="112" alt="P5 icon"></p>
+
 > [!IMPORTANT]
-> **p5.swift is an expanded fork of
-> [Juan Hurtado's P5Swift](https://github.com/juandahurt/P5Swift).**
-> The original project established the Core Graphics sketch model that this
-> package continues to develop.
+> p5.swift is an expanded fork of [Juan Hurtado's P5Swift](https://github.com/juandahurt/P5Swift). The original project established the Core Graphics sketch model this package develops.
 
 [![Tests](https://github.com/ezefranca/p5.swift/actions/workflows/tests.yml/badge.svg)](https://github.com/ezefranca/p5.swift/actions/workflows/tests.yml)
-[![Documentation](https://img.shields.io/badge/documentation-DocC-0A84FF.svg?logo=swift&logoColor=white)](https://ezefranca.com/p5.swift/documentation/p5/)
-[![Release](https://github.com/ezefranca/p5.swift/actions/workflows/release.yml/badge.svg)](https://github.com/ezefranca/p5.swift/actions/workflows/release.yml)
-[![Latest release](https://img.shields.io/github/v/release/ezefranca/p5.swift)](https://github.com/ezefranca/p5.swift/releases)
-![Swift 6.2](https://img.shields.io/badge/Swift-6.2-F05138?logo=swift&logoColor=white)
-![Platforms](https://img.shields.io/badge/Platforms-iOS%2017%2B%20%7C%20macOS%2014%2B-000000?logo=apple&logoColor=white)
-![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-brightgreen)
+[![Documentation](https://github.com/ezefranca/p5.swift/actions/workflows/documentation.yml/badge.svg)](https://ezefranca.com/p5.swift/documentation/p5/)
+[![Swift Package Index](https://img.shields.io/badge/Swift_Package_Index-ready-0D96F6?logo=swift)](https://swiftpackageindex.com/ezefranca/p5.swift)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](Scripts/check_coverage.py)
+![Swift 6.2](https://img.shields.io/badge/Swift-6.2-F05138?logo=swift&logoColor=white)
+![Platforms](https://img.shields.io/badge/Platforms-iOS%2017%2B%20%7C%20macOS%2014%2B-black?logo=apple)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-p5.swift brings the lifecycle and creative-coding vocabulary of
-[p5.js](https://p5js.org) to native Swift. It provides a main-actor sketch
-model, Core Graphics rendering, SwiftUI integration, and native AppKit and
-UIKit canvases.
+p5.swift brings the lifecycle and creative-coding vocabulary of [p5.js](https://p5js.org/) to native Swift. It combines Core Graphics 2D drawing, Metal 3D, SwiftUI/UIKit/AppKit presentation, deterministic math, native input, media, audio, persistence, export, and accessible controls in one independent Swift package.
 
-## Requirements
-
-| Tool or platform | Minimum version |
-| --- | --- |
-| Swift | 6.2 |
-| Xcode | 26 |
-| iOS | 17 |
-| macOS | 14 |
+The package is a pre-1.0 release candidate. Its public API, DocC inventory, 100% production line/region coverage gates, and macOS/iOS build matrix are enforced in CI.
 
 ## Add the package
 
@@ -38,27 +25,19 @@ In Xcode, choose **File > Add Package Dependencies** and enter:
 https://github.com/ezefranca/p5.swift
 ```
 
-For another Swift package:
+For the release-candidate branch in another Swift package:
 
 ```swift
 dependencies: [
-    .package(
-        url: "https://github.com/ezefranca/p5.swift",
-        from: "0.3.2"
-    )
+    .package(url: "https://github.com/ezefranca/p5.swift", branch: "main")
 ]
 ```
 
-Add the `P5` product to your target, then import the module:
-
-```swift
-import P5
-```
+Add the `P5` product to the application target and `import P5`.
 
 ## Create a sketch
 
 ```swift
-import CoreGraphics
 import P5
 
 @MainActor
@@ -68,146 +47,53 @@ final class OrbitSketch: P5Sketch {
     override func setup() {
         frameRate(60)
         noStroke()
-        fill(CGColor(red: 1, green: 0.2, blue: 0.5, alpha: 1))
+        fill(51, 181, 229)
     }
 
     override func draw() {
-        background(CGColor(gray: 0.08, alpha: 1))
-
-        let radius: CGFloat = 80
-        let x = width / 2 + cos(angle) * radius
-        let y = height / 2 + sin(angle) * radius
-        circle(x, y, 32)
+        background(18)
+        circle(
+            width / 2 + cos(angle) * 80,
+            height / 2 + sin(angle) * 80,
+            32
+        )
         angle += 0.03
     }
 }
 ```
 
-## SwiftUI
+Present it with `P5SketchView` in SwiftUI or retain the sketch and embed its native `view` in UIKit/AppKit. See [Your First P5 Sketch](Sources/P5/P5.docc/GettingStarted.md) and the [complete DocC site](https://ezefranca.com/p5.swift/documentation/p5/).
 
-Use `P5SketchView` to own and present a sketch:
+## Capability map
 
-```swift
-import P5
-import SwiftUI
-
-struct ContentView: View {
-    private let canvasSize = CGSize(width: 600, height: 400)
-
-    var body: some View {
-        P5SketchView(
-            size: canvasSize,
-            makeSketch: OrbitSketch.init(size:)
-        )
-        .accessibilityLabel("A circle orbiting on a dark canvas")
-    }
-}
-```
-
-Pass a `GeometryReader` size for a flexible canvas. A size change creates a
-new fixed-size sketch.
-
-## UIKit and AppKit
-
-Every sketch exposes its native canvas through `view`:
-
-```swift
-let sketch = OrbitSketch(size: view.bounds.size)
-view.addSubview(sketch.view)
-```
-
-Keep a strong reference to the sketch while displaying its view.
-
-## Swift Playgrounds
-
-Create an App project, add this repository as a package dependency, import
-`P5`, and use `P5SketchView` as the root SwiftUI content. The
-[SwiftUI and Swift Playgrounds](https://ezefranca.com/p5.swift/documentation/p5/swiftuiandplaygrounds/)
-article includes complete App and Xcode playground examples.
-
-## p5.js compatibility
-
-p5.swift follows p5.js terminology and geometry where it maps cleanly to
-Swift. For example, `circle()` accepts a diameter, default drawing styles
-match p5.js, and `push()` / `pop()` preserve styles and transformations.
-
-The goal is near-complete native capability parity:
-
-| p5.js capability | Native implementation direction |
+| Area | Native implementation |
 | --- | --- |
-| 2D canvas and typography | Core Graphics and Core Text |
-| DOM and HTML controls | SwiftUI, UIKit, and AppKit |
-| WebGL | Metal |
-| Camera, microphone, and audio | AVFoundation |
-| Files, photos, and export | Native importers, exporters, and Photos |
-| Fetch and persistence | URLSession, UserDefaults, and file storage |
+| 2D drawing, text, images, pixels | Core Graphics, Core Text, Core Image, ImageIO |
+| 3D scenes, meshes, lights, textures | Actor-owned Metal renderer and MetalKit presentation |
+| Lifecycle and UI | Main-actor sketches with SwiftUI, UIKit, and AppKit |
+| Input and accessibility | Pointer, Pencil, touch, keyboard, drag/drop, clipboard, VoiceOver actions |
+| Camera, video, audio, Photos | Permission-aware AVFoundation and Photos adapters |
+| Data, persistence, export | URLSession, typed tables, UserDefaults/files, PNG/JPEG/HEIF/GIF/video |
+| Math | Vectors, transforms, seeded randomness, Gaussian sampling, Perlin noise |
 
-Literal browser objects such as `window`, HTML elements, and CSS do not exist
-on Apple platforms. Their underlying capabilities can still receive native
-APIs.
+Browser globals, HTML/CSS, JavaScript coercion, Web Audio graphs, and GLSL are intentionally mapped to native Apple concepts rather than emulated. The [compatibility guide](Sources/P5/P5.docc/P5CompatibilityAndConcepts.md) records those differences.
 
-See the
-[parity roadmap](https://ezefranca.com/p5.swift/documentation/p5/p5parityroadmap/)
-for the planned implementation sequence.
-
-## Documentation
-
-The DocC documentation is published at
-[ezefranca.com/p5.swift](https://ezefranca.com/p5.swift/documentation/p5/).
-GitHub Actions rebuilds it from `main`.
-
-Swift Package Index also builds and hosts versioned
-[DocC documentation](https://swiftpackageindex.com/ezefranca/p5.swift/documentation)
-from the `P5` target configured in `.spi.yml`.
-
-The public site also publishes
-[agent-readable documentation](https://ezefranca.com/p5.swift/llms.txt),
-[complete source context](https://ezefranca.com/p5.swift/llms-full.txt), and
-[structured package metadata](https://ezefranca.com/p5.swift/agent-context.json).
-
-In Xcode, choose **Product > Build Documentation** to build it locally.
-
-Run the test suite and its coverage gate with:
+## Run and validate
 
 ```sh
-swift test --parallel --enable-code-coverage
-COVERAGE_JSON=$(swift test --show-codecov-path)
-python3 Scripts/check_coverage.py \
-  --coverage "$COVERAGE_JSON" \
-  --source-root Sources/P5
+swift run P5SmokeSample
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer bash Scripts/validate.sh
 ```
 
-Full Xcode toolchains include Swift Testing. If a standalone Command Line
-Tools installation omits that module, set
-`P5_USE_SWIFT_TESTING_PACKAGE=1` to use the upstream test package while
-developing locally.
+The complete validator runs policy, privacy, dependency, workflow, link, formatting, Release, test/coverage, symbol documentation, API-digester, DocC, macOS/iOS test-plan, and Debug/Release application gates. See [Contributing](CONTRIBUTING.md) and [Releasing](Documentation/Releasing.md).
 
-## Distribution
+## Package family
 
-p5.swift is distributed as a source package through Swift Package Manager.
-Semantic version tags are published as GitHub Releases by the release
-workflow.
+- [matter.swift](https://github.com/ezefranca/matter.swift) — deterministic native physics inspired by Matter.js.
+- [ml5.swift](https://github.com/ezefranca/ml5.swift) — approachable Core ML and native dense training inspired by ml5.js.
 
-The repository includes `.spi.yml` metadata for
-[Swift Package Index](https://swiftpackageindex.com/ezefranca/p5.swift).
-After the GitHub repository is renamed and public, submit its URL through
-[Add a Package](https://swiftpackageindex.com/add-a-package).
+The repositories are independently versioned and have no production dependency on one another. Applications may compose any combination.
 
-GitHub Packages does not currently provide a Swift package registry. Using an
-unrelated GitHub Packages format would not be consumable by SwiftPM, so the
-repository follows Swift's standard tag-and-release distribution model.
+## Scope and attribution
 
-## Attribution
-
-p5.swift builds on
-[Juan Hurtado's P5Swift](https://github.com/juandahurt/P5Swift), including its
-original Core Graphics renderer and demo sketches. The project is inspired by
-[p5.js](https://p5js.org) and the creative-coding work of
-[Daniel Shiffman](https://github.com/shiffman).
-
-## Contributing and license
-
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the
-[security policy](SECURITY.md) before opening a change.
-
-p5.swift is available under the MIT License. See [LICENSE](LICENSE).
+The reusable API requirements were audited against Daniel Shiffman's [The Nature of Code](https://natureofcode.com/), but exhaustive example ports are intentionally outside the package. See [Nature of Code compatibility](Sources/P5/P5.docc/NatureOfCodeCompatibility.md) and [third-party notices](THIRD_PARTY_NOTICES.md).

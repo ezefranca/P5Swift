@@ -2,45 +2,35 @@
 
 import PackageDescription
 
-let usesSwiftTestingPackage =
-    Context.environment["P5_USE_SWIFT_TESTING_PACKAGE"] == "1"
-
-var packageDependencies: [Package.Dependency] = []
-var testDependencies: [Target.Dependency] = ["P5"]
-
-if usesSwiftTestingPackage {
-    packageDependencies.append(
+let package = Package(
+    name: "p5.swift",
+    platforms: [.iOS(.v17), .macOS(.v14)],
+    products: [
+        .library(name: "P5", targets: ["P5"]),
+        .executable(name: "P5SmokeSample", targets: ["P5SmokeSample"]),
+    ],
+    dependencies: [
         .package(
             url: "https://github.com/swiftlang/swift-testing",
             revision: "swift-6.2.3-RELEASE"
         )
-    )
-    testDependencies.append(
-        .product(name: "Testing", package: "swift-testing")
-    )
-}
-
-let package = Package(
-    name: "p5.swift",
-    platforms: [
-        .iOS(.v17),
-        .macOS(.v14),
     ],
-    products: [
-        .library(
-            name: "P5",
-            targets: ["P5"]
-        ),
-    ],
-    dependencies: packageDependencies,
     targets: [
         .target(
-            name: "P5"
+            name: "P5",
+            resources: [
+                .copy("Resources/P5Renderer3D.metal"),
+                .process("Resources/PrivacyInfo.xcprivacy"),
+            ]
         ),
         .testTarget(
             name: "P5Tests",
-            dependencies: testDependencies
+            dependencies: [
+                "P5",
+                .product(name: "Testing", package: "swift-testing"),
+            ]
         ),
+        .executableTarget(name: "P5SmokeSample", dependencies: ["P5"]),
     ],
     swiftLanguageModes: [.v6]
 )

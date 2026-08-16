@@ -82,6 +82,12 @@ Provide optional integrations rather than cloning the browser DOM:
 - Drag and drop, clipboard, file dialogs, and sharing.
 - URLSession networking and native persistence helpers.
 
+The shipped persistence layer uses typed keys, namespaced UserDefaults, and an
+actor-isolated atomic file store. See <doc:Persistence>.
+
+Native interface roles are available as SwiftUI controls and observable state, with
+AppKit and UIKit factories for hosts that do not use SwiftUI. See <doc:NativeControls>.
+
 ## Compatibility policy
 
 Each implemented API should:

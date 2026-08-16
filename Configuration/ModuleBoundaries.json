@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "products": {
+    "P5": {
+      "sourceRoot": "Sources/P5",
+      "testRoot": "Tests/P5Tests",
+      "allowedProductionDependencies": []
+    }
+  }
+}

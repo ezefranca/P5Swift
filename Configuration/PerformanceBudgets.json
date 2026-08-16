@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "baselines": [
+    {
+      "name": "p5-metal-rendering",
+      "filter": "P5MetalRendererTests/rendering",
+      "maximumSeconds": 15
+    }
+  ]
+}

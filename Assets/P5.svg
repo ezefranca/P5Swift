@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img">
+  <title>P5</title><desc>A coral creative-coding orbit on a dark rounded square.</desc>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff5f6d"/><stop offset="1" stop-color="#ff2d55"/></linearGradient></defs>
+  <rect width="512" height="512" rx="112" fill="#111318"/>
+  <circle cx="256" cy="256" r="142" fill="none" stroke="url(#g)" stroke-width="28"/>
+  <circle cx="356" cy="156" r="38" fill="#ffd60a"/>
+  <path d="M176 308c42-88 118-88 160 0" fill="none" stroke="#f5f5f7" stroke-width="28" stroke-linecap="round"/>
+</svg>

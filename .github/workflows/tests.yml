@@ -2,8 +2,7 @@ name: Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -15,31 +14,207 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  swift-test:
-    name: Swift Package
+  package:
+    name: Swift package quality gates
     runs-on: macos-26
-    timeout-minutes: 10
-
+    timeout-minutes: 20
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7
-
-      - name: Show Swift version
-        run: swift --version
-
-      - name: Build and test
-        run: swift test --parallel --enable-code-coverage
-
-      - name: Require 100% line coverage
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Cache dependency repositories
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: |
+            ~/.swiftpm/cache
+            ~/Library/Caches/org.swift.swiftpm/repositories
+          key: swiftpm-${{ runner.os }}-${{ hashFiles('Package.swift', 'Package.resolved') }}
+      - name: Validate package
         run: |
-          COVERAGE_JSON=$(swift test --show-codecov-path)
-          python3 Scripts/check_coverage.py \
-            --coverage "$COVERAGE_JSON" \
-            --source-root Sources/P5
+          swift package clean
+          bash Scripts/validate.sh --skip-xcode
 
-      - name: Build iOS library
-        run: >
-          xcodebuild build
-          -scheme P5
-          -destination 'generic/platform=iOS Simulator'
-          CODE_SIGNING_ALLOWED=NO
+  product-build:
+    name: Product · ${{ matrix.platform }} · ${{ matrix.configuration }}
+    runs-on: macos-26
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [macOS, iOS Simulator]
+        configuration: [Debug, Release]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build product
+        env:
+          CONFIGURATION: ${{ matrix.configuration }}
+          PLATFORM: ${{ matrix.platform }}
+        run: |
+          PRODUCT=$(python3 -c 'import json; print(next(iter(json.load(open("Configuration/ModuleBoundaries.json"))["products"])))')
+          xcodebuild build \
+            -scheme "$PRODUCT" \
+            -configuration "$CONFIGURATION" \
+            -destination "generic/platform=$PLATFORM" \
+            CODE_SIGNING_ALLOWED=NO \
+            SWIFT_SUPPRESS_WARNINGS=NO \
+            SWIFT_TREAT_WARNINGS_AS_ERRORS=YES
+
+  xcode-test:
+    name: Test plan · ${{ matrix.platform }}
+    runs-on: macos-26
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [macOS, iOS Simulator]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Run shared test plan
+        env:
+          PLATFORM: ${{ matrix.platform }}
+        run: |
+          PRODUCT=$(python3 -c 'import json; print(next(iter(json.load(open("Configuration/ModuleBoundaries.json"))["products"])))')
+          if [[ "$PLATFORM" == "macOS" ]]; then
+            DESTINATION='platform=macOS'
+          else
+            DEVICE_ID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          devices = json.load(sys.stdin)["devices"]
+          print(next(device["udid"] for runtime in devices.values() for device in runtime if "iPhone" in device["name"]))
+          ')
+            DESTINATION="id=$DEVICE_ID"
+          fi
+          xcodebuild test \
+            -skipMacroValidation \
+            -scheme "$PRODUCT" \
+            -testPlan "$PRODUCT" \
+            -destination "$DESTINATION" \
+            -resultBundlePath "${{ runner.temp }}/$PRODUCT-${{ matrix.platform }}.xcresult" \
+            CODE_SIGNING_ALLOWED=NO \
+            SWIFT_SUPPRESS_WARNINGS=NO \
+            SWIFT_TREAT_WARNINGS_AS_ERRORS=YES
+
+  toolchain:
+    name: Toolchain · ${{ matrix.release }}
+    runs-on: macos-26
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - release: minimum
+            selection: minimum
+          - release: current
+            selection: current
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Resolve selected toolchain
+        id: toolchain
+        env:
+          SELECTION: ${{ matrix.selection }}
+        run: |
+          if [[ "$SELECTION" == "minimum" ]]; then
+            XCODE_APP=$(find /Applications -maxdepth 1 -name 'Xcode_26.0*.app' -print -quit)
+            test -n "$XCODE_APP"
+            SELECTED_DEVELOPER_DIR="$XCODE_APP/Contents/Developer"
+          else
+            SELECTED_DEVELOPER_DIR=$(xcode-select -p)
+          fi
+          echo "developer_dir=$SELECTED_DEVELOPER_DIR" >> "$GITHUB_OUTPUT"
+      - name: Build with complete concurrency checking
+        env:
+          DEVELOPER_DIR: ${{ steps.toolchain.outputs.developer_dir }}
+        run: |
+          swift package clean
+          swift build --configuration debug -Xswiftc -warnings-as-errors -Xswiftc -strict-concurrency=complete
+          swift build --configuration release -Xswiftc -warnings-as-errors -Xswiftc -strict-concurrency=complete
+
+  metal-source:
+    name: Metal source · ${{ matrix.sdk }}
+    runs-on: macos-26
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        sdk: [macosx, iphonesimulator]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Compile bundled Metal source when present
+        env:
+          SDK: ${{ matrix.sdk }}
+        run: |
+          while IFS= read -r SHADER; do
+            test -z "$SHADER" && continue
+            NAME=$(basename "$SHADER" .metal)
+            xcrun -sdk "$SDK" metal -Wall -Werror -c "$SHADER" -o "${{ runner.temp }}/$NAME.air"
+          done < <(find Sources -name '*.metal' -print)
+
+  sanitizer:
+    name: ${{ matrix.sanitizer }} Sanitizer
+    runs-on: macos-26
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        sanitizer: [address, thread]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Run sanitizer suite
+        env:
+          SANITIZER: ${{ matrix.sanitizer }}
+        run: swift test --sanitize "$SANITIZER" -Xswiftc -warnings-as-errors
+
+  deterministic-repeat:
+    name: Repeat deterministic suites
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build and repeat
+        run: |
+          swift test list -Xswiftc -warnings-as-errors
+          for ATTEMPT in 1 2 3; do
+            echo "Determinism pass $ATTEMPT"
+            swift test --skip-build --parallel
+          done
+
+  performance:
+    name: Performance regression budgets
+    runs-on: macos-26
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Run baselines
+        run: python3 Scripts/run_performance_baselines.py
+
+  samples:
+    name: Package and app samples
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Run package smoke sample
+        run: |
+          PRODUCT=$(python3 -c 'import json; print(next(iter(json.load(open("Configuration/ModuleBoundaries.json"))["products"])))')
+          swift run "${PRODUCT}SmokeSample"
+      - name: Build accessible iOS gallery when present
+        run: |
+          if [[ -f P5Demo/P5Demo.xcodeproj/project.pbxproj ]]; then
+            for CONFIGURATION in Debug Release; do
+              xcodebuild build \
+                -project P5Demo/P5Demo.xcodeproj \
+                -scheme P5Demo \
+                -configuration "$CONFIGURATION" \
+                -destination 'generic/platform=iOS Simulator' \
+                -derivedDataPath "${{ runner.temp }}/P5Demo-$CONFIGURATION" \
+                CODE_SIGNING_ALLOWED=NO \
+                SWIFT_SUPPRESS_WARNINGS=NO \
+                SWIFT_TREAT_WARNINGS_AS_ERRORS=YES
+            done
+          fi
