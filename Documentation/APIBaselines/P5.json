@@ -6,6 +6,13 @@
     "children": [
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
         "name": "AppKit",
         "printedName": "AppKit",
         "declKind": "Import",
@@ -29,6 +36,13 @@
         "kind": "Import",
         "name": "CoreText",
         "printedName": "CoreText",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreVideo",
+        "printedName": "CoreVideo",
         "declKind": "Import",
         "moduleName": "P5"
       },
@@ -15119,6 +15133,38 @@
             "moduleName": "P5",
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeVideo",
+            "printedName": "writeVideo(to:configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoExportConfiguration",
+                "printedName": "P5.P5VideoExportConfiguration",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A24VideoExportConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13FrameSequenceV10writeVideo2to13configurationy10Foundation3URLV_AA0aE19ExportConfigurationVtYaKF",
+            "mangledName": "$s2P50A13FrameSequenceV10writeVideo2to13configurationy10Foundation3URLV_AA0aE19ExportConfigurationVtYaKF",
+            "moduleName": "P5",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -23925,6 +23971,1857 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5VideoCodec",
+        "printedName": "P5VideoCodec",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "h264",
+            "printedName": "h264",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoCodec.Type) -> P5.P5VideoCodec",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoCodec.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoCodec",
+                        "printedName": "P5.P5VideoCodec",
+                        "usr": "s:2P50A10VideoCodecO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10VideoCodecO4h264yA2CmF",
+            "mangledName": "$s2P50A10VideoCodecO4h264yA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "hevc",
+            "printedName": "hevc",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoCodec.Type) -> P5.P5VideoCodec",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoCodec.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoCodec",
+                        "printedName": "P5.P5VideoCodec",
+                        "usr": "s:2P50A10VideoCodecO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10VideoCodecO4hevcyA2CmF",
+            "mangledName": "$s2P50A10VideoCodecO4hevcyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "proRes422",
+            "printedName": "proRes422",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoCodec.Type) -> P5.P5VideoCodec",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoCodec.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoCodec",
+                        "printedName": "P5.P5VideoCodec",
+                        "usr": "s:2P50A10VideoCodecO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10VideoCodecO9proRes422yA2CmF",
+            "mangledName": "$s2P50A10VideoCodecO9proRes422yA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "proRes4444",
+            "printedName": "proRes4444",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoCodec.Type) -> P5.P5VideoCodec",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoCodec.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoCodec",
+                        "printedName": "P5.P5VideoCodec",
+                        "usr": "s:2P50A10VideoCodecO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10VideoCodecO10proRes4444yA2CmF",
+            "mangledName": "$s2P50A10VideoCodecO10proRes4444yA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5VideoCodec?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A10VideoCodecO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A10VideoCodecO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5VideoCodec]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A10VideoCodecO8AllCasesa",
+            "mangledName": "$s2P50A10VideoCodecO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A10VideoCodecO8RawValuea",
+            "mangledName": "$s2P50A10VideoCodecO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5VideoCodec]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10VideoCodecO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A10VideoCodecO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5VideoCodec]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoCodec",
+                        "printedName": "P5.P5VideoCodec",
+                        "usr": "s:2P50A10VideoCodecO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10VideoCodecO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A10VideoCodecO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10VideoCodecO8rawValueSSvp",
+            "mangledName": "$s2P50A10VideoCodecO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10VideoCodecO8rawValueSSvg",
+                "mangledName": "$s2P50A10VideoCodecO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A10VideoCodecO",
+        "mangledName": "$s2P50A10VideoCodecO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5VideoCodec]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoCodec",
+                        "printedName": "P5.P5VideoCodec",
+                        "usr": "s:2P50A10VideoCodecO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5VideoFileType",
+        "printedName": "P5VideoFileType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "quickTimeMovie",
+            "printedName": "quickTimeMovie",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoFileType.Type) -> P5.P5VideoFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoFileType",
+                    "printedName": "P5.P5VideoFileType",
+                    "usr": "s:2P50A13VideoFileTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoFileType",
+                        "printedName": "P5.P5VideoFileType",
+                        "usr": "s:2P50A13VideoFileTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13VideoFileTypeO14quickTimeMovieyA2CmF",
+            "mangledName": "$s2P50A13VideoFileTypeO14quickTimeMovieyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "mpeg4",
+            "printedName": "mpeg4",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoFileType.Type) -> P5.P5VideoFileType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoFileType",
+                    "printedName": "P5.P5VideoFileType",
+                    "usr": "s:2P50A13VideoFileTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoFileType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoFileType",
+                        "printedName": "P5.P5VideoFileType",
+                        "usr": "s:2P50A13VideoFileTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A13VideoFileTypeO5mpeg4yA2CmF",
+            "mangledName": "$s2P50A13VideoFileTypeO5mpeg4yA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "filenameExtension",
+            "printedName": "filenameExtension",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13VideoFileTypeO17filenameExtensionSSvp",
+            "mangledName": "$s2P50A13VideoFileTypeO17filenameExtensionSSvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13VideoFileTypeO17filenameExtensionSSvg",
+                "mangledName": "$s2P50A13VideoFileTypeO17filenameExtensionSSvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5VideoFileType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoFileType",
+                    "printedName": "P5.P5VideoFileType",
+                    "usr": "s:2P50A13VideoFileTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13VideoFileTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A13VideoFileTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5VideoFileType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoFileType",
+                    "printedName": "P5.P5VideoFileType",
+                    "usr": "s:2P50A13VideoFileTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A13VideoFileTypeO8AllCasesa",
+            "mangledName": "$s2P50A13VideoFileTypeO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A13VideoFileTypeO8RawValuea",
+            "mangledName": "$s2P50A13VideoFileTypeO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5VideoFileType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoFileType",
+                    "printedName": "P5.P5VideoFileType",
+                    "usr": "s:2P50A13VideoFileTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13VideoFileTypeO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A13VideoFileTypeO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5VideoFileType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoFileType",
+                        "printedName": "P5.P5VideoFileType",
+                        "usr": "s:2P50A13VideoFileTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13VideoFileTypeO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A13VideoFileTypeO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13VideoFileTypeO8rawValueSSvp",
+            "mangledName": "$s2P50A13VideoFileTypeO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13VideoFileTypeO8rawValueSSvg",
+                "mangledName": "$s2P50A13VideoFileTypeO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A13VideoFileTypeO",
+        "mangledName": "$s2P50A13VideoFileTypeO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5VideoFileType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoFileType",
+                        "printedName": "P5.P5VideoFileType",
+                        "usr": "s:2P50A13VideoFileTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5VideoExportConfiguration",
+        "printedName": "P5VideoExportConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "codec",
+            "printedName": "codec",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoCodec",
+                "printedName": "P5.P5VideoCodec",
+                "usr": "s:2P50A10VideoCodecO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24VideoExportConfigurationV5codecAA0aB5CodecOvp",
+            "mangledName": "$s2P50A24VideoExportConfigurationV5codecAA0aB5CodecOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoCodec",
+                    "printedName": "P5.P5VideoCodec",
+                    "usr": "s:2P50A10VideoCodecO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24VideoExportConfigurationV5codecAA0aB5CodecOvg",
+                "mangledName": "$s2P50A24VideoExportConfigurationV5codecAA0aB5CodecOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fileType",
+            "printedName": "fileType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoFileType",
+                "printedName": "P5.P5VideoFileType",
+                "usr": "s:2P50A13VideoFileTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24VideoExportConfigurationV8fileTypeAA0ab4FileF0Ovp",
+            "mangledName": "$s2P50A24VideoExportConfigurationV8fileTypeAA0ab4FileF0Ovp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoFileType",
+                    "printedName": "P5.P5VideoFileType",
+                    "usr": "s:2P50A13VideoFileTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24VideoExportConfigurationV8fileTypeAA0ab4FileF0Ovg",
+                "mangledName": "$s2P50A24VideoExportConfigurationV8fileTypeAA0ab4FileF0Ovg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "averageBitRate",
+            "printedName": "averageBitRate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24VideoExportConfigurationV14averageBitRateSiSgvp",
+            "mangledName": "$s2P50A24VideoExportConfigurationV14averageBitRateSiSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24VideoExportConfigurationV14averageBitRateSiSgvg",
+                "mangledName": "$s2P50A24VideoExportConfigurationV14averageBitRateSiSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "optimizesForNetworkUse",
+            "printedName": "optimizesForNetworkUse",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24VideoExportConfigurationV22optimizesForNetworkUseSbvp",
+            "mangledName": "$s2P50A24VideoExportConfigurationV22optimizesForNetworkUseSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24VideoExportConfigurationV22optimizesForNetworkUseSbvg",
+                "mangledName": "$s2P50A24VideoExportConfigurationV22optimizesForNetworkUseSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(codec:fileType:averageBitRate:optimizesForNetworkUse:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoExportConfiguration",
+                "printedName": "P5.P5VideoExportConfiguration",
+                "usr": "s:2P50A24VideoExportConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoCodec",
+                "printedName": "P5.P5VideoCodec",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A10VideoCodecO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoFileType",
+                "printedName": "P5.P5VideoFileType",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A13VideoFileTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A24VideoExportConfigurationV5codec8fileType14averageBitRate22optimizesForNetworkUseAcA0aB5CodecO_AA0ab4FileG0OSiSgSbtcfc",
+            "mangledName": "$s2P50A24VideoExportConfigurationV5codec8fileType14averageBitRate22optimizesForNetworkUseAcA0aB5CodecO_AA0ab4FileG0OSiSgSbtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoExportConfiguration",
+                "printedName": "P5.P5VideoExportConfiguration",
+                "usr": "s:2P50A24VideoExportConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A24VideoExportConfigurationV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A24VideoExportConfigurationV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoExportConfiguration",
+                "printedName": "P5.P5VideoExportConfiguration",
+                "usr": "s:2P50A24VideoExportConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoExportConfiguration",
+                "printedName": "P5.P5VideoExportConfiguration",
+                "usr": "s:2P50A24VideoExportConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A24VideoExportConfigurationV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A24VideoExportConfigurationV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A24VideoExportConfigurationV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A24VideoExportConfigurationV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A24VideoExportConfigurationV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A24VideoExportConfigurationV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A24VideoExportConfigurationV9hashValueSivp",
+            "mangledName": "$s2P50A24VideoExportConfigurationV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A24VideoExportConfigurationV9hashValueSivg",
+                "mangledName": "$s2P50A24VideoExportConfigurationV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A24VideoExportConfigurationV",
+        "mangledName": "$s2P50A24VideoExportConfigurationV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5VideoExportError",
+        "printedName": "P5VideoExportError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "destinationIsNotFileURL",
+            "printedName": "destinationIsNotFileURL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoExportError.Type) -> P5.P5VideoExportError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoExportError",
+                    "printedName": "P5.P5VideoExportError",
+                    "usr": "s:2P50A16VideoExportErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoExportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16VideoExportErrorO23destinationIsNotFileURLyA2CmF",
+            "mangledName": "$s2P50A16VideoExportErrorO23destinationIsNotFileURLyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "destinationAlreadyExists",
+            "printedName": "destinationAlreadyExists",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoExportError.Type) -> P5.P5VideoExportError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5VideoExportError",
+                    "printedName": "P5.P5VideoExportError",
+                    "usr": "s:2P50A16VideoExportErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoExportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16VideoExportErrorO24destinationAlreadyExistsyA2CmF",
+            "mangledName": "$s2P50A16VideoExportErrorO24destinationAlreadyExistsyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "pipelineCreationFailed",
+            "printedName": "pipelineCreationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoExportError.Type) -> (Swift.String) -> P5.P5VideoExportError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5VideoExportError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoExportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16VideoExportErrorO22pipelineCreationFailedyACSScACmF",
+            "mangledName": "$s2P50A16VideoExportErrorO22pipelineCreationFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "frameConversionFailed",
+            "printedName": "frameConversionFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoExportError.Type) -> (Swift.Int) -> P5.P5VideoExportError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> P5.P5VideoExportError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoExportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16VideoExportErrorO21frameConversionFailedyACSicACmF",
+            "mangledName": "$s2P50A16VideoExportErrorO21frameConversionFailedyACSicACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "frameAppendFailed",
+            "printedName": "frameAppendFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoExportError.Type) -> (Swift.Int, Swift.String) -> P5.P5VideoExportError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, Swift.String) -> P5.P5VideoExportError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoExportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16VideoExportErrorO17frameAppendFailedyACSi_SStcACmF",
+            "mangledName": "$s2P50A16VideoExportErrorO17frameAppendFailedyACSi_SStcACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "writingFailed",
+            "printedName": "writingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5VideoExportError.Type) -> (Swift.String) -> P5.P5VideoExportError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5VideoExportError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5VideoExportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5VideoExportError",
+                        "printedName": "P5.P5VideoExportError",
+                        "usr": "s:2P50A16VideoExportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16VideoExportErrorO13writingFailedyACSScACmF",
+            "mangledName": "$s2P50A16VideoExportErrorO13writingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A16VideoExportErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A16VideoExportErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A16VideoExportErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A16VideoExportErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoExportError",
+                "printedName": "P5.P5VideoExportError",
+                "usr": "s:2P50A16VideoExportErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5VideoExportError",
+                "printedName": "P5.P5VideoExportError",
+                "usr": "s:2P50A16VideoExportErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A16VideoExportErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A16VideoExportErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A16VideoExportErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A16VideoExportErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A16VideoExportErrorO9hashValueSivp",
+            "mangledName": "$s2P50A16VideoExportErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A16VideoExportErrorO9hashValueSivg",
+                "mangledName": "$s2P50A16VideoExportErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A16VideoExportErrorO",
+        "mangledName": "$s2P50A16VideoExportErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
           },
           {
             "kind": "Conformance",
@@ -36979,6 +38876,734 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ImageDocumentError",
+        "printedName": "P5ImageDocumentError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unsupportedContentType",
+            "printedName": "unsupportedContentType",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageDocumentError.Type) -> (Swift.String) -> P5.P5ImageDocumentError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5ImageDocumentError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageDocumentError",
+                        "printedName": "P5.P5ImageDocumentError",
+                        "usr": "s:2P50A18ImageDocumentErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageDocumentError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageDocumentError",
+                        "printedName": "P5.P5ImageDocumentError",
+                        "usr": "s:2P50A18ImageDocumentErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18ImageDocumentErrorO22unsupportedContentTypeyACSScACmF",
+            "mangledName": "$s2P50A18ImageDocumentErrorO22unsupportedContentTypeyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "missingFileContents",
+            "printedName": "missingFileContents",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5ImageDocumentError.Type) -> P5.P5ImageDocumentError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageDocumentError",
+                    "printedName": "P5.P5ImageDocumentError",
+                    "usr": "s:2P50A18ImageDocumentErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5ImageDocumentError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5ImageDocumentError",
+                        "printedName": "P5.P5ImageDocumentError",
+                        "usr": "s:2P50A18ImageDocumentErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18ImageDocumentErrorO19missingFileContentsyA2CmF",
+            "mangledName": "$s2P50A18ImageDocumentErrorO19missingFileContentsyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18ImageDocumentErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A18ImageDocumentErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18ImageDocumentErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A18ImageDocumentErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageDocumentError",
+                "printedName": "P5.P5ImageDocumentError",
+                "usr": "s:2P50A18ImageDocumentErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageDocumentError",
+                "printedName": "P5.P5ImageDocumentError",
+                "usr": "s:2P50A18ImageDocumentErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A18ImageDocumentErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A18ImageDocumentErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A18ImageDocumentErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A18ImageDocumentErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18ImageDocumentErrorO9hashValueSivp",
+            "mangledName": "$s2P50A18ImageDocumentErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18ImageDocumentErrorO9hashValueSivg",
+                "mangledName": "$s2P50A18ImageDocumentErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A18ImageDocumentErrorO",
+        "mangledName": "$s2P50A18ImageDocumentErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5ImageDocument",
+        "printedName": "P5ImageDocument",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "readableContentTypes",
+            "printedName": "readableContentTypes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UniformTypeIdentifiers.UTType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UTType",
+                    "printedName": "UniformTypeIdentifiers.UTType",
+                    "usr": "s:22UniformTypeIdentifiers6UTTypeV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ImageDocumentV20readableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvpZ",
+            "mangledName": "$s2P50A13ImageDocumentV20readableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UniformTypeIdentifiers.UTType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UTType",
+                        "printedName": "UniformTypeIdentifiers.UTType",
+                        "usr": "s:22UniformTypeIdentifiers6UTTypeV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ImageDocumentV20readableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvgZ",
+                "mangledName": "$s2P50A13ImageDocumentV20readableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "writableContentTypes",
+            "printedName": "writableContentTypes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UniformTypeIdentifiers.UTType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UTType",
+                    "printedName": "UniformTypeIdentifiers.UTType",
+                    "usr": "s:22UniformTypeIdentifiers6UTTypeV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ImageDocumentV20writableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvpZ",
+            "mangledName": "$s2P50A13ImageDocumentV20writableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UniformTypeIdentifiers.UTType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UTType",
+                        "printedName": "UniformTypeIdentifiers.UTType",
+                        "usr": "s:22UniformTypeIdentifiers6UTTypeV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ImageDocumentV20writableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvgZ",
+                "mangledName": "$s2P50A13ImageDocumentV20writableContentTypesSay22UniformTypeIdentifiers6UTTypeVGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ImageDocumentV5imageAA0aB0Vvp",
+            "mangledName": "$s2P50A13ImageDocumentV5imageAA0aB0Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5Image",
+                    "printedName": "P5.P5Image",
+                    "usr": "s:2P50A5ImageV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ImageDocumentV5imageAA0aB0Vvg",
+                "mangledName": "$s2P50A13ImageDocumentV5imageAA0aB0Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "format",
+            "printedName": "format",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageFormat",
+                "printedName": "P5.P5ImageFormat",
+                "usr": "s:2P50A11ImageFormatO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ImageDocumentV6formatAA0aB6FormatOvp",
+            "mangledName": "$s2P50A13ImageDocumentV6formatAA0aB6FormatOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5ImageFormat",
+                    "printedName": "P5.P5ImageFormat",
+                    "usr": "s:2P50A11ImageFormatO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ImageDocumentV6formatAA0aB6FormatOvg",
+                "mangledName": "$s2P50A13ImageDocumentV6formatAA0aB6FormatOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "quality",
+            "printedName": "quality",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13ImageDocumentV7quality14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s2P50A13ImageDocumentV7quality12CoreGraphics7CGFloatVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13ImageDocumentV7quality14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s2P50A13ImageDocumentV7quality12CoreGraphics7CGFloatVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(image:format:quality:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageDocument",
+                "printedName": "P5.P5ImageDocument",
+                "usr": "s:2P50A13ImageDocumentV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5Image",
+                "printedName": "P5.P5Image",
+                "usr": "s:2P50A5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageFormat",
+                "printedName": "P5.P5ImageFormat",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A11ImageFormatO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13ImageDocumentV5image6format7qualityAcA0aB0V_AA0aB6FormatO14CoreFoundation7CGFloatVtcfc",
+            "mangledName": "$s2P50A13ImageDocumentV5image6format7qualityAcA0aB0V_AA0aB6FormatO12CoreGraphics7CGFloatVtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5ImageDocument",
+                "printedName": "P5.P5ImageDocument",
+                "usr": "s:2P50A13ImageDocumentV"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "ReadConfiguration",
+                "printedName": "P5.P5ImageDocument.ReadConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FileDocumentReadConfiguration",
+                    "printedName": "SwiftUI.FileDocumentReadConfiguration",
+                    "usr": "s:7SwiftUI29FileDocumentReadConfigurationV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13ImageDocumentV13configurationAC7SwiftUI04FileC17ReadConfigurationV_tKcfc",
+            "mangledName": "$s2P50A13ImageDocumentV13configurationAC7SwiftUI04FileC17ReadConfigurationV_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "fileWrapper",
+            "printedName": "fileWrapper(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileWrapper",
+                "printedName": "Foundation.FileWrapper",
+                "usr": "c:objc(cs)NSFileWrapper"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "WriteConfiguration",
+                "printedName": "P5.P5ImageDocument.WriteConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FileDocumentWriteConfiguration",
+                    "printedName": "SwiftUI.FileDocumentWriteConfiguration",
+                    "usr": "s:7SwiftUI30FileDocumentWriteConfigurationV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13ImageDocumentV11fileWrapper13configurationSo06NSFileE0C7SwiftUI04FileC18WriteConfigurationV_tKF",
+            "mangledName": "$s2P50A13ImageDocumentV11fileWrapper13configurationSo06NSFileE0C7SwiftUI04FileC18WriteConfigurationV_tKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A13ImageDocumentV",
+        "mangledName": "$s2P50A13ImageDocumentV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FileDocument",
+            "printedName": "FileDocument",
+            "usr": "s:7SwiftUI12FileDocumentP",
+            "mangledName": "$s7SwiftUI12FileDocumentP"
           }
         ]
       },

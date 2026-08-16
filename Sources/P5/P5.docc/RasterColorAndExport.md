@@ -54,3 +54,48 @@ let animation = P5FrameSequence(
 )
 try animation.writeGIF(to: outputURL)
 ```
+
+``P5FrameSequence/writeVideo(to:configuration:)`` exports H.264, HEVC, ProRes
+422, or alpha-preserving ProRes 4444 through AVFoundation. The writer publishes
+a complete file atomically, never overwrites an existing destination, preserves
+the sequence's exact frame duration, and removes private partial output after
+failure or cancellation.
+
+```swift
+try await animation.writeVideo(
+    to: movieURL,
+    configuration: P5VideoExportConfiguration(
+        codec: .hevc,
+        fileType: .quickTimeMovie
+    )
+)
+```
+
+H.264, HEVC, and ProRes 422 flatten transparent pixels over opaque black.
+ProRes 4444 retains alpha. All movie output declares the SDR BT.709 color
+primaries, transfer function, and YCbCr matrix that correspond to p5.swift's
+8-bit raster contract. ProRes requires a QuickTime Movie container.
+
+## Native file panels
+
+``P5ImageDocument`` conforms to SwiftUI's `FileDocument` protocol for PNG,
+JPEG, and HEIF. Use it with `DocumentGroup` or `fileExporter` so the system owns
+panel presentation, sandbox extensions, and cancellation. For `fileImporter`,
+pass the returned security-scoped URL to ``P5Image/load(from:pixelDensity:session:)``
+while the host owns access.
+
+```swift
+let document = P5ImageDocument(image: frame, format: .png)
+
+.fileExporter(
+    isPresented: $isExporting,
+    document: document,
+    contentType: .png,
+    defaultFilename: "Sketch"
+) { result in
+    // Handle the selected URL or the user cancellation in the host app.
+}
+```
+
+The package does not present UI or retain security-scoped access itself. Movie
+and GIF URL exporters accept a URL already selected by the host application.
