@@ -13,6 +13,13 @@
       },
       {
         "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "P5"
+      },
+      {
+        "kind": "Import",
         "name": "AppKit",
         "printedName": "AppKit",
         "declKind": "Import",
@@ -38869,6 +38876,4914 @@
             ],
             "usr": "s:SY",
             "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioError",
+        "printedName": "P5AudioError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fileLoadingFailed",
+            "printedName": "fileLoadingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioError.Type) -> (Swift.String) -> P5.P5AudioError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5AudioError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10AudioErrorO17fileLoadingFailedyACSScACmF",
+            "mangledName": "$s2P50A10AudioErrorO17fileLoadingFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "engineStartFailed",
+            "printedName": "engineStartFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioError.Type) -> (Swift.String) -> P5.P5AudioError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5AudioError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10AudioErrorO17engineStartFailedyACSScACmF",
+            "mangledName": "$s2P50A10AudioErrorO17engineStartFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidTime",
+            "printedName": "invalidTime",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioError.Type) -> P5.P5AudioError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioError",
+                    "printedName": "P5.P5AudioError",
+                    "usr": "s:2P50A10AudioErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10AudioErrorO11invalidTimeyA2CmF",
+            "mangledName": "$s2P50A10AudioErrorO11invalidTimeyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidSamples",
+            "printedName": "invalidSamples",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioError.Type) -> P5.P5AudioError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioError",
+                    "printedName": "P5.P5AudioError",
+                    "usr": "s:2P50A10AudioErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10AudioErrorO14invalidSamplesyA2CmF",
+            "mangledName": "$s2P50A10AudioErrorO14invalidSamplesyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "analyzerCreationFailed",
+            "printedName": "analyzerCreationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioError.Type) -> (Swift.String) -> P5.P5AudioError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5AudioError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10AudioErrorO22analyzerCreationFailedyACSScACmF",
+            "mangledName": "$s2P50A10AudioErrorO22analyzerCreationFailedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "formatCreationFailed",
+            "printedName": "formatCreationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioError.Type) -> P5.P5AudioError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioError",
+                    "printedName": "P5.P5AudioError",
+                    "usr": "s:2P50A10AudioErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10AudioErrorO20formatCreationFailedyA2CmF",
+            "mangledName": "$s2P50A10AudioErrorO20formatCreationFailedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "analyzerAlreadyInstalled",
+            "printedName": "analyzerAlreadyInstalled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioError.Type) -> P5.P5AudioError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioError",
+                    "printedName": "P5.P5AudioError",
+                    "usr": "s:2P50A10AudioErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioError",
+                        "printedName": "P5.P5AudioError",
+                        "usr": "s:2P50A10AudioErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A10AudioErrorO24analyzerAlreadyInstalledyA2CmF",
+            "mangledName": "$s2P50A10AudioErrorO24analyzerAlreadyInstalledyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10AudioErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s2P50A10AudioErrorO16errorDescriptionSSSgvp",
+            "moduleName": "P5",
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10AudioErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s2P50A10AudioErrorO16errorDescriptionSSSgvg",
+                "moduleName": "P5",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioError",
+                "printedName": "P5.P5AudioError",
+                "usr": "s:2P50A10AudioErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioError",
+                "printedName": "P5.P5AudioError",
+                "usr": "s:2P50A10AudioErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10AudioErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A10AudioErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10AudioErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A10AudioErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10AudioErrorO9hashValueSivp",
+            "mangledName": "$s2P50A10AudioErrorO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10AudioErrorO9hashValueSivg",
+                "mangledName": "$s2P50A10AudioErrorO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A10AudioErrorO",
+        "mangledName": "$s2P50A10AudioErrorO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioFile",
+        "printedName": "P5AudioFile",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "url",
+            "printedName": "url",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9AudioFileV3url10Foundation3URLVvp",
+            "mangledName": "$s2P50A9AudioFileV3url10Foundation3URLVvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9AudioFileV3url10Foundation3URLVvg",
+                "mangledName": "$s2P50A9AudioFileV3url10Foundation3URLVvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "duration",
+            "printedName": "duration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9AudioFileV8durationSdvp",
+            "mangledName": "$s2P50A9AudioFileV8durationSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9AudioFileV8durationSdvg",
+                "mangledName": "$s2P50A9AudioFileV8durationSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sampleRate",
+            "printedName": "sampleRate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9AudioFileV10sampleRateSdvp",
+            "mangledName": "$s2P50A9AudioFileV10sampleRateSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9AudioFileV10sampleRateSdvg",
+                "mangledName": "$s2P50A9AudioFileV10sampleRateSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "channelCount",
+            "printedName": "channelCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A9AudioFileV12channelCountSivp",
+            "mangledName": "$s2P50A9AudioFileV12channelCountSivp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A9AudioFileV12channelCountSivg",
+                "mangledName": "$s2P50A9AudioFileV12channelCountSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFile",
+                "printedName": "P5.P5AudioFile",
+                "usr": "s:2P50A9AudioFileV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A9AudioFileV3urlAC10Foundation3URLV_tKcfc",
+            "mangledName": "$s2P50A9AudioFileV3urlAC10Foundation3URLV_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A9AudioFileV",
+        "mangledName": "$s2P50A9AudioFileV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5OscillatorWaveform",
+        "printedName": "P5OscillatorWaveform",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sine",
+            "printedName": "sine",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5OscillatorWaveform.Type) -> P5.P5OscillatorWaveform",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5OscillatorWaveform.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5OscillatorWaveform",
+                        "printedName": "P5.P5OscillatorWaveform",
+                        "usr": "s:2P50A18OscillatorWaveformO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18OscillatorWaveformO4sineyA2CmF",
+            "mangledName": "$s2P50A18OscillatorWaveformO4sineyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "square",
+            "printedName": "square",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5OscillatorWaveform.Type) -> P5.P5OscillatorWaveform",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5OscillatorWaveform.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5OscillatorWaveform",
+                        "printedName": "P5.P5OscillatorWaveform",
+                        "usr": "s:2P50A18OscillatorWaveformO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18OscillatorWaveformO6squareyA2CmF",
+            "mangledName": "$s2P50A18OscillatorWaveformO6squareyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "sawtooth",
+            "printedName": "sawtooth",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5OscillatorWaveform.Type) -> P5.P5OscillatorWaveform",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5OscillatorWaveform.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5OscillatorWaveform",
+                        "printedName": "P5.P5OscillatorWaveform",
+                        "usr": "s:2P50A18OscillatorWaveformO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18OscillatorWaveformO8sawtoothyA2CmF",
+            "mangledName": "$s2P50A18OscillatorWaveformO8sawtoothyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "triangle",
+            "printedName": "triangle",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5OscillatorWaveform.Type) -> P5.P5OscillatorWaveform",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5OscillatorWaveform.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5OscillatorWaveform",
+                        "printedName": "P5.P5OscillatorWaveform",
+                        "usr": "s:2P50A18OscillatorWaveformO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A18OscillatorWaveformO8triangleyA2CmF",
+            "mangledName": "$s2P50A18OscillatorWaveformO8triangleyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5OscillatorWaveform?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A18OscillatorWaveformO8rawValueACSgSS_tcfc",
+            "mangledName": "$s2P50A18OscillatorWaveformO8rawValueACSgSS_tcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "declAttributes": [
+              "Inlinable"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "AllCases",
+            "printedName": "AllCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5OscillatorWaveform]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18OscillatorWaveformO8AllCasesa",
+            "mangledName": "$s2P50A18OscillatorWaveformO8AllCasesa",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "RawValue",
+            "printedName": "RawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:2P50A18OscillatorWaveformO8RawValuea",
+            "mangledName": "$s2P50A18OscillatorWaveformO8RawValuea",
+            "moduleName": "P5",
+            "implicit": true
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[P5.P5OscillatorWaveform]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18OscillatorWaveformO8allCasesSayACGvpZ",
+            "mangledName": "$s2P50A18OscillatorWaveformO8allCasesSayACGvpZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5OscillatorWaveform]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5OscillatorWaveform",
+                        "printedName": "P5.P5OscillatorWaveform",
+                        "usr": "s:2P50A18OscillatorWaveformO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18OscillatorWaveformO8allCasesSayACGvgZ",
+                "mangledName": "$s2P50A18OscillatorWaveformO8allCasesSayACGvgZ",
+                "moduleName": "P5",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A18OscillatorWaveformO8rawValueSSvp",
+            "mangledName": "$s2P50A18OscillatorWaveformO8rawValueSSvp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A18OscillatorWaveformO8rawValueSSvg",
+                "mangledName": "$s2P50A18OscillatorWaveformO8rawValueSSvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Inlinable"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A18OscillatorWaveformO",
+        "mangledName": "$s2P50A18OscillatorWaveformO",
+        "moduleName": "P5",
+        "enumRawTypeName": "String",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[P5.P5OscillatorWaveform]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5OscillatorWaveform",
+                        "printedName": "P5.P5OscillatorWaveform",
+                        "usr": "s:2P50A18OscillatorWaveformO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioEnvelope",
+        "printedName": "P5AudioEnvelope",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "attackTime",
+            "printedName": "attackTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioEnvelopeV10attackTimeSdvp",
+            "mangledName": "$s2P50A13AudioEnvelopeV10attackTimeSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioEnvelopeV10attackTimeSdvg",
+                "mangledName": "$s2P50A13AudioEnvelopeV10attackTimeSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "decayTime",
+            "printedName": "decayTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioEnvelopeV9decayTimeSdvp",
+            "mangledName": "$s2P50A13AudioEnvelopeV9decayTimeSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioEnvelopeV9decayTimeSdvg",
+                "mangledName": "$s2P50A13AudioEnvelopeV9decayTimeSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sustainLevel",
+            "printedName": "sustainLevel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioEnvelopeV12sustainLevelSfvp",
+            "mangledName": "$s2P50A13AudioEnvelopeV12sustainLevelSfvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioEnvelopeV12sustainLevelSfvg",
+                "mangledName": "$s2P50A13AudioEnvelopeV12sustainLevelSfvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "releaseTime",
+            "printedName": "releaseTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioEnvelopeV11releaseTimeSdvp",
+            "mangledName": "$s2P50A13AudioEnvelopeV11releaseTimeSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioEnvelopeV11releaseTimeSdvg",
+                "mangledName": "$s2P50A13AudioEnvelopeV11releaseTimeSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(attackTime:decayTime:sustainLevel:releaseTime:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEnvelope",
+                "printedName": "P5.P5AudioEnvelope",
+                "usr": "s:2P50A13AudioEnvelopeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13AudioEnvelopeV10attackTime05decayE012sustainLevel07releaseE0ACSd_SdSfSdtcfc",
+            "mangledName": "$s2P50A13AudioEnvelopeV10attackTime05decayE012sustainLevel07releaseE0ACSd_SdSfSdtcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "amplitude",
+            "printedName": "amplitude(at:releaseAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioEnvelopeV9amplitude2at9releaseAtSfSd_SdSgtF",
+            "mangledName": "$s2P50A13AudioEnvelopeV9amplitude2at9releaseAtSfSd_SdSgtF",
+            "moduleName": "P5",
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEnvelope",
+                "printedName": "P5.P5AudioEnvelope",
+                "usr": "s:2P50A13AudioEnvelopeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13AudioEnvelopeV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A13AudioEnvelopeV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioEnvelopeV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A13AudioEnvelopeV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEnvelope",
+                "printedName": "P5.P5AudioEnvelope",
+                "usr": "s:2P50A13AudioEnvelopeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEnvelope",
+                "printedName": "P5.P5AudioEnvelope",
+                "usr": "s:2P50A13AudioEnvelopeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioEnvelopeV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A13AudioEnvelopeV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioEnvelopeV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A13AudioEnvelopeV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioEnvelopeV9hashValueSivp",
+            "mangledName": "$s2P50A13AudioEnvelopeV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioEnvelopeV9hashValueSivg",
+                "mangledName": "$s2P50A13AudioEnvelopeV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A13AudioEnvelopeV",
+        "mangledName": "$s2P50A13AudioEnvelopeV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioAnalysis",
+        "printedName": "P5AudioAnalysis",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "amplitude",
+            "printedName": "amplitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioAnalysisV9amplitudeSfvp",
+            "mangledName": "$s2P50A13AudioAnalysisV9amplitudeSfvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioAnalysisV9amplitudeSfvg",
+                "mangledName": "$s2P50A13AudioAnalysisV9amplitudeSfvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "spectrum",
+            "printedName": "spectrum",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioAnalysisV8spectrumSaySfGvp",
+            "mangledName": "$s2P50A13AudioAnalysisV8spectrumSaySfGvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioAnalysisV8spectrumSaySfGvg",
+                "mangledName": "$s2P50A13AudioAnalysisV8spectrumSaySfGvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sampleRate",
+            "printedName": "sampleRate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioAnalysisV10sampleRateSdvp",
+            "mangledName": "$s2P50A13AudioAnalysisV10sampleRateSdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioAnalysisV10sampleRateSdvg",
+                "mangledName": "$s2P50A13AudioAnalysisV10sampleRateSdvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftSize",
+            "printedName": "fftSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioAnalysisV7fftSizeSivp",
+            "mangledName": "$s2P50A13AudioAnalysisV7fftSizeSivp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioAnalysisV7fftSizeSivg",
+                "mangledName": "$s2P50A13AudioAnalysisV7fftSizeSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(amplitude:spectrum:sampleRate:fftSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalysis",
+                "printedName": "P5.P5AudioAnalysis",
+                "usr": "s:2P50A13AudioAnalysisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13AudioAnalysisV9amplitude8spectrum10sampleRate7fftSizeACSf_SaySfGSdSitcfc",
+            "mangledName": "$s2P50A13AudioAnalysisV9amplitude8spectrum10sampleRate7fftSizeACSf_SaySfGSdSitcfc",
+            "moduleName": "P5",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "frequency",
+            "printedName": "frequency(forBin:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioAnalysisV9frequency6forBinSdSi_tF",
+            "mangledName": "$s2P50A13AudioAnalysisV9frequency6forBinSdSi_tF",
+            "moduleName": "P5",
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalysis",
+                "printedName": "P5.P5AudioAnalysis",
+                "usr": "s:2P50A13AudioAnalysisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13AudioAnalysisV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A13AudioAnalysisV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioAnalysisV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A13AudioAnalysisV6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_struct_equals",
+            "printedName": "__derived_struct_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalysis",
+                "printedName": "P5.P5AudioAnalysis",
+                "usr": "s:2P50A13AudioAnalysisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalysis",
+                "printedName": "P5.P5AudioAnalysis",
+                "usr": "s:2P50A13AudioAnalysisV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioAnalysisV23__derived_struct_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A13AudioAnalysisV23__derived_struct_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioAnalysisV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A13AudioAnalysisV4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioAnalysisV9hashValueSivp",
+            "mangledName": "$s2P50A13AudioAnalysisV9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioAnalysisV9hashValueSivg",
+                "mangledName": "$s2P50A13AudioAnalysisV9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2P50A13AudioAnalysisV",
+        "mangledName": "$s2P50A13AudioAnalysisV",
+        "moduleName": "P5",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioAnalyzer",
+        "printedName": "P5AudioAnalyzer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fftSize",
+            "printedName": "fftSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioAnalyzerC7fftSizeSivp",
+            "mangledName": "$s2P50A13AudioAnalyzerC7fftSizeSivp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioAnalyzerC7fftSizeSivg",
+                "mangledName": "$s2P50A13AudioAnalyzerC7fftSizeSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(fftSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalyzer",
+                "printedName": "P5.P5AudioAnalyzer",
+                "usr": "s:2P50A13AudioAnalyzerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A13AudioAnalyzerC7fftSizeACSi_tKcfc",
+            "mangledName": "$s2P50A13AudioAnalyzerC7fftSizeACSi_tKcfc",
+            "moduleName": "P5",
+            "throwing": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Var",
+            "name": "latest",
+            "printedName": "latest",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "P5.P5AudioAnalysis?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioAnalysis",
+                    "printedName": "P5.P5AudioAnalysis",
+                    "usr": "s:2P50A13AudioAnalysisV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A13AudioAnalyzerC6latestAA0aB8AnalysisVSgvp",
+            "mangledName": "$s2P50A13AudioAnalyzerC6latestAA0aB8AnalysisVSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "P5.P5AudioAnalysis?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioAnalysis",
+                        "printedName": "P5.P5AudioAnalysis",
+                        "usr": "s:2P50A13AudioAnalysisV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A13AudioAnalyzerC6latestAA0aB8AnalysisVSgvg",
+                "mangledName": "$s2P50A13AudioAnalyzerC6latestAA0aB8AnalysisVSgvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "analyze",
+            "printedName": "analyze(samples:sampleRate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalysis",
+                "printedName": "P5.P5AudioAnalysis",
+                "usr": "s:2P50A13AudioAnalysisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioAnalyzerC7analyze7samples10sampleRateAA0aB8AnalysisVSaySfG_SdtKF",
+            "mangledName": "$s2P50A13AudioAnalyzerC7analyze7samples10sampleRateAA0aB8AnalysisVSaySfG_SdtKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "process",
+            "printedName": "process(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalysis",
+                "printedName": "P5.P5AudioAnalysis",
+                "usr": "s:2P50A13AudioAnalysisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioPCMBuffer",
+                "printedName": "AVFAudio.AVAudioPCMBuffer",
+                "usr": "c:objc(cs)AVAudioPCMBuffer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A13AudioAnalyzerC7processyAA0aB8AnalysisVSo16AVAudioPCMBufferCKF",
+            "mangledName": "$s2P50A13AudioAnalyzerC7processyAA0aB8AnalysisVSo16AVAudioPCMBufferCKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "DiscardableResult"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A13AudioAnalyzerC",
+        "mangledName": "$s2P50A13AudioAnalyzerC",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Final"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioEngineState",
+        "printedName": "P5AudioEngineState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "stopped",
+            "printedName": "stopped",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioEngineState.Type) -> P5.P5AudioEngineState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioEngineState",
+                    "printedName": "P5.P5AudioEngineState",
+                    "usr": "s:2P50A16AudioEngineStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioEngineState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioEngineState",
+                        "printedName": "P5.P5AudioEngineState",
+                        "usr": "s:2P50A16AudioEngineStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16AudioEngineStateO7stoppedyA2CmF",
+            "mangledName": "$s2P50A16AudioEngineStateO7stoppedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "running",
+            "printedName": "running",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioEngineState.Type) -> P5.P5AudioEngineState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioEngineState",
+                    "printedName": "P5.P5AudioEngineState",
+                    "usr": "s:2P50A16AudioEngineStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioEngineState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioEngineState",
+                        "printedName": "P5.P5AudioEngineState",
+                        "usr": "s:2P50A16AudioEngineStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16AudioEngineStateO7runningyA2CmF",
+            "mangledName": "$s2P50A16AudioEngineStateO7runningyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "paused",
+            "printedName": "paused",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioEngineState.Type) -> P5.P5AudioEngineState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioEngineState",
+                    "printedName": "P5.P5AudioEngineState",
+                    "usr": "s:2P50A16AudioEngineStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioEngineState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioEngineState",
+                        "printedName": "P5.P5AudioEngineState",
+                        "usr": "s:2P50A16AudioEngineStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16AudioEngineStateO6pausedyA2CmF",
+            "mangledName": "$s2P50A16AudioEngineStateO6pausedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioEngineState.Type) -> (Swift.String) -> P5.P5AudioEngineState",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> P5.P5AudioEngineState",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioEngineState",
+                        "printedName": "P5.P5AudioEngineState",
+                        "usr": "s:2P50A16AudioEngineStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioEngineState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioEngineState",
+                        "printedName": "P5.P5AudioEngineState",
+                        "usr": "s:2P50A16AudioEngineStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A16AudioEngineStateO6failedyACSScACmF",
+            "mangledName": "$s2P50A16AudioEngineStateO6failedyACSScACmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEngineState",
+                "printedName": "P5.P5AudioEngineState",
+                "usr": "s:2P50A16AudioEngineStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEngineState",
+                "printedName": "P5.P5AudioEngineState",
+                "usr": "s:2P50A16AudioEngineStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A16AudioEngineStateO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A16AudioEngineStateO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A16AudioEngineStateO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A16AudioEngineStateO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A16AudioEngineStateO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A16AudioEngineStateO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A16AudioEngineStateO9hashValueSivp",
+            "mangledName": "$s2P50A16AudioEngineStateO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A16AudioEngineStateO9hashValueSivg",
+                "mangledName": "$s2P50A16AudioEngineStateO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEngineState",
+                "printedName": "P5.P5AudioEngineState",
+                "usr": "s:2P50A16AudioEngineStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A16AudioEngineStateO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A16AudioEngineStateO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A16AudioEngineStateO",
+        "mangledName": "$s2P50A16AudioEngineStateO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioEngine",
+        "printedName": "P5AudioEngine",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nativeEngine",
+            "printedName": "nativeEngine",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioEngine",
+                "printedName": "AVFAudio.AVAudioEngine",
+                "usr": "c:objc(cs)AVAudioEngine"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11AudioEngineC06nativeC0So07AVAudioC0Cvp",
+            "mangledName": "$s2P50A11AudioEngineC06nativeC0So07AVAudioC0Cvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioEngine",
+                    "printedName": "AVFAudio.AVAudioEngine",
+                    "usr": "c:objc(cs)AVAudioEngine"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11AudioEngineC06nativeC0So07AVAudioC0Cvg",
+                "mangledName": "$s2P50A11AudioEngineC06nativeC0So07AVAudioC0Cvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEngineState",
+                "printedName": "P5.P5AudioEngineState",
+                "usr": "s:2P50A16AudioEngineStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11AudioEngineC5stateAA0abC5StateOvp",
+            "mangledName": "$s2P50A11AudioEngineC5stateAA0abC5StateOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioEngineState",
+                    "printedName": "P5.P5AudioEngineState",
+                    "usr": "s:2P50A16AudioEngineStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11AudioEngineC5stateAA0abC5StateOvg",
+                "mangledName": "$s2P50A11AudioEngineC5stateAA0abC5StateOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "stateChanged",
+            "printedName": "stateChanged",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((P5.P5AudioEngineState) -> Swift.Void)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5AudioEngineState) -> Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNameAlias",
+                        "name": "Void",
+                        "printedName": "Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioEngineState",
+                        "printedName": "P5.P5AudioEngineState",
+                        "usr": "s:2P50A16AudioEngineStateO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11AudioEngineC12stateChangedyAA0abC5StateOYbScMYccSgvp",
+            "mangledName": "$s2P50A11AudioEngineC12stateChangedyAA0abC5StateOYbScMYccSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5AudioEngineState) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5AudioEngineState) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5AudioEngineState",
+                            "printedName": "P5.P5AudioEngineState",
+                            "usr": "s:2P50A16AudioEngineStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11AudioEngineC12stateChangedyAA0abC5StateOYbScMYccSgvg",
+                "mangledName": "$s2P50A11AudioEngineC12stateChangedyAA0abC5StateOYbScMYccSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5AudioEngineState) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5AudioEngineState) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5AudioEngineState",
+                            "printedName": "P5.P5AudioEngineState",
+                            "usr": "s:2P50A16AudioEngineStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11AudioEngineC12stateChangedyAA0abC5StateOYbScMYccSgvs",
+                "mangledName": "$s2P50A11AudioEngineC12stateChangedyAA0abC5StateOYbScMYccSgvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEngine",
+                "printedName": "P5.P5AudioEngine",
+                "usr": "s:2P50A11AudioEngineC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A11AudioEngineCACycfc",
+            "mangledName": "$s2P50A11AudioEngineCACycfc",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Custom"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Var",
+            "name": "outputVolume",
+            "printedName": "outputVolume",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A11AudioEngineC12outputVolumeSfvp",
+            "mangledName": "$s2P50A11AudioEngineC12outputVolumeSfvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11AudioEngineC12outputVolumeSfvg",
+                "mangledName": "$s2P50A11AudioEngineC12outputVolumeSfvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A11AudioEngineC12outputVolumeSfvs",
+                "mangledName": "$s2P50A11AudioEngineC12outputVolumeSfvs",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC5startyyKF",
+            "mangledName": "$s2P50A11AudioEngineC5startyyKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC5pauseyyF",
+            "mangledName": "$s2P50A11AudioEngineC5pauseyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC4stopyyF",
+            "mangledName": "$s2P50A11AudioEngineC4stopyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scenePhaseChanged",
+            "printedName": "scenePhaseChanged(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5ScenePhase",
+                "printedName": "P5.P5ScenePhase",
+                "usr": "s:2P50A10ScenePhaseO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC17scenePhaseChanged2toyAA0a5SceneE0O_tF",
+            "mangledName": "$s2P50A11AudioEngineC17scenePhaseChanged2toyAA0a5SceneE0O_tF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeOscillator",
+            "printedName": "makeOscillator(waveform:frequency:amplitude:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5Oscillator",
+                "printedName": "P5.P5Oscillator",
+                "usr": "s:2P50A10OscillatorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5OscillatorWaveform",
+                "printedName": "P5.P5OscillatorWaveform",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A18OscillatorWaveformO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC14makeOscillator8waveform9frequency9amplitudeAA0aE0CAA0aE8WaveformO_SdSftKF",
+            "mangledName": "$s2P50A11AudioEngineC14makeOscillator8waveform9frequency9amplitudeAA0aE0CAA0aE8WaveformO_SdSftKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeFilePlayer",
+            "printedName": "makeFilePlayer(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFilePlayer",
+                "printedName": "P5.P5AudioFilePlayer",
+                "usr": "s:2P50A15AudioFilePlayerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFile",
+                "printedName": "P5.P5AudioFile",
+                "usr": "s:2P50A9AudioFileV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC14makeFilePlayer3forAA0abeF0CAA0abE0V_tKF",
+            "mangledName": "$s2P50A11AudioEngineC14makeFilePlayer3forAA0abeF0CAA0abE0V_tKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "installAnalyzer",
+            "printedName": "installAnalyzer(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioAnalyzer",
+                "printedName": "P5.P5AudioAnalyzer",
+                "usr": "s:2P50A13AudioAnalyzerC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC15installAnalyzeryyAA0abE0CKF",
+            "mangledName": "$s2P50A11AudioEngineC15installAnalyzeryyAA0abE0CKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAnalyzer",
+            "printedName": "removeAnalyzer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A11AudioEngineC14removeAnalyzeryyF",
+            "mangledName": "$s2P50A11AudioEngineC14removeAnalyzeryyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A11AudioEngineC",
+        "mangledName": "$s2P50A11AudioEngineC",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Final",
+          "Custom"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5Oscillator",
+        "printedName": "P5Oscillator",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nativeNode",
+            "printedName": "nativeNode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioSourceNode",
+                "printedName": "AVFAudio.AVAudioSourceNode",
+                "usr": "c:objc(cs)AVAudioSourceNode"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10OscillatorC10nativeNodeSo013AVAudioSourceD0Cvp",
+            "mangledName": "$s2P50A10OscillatorC10nativeNodeSo013AVAudioSourceD0Cvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioSourceNode",
+                    "printedName": "AVFAudio.AVAudioSourceNode",
+                    "usr": "c:objc(cs)AVAudioSourceNode"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC10nativeNodeSo013AVAudioSourceD0Cvg",
+                "mangledName": "$s2P50A10OscillatorC10nativeNodeSo013AVAudioSourceD0Cvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "waveform",
+            "printedName": "waveform",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5OscillatorWaveform",
+                "printedName": "P5.P5OscillatorWaveform",
+                "usr": "s:2P50A18OscillatorWaveformO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10OscillatorC8waveformAA0aB8WaveformOvp",
+            "mangledName": "$s2P50A10OscillatorC8waveformAA0aB8WaveformOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC8waveformAA0aB8WaveformOvg",
+                "mangledName": "$s2P50A10OscillatorC8waveformAA0aB8WaveformOvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5OscillatorWaveform",
+                    "printedName": "P5.P5OscillatorWaveform",
+                    "usr": "s:2P50A18OscillatorWaveformO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC8waveformAA0aB8WaveformOvs",
+                "mangledName": "$s2P50A10OscillatorC8waveformAA0aB8WaveformOvs",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "frequency",
+            "printedName": "frequency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10OscillatorC9frequencySdvp",
+            "mangledName": "$s2P50A10OscillatorC9frequencySdvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC9frequencySdvg",
+                "mangledName": "$s2P50A10OscillatorC9frequencySdvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC9frequencySdvs",
+                "mangledName": "$s2P50A10OscillatorC9frequencySdvs",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "amplitude",
+            "printedName": "amplitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10OscillatorC9amplitudeSfvp",
+            "mangledName": "$s2P50A10OscillatorC9amplitudeSfvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC9amplitudeSfvg",
+                "mangledName": "$s2P50A10OscillatorC9amplitudeSfvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC9amplitudeSfvs",
+                "mangledName": "$s2P50A10OscillatorC9amplitudeSfvs",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isPlaying",
+            "printedName": "isPlaying",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A10OscillatorC9isPlayingSbvp",
+            "mangledName": "$s2P50A10OscillatorC9isPlayingSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A10OscillatorC9isPlayingSbvg",
+                "mangledName": "$s2P50A10OscillatorC9isPlayingSbvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "play",
+            "printedName": "play()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10OscillatorC4playyyF",
+            "mangledName": "$s2P50A10OscillatorC4playyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trigger",
+            "printedName": "trigger(envelope:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioEnvelope",
+                "printedName": "P5.P5AudioEnvelope",
+                "hasDefaultArg": true,
+                "usr": "s:2P50A13AudioEnvelopeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10OscillatorC7trigger8envelopeyAA0A13AudioEnvelopeV_tF",
+            "mangledName": "$s2P50A10OscillatorC7trigger8envelopeyAA0A13AudioEnvelopeV_tF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "release",
+            "printedName": "release()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10OscillatorC7releaseyyF",
+            "mangledName": "$s2P50A10OscillatorC7releaseyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A10OscillatorC4stopyyF",
+            "mangledName": "$s2P50A10OscillatorC4stopyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A10OscillatorC",
+        "mangledName": "$s2P50A10OscillatorC",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Final",
+          "Custom"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioFilePlayerState",
+        "printedName": "P5AudioFilePlayerState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "stopped",
+            "printedName": "stopped",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioFilePlayerState.Type) -> P5.P5AudioFilePlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioFilePlayerState",
+                    "printedName": "P5.P5AudioFilePlayerState",
+                    "usr": "s:2P50A20AudioFilePlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioFilePlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioFilePlayerState",
+                        "printedName": "P5.P5AudioFilePlayerState",
+                        "usr": "s:2P50A20AudioFilePlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A20AudioFilePlayerStateO7stoppedyA2CmF",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO7stoppedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "playing",
+            "printedName": "playing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioFilePlayerState.Type) -> P5.P5AudioFilePlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioFilePlayerState",
+                    "printedName": "P5.P5AudioFilePlayerState",
+                    "usr": "s:2P50A20AudioFilePlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioFilePlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioFilePlayerState",
+                        "printedName": "P5.P5AudioFilePlayerState",
+                        "usr": "s:2P50A20AudioFilePlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A20AudioFilePlayerStateO7playingyA2CmF",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO7playingyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "paused",
+            "printedName": "paused",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioFilePlayerState.Type) -> P5.P5AudioFilePlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioFilePlayerState",
+                    "printedName": "P5.P5AudioFilePlayerState",
+                    "usr": "s:2P50A20AudioFilePlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioFilePlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioFilePlayerState",
+                        "printedName": "P5.P5AudioFilePlayerState",
+                        "usr": "s:2P50A20AudioFilePlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A20AudioFilePlayerStateO6pausedyA2CmF",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO6pausedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Var",
+            "name": "ended",
+            "printedName": "ended",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(P5.P5AudioFilePlayerState.Type) -> P5.P5AudioFilePlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioFilePlayerState",
+                    "printedName": "P5.P5AudioFilePlayerState",
+                    "usr": "s:2P50A20AudioFilePlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "P5.P5AudioFilePlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioFilePlayerState",
+                        "printedName": "P5.P5AudioFilePlayerState",
+                        "usr": "s:2P50A20AudioFilePlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:2P50A20AudioFilePlayerStateO5endedyA2CmF",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO5endedyA2CmF",
+            "moduleName": "P5"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFilePlayerState",
+                "printedName": "P5.P5AudioFilePlayerState",
+                "usr": "s:2P50A20AudioFilePlayerStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFilePlayerState",
+                "printedName": "P5.P5AudioFilePlayerState",
+                "usr": "s:2P50A20AudioFilePlayerStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20AudioFilePlayerStateO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "P5",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20AudioFilePlayerStateO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO6encode2toys7Encoder_p_tKF",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A20AudioFilePlayerStateO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO4hash4intoys6HasherVz_tF",
+            "moduleName": "P5",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A20AudioFilePlayerStateO9hashValueSivp",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO9hashValueSivp",
+            "moduleName": "P5",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A20AudioFilePlayerStateO9hashValueSivg",
+                "mangledName": "$s2P50A20AudioFilePlayerStateO9hashValueSivg",
+                "moduleName": "P5",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFilePlayerState",
+                "printedName": "P5.P5AudioFilePlayerState",
+                "usr": "s:2P50A20AudioFilePlayerStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:2P50A20AudioFilePlayerStateO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s2P50A20AudioFilePlayerStateO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "P5",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:2P50A20AudioFilePlayerStateO",
+        "mangledName": "$s2P50A20AudioFilePlayerStateO",
+        "moduleName": "P5",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "P5AudioFilePlayer",
+        "printedName": "P5AudioFilePlayer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "file",
+            "printedName": "file",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFile",
+                "printedName": "P5.P5AudioFile",
+                "usr": "s:2P50A9AudioFileV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15AudioFilePlayerC4fileAA0abC0Vvp",
+            "mangledName": "$s2P50A15AudioFilePlayerC4fileAA0abC0Vvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioFile",
+                    "printedName": "P5.P5AudioFile",
+                    "usr": "s:2P50A9AudioFileV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC4fileAA0abC0Vvg",
+                "mangledName": "$s2P50A15AudioFilePlayerC4fileAA0abC0Vvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nativeNode",
+            "printedName": "nativeNode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioPlayerNode",
+                "printedName": "AVFAudio.AVAudioPlayerNode",
+                "usr": "c:objc(cs)AVAudioPlayerNode"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15AudioFilePlayerC10nativeNodeSo07AVAudiodF0Cvp",
+            "mangledName": "$s2P50A15AudioFilePlayerC10nativeNodeSo07AVAudiodF0Cvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioPlayerNode",
+                    "printedName": "AVFAudio.AVAudioPlayerNode",
+                    "usr": "c:objc(cs)AVAudioPlayerNode"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC10nativeNodeSo07AVAudiodF0Cvg",
+                "mangledName": "$s2P50A15AudioFilePlayerC10nativeNodeSo07AVAudiodF0Cvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "P5AudioFilePlayerState",
+                "printedName": "P5.P5AudioFilePlayerState",
+                "usr": "s:2P50A20AudioFilePlayerStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15AudioFilePlayerC5stateAA0abcD5StateOvp",
+            "mangledName": "$s2P50A15AudioFilePlayerC5stateAA0abcD5StateOvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "SetterAccess",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "P5AudioFilePlayerState",
+                    "printedName": "P5.P5AudioFilePlayerState",
+                    "usr": "s:2P50A20AudioFilePlayerStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC5stateAA0abcD5StateOvg",
+                "mangledName": "$s2P50A15AudioFilePlayerC5stateAA0abcD5StateOvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "loops",
+            "printedName": "loops",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15AudioFilePlayerC5loopsSbvp",
+            "mangledName": "$s2P50A15AudioFilePlayerC5loopsSbvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC5loopsSbvg",
+                "mangledName": "$s2P50A15AudioFilePlayerC5loopsSbvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC5loopsSbvs",
+                "mangledName": "$s2P50A15AudioFilePlayerC5loopsSbvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "stateChanged",
+            "printedName": "stateChanged",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((P5.P5AudioFilePlayerState) -> Swift.Void)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(P5.P5AudioFilePlayerState) -> Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNameAlias",
+                        "name": "Void",
+                        "printedName": "Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "P5AudioFilePlayerState",
+                        "printedName": "P5.P5AudioFilePlayerState",
+                        "usr": "s:2P50A20AudioFilePlayerStateO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15AudioFilePlayerC12stateChangedyAA0abcD5StateOYbScMYccSgvp",
+            "mangledName": "$s2P50A15AudioFilePlayerC12stateChangedyAA0abcD5StateOYbScMYccSgvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5AudioFilePlayerState) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5AudioFilePlayerState) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5AudioFilePlayerState",
+                            "printedName": "P5.P5AudioFilePlayerState",
+                            "usr": "s:2P50A20AudioFilePlayerStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC12stateChangedyAA0abcD5StateOYbScMYccSgvg",
+                "mangledName": "$s2P50A15AudioFilePlayerC12stateChangedyAA0abcD5StateOYbScMYccSgvg",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((P5.P5AudioFilePlayerState) -> Swift.Void)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(P5.P5AudioFilePlayerState) -> Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNameAlias",
+                            "name": "Void",
+                            "printedName": "Swift.Void",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "P5AudioFilePlayerState",
+                            "printedName": "P5.P5AudioFilePlayerState",
+                            "usr": "s:2P50A20AudioFilePlayerStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC12stateChangedyAA0abcD5StateOYbScMYccSgvs",
+                "mangledName": "$s2P50A15AudioFilePlayerC12stateChangedyAA0abcD5StateOYbScMYccSgvs",
+                "moduleName": "P5",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Transparent"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "volume",
+            "printedName": "volume",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15AudioFilePlayerC6volumeSfvp",
+            "mangledName": "$s2P50A15AudioFilePlayerC6volumeSfvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC6volumeSfvg",
+                "mangledName": "$s2P50A15AudioFilePlayerC6volumeSfvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC6volumeSfvs",
+                "mangledName": "$s2P50A15AudioFilePlayerC6volumeSfvs",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pan",
+            "printedName": "pan",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2P50A15AudioFilePlayerC3panSfvp",
+            "mangledName": "$s2P50A15AudioFilePlayerC3panSfvp",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC3panSfvg",
+                "mangledName": "$s2P50A15AudioFilePlayerC3panSfvg",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2P50A15AudioFilePlayerC3panSfvs",
+                "mangledName": "$s2P50A15AudioFilePlayerC3panSfvs",
+                "moduleName": "P5",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "play",
+            "printedName": "play()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15AudioFilePlayerC4playyyF",
+            "mangledName": "$s2P50A15AudioFilePlayerC4playyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15AudioFilePlayerC5pauseyyF",
+            "mangledName": "$s2P50A15AudioFilePlayerC5pauseyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15AudioFilePlayerC4stopyyF",
+            "mangledName": "$s2P50A15AudioFilePlayerC4stopyyF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "seek",
+            "printedName": "seek(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:2P50A15AudioFilePlayerC4seek2toySd_tKF",
+            "mangledName": "$s2P50A15AudioFilePlayerC4seek2toySd_tKF",
+            "moduleName": "P5",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:2P50A15AudioFilePlayerC",
+        "mangledName": "$s2P50A15AudioFilePlayerC",
+        "moduleName": "P5",
+        "declAttributes": [
+          "Final",
+          "Custom"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
