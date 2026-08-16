@@ -1,3 +1,4 @@
+import Foundation
 import P5
 
 @main
@@ -28,5 +29,8 @@ struct P5SmokeSample {
         let target = try await renderer.makeRenderTarget(width: 64, height: 64)
         let statistics = try await renderer.render(scene, to: target)
         print("P5 rendered \(statistics.lastTriangleCount) triangles on \(renderer.deviceName).")
+        if ProcessInfo.processInfo.environment["SWIFT_PACKAGE_INSTRUMENTS_HOLD"] == "1" {
+            try await Task.sleep(for: .seconds(20))
+        }
     }
 }
